@@ -56,6 +56,15 @@ Bundle 'vibrantink'
 
 Bundle 'shemerey/vim-peepopen'
 
+Bundle 'drmingdrmer/xptemplate'
+Bundle 'mattn/zencoding-vim'
+
+" snipmate
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'vim-snipmate.git'
+Bundle 'honza/vim-snippets'
+
 
 syntax on
 filetype plugin indent on
@@ -167,3 +176,15 @@ let g:gist_use_password_in_gitconfig = 1
 
 "Vroom
 let g:vroom_spec_command = 'bundle exec rspec --drb'
+
+map ,rs :!bundle exec rspec --color<cr>
+
+vmap ,cs !coffee -s -c<CR>
+
+" nerdtree
+map \n :NERDTreeToggle<CR>
+
+" zencoding
+let g:user_zen_expandabbr_key = '<C-e>'
+
+
