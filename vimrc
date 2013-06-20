@@ -42,8 +42,11 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/vim-powerline'
 
+" Find Files
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'
 
 " color theme
 Bundle 'ricardovaleriano/vim-github-theme' 
@@ -53,6 +56,8 @@ Bundle 'matthewtodd/vim-twilight'
 Bundle 'sickill/vim-sunburst'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vibrantink'
+Bundle '29decibel/codeschool-vim-theme'
+Bundle 'nelstrom/vim-mac-classic-theme'
 
 Bundle 'shemerey/vim-peepopen'
 
@@ -65,6 +70,11 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'vim-snipmate.git'
 Bundle 'honza/vim-snippets'
 
+" syntax checker
+Bundle 'scrooloose/syntastic'
+
+" Show funtion list
+Bundle 'functionlist.vim'
 
 syntax on
 filetype plugin indent on
@@ -187,4 +197,29 @@ map \n :NERDTreeToggle<CR>
 " zencoding
 let g:user_zen_expandabbr_key = '<C-e>'
 
+"syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_echo_current_error=1
+let g:syntastic_enable_signs=1
+let g:syntastic_enable_balloons = 1
+let g:syntastic_auto_jump=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_html_checkers = ['w3']
+let g:syntastic_java_checkers = ['javac']
+let g:syntastic_css_checkers = ['csslint']
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_xml_checkers = ['xmllint']
 
+" Unite mapping
+let g:unite_source_history_yank_enable = 1
+nnoremap \y :<C-u>Unite history/yank<CR>
+" nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
+nnoremap \r :<C-u>Unite -start-insert file_rec/async:!<CR>
+" Most recently used files:
+nnoremap \m :<C-u>Unite file_mru<CR>
+nnoremap <silent> \b :<C-u>Unite buffer -start-insert <CR>
+nnoremap <silent> \B :<C-u>Unite buffer file_mru bookmark -start-insert<CR>
+
+" Funtion list
+nnoremap <silent> \t :Flisttoggle<CR>
