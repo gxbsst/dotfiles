@@ -1,4 +1,4 @@
-set guifont=Monaco:h14
+set guifont=Inconsolata-g:h15
 " make the toolbar stay hidden after a restart
 "set guioptions-=T
 " set lines=40
@@ -70,7 +70,7 @@ let g:ConqueTerm_TERM = 'vt100'
 
 "colorscheme railscasts
 "colorscheme sunburst
-colorscheme github
+"colorscheme github
 
 " Command-Shift-F for Ack
 map <D-F> :Ack<space>

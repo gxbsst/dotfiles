@@ -41,6 +41,7 @@ Bundle 'duff/vim-bufonly'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/vim-powerline'
+"Bundle 'bling/vim-airline'
 
 " Find Files
 Bundle 'L9'
@@ -58,8 +59,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'vibrantink'
 Bundle '29decibel/codeschool-vim-theme'
 Bundle 'nelstrom/vim-mac-classic-theme'
+Bundle 'thingsinjars/Cobalt.vim'
 
-Bundle 'shemerey/vim-peepopen'
+"Bundle 'shemerey/vim-peepopen'
 
 Bundle 'drmingdrmer/xptemplate'
 Bundle 'mattn/zencoding-vim'
@@ -139,7 +141,6 @@ endfunction
 au BufWritePost .vimrc so ~/.vimrc
 autocmd QuickFixCmdPost *grep* cwindow
 
-colorscheme railscasts
 
 " StatusLine
 if has('statusline')
@@ -223,3 +224,12 @@ nnoremap <silent> \B :<C-u>Unite buffer file_mru bookmark -start-insert<CR>
 
 " Funtion list
 nnoremap <silent> \t :Flisttoggle<CR>
+
+set noundofile
+
+"colorscheme railscasts
+syntax enable
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termtrans = 1
+colorscheme solarized
