@@ -1,8 +1,8 @@
 [github]
 	user = gxbsst
 [user]
-	name = gxbsst
-	email = gxbsst@gmail.com
+	name = Weston Wei
+	email = weixuhong@rongyi.com
 [alias]
   co = checkout
   cm = commit
@@ -44,5 +44,5 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true

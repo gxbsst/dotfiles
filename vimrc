@@ -4,7 +4,12 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+
 Bundle 'gmarik/vundle'
+
+"WORDPRESS
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
 
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-repeat'
@@ -27,7 +32,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 
 Bundle 'jgdavey/vim-turbux'
-Bundle 'skalnik/vim-vroom'
+"Bundle 'skalnik/vim-vroom'
 
 
 Bundle 'mileszs/ack.vim'
@@ -61,7 +66,7 @@ Bundle '29decibel/codeschool-vim-theme'
 Bundle 'nelstrom/vim-mac-classic-theme'
 Bundle 'thingsinjars/Cobalt.vim'
 
-"Bundle 'shemerey/vim-peepopen'
+Bundle 'shemerey/vim-peepopen'
 
 Bundle 'drmingdrmer/xptemplate'
 Bundle 'mattn/zencoding-vim'
@@ -69,14 +74,31 @@ Bundle 'mattn/zencoding-vim'
 " snipmate
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'vim-snipmate.git'
+"Bundle "snipmate-snippets"
+"Bundle "garbas/vim-snipmate"
 Bundle 'honza/vim-snippets'
+Bundle 'vim-snipmate.git'
+Bundle "sudar/vim-wordpress-snippets"
 
-" syntax checker
-Bundle 'scrooloose/syntastic'
+Bundle 'junegunn/vim-easy-align'
+
+" syntax checker 这个会使vim 保存很慢
+"Bundle 'scrooloose/syntastic'
 
 " Show funtion list
-Bundle 'functionlist.vim'
+"Bundle 'functionlist.vim'
+
+" Rspec
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
+
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
+"Bundle 'vim-scripts/AutoComplPop'
+
+
 
 syntax on
 filetype plugin indent on
@@ -174,21 +196,21 @@ else
 endif
 
 " Turbux
-" let g:turbux_command_rspec  = 'bundle exec rspec --drb'        " default: rspec
-" let g:turbux_command_test_unit = 'ruby'     " default: ruby -Itest
-" let g:turbux_command_cucumber = 'bundle exec cucumber --drb'  " default: cucumber
-" let g:turbux_command_turnip = 'rspec'       " default: rspec -rturnip
-" let g:no_turbux_mappings = 1
-" map <leader>rt <Plug>SendTestToTmux
-" map <leader>rT <Plug>SendFocusedTestToTmux
+ "let g:turbux_command_rspec  = 'bundle exec rspec --drb'        " default: rspec
+ "let g:turbux_command_test_unit = 'ruby'     " default: ruby -Itest
+ "let g:turbux_command_cucumber = 'bundle exec cucumber --drb'  " default: cucumber
+ "let g:turbux_command_turnip = 'rspec'       " default: rspec -rturnip
+ "let g:no_turbux_mappings = 1
+ "map <leader>rt <Plug>SendTestToTmux
+ "map <leader>rT <Plug>SendFocusedTestToTmux
 
 " Gist
 let g:gist_use_password_in_gitconfig = 1
 
 "Vroom
-let g:vroom_spec_command = 'bundle exec rspec --drb'
+"let g:vroom_spec_command = 'bundle exec rspec --drb'
 
-map ,rs :!bundle exec rspec --color<cr>
+"map ,rs :!bundle exec rspec --color<cr>
 
 vmap ,cs !coffee -s -c<CR>
 
@@ -233,3 +255,38 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termtrans = 1
 colorscheme solarized
+
+
+" Rspec
+"let g:rspec_command = 'call Send_to_Tmux("rspec --drb {spec}\n")'
+let g:rspec_command = "!rspec --drb {spec}"
+" RSpec.vim mappings
+map <Leader>tt :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" Fold
+" zo Open the fold on the same line as the cursor
+" zc Close the fold that the cursor is inside
+" zR Open all folds 
+" zM Close all folds
+
+set foldmethod=syntax
+set foldnestmax=1
+
+
+"自动提示
+"let g:acp_completeoptPreview = 1
+" 注视的快捷键: gcc
+" buffer 转化最近两个
+nnoremap bs :b#<CR>
+nnoremap bn :bn<CR>
+nnoremap bp :bp<CR>
+
+"NeoCompleteEnable
+" 参考: https://github.com/Shougo/neocomplete.vim
+let g:neocomplete#enable_at_startup = 1
+"let g:neosnippet#enable_snipmate_compatibility=1
+let g:neocomplete#force_overwrite_completefunc=1
+

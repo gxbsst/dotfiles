@@ -1,4 +1,4 @@
-set guifont=Inconsolata-g:h15
+"set guifont=Inconsolata-g:h15
 " make the toolbar stay hidden after a restart
 "set guioptions-=T
 " set lines=40
@@ -12,6 +12,7 @@ set guioptions-=T                 " Hide toolbar.
 set lines=25 columns=100          " Window dimensions.
 
 set guioptions-=r                 " Don't show right scrollbar
+
 if has("gui_macvim")
    macmenu &File.New\ Tab key=<nop>
    map <D-t> <Plug>PeepOpen
