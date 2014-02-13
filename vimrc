@@ -278,15 +278,26 @@ set foldnestmax=1
 
 "自动提示
 "let g:acp_completeoptPreview = 1
-" 注视的快捷键: gcc
+" 注释快捷键: gcc
 " buffer 转化最近两个
 nnoremap bs :b#<CR>
 nnoremap bn :bn<CR>
 nnoremap bp :bp<CR>
+" new tab
+nnoremap tN :tab new<CR>
+nnoremap tn :tabnext<CR>
+nnoremap tp :tabprevious<CR>
+nnoremap tl :tablast<CR>
+nnoremap tf :tabfirst<CR>
+nnoremap tc :tabclose<CR>
+
+nnoremap \vs :vsplit<CR>
+nnoremap \sp :split<CR>
+
 
 "NeoCompleteEnable
 " 参考: https://github.com/Shougo/neocomplete.vim
 let g:neocomplete#enable_at_startup = 1
-"let g:neosnippet#enable_snipmate_compatibility=1
+let g:neosnippet#enable_snipmate_compatibility=1
 let g:neocomplete#force_overwrite_completefunc=1
 
