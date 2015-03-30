@@ -1,104 +1,107 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"call vundle#rc()
 
-
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "WORDPRESS
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 't9md/vim-ruby-xmpfilter'
 
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-speeddating'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-commentary'
+"Plugin 'tpope/vim-cucumber'
+"Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-haml'
 
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'jgdavey/vim-blockle'
-Bundle 'godlygeek/tabular'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jgdavey/vim-blockle'
+Plugin 'godlygeek/tabular'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
 
-Bundle 'jgdavey/vim-turbux'
-"Bundle 'skalnik/vim-vroom'
+Plugin 'jgdavey/vim-turbux'
+"Plugin 'skalnik/vim-vroom'
 
 
-Bundle 'mileszs/ack.vim'
-Bundle 'ggreer/the_silver_searcher'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'goldfeld/vim-seek'
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'duff/vim-bufonly'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'mattn/gist-vim'
-Bundle 'Lokaltog/vim-powerline'
-"Bundle 'bling/vim-airline'
+Plugin 'mileszs/ack.vim'
+Plugin 'ggreer/the_silver_searcher'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'goldfeld/vim-seek'
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'duff/vim-bufonly'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'mattn/gist-vim'
+Plugin 'Lokaltog/vim-powerline'
+"Plugin 'bling/vim-airline'
 
 " Find Files
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc.vim'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
 
 " color theme
-Bundle 'ricardovaleriano/vim-github-theme' 
-Bundle 'tpope/vim-vividchalk'
-Bundle 'jgdavey/vim-railscasts'
-Bundle 'matthewtodd/vim-twilight'
-Bundle 'sickill/vim-sunburst'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vibrantink'
-Bundle '29decibel/codeschool-vim-theme'
-Bundle 'nelstrom/vim-mac-classic-theme'
-Bundle 'thingsinjars/Cobalt.vim'
+Plugin 'ricardovaleriano/vim-github-theme' 
+Plugin 'tpope/vim-vividchalk'
+Plugin 'jgdavey/vim-railscasts'
+Plugin 'matthewtodd/vim-twilight'
+Plugin 'sickill/vim-sunburst'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vibrantink'
+Plugin '29decibel/codeschool-vim-theme'
+Plugin 'nelstrom/vim-mac-classic-theme'
+Plugin 'thingsinjars/Cobalt.vim'
 
-Bundle 'shemerey/vim-peepopen'
+"Plugin 'shemerey/vim-peepopen'
 
-Bundle 'drmingdrmer/xptemplate'
-Bundle 'mattn/zencoding-vim'
+"Plugin 'drmingdrmer/xptemplate'
+Plugin 'mattn/emmet-vim'
 
 " snipmate
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-"Bundle "snipmate-snippets"
-"Bundle "garbas/vim-snipmate"
-Bundle 'honza/vim-snippets'
-Bundle 'vim-snipmate.git'
-Bundle "sudar/vim-wordpress-snippets"
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'snipmate-snippets'
+"Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'vim-snipmate.git'
+"Plugin "sudar/vim-wordpress-snippets"
 
-Bundle 'junegunn/vim-easy-align'
+"Plugin 'junegunn/vim-easy-align'
 
 " syntax checker 这个会使vim 保存很慢
-"Bundle 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 " Show funtion list
-"Bundle 'functionlist.vim'
+"Plugin 'functionlist.vim'
 
 " Rspec
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'jgdavey/tslime.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
 
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-"Bundle 'vim-scripts/AutoComplPop'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'vim-scripts/AutoComplPop'
 
+Plugin 'plasticboy/vim-markdown'
 
+call vundle#end()
 
 syntax on
 filetype plugin indent on
@@ -109,7 +112,7 @@ set wildmode=list:longest,full
 set splitright
 set splitbelow
 set hidden
-set guifont=Monaco:h16
+set guifont=menlo:h20
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=bash
 set background=dark
@@ -255,6 +258,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termtrans = 1
 colorscheme solarized
+"colorscheme codeschool
 
 
 " Rspec
