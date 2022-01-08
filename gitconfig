@@ -1,48 +1,5 @@
-[github]
-	user = gxbsst
 [user]
-	name = Weston Wei
-	email = weixuhong@rongyi.com
-[alias]
-  co = checkout
-  cm = commit
-  st = status
- throw= reset --hard HEAD
- throwh= reset --hard HEAD^
- # Log display from screencast, with train tracks.                                
- l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
- # Alternate log display from Scott Chacon                                        
- lol = log --pretty=oneline --abbrev-commit --graph --decorate                    
- # Other useful aliases:                                                          
- unstage = reset HEAD                                                             
- staged = diff --cached                                                           
- unstaged = diff                                                                  
- current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'           
- # Usage: git track origin/feature-123-login-form                                 
- track = checkout -t  
-[color]
-	ui = true
-
-#git reset --soft HEAD^
-#git reset -mixed HEAD^ 可单独修改某个文件， 然后使用git add -p 提交
-# edit edit edit 
-#git commit -a -c ORIG_HEAD
-# http://happycasts.net/episodes/34?autoplay=true 回到时间点
-# http://blog.hashrocket.com/posts/feature-development-with-git-branching
-# git checkout : 可以回到过去， 也可以回来
-# git reset --hard HEAD^ 会丢掉当前的commit 且无法回来
-# git reset --soft HEAD^  修改当前的commit 且无法回来
-# http://happycasts.net/episodes/29?autoplay=true
-# git checkout -b dev
-# git pull --rebase 
-# git rebase -i master
-
-[core]
-	excludesfile = /Users/weston/.gitignore_global
-	autocrlf = input
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
-	trustExitCode = true
+	name = 韦旭红
+	email = weixuhong@shouqianba.com
+[pull]
+	rebase = false
