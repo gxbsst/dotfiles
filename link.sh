@@ -24,3 +24,9 @@ for dotfile in "${dotfiles[@]}"; do
   chmod 600 $HOME/.ssh/id_rsa
 done
 
+if [[ -e "$HOME/config/kitty" ]]; then
+  rm -rvf $HOME/.config/kitty
+fi
+
+ln -s $HOME/dotfiles/kitty $HOME/.config/kitty 
+
