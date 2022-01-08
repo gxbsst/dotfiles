@@ -5,19 +5,21 @@
 # rm ~/.npmrc
 # ln -s ~/dotfiles/npmrc ~/.npmrc
 
-dotfiles=("zshrc" "npmrc")
+dotfiles=("zshrc" "npmrc" "SpaceVim.d")
 
 for dotfile in "${dotfiles[@]}"; do
-  source="~/dotfiles/$dotfile"
-  target="~/.$dotfile"
+  source="$HOME/dotfiles/$dotfile"
+  target="$HOME/.$dotfile"
   echo "source $source" 
   echo "target $target" 
 
   if [[ -e "$target" ]]; then
+    echo 'rm...'
     rm $target
   fi
   if [[ -e "$source" ]]; then
-    ln -s "$source $target"
+    echo 'ln...'
+    ln -s $source $target
   fi
 done
 
