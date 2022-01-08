@@ -5,7 +5,7 @@
 # rm ~/.npmrc
 # ln -s ~/dotfiles/npmrc ~/.npmrc
 
-dotfiles=("gitconfig" "zshrc" "npmrc" "SpaceVim.d" "tmux.conf" "ssh")
+dotfiles=("zsh" "gitconfig" "zshrc" "npmrc" "SpaceVim.d" "tmux.conf" "ssh")
 
 for dotfile in "${dotfiles[@]}"; do
   source="$HOME/dotfiles/$dotfile"
