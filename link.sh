@@ -10,16 +10,17 @@ dotfiles=("gitconfig" "zshrc" "npmrc" "SpaceVim.d" "tmux.conf" "ssh")
 for dotfile in "${dotfiles[@]}"; do
   source="$HOME/dotfiles/$dotfile"
   target="$HOME/.$dotfile"
-  echo "source $source" 
-  echo "target $target" 
 
   if [[ -e "$target" ]]; then
-    echo 'rm...'
+    echo "start rm $target"
     rm $target
   fi
+
   if [[ -e "$source" ]]; then
-    echo 'ln...'
+    echo "start ln $source $target"
     ln -s $source $target
   fi
+
+  chmod 600 $HOME/.ssh/id_rsa
 done
 
