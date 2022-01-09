@@ -8,23 +8,20 @@
 
 # All SpaceVim option below [option] section
 [options]
- bootstrap_after = 'myspacevim#after'
-
+#bootstrap_before = 'myspacevim#before'
+bootstrap_after = 'myspacevim#after'
 # set spacevim theme. by default colorscheme layer is not loaded,
 # if you want to use more colorscheme, please load the colorscheme
 # layer
 # colorscheme = "desert"
 #colorscheme="material"
 #colorscheme="gruvbox"
-#colorscheme="molokai"
+colorscheme="molokai"
 #colorscheme="nord"
 #colorscheme="dracula"
 #colorscheme="palenight"
 #colorscheme="atom-dark"
 #colorscheme="OceanicNext"
-#colorscheme = "gruvbox-material"
-colorscheme = 'molokai'
-#colorscheme = 'monokai_pro'
 #colorscheme="NeoSolarized"
 #colorscheme="onedark"
 #colorscheme="neodark"
@@ -48,11 +45,11 @@ autocomplete_method = "coc"
 snippet_engine = "ultisnips"
 
 enabled_formater=["remark", "prettier"]
-#lint_engine="ale"
-#lint_engine="syntastic"
+lint_engine="ale"
+# lint_engine="syntastic"
 
-#enable_neomake = true
-#enable_ale = true
+enable_neomake = true
+# enable_ale = true
 #lint_on_the_fly = true
 #enable_vimfiler_gitstatus = true
 disabled_plugins = ["vim-signify"]
@@ -132,14 +129,15 @@ name = "format"
 [[layers]]
 name = "test"
 
-[[layers]] 
+[[layers]]
 name = 'lsp'
+enabled_clients = ['vimls', 'clangd']
 filetypes = [
   'sh',
   'typescript',
   'javascript',
   'css',
-  'vue'
+  'vue',
   'html'
 ]
 [layers.override_cmd]
@@ -248,6 +246,83 @@ merged = false
 name = "ryanoasis/vim-devicons"
 merged = false
 
+[[custom_plugins]]
+name = "honza/vim-snippets"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-lua/plenary.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope-symbols.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope-fzf-native.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope-frecency.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope-project.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope-file-browser.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "windwp/nvim-spectre"
+merged = false
+
+[[custom_plugins]]
+name = "lewis6991/gitsigns.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "ghifarit53/tokyonight-vim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-treesitter/nvim-treesitter"
+merged = false
+
+[[custom_plugins]]
+name = "ray-x/lsp_signature.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "neovim/nvim-lspconfig"
+merged = false
+
+[[custom_plugins]]
+name = "williamboman/nvim-lsp-installer"
+merged = false
+
+[[custom_plugins]]
+name = "voldikss/vim-floaterm"
+merged = false
+
+[[custom_plugins]]
+name = "me/gruvbox-material"
+merged = false
+
+[[custom_plugins]]
+name = "me/nvim-web-devicons"
+merged = false
+
+[[custom_plugins]]
+name = "me/nvim-tree.lua"
+merged = false
+
+
 # [[custom_plugins]]
 # name = "prabirshrestha/vim-lsp"
 # merged = false
@@ -303,9 +378,19 @@ name = "me/vim-import-cost"
 merged = false
 
 [[custom_plugins]]
+name = "me/vim-devicons"
+merged = false
+
+
+[[custom_plugins]]
+name = "me/nvim-web-devicons"
+merged = false
+
+[[custom_plugins]]
 name = "me/indent-blankline.nvim"
 merged = false
 
 [[custom_plugins]]
 name = "me/vim-monokai-pro"
 merged = false
+

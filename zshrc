@@ -201,8 +201,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init --path)"
 
-#export CFLAGS="-I$(brew --prefix openssl)/include" 
-#export LDFLAGS="-L$(brew --prefix openssl)/lib" 
+#export CFLAGS="-I$(brew --prefix openssl)/include"
+#export LDFLAGS="-L$(brew --prefix openssl)/lib"
 
 
 alias lzd='lazydocker'
