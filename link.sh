@@ -29,20 +29,31 @@ done
 configs=("kitty")
 for config in "${configs[@]}"; do
   if [[ -e "$HOME/.config/$config" ]]; then
-    rm -rvf $HOME/.config$config/
+    rm -rvf $HOME/.config/$config
   fi
   ln -s $HOME/dotfiles/$config $HOME/.config/$config
 done
 
 # SPACE VIM
-SpaceVim="$HOME/dotfiles/SpaceVim/*"
-for space in $SpaceVim
-do
-  if [[ -f "$space" ]]; then
-    rm -rvf $space 
+space_vim=("coc-settings.json")
+for space in "${space_vim[@]}"; do
+  if [[ -e "$HOME/.SpaceVim/$space" ]]; then
+    rm -rvf $HOME/.SpaceVim/$space
   fi
-
-  echo "$(basename "$space")"
-
-  ln -s $space $HOME/.SpaceVim/$(basename "$space")
+  ln -s $HOME/dotfiles/$config $HOME/.SpaceVim/$space
 done
+
+# SpaceVim="$HOME/dotfiles/SpaceVim/*"
+# TargetSpaceVim="$HOME/.SpaceVim"
+# for space in $SpaceVim
+# do
+  # if [[ -f "$space" ]]; then
+    # targetFile = "$TargetSpaceVim/$(basename "$space")"
+    # if [[ -f "$targetFile"]]
+    # then
+      # rm -rvf $targetFile
+    # fi
+  # fi
+#
+  # ln -s $space $HOME/.SpaceVim/$(basename "$space")
+# done
