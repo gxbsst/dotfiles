@@ -16,7 +16,7 @@ bootstrap_after = 'myspacevim#after'
 # colorscheme = "desert"
 #colorscheme="material"
 #colorscheme="gruvbox"
-colorscheme="molokai"
+#colorscheme="molokai"
 #colorscheme="nord"
 #colorscheme="dracula"
 #colorscheme="palenight"
@@ -26,6 +26,7 @@ colorscheme="molokai"
 #colorscheme="onedark"
 #colorscheme="neodark"
 #colorscheme="one"
+colorscheme="gruvbox-material"
 colorscheme_bg = "dark"
 # Disable guicolors in basic mode, many terminal do not support 24bit
 # true colors
