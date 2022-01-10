@@ -28,11 +28,21 @@ done
 # 需要软链的.config下文件夹
 configs=("kitty")
 for config in "${configs[@]}"; do
-  
-if [[ -e "$HOME/.config/$config" ]]; then
-  rm -rvf $HOME/.config$config/
-fi
+  if [[ -e "$HOME/.config/$config" ]]; then
+    rm -rvf $HOME/.config$config/
+  fi
+  ln -s $HOME/dotfiles/$config $HOME/.config/$config
+done
 
-ln -s $HOME/dotfiles/$config $HOME/.config/$config
+# SPACE VIM
+SpaceVim="$HOME/dotfiles/SpaceVim/*"
+for space in $SpaceVim
+do
+  if [[ -f "$space" ]]; then
+    rm -rvf $space 
+  fi
 
+  echo "$(basename "$space")"
+
+  ln -s $space $HOME/.SpaceVim/$(basename "$space")
 done
