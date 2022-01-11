@@ -7,7 +7,6 @@
 
 # 需要做软链的文件或文件夹
 dotfiles=("zsh" "gitconfig" "zshrc" "npmrc" "SpaceVim.d" "tmux.conf" "ssh")
-
 for dotfile in "${dotfiles[@]}"; do
   source="$HOME/dotfiles/$dotfile"
   target="$HOME/.$dotfile"
