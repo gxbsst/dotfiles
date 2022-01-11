@@ -55,9 +55,6 @@ enable_neomake = true
 #lint_on_the_fly = true
 #enable_vimfiler_gitstatus = true
 disabled_plugins = ["vim-signify"]
-
-let g:spacevim_enable_statusline_display_mode = 0
-
 # left sections of statusline
 statusline_left_sections = [
   'winnr',

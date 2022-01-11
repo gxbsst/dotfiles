@@ -39,7 +39,7 @@ for space in "${space_vim[@]}"; do
   if [[ -e "$HOME/.SpaceVim/$space" ]]; then
     rm -rvf $HOME/.SpaceVim/$space
   fi
-  ln -s $HOME/dotfiles/$config $HOME/.SpaceVim/$space
+  ln -s $HOME/dotfiles/$space $HOME/.SpaceVim/$space
 done
 
 # SpaceVim="$HOME/dotfiles/SpaceVim/*"

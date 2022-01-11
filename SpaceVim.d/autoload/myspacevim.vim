@@ -316,8 +316,5 @@ nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 
 inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 1)\<cr>" : "\<Right>"
 inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, 1)\<cr>" : "\<Left>"
-
-let g:spacevim_enable_statusline_display_mode = 0
-
 endfunction
 
