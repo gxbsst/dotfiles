@@ -291,6 +291,8 @@ call wilder#set_option('renderer', wilder#popupmenu_renderer({
 lua require('telescope').load_extension('project')
 lua require('gitsigns').setup()
 
+" Floatterm
+nnoremap <leader>n <cmd>FloatermNew<cr>
 " Find files using Telescope command-line sugar.
 nnoremap <leader>f1 <cmd>Telescope find_files<cr>
 nnoremap <leader>ff <cmd>Telescope git_files<cr>
