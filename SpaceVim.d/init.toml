@@ -386,7 +386,6 @@ merged = false
 name = "me/vim-devicons"
 merged = false
 
-
 [[custom_plugins]]
 name = "me/nvim-web-devicons"
 merged = false
@@ -398,7 +397,6 @@ merged = false
 [[custom_plugins]]
 name = "me/vim-monokai-pro"
 merged = false
-
 
 [[custom_plugins]]
 name = "me/vim-dracula"
