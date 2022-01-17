@@ -348,6 +348,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>9FBB0156-F87B-4594-B8F4-383A5970A3B6</string>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>HapticFeedbackForEsc</key>
