@@ -5,3 +5,88 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 set number relativenumber
 
+""" set leader -----------------------------
+let mapleader = " "
+let g:mapleader = " "
+
+""" tab settings ---------------------------
+set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+
+""" Searching -------------------------------
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+" command completion like zsh ---------------
+" set wildmenu
+" set wildmode=full
+
+""" Split ----------------------------------
+" noremap <Leader>h :<C-u>split<CR>
+" noremap <Leader>v :<C-u>vsplit<CR>
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+
+
+""" Use IdeaJoin ----------------------------
+set ideajoin
+
+""" Use IJ bookmark ------------------------
+" set ideamarks
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+map <C-a> <Plug>(easymotion-prefix)
+
+
+
+""" Disable arrowkeys ----------------------
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+""" Idea Actions ---------------------------
+" Idea Ctrl-u
+noremap <Leader>u :action GotoSuperMethod<CR>
+" Idea Ctrl-o
+noremap <Leader>o :action OverrideMethods<CR>
+" live template
+noremap <Leader>j :action InsertLiveTemplate<CR>
+" git commit
+noremap <Leader>k :action CheckinProject<CR>
+" implement method
+noremap <Leader>i :action ImplementMethods<CR>
+" Type Hierarchy
+noremap <Leader>h :action TypeHierarchy<CR>
+" Go to Declaration
+noremap <Leader>b :action GotoDeclaration<CR>
+" commit history
+noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
+" extend selection
+map <C-z> :action EditorSelectWord<CR>
+" Jump to changes(试了一下暂时没有发现有问题)
+" noremap g; :action JumpToLastChange<CR>
+" noremap g, :action JumpToNextChange<CR>
+" forward and back(试了一下暂时没有发现有问题)
+" map <C-o> :action Back<CR>
+" map <c-i> :action Forward<CR>
+noremap <Leader>r :action RenameElement<CR>
