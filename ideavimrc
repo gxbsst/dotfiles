@@ -84,9 +84,9 @@ noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 " extend selection
 map <C-z> :action EditorSelectWord<CR>
 " Jump to changes(试了一下暂时没有发现有问题)
-" noremap g; :action JumpToLastChange<CR>
-" noremap g, :action JumpToNextChange<CR>
+noremap g; :action JumpToLastChange<CR>
+noremap g, :action JumpToNextChange<CR>
 " forward and back(试了一下暂时没有发现有问题)
-" map <C-o> :action Back<CR>
-" map <c-i> :action Forward<CR>
+map <C-o> :action Back<CR>
+map <c-i> :action Forward<CR>
 noremap <Leader>r :action RenameElement<CR>
