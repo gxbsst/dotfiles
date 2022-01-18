@@ -94,3 +94,5 @@ noremap <Leader>e :action RecentChangedFiles<CR>
 
 noremap zz :action CollapseRegion<CR>
 noremap za :action ExpandRegion<CR>
+
+noremap <Leader>w :action UnsplitAll<CR>
