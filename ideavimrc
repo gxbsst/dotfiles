@@ -64,6 +64,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+noremap <Tap> <Nop>
+
 """ Idea Actions ---------------------------
 " Idea Ctrl-u
 noremap <Leader>u :action GotoSuperMethod<CR>
@@ -76,7 +78,7 @@ noremap <Leader>k :action CheckinProject<CR>
 " implement method
 noremap <Leader>i :action ImplementMethods<CR>
 " Type Hierarchy
-noremap <Leader>h :action TypeHierarchy<CR>
+"noremap <Leader>h :action TypeHierarchy<CR>
 " Go to Declaration
 noremap <Leader>b :action GotoDeclaration<CR>
 " commit history
@@ -93,6 +95,11 @@ noremap <Leader>r :action RenameElement<CR>
 noremap <Leader>e :action RecentChangedFiles<CR>
 
 noremap zz :action CollapseRegion<CR>
+noremap zZ :action CollapseAllRegions<CR>
 noremap za :action ExpandRegion<CR>
+noremap zA :action ExpandToLevel5<CR>
 
 noremap <Leader>w :action UnsplitAll<CR>
+
+noremap <C-l> :action NextSplitter<CR>
+noremap <C-h> :action PrevSplitter<CR>
