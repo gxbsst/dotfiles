@@ -29,12 +29,12 @@ set incsearch
 set nu
 
 " command completion like zsh ---------------
-" set wildmenu
-" set wildmode=full
+ set wildmenu
+set wildmode=full
 
 """ Split ----------------------------------
-" noremap <Leader>h :<C-u>split<CR>
-" noremap <Leader>v :<C-u>vsplit<CR>
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
 
 """ Plugins  --------------------------------
 set surround
@@ -50,7 +50,7 @@ set ReplaceWithRegister
 set ideajoin
 
 """ Use IJ bookmark ------------------------
-" set ideamarks
+set ideamarks
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -90,3 +90,6 @@ noremap g, :action JumpToNextChange<CR>
 map <C-o> :action Back<CR>
 map <c-i> :action Forward<CR>
 noremap <Leader>r :action RenameElement<CR>
+noremap <Leader>e :action RecentChangedFiles<CR>
+
+noremap zz :action CollapseRegion<CR>
