@@ -93,3 +93,4 @@ noremap <Leader>r :action RenameElement<CR>
 noremap <Leader>e :action RecentChangedFiles<CR>
 
 noremap zz :action CollapseRegion<CR>
+noremap za :action ExpandRegion<CR>
