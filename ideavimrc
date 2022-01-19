@@ -1,3 +1,9 @@
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-commentary'
+Plug 'michaeljsmith/vim-indent-object'
+
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
@@ -44,6 +50,8 @@ set argtextobj
 set easymotion
 set textobj-entire
 set ReplaceWithRegister
+set NERDTree
+
 
 
 """ Use IdeaJoin ----------------------------
@@ -64,7 +72,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-noremap <Tap> <Nop>
+" noremap <Tap> <Nop>
 
 """ Idea Actions ---------------------------
 " Idea Ctrl-u
@@ -116,4 +124,8 @@ noremap <Leader>M :action Git.Merge<CR>
 noremap <Leader>k :action CheckinProject<CR>
 
 " SEARCH
-noremap <Leader>p :action SearchEverywhere<CR>
+noremap <C-p> :action SearchEverywhere<CR>
+noremap <Leader><Tab> :action Switcher<CR>
+
+"Wallaby
+noremap \t :action com.wallaby.javascript.actions.StartExclusiveTestRunAction<CR>
