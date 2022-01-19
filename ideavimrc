@@ -73,16 +73,12 @@ noremap <Leader>u :action GotoSuperMethod<CR>
 noremap <Leader>o :action OverrideMethods<CR>
 " live template
 noremap <Leader>j :action InsertLiveTemplate<CR>
-" git commit
-noremap <Leader>k :action CheckinProject<CR>
 " implement method
 noremap <Leader>i :action ImplementMethods<CR>
 " Type Hierarchy
 "noremap <Leader>h :action TypeHierarchy<CR>
 " Go to Declaration
 noremap <Leader>b :action GotoDeclaration<CR>
-" commit history
-noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 " extend selection
 map <C-z> :action EditorSelectWord<CR>
 " Jump to changes(试了一下暂时没有发现有问题)
@@ -101,5 +97,23 @@ noremap zA :action ExpandToLevel5<CR>
 
 noremap <Leader>w :action UnsplitAll<CR>
 
+noremap <Leader>z :action ToggleZenMode<CR>
+
 noremap <C-l> :action NextSplitter<CR>
+noremap <C-j> :action NextSplitter<CR>
 noremap <C-h> :action PrevSplitter<CR>
+noremap <C-k> :action PrevSplitter<CR>
+
+" GIT 
+noremap <Leader>B :action Git.Branches<CR>
+" commit history
+noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
+" commit history
+noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
+" commit merge
+noremap <Leader>M :action Git.Merge<CR>
+" git commit
+noremap <Leader>k :action CheckinProject<CR>
+
+" SEARCH
+noremap <Leader>p :action SearchEverywhere<CR>
