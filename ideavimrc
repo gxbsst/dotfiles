@@ -6,7 +6,7 @@ Plug 'michaeljsmith/vim-indent-object'
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
-inoremap <S-Tab> <C-D>
+inoremap <S-Tab> <C-D
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 set number relativenumber
@@ -113,6 +113,7 @@ noremap <C-h> :action PrevSplitter<CR>
 noremap <C-k> :action PrevSplitter<CR>
 
 " GIT 
+noremap \h :action Vcs.ShowHistoryForBlock<CR>
 noremap <Leader>B :action Git.Branches<CR>
 " commit history
 noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
@@ -122,10 +123,16 @@ noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 noremap <Leader>M :action Git.Merge<CR>
 " git commit
 noremap <Leader>k :action CheckinProject<CR>
-
+noremap <Leader>H :action VcsSelectionHistoryDialog.Popup<CR>
 " SEARCH
 noremap <C-p> :action SearchEverywhere<CR>
 noremap <Leader><Tab> :action Switcher<CR>
 
 "Wallaby
 noremap \t :action com.wallaby.javascript.actions.StartExclusiveTestRunAction<CR>
+
+
+
+map <C-k> :action SmartTypeCompletion<CR>
+"inoremap <C-k> :action SmartTypeCompletion<CR>
+
