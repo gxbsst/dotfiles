@@ -103,7 +103,8 @@ noremap zZ :action CollapseAllRegions<CR>
 noremap za :action ExpandRegion<CR>
 noremap zA :action ExpandToLevel5<CR>
 
-noremap <Leader>w :action UnsplitAll<CR>
+"noremap <Leader>w :action UnsplitAll<CR>
+noremap q :action UnsplitAll<CR>
 
 noremap <Leader>z :action ToggleZenMode<CR>
 
@@ -116,6 +117,9 @@ noremap <C-k> :action PrevSplitter<CR>
 noremap \h :action Vcs.ShowHistoryForBlock<CR>
 noremap \g :action Git.Menu<CR>
 noremap \r :action RunMenu<CR>
+noremap \n :action GoToMenu<CR>
+noremap \c :action CodeMenu<CR>
+noremap \e :action EditMenu<CR>
 noremap <Leader>g :action Git.Menu<CR>
 noremap <Leader>B :action Git.Branches<CR>
 " commit history
@@ -136,6 +140,6 @@ noremap \t :action com.wallaby.javascript.actions.StartExclusiveTestRunAction<CR
 
 
 
-map <C-k> :action SmartTypeCompletion<CR>
+" map <C-k> :action SmartTypeCompletion<CR>
 "inoremap <C-k> :action SmartTypeCompletion<CR>
 
