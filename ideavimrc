@@ -120,6 +120,8 @@ noremap \r :action RunMenu<CR>
 noremap \n :action GoToMenu<CR>
 noremap \c :action CodeMenu<CR>
 noremap \e :action EditMenu<CR>
+noremap \v :action ViewMenu<CR>
+noremap \s :action ScopeViewPopupMenu<CR>
 noremap <Leader>g :action Git.Menu<CR>
 noremap <Leader>B :action Git.Branches<CR>
 " commit history
