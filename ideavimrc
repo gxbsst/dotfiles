@@ -114,6 +114,8 @@ noremap <C-k> :action PrevSplitter<CR>
 
 " GIT 
 noremap \h :action Vcs.ShowHistoryForBlock<CR>
+noremap \g :action Git.Menu<CR>
+noremap <Leader>g :action Git.Menu<CR>
 noremap <Leader>B :action Git.Branches<CR>
 " commit history
 noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
