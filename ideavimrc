@@ -86,7 +86,7 @@ noremap <Leader>i :action ImplementMethods<CR>
 " Type Hierarchy
 "noremap <Leader>h :action TypeHierarchy<CR>
 " Go to Declaration
-noremap <Leader>b :action GotoDeclaration<CR>
+"noremap <Leader>b :action GotoDeclaration<CR>
 " extend selection
 map <C-z> :action EditorSelectWord<CR>
 " Jump to changes(试了一下暂时没有发现有问题)
@@ -125,7 +125,7 @@ noremap \f :action FileMenu<CR>
 noremap \s :action ScopeViewPopupMenu<CR>
 noremap \b :action Bookmarks<CR>
 noremap <Leader>g :action Git.Menu<CR>
-noremap <Leader>B :action Git.Branches<CR>
+noremap <Leader>b :action Git.Branches<CR>
 " commit history
 noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 " commit history
