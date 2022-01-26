@@ -231,3 +231,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
+export PATH="/opt/homebrew/opt/openldap/bin:$PATH"
+export PATH="/opt/homebrew/opt/openldap/sbin:$PATH"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/krb5/bin:$PATH"
+export PATH="/opt/homebrew/opt/krb5/sbin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
