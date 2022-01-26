@@ -142,8 +142,15 @@ noremap <Leader><Tab> :action Switcher<CR>
 "Wallaby
 noremap \t :action com.wallaby.javascript.actions.StartExclusiveTestRunAction<CR>
 
+" File 
+map <M-n> :action NewFile<CR>
 
 
 " map <C-k> :action SmartTypeCompletion<CR>
 "inoremap <C-k> :action SmartTypeCompletion<CR>
 
+
+nnoremap <Leader>E :action EditSourceInNewWindow<CR>
+nnoremap <Leader>n :action NextWindow<CR>
+nnoremap <Leader>p :action PreviousWindow<CR>
+nnoremap <Leader>qa :action CloseAllEditors<CR>
