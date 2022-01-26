@@ -96,7 +96,7 @@ noremap g, :action JumpToNextChange<CR>
 map <C-o> :action Back<CR>
 map <c-i> :action Forward<CR>
 noremap <Leader>r :action RenameElement<CR>
-noremap <Leader>e :action RecentChangedFiles<CR>
+"noremap <Leader>e :action RecentChangedFiles<CR>
 
 noremap zz :action CollapseRegion<CR>
 noremap zZ :action CollapseAllRegions<CR>
@@ -150,7 +150,7 @@ map <M-n> :action NewFile<CR>
 "inoremap <C-k> :action SmartTypeCompletion<CR>
 
 
-nnoremap ,e :action EditSourceInNewWindow<CR>
+nnoremap <Leader>e :action EditSourceInNewWindow<CR>
 nnoremap <Leader>n :action NextWindow<CR>
 nnoremap <Leader>p :action PreviousWindow<CR>
 nnoremap <Leader>qa :action CloseAllEditors<CR>
