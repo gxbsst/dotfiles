@@ -157,7 +157,7 @@ nnoremap <Leader>qa :action CloseAllEditors<CR>
 nnoremap <Leader>s :action FileStructurePopup<CR>
 
 "Bookmark
-nnoremap <C-S-n> :action GotoNextBookmarkInEditor<CR>
+nnoremap <A-C-n> :action GotoNextBookmarkInEditor<CR>
 
 " Running and Debugging
 nnoremap ,r :action ContextRun<CR>
