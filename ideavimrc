@@ -166,6 +166,11 @@ nnoremap ,b :action ToggleLineBreakpoint<CR>
 nnoremap ,d :action ContextDebug<CR>
 nnoremap ,n :action ActivateDebugToolWindow<CR>
 
+" View
+map <M-A-S-0> :action ViewStatusBar<CR>
+map <C-A-M-0> :action ViewNavigationBar<CR>
+map <M-S-0> :action ViewToolButtons<CR>
+
 
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
