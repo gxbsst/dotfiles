@@ -1,0 +1,27 @@
+branch = "master"
+
+# "pat" enter the Github token that has the "repo" permission
+# Get token from https://github.com/settings/tokens
+pat = "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"
+
+# The file name formatting template was uploaded
+# The following example generates a file name preview: 2022/01/upgit_20220131_1643617626.png
+rename = "{year}/{month}/upgit_{year}{month}{day}_{unix_ts}{ext}"
+
+# The name of your public Github repository
+# Attention: Because we use the "raw.githubusercontent.com", so Gtihub repository has to be public.
+repo = "nashannaguo.github.io"
+
+# "username" enter your Github username  
+username = "nashannaguo"
+
+# If your network access to Github is abnormal or sluggish, you can try the following CDN acceleration.
+# [replacements]
+# "raw.githubusercontent.com" = "cdn.jsdelivr.net/gh"
+# "/master" = "@master"
+
+# Custom extra output formats
+[output-formats]
+"bbcode" = "[img]{url}[/img]"
+"html" = '<img src="{url}" />'
+"markdown-simple" = "![]({url})"
