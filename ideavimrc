@@ -83,6 +83,7 @@ noremap <Leader>o :action OverrideMethods<CR>
 noremap <Leader>j :action InsertLiveTemplate<CR>
 " implement method
 noremap <Leader>i :action ImplementMethods<CR>
+noremap <Leader>l :action EditorToggleShowLineNumbers<CR>
 " Type Hierarchy
 "noremap <Leader>h :action TypeHierarchy<CR>
 " Go to Declaration
