@@ -9,7 +9,7 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
-set number relativenumber
+"set number relativenumber
 
 """ set leader -----------------------------
 let mapleader = " "
@@ -32,7 +32,7 @@ set smartcase
 set showmode
 set so=5
 set incsearch
-set nu
+" set nu
 
 " command completion like zsh ---------------
  set wildmenu
