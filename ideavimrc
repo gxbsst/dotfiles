@@ -183,6 +183,7 @@ map <ESC><ESC> :action HideAllWindows<CR>
 " rainbow
 " 高亮显示当前block
 map <Leader>c :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
+map ,, :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
