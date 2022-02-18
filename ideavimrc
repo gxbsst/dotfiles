@@ -179,7 +179,10 @@ map <M-S-0> :action ViewToolButtons<CR>
 
 " 切换所有窗口
 map <A-M-0> :action HideAllWindows<CR>
-
+map <ESC><ESC> :action HideAllWindows<CR>
+" rainbow
+" 高亮显示当前block
+map <Leader>c :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
