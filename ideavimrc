@@ -184,6 +184,7 @@ map <ESC><ESC> :action HideAllWindows<CR>
 " 高亮显示当前block
 map <Leader>c :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 map ,, :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
+"map <Leader>p :!pwd<CR> 
 
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
@@ -239,7 +240,7 @@ map ,, :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 " nnoremap <leader>s :write<CR>
 "" Searching and Source Code Navigation
 " set incsearch
-" nnoremap <c-/> :action FindInPath<CR>
+ nnoremap <c-/> :action FindInPath<CR>
 " nnoremap <c-a> :action GotoAction<CR>
 " nnoremap <c-f> :action GotoFile<CR>
 " nnoremap <leader>u :action FindUsages<CR>
