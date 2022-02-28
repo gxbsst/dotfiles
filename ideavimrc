@@ -180,6 +180,7 @@ map ,a :action StringManipulation.Group.Align<CR>
 map <M-A-S-0> :action ViewStatusBar<CR>
 map <C-A-M-0> :action ViewNavigationBar<CR>
 map <M-S-0> :action ViewToolButtons<CR>
+map <M-S-P> :action GotoAction<CR>
 
 " 切换所有窗口
 map <A-M-0> :action HideAllWindows<CR>
