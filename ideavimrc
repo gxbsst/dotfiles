@@ -158,6 +158,7 @@ nnoremap <Leader>n :action NextWindow<CR>
 nnoremap <Leader>p :action PreviousWindow<CR>
 nnoremap <Leader>qa :action CloseAllEditors<CR>
 nnoremap <Leader>s :action FileStructurePopup<CR>
+nnoremap <Leader>t :action ActivateTerminalToolWindow<CR>
 
 "Bookmark
 nnoremap <A-C-n> :action GotoNextBookmarkInEditor<CR>
