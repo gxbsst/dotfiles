@@ -189,7 +189,8 @@ nnoremap ,u :action Rerun<CR>
 nnoremap ,b :action ToggleLineBreakpoint<CR>
 nnoremap ,d :action ContextDebug<CR>
 " 关闭通知
-nnoremap ,n :action CloseAllNotifications<CR>
+"nnoremap ,n :action CloseAllNotifications<CR>
+nnoremap <Leader> :action CloseAllNotifications<CR>
 map ,m :action osmedile.intellij.stringmanip.SwitchCasePopup<CR>
 map ,s :action osmedile.intellij.stringmanip.RepeatAction<CR>
 map ,a :action StringManipulation.Group.Align<CR>
