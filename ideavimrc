@@ -38,10 +38,6 @@ set incsearch
  set wildmenu
 set wildmode=full
 
-""" Split ----------------------------------
-noremap <M-S-D> :action SplitHorizontally<CR>
-noremap <M-D> :action  SplitVertically<CR>
-
 """ Plugins  --------------------------------
 set surround
 set multiple-cursors
@@ -51,8 +47,6 @@ set easymotion
 set textobj-entire
 set ReplaceWithRegister
 set NERDTree
-
-
 
 """ Use IdeaJoin ----------------------------
 set ideajoin
@@ -109,6 +103,9 @@ noremap q :action UnsplitAll<CR>
 
 noremap <Leader>z :action ToggleZenMode<CR>
 
+""" Split ----------------------------------
+map <M-S-D> :action SplitHorizontally<CR>
+map <M-D> :action  SplitVertically<CR>
 noremap <C-l> :action NextSplitter<CR>
 noremap <C-j> :action NextSplitter<CR>
 noremap <C-h> :action PrevSplitter<CR>
