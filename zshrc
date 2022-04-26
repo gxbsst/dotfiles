@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -13,6 +15,11 @@ ZSH_THEME="robbyrussell"
 #ZSH_THEME="lambda"
 #ZSH_THEME="mikeh"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="amuse"
+#ZSH_THEME="awesomepanda"
+#ZSH_THEME="emotty"
+#ZSH_THEME="frontcube"
+#ZSH_THEME="garyblessington"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -195,7 +202,7 @@ source $HOME/development/wp-completion.bash
 export SDKMAN_DIR="/Users/weston/.sdkman"
 [[ -s "/Users/weston/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/weston/.sdkman/bin/sdkman-init.sh"
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-export EDITOR=vim
+export EDITOR=nvim
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -240,3 +247,8 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/Applications/wechatwebdevtools.app/Contents/MacOS/:$PATH"
+alias python2="/usr/local/bin/python"
+export VISUAL="$EDITOR"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
