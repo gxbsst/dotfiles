@@ -210,6 +210,9 @@ map <Leader>c :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 map ,, :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 "map <Leader>p :!pwd<CR> 
 
+" recent
+map <M-A-E> :action RecentChangedFiles<CR>
+map <M-S-E> :action RecentLocations<CR>
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
 " set clipboard+=ideaput
