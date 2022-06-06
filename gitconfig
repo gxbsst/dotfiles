@@ -16,3 +16,5 @@
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [http]
 [https]
+[core]
+	autocrlf = input

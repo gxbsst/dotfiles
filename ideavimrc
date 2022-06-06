@@ -104,8 +104,8 @@ noremap q :action UnsplitAll<CR>
 noremap <Leader>z :action ToggleZenMode<CR>
 
 """ Split ----------------------------------
-map <M-S-D> :action SplitHorizontally<CR>
-map <M-D> :action  SplitVertically<CR>
+"map <M-S-D> :action SplitHorizontally<CR>
+"map <M-D> :action  SplitVertically<CR>
 noremap <C-l> :action NextSplitter<CR>
 noremap <C-j> :action NextSplitter<CR>
 noremap <C-h> :action PrevSplitter<CR>
@@ -124,7 +124,9 @@ noremap \s :action ScopeViewPopupMenu<CR>
 noremap \b :action Bookmarks<CR>
 noremap \j :action jmix.toolbar<CR>
 noremap <Leader>g :action Generate<CR>
-noremap <Leader>b :action Git.Branches<CR>
+"noremap <Leader>b :action Git.Branches<CR>
+noremap <C-E> :action Git.Branches<CR>
+"noremap <C><Tab> :action Git.Branches<CR>
 " commit history
 noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 " commit history
@@ -209,6 +211,9 @@ map <Leader>c :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 map ,, :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 "map <Leader>p :!pwd<CR> 
 
+" recent
+map <M-A-E> :action RecentChangedFiles<CR>
+map <M-S-E> :action RecentLocations<CR>
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
 " set clipboard+=ideaput
