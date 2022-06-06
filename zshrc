@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -240,3 +242,6 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/Applications/wechatwebdevtools.app/Contents/MacOS/:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
