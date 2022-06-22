@@ -45,8 +45,8 @@ enable_statusline_mode = true
 filetree_direction = "left"
 #guifont="Fira Code:h12"
 filemanager = "nerdtree"
-autocomplete_method = "coc"
-#autocomplete_method = "deoplete"
+#autocomplete_method = "coc"
+autocomplete_method = "deoplete"
 #snippet_engine = "ultisnips"
 
 enabled_formater=["remark", "prettier"]
@@ -291,10 +291,6 @@ name = "windwp/nvim-spectre"
 merged = false
 
 [[custom_plugins]]
-name = "lewis6991/gitsigns.nvim"
-merged = false
-
-[[custom_plugins]]
 name = "ghifarit53/tokyonight-vim"
 merged = false
 
@@ -318,16 +314,13 @@ merged = false
 name = "voldikss/vim-floaterm"
 merged = false
 
+
 [[custom_plugins]]
-name = "me/gruvbox-material"
+name = "kyazdani42/nvim-web-devicons"
 merged = false
 
 [[custom_plugins]]
-name = "me/nvim-web-devicons"
-merged = false
-
-[[custom_plugins]]
-name = "me/nvim-tree.lua"
+name = "kyazdani42/nvim-tree.lua"
 merged = false
 
 
@@ -342,71 +335,47 @@ for = ['javascript', 'javascript.jsx','typescript']
 do = 'make install'
 
 [[custom_plugins]]
-name = "me/plenary.nvim"
+name = "nvim-lua/plenary.nvim"
 merged = false
 
 [[custom_plugins]]
-name = "me/telescope.nvim"
+name = "nvim-telescope/telescope.nvim"
 merged = false
 
 [[custom_plugins]]
-name = "me/vim-cursorword"
+name = "itchyny/vim-cursorword"
 merged = false
 
 [[custom_plugins]]
-name = "me/wilder.nvim"
+name = "gelguy/wilder.nvim"
 merged = false
 
 [[custom_plugins]]
-name = "me/vim-floaterm"
+name = "voldikss/vim-floaterm"
+merged = false
+
+
+[[custom_plugins]]
+name = "zivyangll/git-blame.vim"
+merged = false
+
+
+[[custom_plugins]]
+name = "nvim-pack/nvim-spectre"
+merged = false
+
+
+[[custom_plugins]]
+name = "yardnsm/vim-import-cost"
 merged = false
 
 [[custom_plugins]]
-name = "me/gruvbox-material"
+name = "ryanoasis/vim-devicons"
 merged = false
 
-[[custom_plugins]]
-name = "me/git-blame.nvim"
-merged = false
 
 [[custom_plugins]]
-name = "me/zen-mode.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "me/nvim-spectre"
-merged = false
-
-[[custom_plugins]]
-name = "me/gitsigns.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "me/vim-import-cost"
-merged = false
-
-[[custom_plugins]]
-name = "me/vim-devicons"
-merged = false
-
-[[custom_plugins]]
-name = "me/nvim-web-devicons"
-merged = false
-
-[[custom_plugins]]
-name = "me/indent-blankline.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "me/vim-monokai-pro"
-merged = false
-
-[[custom_plugins]]
-name = "me/vim-dracula"
-merged = false
-
-[[custom_plugins]]
-name = "NLKNguyen/papercolor-theme"
+name = "lukas-reineke/indent-blankline.nvim"
 merged = false
 
 [[custom_plugins]]
