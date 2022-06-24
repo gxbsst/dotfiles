@@ -65,3 +65,26 @@ default_height = 30
 name = "michaeldyrynda/carbon"
 merged = false
 
+[[custom_plugins]]
+name = "chemzqm/wxapp.vim"
+merged = false
+
+[[custom_plugins]]
+name = "gelguy/wilder.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-telescope/telescope.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "nvim-lua/plenary.nvim"
+merged = false
+
+[[custom_plugins]]
+name = "windwp/nvim-spectre"
+merged = false
+
+[[custom_plugins]]
+name = "voldikss/vim-floaterm"
+merged = false

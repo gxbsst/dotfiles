@@ -42,6 +42,7 @@ for space in "${space_vim[@]}"; do
   ln -s $HOME/dotfiles/$space $HOME/.SpaceVim/$space
 done
 
+
 # SpaceVim="$HOME/dotfiles/SpaceVim/*"
 # TargetSpaceVim="$HOME/.SpaceVim"
 # for space in $SpaceVim
