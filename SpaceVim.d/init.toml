@@ -88,3 +88,7 @@ merged = false
 [[custom_plugins]]
 name = "voldikss/vim-floaterm"
 merged = false
+
+[[custom_plugins]]
+name = "mkarmona/materialbox"
+merged = false
