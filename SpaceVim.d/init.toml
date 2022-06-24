@@ -1,99 +1,33 @@
 #=============================================================================
 # dark_powered.toml --- dark powered configuration example for SpaceVim
-# Copyright (c) 2016-2017 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg at 163.com >
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
 # URL: https://spacevim.org
 # License: GPLv3
 #=============================================================================
 
 # All SpaceVim option below [option] section
 [options]
-#bootstrap_before = 'myspacevim#before'
-bootstrap_after = 'myspacevim#after'
-# set spacevim theme. by default colorscheme layer is not loaded,
-# if you want to use more colorscheme, please load the colorscheme
-# layer
-# colorscheme = "desert"
-#colorscheme="material"
-#colorscheme="gruvbox"
-#colorscheme="molokai"
-#colorscheme="nord"
-#colorscheme="dracula"
-#colorscheme="palenight"
-#colorscheme="atom-dark"
-#colorscheme="OceanicNext"
-#colorscheme="NeoSolarized"
-#colorscheme="onedark"
-#colorscheme="neodark"
-#colorscheme="one"
-#colorscheme="gruvbox-material"
-#colorscheme="dracula"
-colorscheme_bg = "dark"
-#colorscheme_bg = "light"
-#colorscheme="PaperColor"
-colorscheme="carbon"
-# Disable guicolors in basic mode, many terminal do not support 24bit
-# true colors
-enable_guicolors = true
-# Disable statusline separator, if you want to use other value, please
-# install nerd fonts
-statusline_separator = "arrow"
-statusline_inactive_separator = "arrow"
-buffer_index_type = 3
-enable_tabline_filetype_icon = true
-enable_statusline_mode = true
-filetree_direction = "left"
-#guifont="Fira Code:h12"
-filemanager = "nerdtree"
-#autocomplete_method = "coc"
-autocomplete_method = "deoplete"
-#snippet_engine = "ultisnips"
+    bootstrap_after = 'myspacevim#after'
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    autocomplete_method = "coc"
+    snippet_engine = "ultisnips"
 
-enabled_formater=["remark", "prettier"]
-lint_engine="ale"
-# lint_engine="syntastic"
-
-enable_neomake = true
-# enable_ale = true
-#lint_on_the_fly = true
-#enable_vimfiler_gitstatus = true
-disabled_plugins = ["vim-signify"]
-# left sections of statusline
-statusline_left_sections = [
-  'winnr',
-  #'major mode',
-  'filename',
-  #'fileformat',
-  #'minor mode lighters',
-  #'search status'
-]
-# right sections of statusline
-statusline_right_sections = [
-  'cursorpos',
-  'percentage',
-  'input method',
-  'battery status',
-  'version control info',
-#'date',
-#  'time'
-]
 # Enable autocomplete layer
-[[layers]]
-  name = "core#statusline"
-
-[[layers]]
- name = 'autocomplete'
- auto-completion-return-key-behavior = "complete"
- auto-completion-tab-key-behavior = "smart"
-# auto_completion_return_key_behavior = "nil"
-# auto_completion_delay = 200
-# auto_completion_complete_with_key_sequence = "nil"
-# auto_completion_complete_with_key_sequence_delay = 0.1
-#auto_completion_enable_snippets_in_popup = true
-
- [[layers]]
-  name = "checkers"
-  lint_on_the_fly = true
 
 [[layers]]
 name = 'shell'
@@ -101,282 +35,31 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
-name = "git"
-#git-plugin='fugitive'
-git-plugin='fugitive'
+  name = "lang#typescript"
 
 [[layers]]
-name = "VersionControl"
+  name = "lang#javascript"
 
 [[layers]]
-name = 'gugitive'
+  name = "lang#rust"
 
 [[layers]]
-name="colorscheme"
+  name = "lang#html"
 
 [[layers]]
-name = "tools"
+  name = "ctrlp"
 
 [[layers]]
-name = "lang#typescript"
+  name = "git"
 
 [[layers]]
-name = "lang#javascript"
+  name = "fzf"
 
 [[layers]]
-name = "lang#html"
-#user_emmet_leader_key = "<C-e>"
+  name = "debug"
 
 [[layers]]
-name = "lang#sh"
-#user_emmet_leader_key = "<C-e>"
-
-[[layers]]
-name = "format"
-
-[[layers]]
-name = "test"
-
-[[layers]]
-name = 'lsp'
-enabled_clients = ['vimls', 'clangd']
-filetypes = [
-  'sh',
-  'typescript',
-  'javascript',
-  'css',
-  'vue',
-  'html'
-]
-[layers.override_cmd]
-c = ['ccls', '--log-file=/tmp/ccls.log']
-cpp = ['ccls', '--log-file=/tmp/ccls.log']
-
-
-[[layers]]
-name = "tmux"
-
-[[layers]]
-name = 'core'
-filetree_show_hidden = true
-
-[[layers]]
-name = "incsearch"
-
-[[layers]]
-name = "edit"
-
-[[layers]]
-name = "denite"
-
-[[layers]]
-name = "ctrlp"
-
-[[layers]]
-name = "tags"
-
-[[layers]]
-name = "gtags"
-gtagslabel = "pygments"
-
-[[layers]]
-name = "lang#toml"
-
-# [[layers]]
-#name = "ctrlspace"
-
-[[custom_plugins]]
-repo = "chemzqm/wxapp.vim"
-merged = false
-
-[[custom_plugins]]
-repo = "mhartington/oceanic-next"
-merged = false
-#
-# [[custom_plugins]]
-# repo ="sukima/vim-javascript-imports"
-# merged = false
-#
-# [[custom_plugins]]
-# repo ="yardnsm/vim-import-cost"
-# merged = false
-#
-[[custom_plugins]]
-repo="mhinz/vim-signify"
-merged = false
-
-[[custom_plugins]]
-repo="gosukiwi/vim-atom-dark"
-merged = false
-
-[[custom_plugins]]
-repo="dracula/dracula-theme"
-merged = false
-
-[[custom_plugins]]
-repo="arcticicestudio/nord-vim"
-merged = false
-
-[[custom_plugins]]
-name = "tpope/vim-vinegar"
-merged = false
-
-[[custom_plugins]]
-name = "mhartington/oceanic-next"
-merged = false
-
-[[custom_plugins]]
-name = "fenetikm/falcon"
-merged = false
-
-[[custom_plugins]]
-name = "airblade/vim-gitgutter"
-merged = false
-
-[[custom_plugins]]
-name = "jsfaint/coc-neoinclude"
-merged = false
-
-[[custom_plugins]]
-name = "neoclide/coc-sources"
-merged = false
-
-[[custom_plugins]]
-name = "tpope/vim-obsession"
-merged = false
-
-# [[custom_plugins]]
-# name = "tpope/vim-projectionist"
-# merged = false
-
-
-[[custom_plugins]]
-name = "ryanoasis/vim-devicons"
-merged = false
-
-[[custom_plugins]]
-name = "honza/vim-snippets"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-lua/plenary.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope-symbols.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope-fzf-native.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope-frecency.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope-project.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope-file-browser.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "windwp/nvim-spectre"
-merged = false
-
-[[custom_plugins]]
-name = "ghifarit53/tokyonight-vim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-treesitter/nvim-treesitter"
-merged = false
-
-[[custom_plugins]]
-name = "ray-x/lsp_signature.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "neovim/nvim-lspconfig"
-merged = false
-
-[[custom_plugins]]
-name = "williamboman/nvim-lsp-installer"
-merged = false
-
-[[custom_plugins]]
-name = "voldikss/vim-floaterm"
-merged = false
-
-
-[[custom_plugins]]
-name = "kyazdani42/nvim-web-devicons"
-merged = false
-
-[[custom_plugins]]
-name = "kyazdani42/nvim-tree.lua"
-merged = false
-
-
-# [[custom_plugins]]
-# name = "prabirshrestha/vim-lsp"
-# merged = false
-
-[[custom_plugins]]
-name = "heavenshell/vim-jsdoc"
-merged = false
-for = ['javascript', 'javascript.jsx','typescript']
-do = 'make install'
-
-[[custom_plugins]]
-name = "nvim-lua/plenary.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "nvim-telescope/telescope.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "itchyny/vim-cursorword"
-merged = false
-
-[[custom_plugins]]
-name = "gelguy/wilder.nvim"
-merged = false
-
-[[custom_plugins]]
-name = "voldikss/vim-floaterm"
-merged = false
-
-
-[[custom_plugins]]
-name = "zivyangll/git-blame.vim"
-merged = false
-
-
-[[custom_plugins]]
-name = "nvim-pack/nvim-spectre"
-merged = false
-
-
-[[custom_plugins]]
-name = "yardnsm/vim-import-cost"
-merged = false
-
-[[custom_plugins]]
-name = "ryanoasis/vim-devicons"
-merged = false
-
-
-[[custom_plugins]]
-name = "lukas-reineke/indent-blankline.nvim"
-merged = false
+  name = "treesitter"
 
 [[custom_plugins]]
 name = "michaeldyrynda/carbon"
