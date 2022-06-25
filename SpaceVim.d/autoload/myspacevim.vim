@@ -2,6 +2,9 @@ function! myspacevim#after() abort
 
   let g:indent_blankline_char = ' '
 
+  nmap <silent> gd <Plug>(coc-definition)
+
+
   if has('nvim')
     inoremap <silent><expr> <c-space> coc#refresh()
   else
