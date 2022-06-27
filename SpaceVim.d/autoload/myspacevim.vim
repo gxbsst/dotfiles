@@ -40,6 +40,7 @@ nnoremap <leader>n <cmd>FloatermNew<cr>
 nnoremap <leader>f1 <cmd>Telescope find_files<cr>
 nnoremap <leader>ff <cmd>Telescope git_files<cr>
 nnoremap <leader>fg <cmd>Telescope git_status<cr>
+nnoremap <leader>ft <cmd>Telescope treesitter<cr>
 "nnoremap <leader>fG <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>

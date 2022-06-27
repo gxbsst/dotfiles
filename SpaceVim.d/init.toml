@@ -61,12 +61,8 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
-[[layers]]
-  name = "lang#typescript"
-
-[[layers]]
-  name = "lang#javascript"
-
+# [[layers]]
+  # name = "lang#typescript"
 [[layers]]
   name = "lang#rust"
 
@@ -93,6 +89,10 @@ default_height = 30
 # [[layers]]
   # name = "lsp"
 #
+
+[[layers]]
+    name = "incsearch"
+
 [[custom_plugins]]
 name = "michaeldyrynda/carbon"
 merged = false
