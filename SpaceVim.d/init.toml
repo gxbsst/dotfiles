@@ -27,6 +27,33 @@
     autocomplete_method = "coc"
     snippet_engine = "ultisnips"
 
+# enabled_formater=["remark", "prettier"]
+# lint_engine="ale"
+# lint_engine="syntastic"
+
+# enable_neomake = true
+# enable_ale = true
+#lint_on_the_fly = true
+#enable_vimfiler_gitstatus = true
+#disabled_plugins = ["vim-signify"]
+# left sections of statusline
+statusline_left_sections = [
+  'winnr',
+  #'major mode',
+  'filename',
+  #'fileformat',
+  #'minor mode lighters',
+  #'search status'
+]
+# right sections of statusline
+statusline_right_sections = [
+  'cursorpos',
+  'percentage',
+  'input method',
+  'version control info',
+#'date',
+#  'time'
+]
 # Enable autocomplete layer
 
 [[layers]]
@@ -61,6 +88,8 @@ default_height = 30
 [[layers]]
   name = "treesitter"
 
+[[layers]]
+  name = "VersionControl"
 # [[layers]]
   # name = "lsp"
 #
