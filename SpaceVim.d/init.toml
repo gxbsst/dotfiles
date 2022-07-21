@@ -1,24 +1,9 @@
-#=============================================================================
-# dark_powered.toml --- dark powered configuration example for SpaceVim
-# Copyright (c) 2016-2022 Wang Shidong & Contributors
-# Author: Wang Shidong < wsdjeg@outlook.com >
-# URL: https://spacevim.org
-# License: GPLv3
-#=============================================================================
-
-# All SpaceVim option below [option] section
 [options]
     bootstrap_after = 'myspacevim#after'
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
     colorscheme = "gruvbox"
+    #colorscheme = "carbon"
     colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
     enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
     statusline_separator = "arrow"
     statusline_iseparator = "arrow"
     buffer_index_type = 4
@@ -77,6 +62,7 @@ default_height = 30
 
 [[layers]]
   name = "git"
+  git_plugin = 'fugitive'
 
 [[layers]]
   name = "fzf"
@@ -111,6 +97,20 @@ merged = false
 [[custom_plugins]]
 name = "nvim-telescope/telescope.nvim"
 merged = false
+# nnoremap <leader>fG <cmd>Telescope live_grep<cr>
+hook_add = '''
+  nnoremap <leader>f1 <cmd>Telescope find_files<cr>
+  nnoremap <leader>ff <cmd>Telescope git_files<cr>
+  nnoremap <leader>fg <cmd>Telescope git_status<cr>
+  nnoremap <leader>ft <cmd>Telescope treesitter<cr>
+  nnoremap <leader>fb <cmd>Telescope buffers<cr>
+  nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+  nnoremap <leader>f1 <cmd>lua require('telescope.builtin').find_files()<cr>
+  nnoremap <leader>ff <cmd>lua require('telescope.builtin').git_files()<cr>
+  nnoremap <leader>fg <cmd>lua require('telescope.builtin').git_status()<cr>
+  nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+  nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+'''
 
 [[custom_plugins]]
 name = "nvim-lua/plenary.nvim"
@@ -119,6 +119,13 @@ merged = false
 [[custom_plugins]]
 name = "windwp/nvim-spectre"
 merged = false
+hook_add = '''
+
+  nnoremap <leader>S :lua require('spectre').open()<CR>
+  nnoremap <leader>sw :lua require('spectre').open_visual({select_word=true})<CR>
+  vnoremap <leader>s :lua require('spectre').open_visual()<CR>
+  nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
+'''
 
 [[custom_plugins]]
 name = "voldikss/vim-floaterm"
@@ -127,3 +134,25 @@ merged = false
 [[custom_plugins]]
 name = "mkarmona/materialbox"
 merged = false
+
+# [[custom_plugins]]
+ # name = 'lewis6991/gitsigns.nvim'
+  # merged = false
+  # hook_add = '''
+  # lua << EOF
+  # require('gitsigns').setup({})
+# EOF
+# '''
+
+[[custom_plugins]]
+name = "sindrets/diffview.nvim"
+merged = false
+hook_add = '''
+  nnoremap <leader>d :DiffviewOpen -uno<cr>
+'''
+
+[[custom_plugins]]
+name = "mhartington/nvim-typescript"
+merged = false
+for = ['javascript', 'javascript.jsx','typescript']
+do = './install.sh'

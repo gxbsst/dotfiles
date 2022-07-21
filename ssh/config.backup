@@ -1,0 +1,386 @@
+Host yp-vpn
+HostName 180.168.249.219
+User root
+Port 22
+
+Host jh_web7
+HostName 122.226.213.7
+User root
+Port 22222
+
+Host jh_web6
+HostName 122.226.213.6
+User root
+Port 22222
+
+Host jh_web5
+HostName 114.80.201.197
+User root
+Port 22222
+
+Host windows
+HostName 114.80.201.196
+User weston
+Port 22222
+
+Host jh_web4
+HostName 122.226.213.4
+User root
+Port 22222
+
+
+Host sidways
+HostName sidways.com
+User sidways
+Port 22
+
+Host sidways.local
+HostName 192.168.11.3
+User sidways
+Port 22
+
+Host jh_web3
+#HostName 122.226.213.3
+HostName 114.80.201.198
+User root
+Port 22222
+
+Host jh_web #虚拟机
+HostName 122.226.213.2
+User root
+Port 22222
+
+Host centos #虚拟机
+HostName 172.16.232.131
+User root
+Port 22
+
+Host server1 #东道1 centos
+HostName 60.191.239.179
+User root
+Port 22
+
+Host sh_svn
+HostName 114.80.201.198
+User weston
+Port 22222
+
+Host sh
+HostName 114.80.201.14
+User root
+Port 22222
+
+Host prealpha
+HostName prealpha.red.com
+User deploy
+Port 22222
+
+Host cn
+HostName 114.80.96.135
+User root
+Port 22
+
+Host linode
+HostName 74.207.249.169
+User root
+Port 22
+
+Host flowerby
+HostName www2.flowerby.com
+User admin
+Port 22
+
+Host life
+HostName 192.168.1.200
+User weston
+Port 22
+
+Host live
+HostName 72.32.43.176
+User root
+Port 22222
+
+Host hk
+#HostName 202.67.211.51
+HostName 180.150.137.226
+User weston
+Port 22222
+
+Host baiselife
+HostName weixuhong.com
+User weston
+Port 22
+
+
+Host baizhang
+HostName baiselife.com
+User zephyrzhang
+Port 22
+
+Host flowerby
+HostName 211.151.248.20
+User root
+Port 22
+
+Host baiselife.com
+HostName baiselife.com
+User weston
+Port 22
+
+Host live_source
+HostName source.red.com
+User weston
+Port 22222
+
+Host debian
+HostName 172.16.127.132
+User weston
+Port 22
+
+Host china
+HostName chinaspringmachine.com
+User chinaspr
+Port 22
+
+Host github.com
+HostName github.com
+User gxbsst
+Port 22
+
+
+Host rico
+HostName 114.80.201.37
+User root
+Port 22
+
+#Zephyr@dreamhost
+Host zephyr
+HostName vinblog.com
+User zephyrzhang
+Port 22
+#password:zhangsheng
+#ssh zephyrzhang@weixuhong.com -p zhangsheng
+
+
+
+Host virgo
+HostName virgo
+User weston
+Port 22
+
+Host leo
+HostName leo
+User weston
+Port 22
+
+Host rails
+HostName 192.168.11.31
+User rails
+Port 22
+
+Host cooper
+HostName www.coopertire.com.cn
+User rails
+Port 20248
+
+Host iwine
+HostName 222.73.181.116
+User iwine
+Port 20248
+
+
+Host vagrant
+  HostName 127.0.0.1
+  User vagrant
+  Port 2200
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/weston/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+
+
+Host weston
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/weston/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+
+# Sidways
+Host taurus
+ HostName 192.168.11.32
+ User root
+ Port 22
+
+Host cancer
+ HostName 114.80.203.161
+ User root
+ Port 20248
+
+Host aries
+ HostName 192.168.11.31
+ User root
+ Port 22
+
+Host mail
+ HostName 192.168.11.43
+ User root
+ Port 22
+
+Host vpn
+ HostName vpn.leap4.net
+ User root
+ Port 22
+
+Host leap
+ HostName 199.68.199.216
+ User root
+ Port 22
+
+Host deployer
+ HostName 199.68.199.216
+ User deployer
+ Port 22
+
+Host wxh
+ HostName 198.211.108.210
+ User root
+ Port 22
+
+Host wine100
+ HostName 199.68.197.213
+ User root
+ Port 22
+
+Host sea
+ HostName sg19.seabig.cn
+ User root
+ Port 22
+
+Host rongyi
+ HostName project.rongyi.com
+ User hg
+ Port 155
+
+Host release
+ HostName 124.202.141.247
+ User root
+ Port 22
+
+# 放录入系统及考试系统
+Host wine100-2
+HostName 114.215.170.112
+User root
+Port 22
+
+Host wine100-2-deployer
+HostName 114.215.170.112
+User deployer
+Port 22
+
+Host mooc
+HostName 172.172.172.199
+User root
+Port 22
+
+Host mooc-rel
+HostName 10.10.31.103
+User root
+Port 22
+
+Host mooc-pro
+HostName 10.10.31.104
+User root
+Port 22
+
+Host service
+HostName 172.172.172.120
+User root
+Port 22
+# password: 123@edutec
+
+#Host *
+#Port 22
+
+Host pbl1
+HostName 10.10.31.109
+User root
+Port 22
+
+Host pbl2
+HostName 10.10.31.110
+User root
+Port 22
+
+Host pbl3
+HostName 10.10.31.111
+User root
+Port 22
+
+Host pbl4
+HostName 10.10.31.112
+User root
+Port 22
+
+Host base
+HostName 10.10.31.19
+User root
+Port 22
+
+Host mj_local
+HostName 192.168.2.191
+User root
+Port 22
+
+Host uos
+HostName 10.0.177.9
+User gxbsst
+Port 22
+
+Host mingzhu
+HostName 47.75.52.209
+User compass
+Port 22
+
+Host fae
+HostName 10.0.165.68
+User radmin
+Port 22
+
+Host efence
+HostName 106.15.228.86
+User root
+Port 22
+
+Host hk-mz
+HostName 47.244.55.194
+User radmin
+Port 22
+
+Host me
+HostName 172.105.208.6
+User root
+Port 22
+
+Host fe
+HostName 139.196.223.214
+User root
+Port 22
+
+Host 192.168.33.10
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/weston/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host git.ionicjs.com
+    IdentityFile /Users/weston/.ssh/ionic/2993
