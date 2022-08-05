@@ -1,6 +1,9 @@
-[user]
-	name = 韦旭红
-	email = weixuhong@shouqianba.com
+[includeIf "gitdir:~/Projects/WOSAI/"]
+  path = ~/dotfiles/gitconfig-work
+
+[includeIf "gitdir:~/Projects/Me/"]
+  path = ~/dotfiles/gitconfig-personal
+
 [pull]
 	rebase = false
 
