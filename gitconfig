@@ -1,3 +1,6 @@
+[user]
+  name = Weston Wei
+  email = gxbsst@gmail.com
 [includeIf "gitdir:~/Projects/WOSAI/"]
   path = ~/dotfiles/gitconfig-work
 
