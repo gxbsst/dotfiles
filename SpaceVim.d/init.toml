@@ -46,8 +46,8 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
- [[layers]]
-  name = "lang#typescript"
+# [[layers]]
+#name = "lang#typescript"
 
  [[layers]]
   name = "lang#javascript"
@@ -151,8 +151,8 @@ hook_add = '''
   nnoremap <leader>d :DiffviewOpen -uno<cr>
 '''
 
-[[custom_plugins]]
-name = "mhartington/nvim-typescript"
-merged = false
-for = ['javascript', 'javascript.jsx','typescript']
-do = './install.sh'
+#[[custom_plugins]]
+#name = "mhartington/nvim-typescript"
+#merged = false
+#for = ['javascript', 'javascript.jsx','typescript']
+#do = './install.sh'
