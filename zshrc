@@ -249,6 +249,7 @@ export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/Applications/wechatwebdevtools.app/Contents/MacOS/:$PATH"
 alias python2="/usr/local/bin/python"
+alias k9s="$HOME/dotfiles/k9s"
 export VISUAL="$EDITOR"
 
 export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
