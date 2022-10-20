@@ -136,6 +136,7 @@ noremap <Leader>M :action Git.Merge<CR>
 " git commit
 noremap <Leader>k :action CheckinProject<CR>
 noremap <Leader>H :action VcsSelectionHistoryDialog.Popup<CR>
+noremap <A-C-M>s :action ChangesView.Shelve<CR>
 " SEARCH
 noremap <C-p> :action SearchEverywhere<CR>
 noremap <Leader><Tab> :action Switcher<CR>
