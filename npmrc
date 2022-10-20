@@ -8,7 +8,7 @@ puppeteer_download_host=https://npm.taobao.org/mirrors
 python=/Users/weston/.pyenv/versions/2.7.18/bin/python2
 phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
 @wosai:registry=https://registry-npm.wosai-inc.com/
-@sqb:registry=https://registry-npm.wosai-inc.com/
+@sqb:registry=https://jfrog.wosai-inc.com/artifactory/api/npm/npm-virtual-dev
 disturl=https://npm.taobao.org/dist
 chromedriver-cdnurl=https://npm.taobao.org/mirrors/chromedriver
 couchbase-binary-host-mirror=https://npm.taobao.org/mirrors/couchbase/v{version}
@@ -43,6 +43,5 @@ zmq-prebuilt-binary-host-mirror=https://npm.taobao.org/mirrors/zmq-prebuilt/v{ve
 //registry-npm.wosai-inc.com/:_password="d3hoNTE0NDg4ODg="
 //registry-npm.wosai-inc.com/:email=weixuhong@shouqianba.com
 //registry-npm.wosai-inc.com/:always-auth=false
-registry=https://registry.npmmirror.com
-@sqb:registry=https://jfrog.wosai-inc.com/artifactory/api/npm/npm-virtual-dev
-
+registry=https://registry.npmmirror.com/
+init-author-name=Weston Wei
