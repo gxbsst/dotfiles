@@ -26,3 +26,7 @@
 	; proxy = socks5://127.0.0.1:1086
 [core]
 	autocrlf = input
+[safe]
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-services
