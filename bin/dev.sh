@@ -20,3 +20,7 @@ if [ "$project" = "jjz" ];then
     sh "$dir/scripts/devNextWx.sh"
   fi
 fi
+# 打开IDE
+if [ "$project" = "auto" ];then
+   cli auto --auto-port=9420 --project="$dir/weapp"
+fi
