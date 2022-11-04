@@ -262,3 +262,6 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 # 显示项目link 的npm包
 alias llp="sh $DOTFILES/bin/list_yarn_links.sh"
 alias dev="sh $DOTFILES/bin/dev.sh"
+alias ls='exa --git --icons --color=always --group-directories-first'
+
+source /Users/weston/.config/broot/launcher/bash/br
