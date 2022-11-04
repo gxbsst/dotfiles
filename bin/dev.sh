@@ -5,18 +5,20 @@ platform=$2
 echo "$project"
 if [ "$project" = "core" ];then
   if [ "$platform" = "my" ];then
-    echo "wx"
-    sh "$dir/script/devMy.sh"
+    echo "开始编译支付宝..."
+    sh "$dir/script/devMy.sh" 
   else
-    echo "my"
+    echo "开始编译微信..."
     sh "$dir/script/devWx.sh"
   fi
 fi
 
 if [ "$project" = "jjz" ];then
   if [ "$platform" = "my" ];then
+    echo "开始编译支付宝..."
     sh "$dir/scripts/devNextMy.sh"
   else
+    echo "开始编译微信..."
     sh "$dir/scripts/devNextWx.sh"
   fi
 fi
