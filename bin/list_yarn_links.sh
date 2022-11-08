@@ -8,7 +8,7 @@ do
   esac
 done
 
-if [ -z "$path"]
+if [ -z "$path" ]
 then
 echo "$path"
 (ls -l $path;ls -l $path/@*) | grep ^l
