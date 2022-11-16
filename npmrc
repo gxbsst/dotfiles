@@ -45,4 +45,5 @@ zmq-prebuilt-binary-host-mirror=https://npm.taobao.org/mirrors/zmq-prebuilt/v{ve
 //registry-npm.wosai-inc.com/:email=weixuhong@shouqianba.com
 //registry-npm.wosai-inc.com/:always-auth=false
 registry=https://registry.npmmirror.com/
+@sqb:registry=https://jfrog.wosai-inc.com/artifactory/api/npm/npm-virtual-dev/
 init-author-name=Weston Wei
