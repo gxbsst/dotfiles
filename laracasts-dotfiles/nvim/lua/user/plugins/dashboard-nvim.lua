@@ -15,9 +15,11 @@ dashboard.custom_center = {
   { icon = '  ', shortcut = 'SPC f', desc = 'Find file                 ', action = 'Telescope find_files' },
   { icon = '  ', shortcut = 'SPC h', desc = 'Recent files              ', action = 'Telescope oldfiles' },
   { icon = '  ', shortcut = 'SPC g', desc = 'Find Word                 ', action = 'Telescope live_grep' },
+  { icon = '  ', shortcut = 'SPC gs', desc = 'Git Status                ', action = 'Telescope git_status' },
 }
 
-dashboard.custom_footer = { '' }
+dashboard.custom_footer = { 'SQB SMART' }
+
 
 vim.api.nvim_set_hl(0, 'DashboardHeader', { fg = '#6272a4' })
 vim.api.nvim_set_hl(0, 'DashboardCenter', { fg = '#f8f8f2' })
