@@ -25,7 +25,7 @@ for dotfile in "${dotfiles[@]}"; do
 done
 
 # 需要软链的.config下文件夹
-configs=("kitty")
+configs=("kitty" "tmuxinator" )
 for config in "${configs[@]}"; do
   if [[ -e "$HOME/.config/$config" ]]; then
     rm -rvf $HOME/.config/$config
