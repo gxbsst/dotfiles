@@ -1,0 +1,24 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: emenu
+root: ~/Projects/WOSAI/FRONTEND/
+
+windows:
+  - compile:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+       - core:
+         - cd emenu-mini-core
+         - yarn dev:components:wx:all
+       - jjz:
+         - cd forever-discount-mp
+         - dev jjz
+       - auto:
+         - cd forever-discount-mp
+         - dev auto
+  - emenu-mini-core:
+     - cd emenu-mini-core
+     - v
+  - forever-discount-mp:
+    - cd forever-discount-mp
+    - v

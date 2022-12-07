@@ -56,7 +56,11 @@ if [ "$project" = "jjz" ];then
 fi
 # 打开IDE
 if [ "$project" = "auto" ];then
+  if [[ "$platform" = "sqb" ]]; then
+   cli auto --auto-port=9420 --project="$dir"
+  else 
    cli auto --auto-port=9420 --project="$dir/weapp"
+  fi
 fi
 
 

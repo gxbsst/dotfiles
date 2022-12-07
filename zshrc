@@ -1,6 +1,6 @@
-export DOTFILES="$HOME/dotfiles"
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+export DOTFILES="$HOME/dotfiles"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -256,12 +256,12 @@ export VISUAL="$EDITOR"
 export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # 显示项目link 的npm包
 alias llp="sh $DOTFILES/bin/list_yarn_links.sh"
 alias dev="sh $DOTFILES/bin/dev.sh"
 alias ls='exa --git --icons --color=always --group-directories-first'
 
 #source /Users/weston/.config/broot/launcher/bash/br
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
