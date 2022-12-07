@@ -12,9 +12,10 @@ dashboard.custom_header = {
 
 dashboard.custom_center = {
   { icon = '  ', desc = 'New file                       ', action = 'enew' },
-  { icon = '  ', shortcut = 'SPC f', desc = 'Find file                 ', action = 'Telescope find_files' },
-  { icon = '  ', shortcut = 'SPC h', desc = 'Recent files              ', action = 'Telescope oldfiles' },
-  { icon = '  ', shortcut = 'SPC g', desc = 'Find Word                 ', action = 'Telescope live_grep' },
+  { icon = '  ', shortcut = 'SPC km', desc = 'Keymaps                ', action = 'Telescope keymaps' },
+  { icon = '  ', shortcut = 'CTRL+p', desc = 'Find file                 ', action = 'Telescope find_files' },
+  { icon = '  ', shortcut = 'CTRL+e', desc = 'Recent files              ', action = 'Telescope oldfiles' },
+  { icon = '  ', shortcut = 'CTRL+g', desc = 'Find Word                 ', action = 'Telescope live_grep' },
   { icon = '  ', shortcut = 'SPC gs', desc = 'Git Status                ', action = 'Telescope git_status' },
 }
 
