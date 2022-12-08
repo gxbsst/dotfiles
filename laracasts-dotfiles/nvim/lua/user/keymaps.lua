@@ -15,7 +15,8 @@ vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('v', 'y', 'myy`y')
 
 -- Disable annoying command line typo.
-vim.keymap.set('n', 'q:', ':q')
+-- vim.keymap.set('n', 'q:', ':q')
+vim.keymap.set('n', 'q', ':q<CR>')
 
 -- Paste replace visual selection without copying it.
 vim.keymap.set('v', 'p', '"_dP')
