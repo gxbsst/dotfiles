@@ -43,7 +43,16 @@ require('null-ls').setup({
         return utils.root_has_file({ '.eslintrc.js' })
       end,
     }),
+    require('null-ls').builtins.diagnostics.cspell,
     require('null-ls').builtins.formatting.prettier,
+    require('null-ls').builtins.code_actions.cspell,
+    require('null-ls').builtins.code_actions.eslint,
+    require('null-ls').builtins.code_actions.gitrebase,
+    require('null-ls').builtins.code_actions.gitsigns,
+    require('null-ls').builtins.code_actions.proselint,
+    require('null-ls').builtins.code_actions.refactoring,
+    require('null-ls').builtins.code_actions.shellcheck,
+    require('null-ls').builtins.code_actions.xo,
   },
 })
 
@@ -58,6 +67,8 @@ vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+
+vim.keymap.set('v', ',,', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 
 -- Commands
 vim.api.nvim_create_user_command('Format', vim.lsp.buf.formatting, {})
