@@ -6,8 +6,6 @@ tarojs
 lodash
 miniprogr
 miniprogram
-config
-conventionalCommits
 allowBranch
 ignoreChanges
 emenu
@@ -22,3 +20,14 @@ getMiniProgramConfig
 cartData
 loadCart
 serviceType
+ci
+wx
+traceId
+booktime
+paytype
+phoneNumber
+cartData
+utils
+emenu
+wosai
+处理麦当劳sticky有空隙
