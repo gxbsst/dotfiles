@@ -47,6 +47,15 @@ cmp.setup({
     { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'path' },
+    {
+      name = 'spell',
+      option = {
+        keep_all_entries = true,
+        enable_in_context = function()
+          return true
+        end,
+      },
+    },
   },
   experimental = {
     ghost_text = true,

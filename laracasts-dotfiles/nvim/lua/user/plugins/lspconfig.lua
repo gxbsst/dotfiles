@@ -53,6 +53,7 @@ require('null-ls').setup({
     require('null-ls').builtins.code_actions.refactoring,
     require('null-ls').builtins.code_actions.shellcheck,
     require('null-ls').builtins.code_actions.xo,
+    require('null-ls').builtins.hover.dictionary,
   },
 })
 
