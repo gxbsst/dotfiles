@@ -66,7 +66,7 @@ vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
-vim.keymap.set('n', 'I', '<cmd>lua vim.lsp.buf.hover()<CR>')
+vim.keymap.set('n', '<C-i>', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 vim.keymap.set('n', ',r', '<cmd>lua vim.lsp.buf.code_action()<CR>')
