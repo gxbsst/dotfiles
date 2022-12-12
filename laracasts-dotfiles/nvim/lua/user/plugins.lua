@@ -317,8 +317,12 @@ use({
   end,
 })
 
+-- find and replace
 use({
   'nvim-pack/nvim-spectre',
+  config = function()
+
+  end
 })
 
 -- Prettier
@@ -381,6 +385,21 @@ use {
         {"nvim-treesitter/nvim-treesitter"}
     }
 }
+
+use {
+  'gelguy/wilder.nvim',
+  config = function()
+    local wilder = require('wilder')
+    wilder.setup({modes = {':', '/', '?'}})
+    -- config goes here
+    wilder.set_option('renderer', wilder.popupmenu_renderer({
+          -- highlighter applies highlighting to the candidates
+          highlighter = wilder.basic_highlighter(),
+      }))
+  end,
+}
+
+use('chemzqm/wxapp.vim')
 
 
 -- Automatically set up your configuration after cloning packer.nvim

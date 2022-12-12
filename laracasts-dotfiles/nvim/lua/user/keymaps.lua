@@ -12,7 +12,7 @@ vim.keymap.set('v', '>', '>gv')
 
 -- Maintain the cursor position when yanking a visual selection.
 -- http://ddrscott.github.io/blog/2016/yank-without-jank/
-vim.keymap.set('v', 'y', 'myy`y')
+  vim.keymap.set('v', 'y', 'myy`y')
 
 -- Disable annoying command line typo.
 -- vim.keymap.set('n', 'q:', ':q')
@@ -47,3 +47,8 @@ vim.keymap.set('n', ',tf', ":set foldcolumn=1<CR>")
 vim.keymap.set('n', '<C-n>', ":bnext<CR>")
 vim.keymap.set('n', '<C-p>', ":bprev<CR>")
 
+-- find replace
+vim.keymap.set('n', '<leader>S', require('spectre').open, {desc = "hello"})
+-- vim.keymap.set('v', '<leader>S1', require('spectre').open_visual, {desc = "hello" })
+-- vim.keymap.set('n', '<leader>S2', require('spectre').open_visual, {desc = "hello"})
+-- vim.keymap.set('n', '<leader>S3', require('spectre').open_file_search, {desc = "hello"})
