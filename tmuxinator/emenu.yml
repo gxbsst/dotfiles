@@ -4,21 +4,42 @@ name: emenu
 root: ~/Projects/WOSAI/FRONTEND/
 
 windows:
-  - compile:
+  - buildJJZ:
       layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
       panes:
-       - core:
-         - cd emenu-mini-core
-         - yarn dev:components:wx:all
-       - jjz:
-         - cd forever-discount-mp
-         - dev jjz
-       - auto:
-         - cd forever-discount-mp
-         - dev auto
+        - core:
+          - cd emenu-mini-core
+          - rm -rvf packages/components/dist
+          - yarn dev:components:wx:all
+        - jjz:
+          - cd forever-discount-mp
+          - dev jjz
+        - auto:
+          - cd forever-discount-mp
+          - dev auto
+  - buildSQB:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - home:
+          - cd emenu-mini-core
+          - rm -rvf packages/components-home
+          - rm -rvf packages/components/dist_npm_home
+          - yarn dev:components:wx:home
+        - order:
+          - cd emenu-mini-core
+          - rm -rvf packages/components-order
+          - rm -rvf packages/components/dist_npm_order
+          - yarn dev:components:wx:order
+        - other:
+          - cd emenu-mini-core
   - emenu-mini-core:
-     - cd emenu-mini-core
-     - v
+    - cd emenu-mini-core
+    - v
   - forever-discount-mp:
     - cd forever-discount-mp
     - v
+  - sqb-qr-mini-app:
+    - echo "edit sqb mp app"
+  - git-core:
+    - cd emenu-mini-core
+    - lazygit

@@ -46,4 +46,3 @@ vim.keymap.set('n', ',tf', ":set foldcolumn=1<CR>")
 -- buffer
 vim.keymap.set('n', '<C-n>', ":bnext<CR>")
 vim.keymap.set('n', '<C-p>', ":bprev<CR>")
-
