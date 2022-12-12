@@ -114,12 +114,12 @@ use({
 })
 
 -- Add smooth scrolling to avoid jarring jumps
---use({
-  -- 'karb94/neoscroll.nvim',
-  -- config = function()
-  --  require('neoscroll').setup()
- -- end,
---})
+use({
+  'karb94/neoscroll.nvim',
+   config = function()
+    require('neoscroll').setup()
+ end,
+})
 
 -- All closing buffers without closing the split window.
 use({
@@ -401,6 +401,10 @@ use {
 
 use('chemzqm/wxapp.vim')
 
+
+-- use {'neoclide/coc.nvim', branch = 'release'}
+--
+-- use 'chemzqm/wxapp.vim'
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
