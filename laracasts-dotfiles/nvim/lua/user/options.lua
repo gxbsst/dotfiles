@@ -46,3 +46,6 @@ vim.opt.backupdir:remove('.') -- keep backups out of the current directory
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- spell
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
