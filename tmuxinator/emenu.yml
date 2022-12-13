@@ -9,7 +9,7 @@ windows:
       panes:
         - core:
             - cd emenu-mini-core
-#            - rm -rvf packages/components/dist
+            - if [ -d "packages/components/dist" ]; then rm -rvf packages/components/dist; fi
             - yarn dev:components:wx:all
         - jjz:
             - cd forever-discount-mp
@@ -18,17 +18,20 @@ windows:
             - cd forever-discount-mp
             - dev auto
   - buildSQB:
-      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      layout: ba78,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
       panes:
         - home:
             - cd emenu-mini-core
-            - rm -rvf packages/components-home
-            - rm -rvf packages/components/dist_npm_home
+            - if [ -d "packages/components-home" ]; then rm -rvf packages/components-home; fi
+            - if [ -d "packages/components/dist_npm_home" ]; then  rm -rvf packages/components/dist_npm_home; fi
+              #- -d "packages/components-home" && rm -rvf packages/components-home
+              #- -d "packages/components/dist_npm_home" && rm -rvf packages/components/dist_npm_home
             - yarn dev:components:wx:home
-        - order1:
+        - order:
             - cd emenu-mini-core
-#            - rm -rvf packages/components-home
-#            - rm -rvf packages/components/dist_npm_home
+            - cd emenu-mini-core &&  [ -d "packages/components-order" ]  && rm -rvf packages/components-order && [ -d "packages/components/dist_npm_order" ] && rm -rvf packages/components/dist_npm_order
+              #- [ -d "packages/components-order" ] && rm -rvf packages/components-order
+              #- [ -d "packages/components/dist_npm_order" ] && rm -rvf packages/components/dist_npm_order
             - yarn dev:components:wx:order
         - other:
             - cd emenu-mini-core
