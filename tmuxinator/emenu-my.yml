@@ -1,0 +1,30 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: emenu-my
+root: ~/Projects/WOSAI/FRONTEND/
+
+windows:
+  - buildJJZ:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - core:
+            - ls
+          #- cd emenu-mini-core && yarn dev:components:my:all
+              #- if [ -d "packages/components/dist" ]; then rm -rvf packages/components/dist; fi
+              #- yarn dev:components:my:all
+        - jjz:
+            - cd forever-discount-mp
+            - dev jjz my
+        - other:
+           - cd emenu-mini-core && yarn dev:components:my:all
+  - emenu-mini-core:
+    - cd emenu-mini-core
+    - v
+  - forever-discount-mp:
+    - cd forever-discount-mp
+    - v
+  - sqb-qr-mini-app:
+    - echo "edit sqb mp app"
+  - git-core:
+    - cd emenu-mini-core
+    - lazygit
