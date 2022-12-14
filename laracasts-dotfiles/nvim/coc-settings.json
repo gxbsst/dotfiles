@@ -2,6 +2,7 @@
   "cSpell.userWords": [
     "Alipay",
     "Booktime",
+    "Fiqyr",
     "Qrcode",
     "Scroller",
     "Wechat",
@@ -11,10 +12,12 @@
     "hbfq",
     "hotsale",
     "huabei",
+    "iwosai",
     "orderno",
     "paytype",
     "payway",
     "recomend",
     "weapp"
-  ]
+  ],
+  "git.enableGutters": false
 }

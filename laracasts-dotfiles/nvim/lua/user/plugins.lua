@@ -400,6 +400,7 @@ use {
 }
 
 use { 'neoclide/coc.nvim', branch = 'release' }
+use {'fannheyward/telescope-coc.nvim'}
   --
 -- use 'chemzqm/wxapp.vim'
 
