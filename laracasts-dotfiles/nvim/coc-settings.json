@@ -2,6 +2,7 @@
   "cSpell.userWords": [
     "Alipay",
     "Booktime",
+    "Checkin",
     "Fiqyr",
     "Qrcode",
     "Scroller",
@@ -17,7 +18,9 @@
     "paytype",
     "payway",
     "recomend",
-    "weapp"
+    "weapp",
+    "wxml",
+    "wxss"
   ],
   "git.enableGutters": false
 }

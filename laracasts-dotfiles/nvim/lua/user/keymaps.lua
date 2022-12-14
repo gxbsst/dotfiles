@@ -63,8 +63,8 @@ keyset("n", "<F2>", "<Plug>(coc-diagnostic-next-error)", {silent = true})
 
 local opts = {silent = true, nowait = true}
 
-keyset("x", "<leader>ca", "<Plug>(coc-codeaction-selected)", opts)
-keyset("n", "<leader>ca", "<Plug>(coc-codeaction-selected)", opts)
+-- keyset("x", "<enter>", "<Plug>(coc-codeaction-selected)", opts)
+keyset("x", "<F3>", "<Plug>(coc-codeaction-selected)", opts)
 
 keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
 keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
