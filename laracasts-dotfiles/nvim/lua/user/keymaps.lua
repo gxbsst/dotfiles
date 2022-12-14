@@ -52,3 +52,26 @@ vim.keymap.set('n', '<leader>S', require('spectre').open, {desc = "hello"})
 -- vim.keymap.set('v', '<leader>S1', require('spectre').open_visual, {desc = "hello" })
 -- vim.keymap.set('n', '<leader>S2', require('spectre').open_visual, {desc = "hello"})
 -- vim.keymap.set('n', '<leader>S3', require('spectre').open_file_search, {desc = "hello"})
+
+-- COC
+local keyset = vim.keymap.set
+local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+
+keyset("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
+keyset("n", "<F2>", "<Plug>(coc-diagnostic-prev-error)", {silent = true})
+keyset("n", "<F2>", "<Plug>(coc-diagnostic-next-error)", {silent = true})
+
+local opts = {silent = true, nowait = true}
+
+keyset("x", "<leader>ca", "<Plug>(coc-codeaction-selected)", opts)
+keyset("n", "<leader>ca", "<Plug>(coc-codeaction-selected)", opts)
+
+keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
+keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
+keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", opts)
+keyset("n", ",cre", "<Plug>(coc-codeaction-refactor)", { silent = true })
+keyset("x", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+keyset("n", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+keyset("n", ",cl", "<Plug>(coc-codelens-action)", opts)
+
+

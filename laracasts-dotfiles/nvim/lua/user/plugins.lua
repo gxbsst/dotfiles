@@ -399,11 +399,8 @@ use {
   end,
 }
 
-use('chemzqm/wxapp.vim')
-
-
--- use {'neoclide/coc.nvim', branch = 'release'}
---
+use { 'neoclide/coc.nvim', branch = 'release' }
+  --
 -- use 'chemzqm/wxapp.vim'
 
 -- Automatically set up your configuration after cloning packer.nvim

@@ -73,3 +73,12 @@ cd
 buildSQB
 buildJJZ
 miniPack
+bg
+png
+搜索
+FFFFFF
+setNavigation
+pluginCore
+sqbShowTimeStamp
+需要重置currentStoreId
+storeId

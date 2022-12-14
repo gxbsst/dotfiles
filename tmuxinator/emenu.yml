@@ -7,6 +7,9 @@ windows:
   - buildJJZ:
       layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
       panes:
+        - auto:
+            - cd forever-discount-mp
+            - dev auto
         - core:
             - cd emenu-mini-core
             - if [ -d "packages/components/dist" ]; then rm -rvf packages/components/dist; fi
@@ -14,9 +17,6 @@ windows:
         - jjz:
             - cd forever-discount-mp
             - dev jjz
-        - auto:
-            - cd forever-discount-mp
-            - dev auto
   - buildSQB:
       layout: ba78,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
       panes:
