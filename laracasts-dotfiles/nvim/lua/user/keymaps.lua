@@ -68,6 +68,7 @@ keyset("n", "<leader>ca", "<Plug>(coc-codeaction-selected)", opts)
 
 keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
 keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
+keyset("n", "<leader><TAB>", "<Plug>(coc-range-select)", opts)
 keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", opts)
 keyset("n", ",cre", "<Plug>(coc-codeaction-refactor)", { silent = true })
 keyset("x", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
