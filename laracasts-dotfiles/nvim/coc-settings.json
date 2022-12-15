@@ -10,6 +10,7 @@
     "Weixin",
     "adsense",
     "automator",
+    "dingding",
     "hbfq",
     "hotsale",
     "huabei",
@@ -17,8 +18,10 @@
     "orderno",
     "paytype",
     "payway",
+    "prepatch",
     "recomend",
     "weapp",
+    "wosai",
     "wxml",
     "wxss"
   ],

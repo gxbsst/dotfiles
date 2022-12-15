@@ -102,3 +102,8 @@ hotsale
 last30
 num
 weapp
+dingdingNotify
+ENV
+lerna
+prepatch
+wosaimg

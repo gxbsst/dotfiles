@@ -66,7 +66,7 @@ local opts = {silent = true, nowait = true}
 -- keyset("x", "<enter>", "<Plug>(coc-codeaction-selected)", opts)
 keyset("x", "<F3>", "<Plug>(coc-codeaction-selected)", opts)
 
-keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)
+keyset("n", "<F4>", "<Plug>(coc-codeaction-cursor)", opts)
 keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
 keyset("n", "<leader><TAB>", "<Plug>(coc-range-select)", opts)
 keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", opts)
