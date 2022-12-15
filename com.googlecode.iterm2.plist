@@ -5,7 +5,7 @@
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>Command</key>
-	<string>tmuxinatorstartemenu</string>
+	<string>ls</string>
 	<key>CopySelection</key>
 	<true/>
 	<key>Custom Color Presets</key>
@@ -1408,7 +1408,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmuxinator start emenu</string>
+			<string></string>
 			<key>Initial Use Transparency</key>
 			<true/>
 			<key>Jobs to Ignore</key>
