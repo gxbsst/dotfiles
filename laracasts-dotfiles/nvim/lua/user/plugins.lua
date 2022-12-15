@@ -402,7 +402,9 @@ use {
 use { 'neoclide/coc.nvim', branch = 'release' }
 use {'fannheyward/telescope-coc.nvim'}
   --
--- use 'chemzqm/wxapp.vim'
+use {'chemzqm/wxapp.vim'}
+
+use({'junegunn/vim-easy-align'})
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
