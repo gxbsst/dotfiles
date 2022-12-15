@@ -74,6 +74,7 @@ keyset("n", ",cre", "<Plug>(coc-codeaction-refactor)", { silent = true })
 keyset("x", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 keyset("n", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 keyset("n", ",cl", "<Plug>(coc-codelens-action)", opts)
+keyset("n", ",cd", "<Plug>(coc-float-jump)", opts)
 
 -- ALIGN
 keyset("x", "<leader>ta", "<Plug>(EasyAlign)", {silent = true })
