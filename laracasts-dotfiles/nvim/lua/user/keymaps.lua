@@ -76,7 +76,12 @@ keyset("n", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true }
 keyset("n", ",cl", "<Plug>(coc-codelens-action)", opts)
 keyset("n", ",cd", "<Plug>(coc-float-jump)", opts)
 
+-- TEXT
 -- ALIGN
 keyset("x", "<leader>ta", "<Plug>(EasyAlign)", {silent = true })
+-- FORMAT
+keyset("n", "<leader>tf", vim.lsp.buf.formatting, {silent = true})
+keyset("v", "<leader>tf", vim.lsp.buf.formatting, {silent = true})
+
 
 
