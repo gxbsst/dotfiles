@@ -57,7 +57,7 @@ vim.keymap.set('n', '<leader>S', require('spectre').open, {desc = "hello"})
 local keyset = vim.keymap.set
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 
-keyset("n", "]g", "<Plug>(coc-diagnostic-next)", {silent = true})
+keyset("n", "<F11>", "<Plug>(coc-diagnostic-next)", {silent = true})
 keyset("n", "<F2>", "<Plug>(coc-diagnostic-prev-error)", {silent = true})
 keyset("n", "<F2>", "<Plug>(coc-diagnostic-next-error)", {silent = true})
 
