@@ -43,6 +43,8 @@ lsp.on_attach(function(client, bufnr)
   -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set("n", "<F2>", function() vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR}) end, opts)
   vim.keymap.set("n", "<F11>", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "<F3>", function() vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("v", "<F3>", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", ",r", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("v", ",r", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
@@ -74,7 +76,6 @@ lsp.set_preferences({
 })
 
 
-
 lsp.setup()
 
 vim.diagnostic.config({
@@ -86,8 +87,8 @@ vim.diagnostic.config({
   float =  true,
 })
 -- 鼠标在错误位置时，显示错误信息
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+-- vim.o.updatetime = 250
+-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 
 

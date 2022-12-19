@@ -17,7 +17,8 @@ require('bufferline').setup({
         text_align = 'left',
       },
     },
-    separator_style = 'slant',
+    -- separator_style = 'slant',
+    -- separator_style = 'thick',
     modified_icon = '',
     custom_areas = {
       left = function()
@@ -29,24 +30,24 @@ require('bufferline').setup({
   },
   highlights = {
     fill = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
     },
     background = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
     },
     tab = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
     },
     tab_close = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
     },
     close_button = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
-      fg = { attribute = 'fg', highlight = 'StatusLineNonText' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- fg = { attribute = 'fg', highlight = 'StatusLineNonText' },
     },
     close_button_visible = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
-      fg = { attribute = 'fg', highlight = 'StatusLineNonText' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- fg = { attribute = 'fg', highlight = 'StatusLineNonText' },
     },
     close_button_selected = {
       fg = { attribute = 'fg', highlight = 'StatusLineNonText' },
@@ -54,8 +55,13 @@ require('bufferline').setup({
     buffer_visible = {
       bg = { attribute = 'bg', highlight = 'StatusLine' },
     },
+    buffer_selected = {
+      -- bg = '#FFFFFF',
+      bold = true,
+      italic = true
+    },
     modified = {
-      bg = { attribute = 'bg', highlight = 'StatusLine' },
+      -- bg = { attribute = 'bg', highlight = 'StatusLine' },
     },
     modified_visible = {
       bg = { attribute = 'bg', highlight = 'StatusLine' },

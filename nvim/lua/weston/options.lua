@@ -51,3 +51,4 @@ vim.opt.foldcolumn = "1"
 -- spell
 vim.opt.spell = true
 vim.opt.spelllang = { 'en_us' }
+vim.api.nvim_command("set noswapfile")
