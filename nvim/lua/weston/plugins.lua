@@ -1,3 +1,18 @@
+require('rose-pine').setup({
+    disable_background = true
+})
+
+function ColorMyPencils(color) 
+  color = color or "rose-pine"
+  vim.cmd.colorscheme(color)
+
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+end
+
+ColorMyPencils()
+
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -99,13 +114,33 @@ use({
       -- Snippets
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
+      -- format
+      {'MunifTanjim/prettier.nvim'}
     },
     config = function ( )
       require('weston/plugins/lsp')
     end
   }
 
-  use("folke/zen-mode.nvim")
+  use({"folke/zen-mode.nvim",
+  config = function() 
+    require("zen-mode").setup {
+    window = {
+        width = 90,
+        options = {
+            number = true,
+            relativenumber = true,
+        }
+    },
+}
+
+   vim.keymap.set("n", "<leader>zz", function()
+    require("zen-mode").toggle()
+    vim.wo.wrap = false
+    -- ColorMyPencils()
+    end)
+  end 
+})
   use("github/copilot.vim")
 
   -- File tree sidebar
@@ -123,6 +158,7 @@ use({'nvim-pack/nvim-spectre'})
 -- Display buffers as tabs.
 use({
   'akinsho/bufferline.nvim',
+   tag = "v3.*",
   -- requires = 'kyazdani42/nvim-web-devicons',
   -- after = 'onedark.nvim',
   config = function()
@@ -165,17 +201,7 @@ use({
 -- Commenting support.
 use('tpope/vim-commentary')
 
--- Spell
-use {
-  'lewis6991/spellsitter.nvim',
-  config = function()
-    require('spellsitter').setup{
-       highlight = {
-    enable = true,
-      debug = false,
-    -- additional_vim_regex_highlighting = true, -- DO NOT SET THIS
-  },
-    }
-  end
-}
+-- Navigate seamlessly between Vim windows and Tmux panes.
+use('christoomey/vim-tmux-navigator')
+
 
