@@ -114,13 +114,20 @@ use({
       -- Snippets
       {'L3MON4D3/LuaSnip'},
       {'rafamadriz/friendly-snippets'},
-      -- format
-      {'MunifTanjim/prettier.nvim'}
+
     },
     config = function ( )
       require('weston/plugins/lsp')
     end
   }
+
+ -- format
+  use({
+  'prettier/vim-prettier',
+  config = function()
+   
+  end
+})
 
   use({"folke/zen-mode.nvim",
   config = function() 
@@ -204,4 +211,17 @@ use('tpope/vim-commentary')
 -- Navigate seamlessly between Vim windows and Tmux panes.
 use('christoomey/vim-tmux-navigator')
 
-
+--- Floating terminal.
+use({
+  'voldikss/vim-floaterm',
+  config = function()
+    vim.g.floaterm_width = 0.8
+    vim.g.floaterm_height = 0.8
+    vim.keymap.set('n', '<F1>', ':FloatermToggle<CR>')
+    vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
+    vim.cmd([[
+      highlight link Floaterm CursorLine
+      highlight link FloatermBorder CursorLineBg
+    ]])
+  end
+})
