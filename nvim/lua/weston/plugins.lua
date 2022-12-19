@@ -57,11 +57,28 @@ use({
     end
   })
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
+  -- use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  -- use('nvim-treesitter/playground')
+
+  -- Improved syntax highlighting
+use({
+  'nvim-treesitter/nvim-treesitter',
+  run = function()
+    require('nvim-treesitter.install').update({ with_sync = true })
+  end,
+  requires = {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    'nvim-treesitter/playground'
+  },
+  config = function()
+    require('weston/plugins/treesitter')
+  end,
+})
+
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
-  use('tpope/vim-fugitive')
+ 
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -121,3 +138,44 @@ use({
     require('weston/plugins/lualine')
   end,
 })
+
+-- Git integration.
+
+ use({'tpope/vim-fugitive', 
+    requires = 'tpope/vim-rhubarb',
+    config = function() 
+      require('weston/plugins/fugitive')
+    end
+  })
+
+use({
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+    vim.keymap.set('n', ']h', ':Gitsigns next_hunk<CR>')
+    vim.keymap.set('n', '[h', ':Gitsigns prev_hunk<CR>')
+    vim.keymap.set('n', 'gs', ':Gitsigns stage_hunk<CR>')
+    -- vim.keymap.set('n', 'gS', ':Gitsigns undo_stage_hunk<CR>')
+    vim.keymap.set('n', 'gS', ':Gitsigns reset_hunk<CR>')
+    vim.keymap.set('n', 'gp', ':Gitsigns preview_hunk<CR>')
+    vim.keymap.set('n', 'gb', ':Gitsigns blame_line<CR>')
+  end,
+})
+
+-- Commenting support.
+use('tpope/vim-commentary')
+
+-- Spell
+use {
+  'lewis6991/spellsitter.nvim',
+  config = function()
+    require('spellsitter').setup{
+       highlight = {
+    enable = true,
+      debug = false,
+    -- additional_vim_regex_highlighting = true, -- DO NOT SET THIS
+  },
+    }
+  end
+}
+

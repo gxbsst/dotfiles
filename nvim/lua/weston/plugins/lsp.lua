@@ -29,22 +29,26 @@ lsp.set_preferences({
 })
 
 lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+  mapping = cmp_mappings,
 })
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+  vim.keymap.set("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("n", "E", function() vim.diagnostic.open_float() end, opts)
+  -- vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+  -- vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "<F2>", function() vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR}) end, opts)
+  vim.keymap.set("n", "<F11>", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", ",r", function() vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("v", ",r", function() vim.lsp.buf.code_action() end, opts)
+  vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
+  vim.keymap.set("n", "grn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  vim.api.nvim_create_user_command('Format', vim.lsp.buf.formatting, {})
 end)
 
 -- lsp.configure('pyright', {
@@ -72,12 +76,16 @@ lsp.set_preferences({
 lsp.setup()
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = true,
-  update_in_insert = false,
+  update_in_insert = true,
   underline = true,
   severity_sort = false,
-  float = true,
+  float =  true,
 })
+-- 鼠标在错误位置时，显示错误信息
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
 
 

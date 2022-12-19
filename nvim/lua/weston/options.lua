@@ -45,9 +45,9 @@ vim.opt.backup = true -- automatically save a backup file
 vim.opt.backupdir:remove('.') -- keep backups out of the current directory
 -- fold 代码折叠
 vim.opt.foldlevel = 20
-vim.opt.foldmethod = "syntax"
+vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldcolumn = "1"
 -- spell
--- vim.opt.spell = true
--- vim.opt.spelllang = { 'en_us' }
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
