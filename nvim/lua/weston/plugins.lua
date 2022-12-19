@@ -287,6 +287,10 @@ config = function()
     mode = 'foreground';
   }
 }
-
 end
 })
+
+-- TEXT Align
+use({'junegunn/vim-easy-align'})
+-- Mark
+use({'kshenoy/vim-signature'})
