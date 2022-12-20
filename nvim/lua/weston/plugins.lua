@@ -294,3 +294,5 @@ end
 use({'junegunn/vim-easy-align'})
 -- Mark
 use({'kshenoy/vim-signature'})
+
+use('elianiva/telescope-npm.nvim')
