@@ -50,7 +50,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "grn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-  vim.api.nvim_create_user_command('Format', vim.lsp.buf.formatting, {})
+  vim.api.nvim_create_user_command('Format', function() vim.lsp.buf.formatting() end , {})
 end)
 
 -- lsp.configure('pyright', {
