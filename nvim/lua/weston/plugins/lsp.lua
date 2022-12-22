@@ -13,6 +13,15 @@ lsp.ensure_installed({
   'eslint',
   'sumneko_lua',
   'rust_analyzer',
+  'tailwindcss',
+  'rome',
+  'volar',
+  'sqlls',
+  'jsonls',
+  'html',
+  'emmet_ls',
+  'cssls',
+  'bashls',
 })
 
 local cmp = require('cmp')

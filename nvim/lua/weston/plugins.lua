@@ -294,5 +294,9 @@ end
 use({'junegunn/vim-easy-align'})
 -- Mark
 use({'kshenoy/vim-signature'})
-
 use('elianiva/telescope-npm.nvim')
+-- 错误开关
+use({'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim', 
+config = function() 
+    require'toggle_lsp_diagnostics'.init()
+end})
