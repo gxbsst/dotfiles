@@ -137,3 +137,6 @@ storeCard
 params
 cstore
 mealTypes
+colorette
+eslint
+fallthrough
