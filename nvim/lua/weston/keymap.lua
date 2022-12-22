@@ -63,18 +63,18 @@ local opts = {silent = true, noremap = true, expr = true, replace_keycodes = fal
 
 local opts = {silent = true, nowait = true}
 
--- keyset("x", "<enter>", "<Plug>(coc-codeaction-selected)", opts)
-keyset("x", "<F3>", "<Plug>(coc-codeaction-selected)", opts)
+-- -- keyset("x", "<enter>", "<Plug>(coc-codeaction-selected)", opts)
+-- keyset("x", "<F3>", "<Plug>(coc-codeaction-selected)", opts)
 
-keyset("n", "<F4>", "<Plug>(coc-codeaction-cursor)", opts)
-keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
-keyset("n", "<leader><TAB>", "<Plug>(coc-range-select)", opts)
-keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", opts)
-keyset("n", ",cre", "<Plug>(coc-codeaction-refactor)", { silent = true })
-keyset("x", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
-keyset("n", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
-keyset("n", ",cl", "<Plug>(coc-codelens-action)", opts)
-keyset("n", ",cd", "<Plug>(coc-float-jump)", opts)
+-- keyset("n", "<F4>", "<Plug>(coc-codeaction-cursor)", opts)
+-- keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
+-- keyset("n", "<leader><TAB>", "<Plug>(coc-range-select)", opts)
+-- keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", opts)
+-- keyset("n", ",cre", "<Plug>(coc-codeaction-refactor)", { silent = true })
+-- keyset("x", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+-- keyset("n", ",cr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+-- keyset("n", ",cl", "<Plug>(coc-codelens-action)", opts)
+-- keyset("n", ",cd", "<Plug>(coc-float-jump)", opts)
 
 -- TEXT
 -- ALIGN
@@ -83,6 +83,7 @@ keyset("x", "<leader>ta", "<Plug>(EasyAlign)", {silent = true })
 keyset("n", "<leader>tf", vim.lsp.buf.format)
 -- keyset("n", "<leader>tf", vim.lsp.buf.formatting, {silent = true})
 -- keyset("v", "<leader>tf", vim.lsp.buf.formatting, {silent = true})
+keyset("n","S", ":w<CR>")
 
 
 
