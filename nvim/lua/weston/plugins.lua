@@ -152,8 +152,9 @@ use({
   config = function() 
     require("zen-mode").setup {
     window = {
-        width = 90,
+        width = 120,
         options = {
+            colorcolumn = 120,
             number = true,
             relativenumber = true,
         }
@@ -161,8 +162,12 @@ use({
 }
 
    vim.keymap.set("n", "<leader>zz", function()
-    require("zen-mode").toggle()
-    vim.wo.wrap = false
+    require("zen-mode").toggle({ 
+        window = {
+            width = 120
+        }
+    })
+    vim.wo.wrap = true
     -- ColorMyPencils()
     end)
   end 

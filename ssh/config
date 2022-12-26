@@ -384,3 +384,7 @@ Host 192.168.33.10
 
 Host git.ionicjs.com
     IdentityFile /Users/weston/.ssh/ionic/2993
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh
