@@ -308,3 +308,7 @@ use({
     require('weston/plugins/vim-test')
   end,
 })
+
+-- Window Zoom
+--  use <C-w>m
+use({'dhruvasagar/vim-zoom'})
