@@ -300,3 +300,11 @@ use({'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim',
 config = function() 
     require'toggle_lsp_diagnostics'.init()
 end})
+
+-- Testing helper
+use({
+  'vim-test/vim-test',
+  config = function()
+    require('weston/plugins/vim-test')
+  end,
+})
