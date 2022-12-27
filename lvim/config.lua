@@ -41,6 +41,7 @@ lvim.keys.normal_mode["S"] = ":w<cr>"
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerSync
 lvim.builtin.alpha.active = true
+-- lvim.builtin.alpha.mode = "startify"
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -99,101 +100,101 @@ lvim.builtin.treesitter.auto_install = true
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  {'theHamsta/nvim-dap-virtual-text', 
-config = function() 
-   require("nvim-dap-virtual-text").setup {
-    enabled = true,                        -- enable this plugin (the default)
-    enabled_commands = true,               -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
-    highlight_changed_variables = true,    -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
-    highlight_new_as_changed = false,      -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
-    show_stop_reason = true,               -- show stop reason when stopped for exceptions
-    commented = false,                     -- prefix virtual text with comment string
-    only_first_definition = true,          -- only show virtual text at first definition (if there are multiple)
-    all_references = false,                -- show virtual text on all all references of the variable (not only definitions)
-    filter_references_pattern = '<module', -- filter references (not definitions) pattern when all_references is activated (Lua gmatch pattern, default filters out Python modules)
-    -- experimental features:
-    virt_text_pos = 'eol',                 -- position of virtual text, see `:h nvim_buf_set_extmark()`
-    all_frames = false,                    -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
-    virt_lines = false,                    -- show virtual lines instead of virtual text (will flicker!)
-    virt_text_win_col = nil                -- position the virtual text at a fixed window column (starting from the first text column) ,
-                                           -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
-}
-end },
-  {'David-Kunz/jester'},
+  { 'theHamsta/nvim-dap-virtual-text',
+    config = function()
+      require("nvim-dap-virtual-text").setup {
+        enabled = true, -- enable this plugin (the default)
+        enabled_commands = true, -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
+        highlight_changed_variables = true, -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
+        highlight_new_as_changed = false, -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
+        show_stop_reason = true, -- show stop reason when stopped for exceptions
+        commented = false, -- prefix virtual text with comment string
+        only_first_definition = true, -- only show virtual text at first definition (if there are multiple)
+        all_references = false, -- show virtual text on all all references of the variable (not only definitions)
+        filter_references_pattern = '<module', -- filter references (not definitions) pattern when all_references is activated (Lua gmatch pattern, default filters out Python modules)
+        -- experimental features:
+        virt_text_pos = 'eol', -- position of virtual text, see `:h nvim_buf_set_extmark()`
+        all_frames = false, -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
+        virt_lines = false, -- show virtual lines instead of virtual text (will flicker!)
+        virt_text_win_col = nil -- position the virtual text at a fixed window column (starting from the first text column) ,
+        -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
+      }
+    end },
+  { 'David-Kunz/jester' },
   {
-  'voldikss/vim-floaterm',
-  config = function()
-    vim.g.floaterm_width = 0.8
-    vim.g.floaterm_height = 0.8
-    vim.keymap.set('n', '<F1>', ':FloatermToggle<CR>')
-    vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
-    vim.cmd([[
+    'voldikss/vim-floaterm',
+    config = function()
+      vim.g.floaterm_width = 0.8
+      vim.g.floaterm_height = 0.8
+      vim.keymap.set('n', '<F1>', ':FloatermToggle<CR>')
+      vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
+      vim.cmd([[
       highlight link Floaterm CursorLine
       highlight link FloatermBorder CursorLineBg
-    ]])
-  end
-},
-{'chemzqm/wxapp.vim'},
-{'norcalli/nvim-colorizer.lua', 
-config = function() 
-  require 'colorizer'.setup {
-    'less',
-  'css';
-  'javascript';
-  html = {
-    mode = 'foreground';
-  }
-}
-end
-},
--- TEXT Align
-{'junegunn/vim-easy-align'},
--- NPM
-{'elianiva/telescope-npm.nvim'},
--- 错误开关
-{'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'},
--- Window Zoom
---  use <C-w>m
-{'dhruvasagar/vim-zoom'},
-{'christoomey/vim-tmux-navigator'},
-{"folke/zen-mode.nvim",
-  config = function() 
-    require("zen-mode").setup {
-    window = {
-        width = 120,
-        options = {
+    ]] )
+    end
+  },
+  { 'chemzqm/wxapp.vim' },
+  { 'norcalli/nvim-colorizer.lua',
+    config = function()
+      require 'colorizer'.setup {
+        'less',
+        'css';
+        'javascript';
+        html = {
+          mode = 'foreground';
+        }
+      }
+    end
+  },
+  -- TEXT Align
+  { 'junegunn/vim-easy-align' },
+  -- NPM
+  { 'elianiva/telescope-npm.nvim' },
+  -- 错误开关
+  { 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim' },
+  -- Window Zoom
+  --  use <C-w>m
+  { 'dhruvasagar/vim-zoom' },
+  { 'christoomey/vim-tmux-navigator' },
+  { "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {
+        window = {
+          width = 120,
+          options = {
             number = true,
             relativenumber = true,
-        }
-    },
-}
+          }
+        },
+      }
 
-   vim.keymap.set("n", "<leader>zz", function()
-    require("zen-mode").toggle({ 
-        window = {
+      vim.keymap.set("n", "<leader>zz", function()
+        require("zen-mode").toggle({
+          window = {
             width = 120,
 
-             options = {
-            number = true,
-            relativenumber = true,
-        }
-        }
-    })
-    vim.wo.wrap = true
-    -- ColorMyPencils()
-    end)
-  end 
-},
-{
-  'vim-test/vim-test',
-  config = function()
-    vim.keymap.set('n', '<Leader>rt', ':TestNearest<CR>')
-vim.keymap.set('n', '<Leader>rtf', ':TestFile<CR>')
-vim.keymap.set('n', '<Leader>rts', ':TestSuite<CR>')
-vim.keymap.set('n', '<Leader>rtl', ':TestLast<CR>')
-vim.keymap.set('n', '<Leader>rtv', ':TestVisit<CR>')
+            options = {
+              number = true,
+              relativenumber = true,
+            }
+          }
+        })
+        vim.wo.wrap = true
+        -- ColorMyPencils()
+      end)
+    end
+  },
+  {
+    'vim-test/vim-test',
+    config = function()
+      vim.keymap.set('n', '<Leader>rt', ':TestNearest<CR>')
+      vim.keymap.set('n', '<Leader>rtf', ':TestFile<CR>')
+      vim.keymap.set('n', '<Leader>rts', ':TestSuite<CR>')
+      vim.keymap.set('n', '<Leader>rtl', ':TestLast<CR>')
+      vim.keymap.set('n', '<Leader>rtv', ':TestVisit<CR>')
 
-vim.cmd([[
+      vim.cmd([[
   function! FloatermStrategy(cmd)
     execute 'silent FloatermKill'
     execute 'FloatermNew! '.a:cmd.' |less -X'
@@ -201,13 +202,13 @@ vim.cmd([[
 
   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
   let g:test#strategy = 'floaterm'
-]])
-  end,
-}
-    -- {
-      -- "folke/trouble.nvim",
-      -- cmd = "TroubleToggle",
-    -- },
+]]     )
+    end,
+  }
+  -- {
+  -- "folke/trouble.nvim",
+  -- cmd = "TroubleToggle",
+  -- },
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
@@ -230,7 +231,7 @@ lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
 -- lvim.transparent_window = true
 
 vim.keymap.set("n", "<F2>", function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end,
-        opts)
+  opts)
 vim.keymap.set("n", "<F11>", function() vim.diagnostic.goto_prev() end, opts)
 vim.keymap.set("n", "<F3>", function() vim.lsp.buf.code_action() end, opts)
 vim.keymap.set("v", "<F3>", function() vim.lsp.buf.code_action() end, opts)
@@ -255,7 +256,8 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 -- Telescope
 vim.keymap.set('n', ',km', ":Telescope keymaps<CR>")
 vim.keymap.set('n', '<C-O>', [[<cmd>lua require('telescope.builtin').find_files()<CR>]])
-vim.keymap.set('n', '<C-F>', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
+vim.keymap.set('n', '<C-F>',
+  [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
 vim.keymap.set('n', '<C-b>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 vim.keymap.set('n', '<C-g>', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]])
 vim.keymap.set('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
@@ -270,14 +272,14 @@ local dap = require('dap')
 dap.adapters.node2 = {
   type = 'executable',
   command = 'node',
-  args = {os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js'},
+  args = { os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js' },
 }
 
 dap.adapters.node = {
-      type = 'executable',
-      command = 'node',
-      args = { os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js' },
-    }
+  type = 'executable',
+  command = 'node',
+  args = { os.getenv('HOME') .. '/dev/microsoft/vscode-node-debug2/out/src/nodeDebug.js' },
+}
 
 dap.configurations.javascript = {
   {
@@ -295,40 +297,53 @@ dap.configurations.javascript = {
     name = 'Attach to process',
     type = 'node',
     request = 'attach',
-    processId = require'dap.utils'.pick_process,
+    processId = require 'dap.utils'.pick_process,
   },
 }
 
 dap.adapters.chrome = {
-    type = "executable",
-    command = "node",
-    args = {os.getenv("HOME") .. "/vscode-chrome-debug/out/src/chromeDebug.js"} -- TODO adjust
+  type = "executable",
+  command = "node",
+  args = { os.getenv("HOME") .. "/vscode-chrome-debug/out/src/chromeDebug.js" } -- TODO adjust
 }
 
 dap.configurations.javascriptreact = { -- change this to javascript if needed
-    {
-        type = "chrome",
-        request = "attach",
-        program = "${file}",
-        cwd = vim.fn.getcwd(),
-        sourceMaps = true,
-        protocol = "inspector",
-        port = 9222,
-        webRoot = "${workspaceFolder}"
-    }
+  {
+    type = "chrome",
+    request = "attach",
+    program = "${file}",
+    cwd = vim.fn.getcwd(),
+    sourceMaps = true,
+    protocol = "inspector",
+    port = 9222,
+    webRoot = "${workspaceFolder}"
+  }
+}
+
+dap.configurations.vue = { -- change this to javascript if needed
+  {
+    type = "chrome",
+    request = "attach",
+    program = "${file}",
+    cwd = vim.fn.getcwd(),
+    sourceMaps = true,
+    protocol = "inspector",
+    port = 9222,
+    webRoot = "${workspaceFolder}"
+  }
 }
 
 dap.configurations.typescriptreact = { -- change to typescript if needed
-    {
-        type = "chrome",
-        request = "attach",
-        program = "${file}",
-        cwd = vim.fn.getcwd(),
-        sourceMaps = true,
-        protocol = "inspector",
-        port = 9222,
-        webRoot = "${workspaceFolder}"
-    }
+  {
+    type = "chrome",
+    request = "attach",
+    program = "${file}",
+    cwd = vim.fn.getcwd(),
+    sourceMaps = true,
+    protocol = "inspector",
+    port = 9222,
+    webRoot = "${workspaceFolder}"
+  }
 }
 
 -- dap.configurations.javascriptreact = { -- change this to javascript if needed
