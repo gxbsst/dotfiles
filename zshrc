@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 #ZSH_THEME="carborn"
 #ZSH_THEME="evan"
 #ZSH_THEME="lambda"
@@ -165,7 +165,7 @@ alias loop='f() { while true; do sleep 0.5 && $1 $2 $3 $4; done  };f'
 alias which='which -a'
 alias s='webstorm .'
 alias wxcli="/Applications/wechatwebdevtools.app/Contents/MacOS/cli"
-alias v="nvim"
+alias v="lvim"
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug
