@@ -127,6 +127,12 @@ linters.setup {
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {'tpope/vim-fugitive', 
+    requires = 'tpope/vim-rhubarb',
+    config = function() 
+      
+    end
+  },
   {
   "echasnovski/mini.map",
   branch = "stable",
