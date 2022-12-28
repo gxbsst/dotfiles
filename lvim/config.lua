@@ -128,6 +128,34 @@ linters.setup {
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+  "echasnovski/mini.map",
+  branch = "stable",
+  config = function()
+    require('mini.map').setup()
+    local map = require('mini.map')
+    map.setup({
+      integrations = {
+        map.gen_integration.builtin_search(),
+        map.gen_integration.diagnostic({
+          error = 'DiagnosticFloatingError',
+          warn  = 'DiagnosticFloatingWarn',
+          info  = 'DiagnosticFloatingInfo',
+          hint  = 'DiagnosticFloatingHint',
+        }),
+      },
+      symbols = {
+        encode = map.gen_encode_symbols.dot('4x2'),
+      },
+      window = {
+        side = 'right',
+        width = 20, -- set to 1 for a pure scrollbar :)
+        winblend = 15,
+        show_integration_count = false,
+      },
+    })
+  end
+},
+  {
     "windwp/nvim-spectre",
     event = "BufRead",
     config = function()
@@ -272,7 +300,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
 -- lvim.builtin.telescope.defaults.layout_config.prompt_position = "bottom"
 -- lvim.builtin.telescope.defaults.layout_config.vertical.mirror = true
-lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
+-- lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
 
 -- UI
 -- lvim.transparent_window = true
@@ -334,6 +362,26 @@ dap.adapters.node = {
 }
 
 dap.configurations.javascript = {
+  {
+    name = 'Launch',
+    type = 'node',
+    request = 'launch',
+    program = '${file}',
+    cwd = vim.fn.getcwd(),
+    sourceMaps = true,
+    protocol = 'inspector',
+    console = 'integratedTerminal',
+  },
+  {
+    -- For this to work you need to make sure the node process is started with the `--inspect` flag.
+    name = 'Attach to process',
+    type = 'node',
+    request = 'attach',
+    processId = require 'dap.utils'.pick_process,
+  },
+}
+
+dap.configurations.typescript = {
   {
     name = 'Launch',
     type = 'node',

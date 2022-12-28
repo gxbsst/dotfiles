@@ -204,7 +204,7 @@ source $HOME/development/wp-completion.bash
 export SDKMAN_DIR="/Users/weston/.sdkman"
 [[ -s "/Users/weston/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/weston/.sdkman/bin/sdkman-init.sh"
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-export EDITOR=nvim
+export EDITOR=lvim
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
