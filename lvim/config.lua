@@ -48,6 +48,7 @@ lvim.builtin.which_key.mappings["sS"] = { "<cmd>lua require('spectre').open()<CR
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["gS"] = { "<cmd>Telescope git_status<CR>", "Git Status" }
 -- 项目
 lvim.builtin.which_key.mappings["P"] = {
   name = "Project",
@@ -65,11 +66,6 @@ lvim.builtin.which_key.mappings["E"] = {
 }
 -- 测试
 lvim.builtin.which_key.mappings["t"] = {
-  -- vim.keymap.set('n', '<Leader>rt', ':TestNearest<CR>')
-  -- vim.keymap.set('n', '<Leader>rtf', ':TestFile<CR>')
-  -- vim.keymap.set('n', '<Leader>rts', ':TestSuite<CR>')
-  -- vim.keymap.set('n', '<Leader>rtl', ':TestLast<CR>')
-  -- vim.keymap.set('n', '<Leader>rtv', ':TestVisit<CR>')
   name = 'Test',
   t = { "<cmd>TestNearest<CR>", "TestNearest" },
   f = { "<cmd>TestFile<CR>", "TestFile" },
