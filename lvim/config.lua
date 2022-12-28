@@ -48,16 +48,36 @@ lvim.builtin.which_key.mappings["sS"] = { "<cmd>lua require('spectre').open()<CR
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-
-lvim.builtin.which_key.mappings["a"] = {
-  name = "apps",
+-- 项目
+lvim.builtin.which_key.mappings["P"] = {
+  name = "Project",
   mb = { ":!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
-    "merchant app build npm" },
+    "商家小程序build npm" },
+}
+-- 警告提示
+lvim.builtin.which_key.mappings["E"] = {
+  name = "Error & Warning",
   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
+  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
+}
+-- 测试
+lvim.builtin.which_key.mappings["t"] = {
+  -- vim.keymap.set('n', '<Leader>rt', ':TestNearest<CR>')
+  -- vim.keymap.set('n', '<Leader>rtf', ':TestFile<CR>')
+  -- vim.keymap.set('n', '<Leader>rts', ':TestSuite<CR>')
+  -- vim.keymap.set('n', '<Leader>rtl', ':TestLast<CR>')
+  -- vim.keymap.set('n', '<Leader>rtv', ':TestVisit<CR>')
+  name = 'Test',
+  t = { "<cmd>TestNearest<CR>", "TestNearest" },
+  f = { "<cmd>TestFile<CR>", "TestFile" },
+  s = { "<cmd>TestSuite<CR>", "TestSuite" },
+  l = { "<cmd>TestLast<CR>", "TestLast" },
+  v = { "<cmd>TestVisit<CR>", "TestVisit" },
+  j = { "<cmd>lua require'jester'.debug()<CR>", "Debug nearest test(s) under the cursor" },
+  J = { "<cmd>lua require'jester'.debug_file()<CR>", "Debug current file" },
 }
 
 -- -- Change theme settings
@@ -127,40 +147,51 @@ linters.setup {
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  {'tpope/vim-fugitive', 
+  {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  },
+  { 'tpope/vim-fugitive',
     requires = 'tpope/vim-rhubarb',
-    config = function() 
-      
+    config = function()
+
     end
   },
   {
-  "echasnovski/mini.map",
-  branch = "stable",
-  config = function()
-    require('mini.map').setup()
-    local map = require('mini.map')
-    map.setup({
-      integrations = {
-        map.gen_integration.builtin_search(),
-        map.gen_integration.diagnostic({
-          error = 'DiagnosticFloatingError',
-          warn  = 'DiagnosticFloatingWarn',
-          info  = 'DiagnosticFloatingInfo',
-          hint  = 'DiagnosticFloatingHint',
-        }),
-      },
-      symbols = {
-        encode = map.gen_encode_symbols.dot('4x2'),
-      },
-      window = {
-        side = 'right',
-        width = 20, -- set to 1 for a pure scrollbar :)
-        winblend = 15,
-        show_integration_count = false,
-      },
-    })
-  end
-},
+    "echasnovski/mini.map",
+    branch = "stable",
+    config = function()
+      require('mini.map').setup()
+      local map = require('mini.map')
+      map.setup({
+        integrations = {
+          map.gen_integration.builtin_search(),
+          map.gen_integration.diagnostic({
+            error = 'DiagnosticFloatingError',
+            warn  = 'DiagnosticFloatingWarn',
+            info  = 'DiagnosticFloatingInfo',
+            hint  = 'DiagnosticFloatingHint',
+          }),
+        },
+        symbols = {
+          encode = map.gen_encode_symbols.dot('4x2'),
+        },
+        window = {
+          side = 'right',
+          width = 20, -- set to 1 for a pure scrollbar :)
+          winblend = 15,
+          show_integration_count = false,
+        },
+      })
+    end
+  },
   {
     "windwp/nvim-spectre",
     event = "BufRead",
