@@ -260,6 +260,7 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 alias llp="sh $DOTFILES/bin/list_yarn_links.sh"
 alias dev="sh $DOTFILES/bin/dev.sh"
 alias ls='exa --git --icons --color=always --group-directories-first'
+alias wx='cli --project "$(pwd)"'
 
 #source /Users/weston/.config/broot/launcher/bash/br
 

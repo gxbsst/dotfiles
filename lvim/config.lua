@@ -14,6 +14,7 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldcolumn = "1"
 
+
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
@@ -21,6 +22,10 @@ lvim.format_on_save = {
   pattern = "*.lua",
   timeout = 1000,
 }
+-- lualine
+-- lvim.builtin.lualine.style = "default" -- or "none"
+lvim.builtin.lualine.sections.lualine_c = { "diff" }
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -29,24 +34,46 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["S"] = ":w<cr>"
 
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+-- Easy insertion of a trailing ; or , from insert mode.
+vim.keymap.set('i', ';;', '<Esc>A;')
+vim.keymap.set('i', ',,', '<Esc>A,')
+
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
+-- search
+-- find and replace
+lvim.builtin.which_key.mappings["sS"] = { "<cmd>lua require('spectre').open()<CR>", "find and replace" }
 
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+
+lvim.builtin.which_key.mappings["a"] = {
+  name = "apps",
+  mb = { ":!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
+    "merchant app build npm" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+  d = { "<cmd>Trouble lsp_document_diagnostics<cr>", "Diagnostics" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
+}
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
 
 -- After changing plugin config exit and reopen LunarVim, Run :PackerSync
 lvim.builtin.alpha.active = true
--- lvim.builtin.alpha.mode = "startify"
-lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.alpha.mode = "startify"
+-- lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
+-- lvim.builtin.nvimtree.setup.actions.change_dir = {
+--enable = false,
+---global = false,
+-- }
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
 
@@ -80,26 +107,46 @@ lvim.builtin.treesitter.auto_install = true
 -- end
 
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "stylua" },
---   {
---     command = "prettier",
---     extra_args = { "--print-width", "100" },
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     command = "shellcheck",
---     args = { "--severity", "warning" },
---   },
--- }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "stylua" },
+  {
+    command = "prettier",
+    -- extra_args = { "--print-width", "100" },
+    filetypes = { "typescript", "typescriptreact" },
+  },
+}
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "flake8", filetypes = { "python" } },
+  {
+    command = "shellcheck",
+    args = { "--severity", "warning" },
+  },
+}
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+    "windwp/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("spectre").setup()
+    end,
+  },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+  },
+  {
+    "f-person/git-blame.nvim",
+    event = "BufRead",
+    config = function()
+      vim.cmd "highlight default link gitblame SpecialComment"
+      vim.g.gitblame_enabled = 0
+    end,
+  },
+  { 'prettier/vim-prettier' },
   { 'theHamsta/nvim-dap-virtual-text',
     config = function()
       require("nvim-dap-virtual-text").setup {
@@ -212,13 +259,13 @@ lvim.plugins = {
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "zsh",
+  callback = function()
+    -- let treesitter use bash highlight for zsh files as well
+    require("nvim-treesitter.highlight").attach(0, "bash")
+  end,
+})
 -- Telescope
 -- lvim.builtin.telescope.defaults.initial_mode = "insert"
 -- lvim.builtin.telescope.defaults.layout_config.horizontal.mirror = true
@@ -254,17 +301,22 @@ vim.keymap.set('n', 'L', ':move .-2<CR>==')
 vim.keymap.set('v', 'j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 -- Telescope
-vim.keymap.set('n', ',km', ":Telescope keymaps<CR>")
-vim.keymap.set('n', '<C-O>', [[<cmd>lua require('telescope.builtin').find_files()<CR>]])
+vim.keymap.set('n', ',km', "<cmd>Telescope keymaps<CR>")
+vim.keymap.set('n', '<C-o>', "<cmd>Telescope git_files<CR>")
 vim.keymap.set('n', '<C-F>',
   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
 vim.keymap.set('n', '<C-b>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
-vim.keymap.set('n', '<C-g>', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]])
+vim.keymap.set('n', '<C-g>', ":Telescope live_grep<CR>")
 vim.keymap.set('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 vim.keymap.set('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 vim.keymap.set('n', '<C-r>', ":Telescope npm scripts<CR>")
+-- NvimTree
+-- 默认打开 NvimTreeOpen
+vim.schedule(function()
+  vim.cmd "noautocmd NvimTreeOpen"
+end)
 
--- CONFIG
+-- -- DAP CONFIG
 lvim.builtin.dap.active = true
 
 local dap = require('dap')
