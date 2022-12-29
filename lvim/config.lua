@@ -192,7 +192,11 @@ lvim.plugins = {
   {
     'simrat39/symbols-outline.nvim',
     config = function()
-      require("symbols-outline").setup()
+      require("symbols-outline").setup({
+        -- auto_preview = false,
+        autofold_depth = 1,
+        -- auto_close = true,
+      })
     end
   },
   -- {
