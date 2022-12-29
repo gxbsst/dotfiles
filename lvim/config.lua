@@ -37,7 +37,25 @@ lvim.keys.normal_mode["S"] = ":w<cr>"
 -- Easy insertion of a trailing ; or , from insert mode.
 vim.keymap.set('i', ';;', '<Esc>A;')
 vim.keymap.set('i', ',,', '<Esc>A,')
-
+-- terminal
+vim.keymap.set('n', '<F9>', '<cmd>terminal<cr>')
+-- outline
+ -- keymaps = { -- These keymaps can be a string or a table for multiple keys
+ --    close = {"<Esc>", "q"},
+ --    goto_location = "<Cr>",
+ --    focus_location = "o",
+ --    hover_symbol = "<C-space>",
+ --    toggle_preview = "K",
+ --    rename_symbol = "r",
+ --    code_actions = "a",
+ --    fold = "h",
+ --    unfold = "l",
+ --    fold_all = "W",
+ --    unfold_all = "E",
+ --    fold_reset = "R",
+ --  },
+vim.keymap.set('n', '<F7>', '<cmd>SymbolsOutline<cr>')
+-- buffer
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -49,8 +67,10 @@ lvim.builtin.which_key.mappings["sS"] = { "<cmd>lua require('spectre').open()<CR
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["gS"] = { "<cmd>Telescope git_status<CR>", "Git Status" }
+-- Command
+lvim.builtin.which_key.mappings["C"] = {"<cmd>Telescope command_center<CR>", "Command Center"}
 -- 项目
-lvim.builtin.which_key.mappings["P"] = {
+lvim.builtin.which_key.mappings["p"] = {
   name = "Project",
   mb = { ":!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
     "商家小程序build npm" },
@@ -144,6 +164,59 @@ linters.setup {
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+  "FeiyouG/command_center.nvim",
+  requires = { "nvim-telescope/telescope.nvim" },
+  config = function()
+    require("telescope").load_extension("command_center")
+    local command_center = require("command_center")
+    command_center.add({
+  {
+    desc = "编译商家小程序npm",
+    cmd = "<CMD>:!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
+    -- keys = { "n", "<leader>fl", noremap },
+  }} )
+  end
+},
+  -- KEYMAPS
+  -- LSP
+  {
+    'ray-x/lsp_signature.nvim',
+    config = function()
+      require "lsp_signature".setup()
+    end
+  },
+  {
+    'weilbith/nvim-code-action-menu',
+    cmd = 'CodeActionMenu',
+  },
+  {
+    'simrat39/symbols-outline.nvim',
+    config = function()
+      require("symbols-outline").setup()
+    end
+  },
+  -- {
+  --   'ray-x/navigator.lua',
+  --   requires = {
+  --     { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
+  --     { 'neovim/nvim-lspconfig' },
+  --   },
+  --   config = function()
+  --     require 'navigator'.setup()
+  --   end
+  -- },
+  -- {
+  --   "glepnir/lspsaga.nvim",
+  --   branch = "main",
+  --   config = function()
+  --     local saga = require("lspsaga")
+
+  --     saga.init_lsp_saga({
+  --       -- your configuration
+  --     })
+  --   end,
+  -- },
+  {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
@@ -154,12 +227,26 @@ lvim.plugins = {
       }
     end
   },
+  -- GIT
   { 'tpope/vim-fugitive',
     requires = 'tpope/vim-rhubarb',
     config = function()
 
     end
   },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+  },
+  {
+    "f-person/git-blame.nvim",
+    event = "BufRead",
+    config = function()
+      vim.cmd "highlight default link gitblame SpecialComment"
+      vim.g.gitblame_enabled = 0
+    end,
+  },
+  -- CODE
   {
     "echasnovski/mini.map",
     branch = "stable",
@@ -188,23 +275,12 @@ lvim.plugins = {
       })
     end
   },
+  -- TEXT
   {
     "windwp/nvim-spectre",
     event = "BufRead",
     config = function()
       require("spectre").setup()
-    end,
-  },
-  {
-    "sindrets/diffview.nvim",
-    event = "BufRead",
-  },
-  {
-    "f-person/git-blame.nvim",
-    event = "BufRead",
-    config = function()
-      vim.cmd "highlight default link gitblame SpecialComment"
-      vim.g.gitblame_enabled = 0
     end,
   },
   { 'prettier/vim-prettier' },
@@ -228,7 +304,23 @@ lvim.plugins = {
         -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
       }
     end },
+  -- TEST
   { 'David-Kunz/jester' },
+  {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim"
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+         
+        },
+      })
+    end
+  },
   {
     'voldikss/vim-floaterm',
     config = function()
@@ -242,6 +334,7 @@ lvim.plugins = {
     ]] )
     end
   },
+  -- WX
   { 'chemzqm/wxapp.vim' },
   { 'norcalli/nvim-colorizer.lua',
     config = function()
@@ -348,8 +441,8 @@ vim.keymap.set("v", "<F3>", function() vim.lsp.buf.code_action() end, opts)
 vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
 
 -- Buffer
-vim.keymap.set('n', '<C-n>', ":bnext<CR>")
-vim.keymap.set('n', '<C-p>', ":bprev<CR>")
+-- vim.keymap.set('n', '<C-n>', ":bnext<CR>")
+-- vim.keymap.set('n', '<C-p>', ":bprev<CR>")
 
 -- Quit
 vim.keymap.set('n', 'q', ':q<CR>')
@@ -494,3 +587,8 @@ dap.configurations.typescriptreact = { -- change to typescript if needed
 --     disableOptimisticBPs = true
 --     }
 -- }
+
+-- 编译商家小程序npm
+vim.api.nvim_create_user_command('BuildMerchantNPM', function() 
+  vim.api.nvim_command(":!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm")
+end, {})
