@@ -87,7 +87,7 @@ lvim.builtin.which_key.mappings["E"] = {
 -- 测试
 lvim.builtin.which_key.mappings["t"] = {
   name = 'Test',
-  t = { "<cmd>TestNearest<CR>", "TestNearest" },
+    t = { '<cmd>lua require("neotest").run.run({strategy = "dap"})<CR>', "TestNearest" },
   f = { "<cmd>TestFile<CR>", "TestFile" },
   s = { "<cmd>TestSuite<CR>", "TestSuite" },
   l = { "<cmd>TestLast<CR>", "TestLast" },
@@ -163,6 +163,9 @@ linters.setup {
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+    "airblade/vim-rooter"
+  },
   {
     "terryma/vim-multiple-cursors"
   },
@@ -394,14 +397,6 @@ lvim.plugins = {
       end)
     end
   },
-  {
-    'vim-test/vim-test',
-    config = function()
-      vim.keymap.set('n', '<Leader>rt', ':TestNearest<CR>')
-      vim.keymap.set('n', '<Leader>rtf', ':TestFile<CR>')
-      vim.keymap.set('n', '<Leader>rts', ':TestSuite<CR>')
-      vim.keymap.set('n', '<Leader>rtl', ':TestLast<CR>')
-      vim.keymap.set('n', '<Leader>rtv', ':TestVisit<CR>')
 
       vim.cmd([[
   function! FloatermStrategy(cmd)
@@ -409,11 +404,17 @@ lvim.plugins = {
     execute 'FloatermNew! '.a:cmd.' |less -X'
   endfunction
 
-  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
-  let g:test#strategy = 'floaterm'
-]]     )
-    end,
-  }
+--       vim.cmd([[
+--   function! FloatermStrategy(cmd)
+--     execute 'silent FloatermKill'
+--     execute 'FloatermNew! '.a:cmd.' |less -X'
+--   endfunction
+
+--   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
+--   let g:test#strategy = 'floaterm'
+-- ]]     )
+--     end,
+--   }
   -- {
   -- "folke/trouble.nvim",
   -- cmd = "TroubleToggle",
