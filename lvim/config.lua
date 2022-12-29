@@ -164,6 +164,10 @@ linters.setup {
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+    "terryma/vim-multiple-cursors"
+  },
+  -- Command
+  {
   "FeiyouG/command_center.nvim",
   requires = { "nvim-telescope/telescope.nvim" },
   config = function()
@@ -435,6 +439,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- UI
 -- lvim.transparent_window = true
 
+-- KEYMPAPS BINDING
 vim.keymap.set("n", "<F2>", function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end,
   opts)
 vim.keymap.set("n", "<F11>", function() vim.diagnostic.goto_prev() end, opts)
@@ -468,6 +473,8 @@ vim.keymap.set('n', '<C-g>', ":Telescope live_grep<CR>")
 vim.keymap.set('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 vim.keymap.set('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 vim.keymap.set('n', '<C-r>', ":Telescope npm scripts<CR>")
+local opts = {buffer = bufnr, remap = false}
+vim.keymap.set("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
 -- NvimTree
 -- 默认打开 NvimTreeOpen
 vim.schedule(function()
