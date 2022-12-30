@@ -14,6 +14,8 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldcolumn = "1"
 
+vim.g.noautochdir = true
+
 
 -- general
 lvim.log.level = "info"
@@ -40,20 +42,20 @@ vim.keymap.set('i', ',,', '<Esc>A,')
 -- terminal
 vim.keymap.set('n', '<F9>', '<cmd>terminal<cr>')
 -- outline
- -- keymaps = { -- These keymaps can be a string or a table for multiple keys
- --    close = {"<Esc>", "q"},
- --    goto_location = "<Cr>",
- --    focus_location = "o",
- --    hover_symbol = "<C-space>",
- --    toggle_preview = "K",
- --    rename_symbol = "r",
- --    code_actions = "a",
- --    fold = "h",
- --    unfold = "l",
- --    fold_all = "W",
- --    unfold_all = "E",
- --    fold_reset = "R",
- --  },
+-- keymaps = { -- These keymaps can be a string or a table for multiple keys
+--    close = {"<Esc>", "q"},
+--    goto_location = "<Cr>",
+--    focus_location = "o",
+--    hover_symbol = "<C-space>",
+--    toggle_preview = "K",
+--    rename_symbol = "r",
+--    code_actions = "a",
+--    fold = "h",
+--    unfold = "l",
+--    fold_all = "W",
+--    unfold_all = "E",
+--    fold_reset = "R",
+--  },
 vim.keymap.set('n', '<F7>', '<cmd>SymbolsOutline<cr>')
 -- buffer
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
@@ -68,7 +70,7 @@ lvim.builtin.which_key.mappings["sS"] = { "<cmd>lua require('spectre').open()<CR
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["gS"] = { "<cmd>Telescope git_status<CR>", "Git Status" }
 -- Command
-lvim.builtin.which_key.mappings["C"] = {"<cmd>Telescope command_center<CR>", "Command Center"}
+lvim.builtin.which_key.mappings["C"] = { "<cmd>Telescope command_center<CR>", "Command Center" }
 -- 项目
 lvim.builtin.which_key.mappings["p"] = {
   name = "Project",
@@ -87,7 +89,7 @@ lvim.builtin.which_key.mappings["E"] = {
 -- 测试
 lvim.builtin.which_key.mappings["t"] = {
   name = 'Test',
-    t = { '<cmd>lua require("neotest").run.run({strategy = "dap"})<CR>', "TestNearest" },
+  t = { '<cmd>TestNearest<CR>', "TestNearest" },
   f = { "<cmd>TestFile<CR>", "TestFile" },
   s = { "<cmd>TestSuite<CR>", "TestSuite" },
   l = { "<cmd>TestLast<CR>", "TestLast" },
@@ -105,7 +107,14 @@ lvim.builtin.alpha.mode = "startify"
 -- lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.setup.update_focused_file = { update_cwd = false, update_focused_file = false, enable = false,
+  update_root = false,
+  ignore_list = { "package.json", }
+}
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
+-- lvim.builtin.project.active = true
+-- lvim.builtin.project.patterns = { ".git" }
+lvim.builtin.project.detection_methods = nil
 -- lvim.builtin.nvimtree.setup.actions.change_dir = {
 --enable = false,
 ---global = false,
@@ -141,6 +150,8 @@ lvim.builtin.treesitter.auto_install = true
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
+--
+lvim.builtin.nvimtree.setup.update_cwd = false
 
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -163,27 +174,27 @@ linters.setup {
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  {
-    "airblade/vim-rooter"
-  },
+  -- {
+  --   "airblade/vim-rooter"
+  -- },
   {
     "terryma/vim-multiple-cursors"
   },
   -- Command
   {
-  "FeiyouG/command_center.nvim",
-  requires = { "nvim-telescope/telescope.nvim" },
-  config = function()
-    require("telescope").load_extension("command_center")
-    local command_center = require("command_center")
-    command_center.add({
-  {
-    desc = "编译商家小程序npm",
-    cmd = "<CMD>:!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
-    -- keys = { "n", "<leader>fl", noremap },
-  }} )
-  end
-},
+    "FeiyouG/command_center.nvim",
+    requires = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("telescope").load_extension("command_center")
+      local command_center = require("command_center")
+      command_center.add({
+        {
+          desc = "编译商家小程序npm",
+          cmd = "<CMD>:!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
+        }
+      })
+    end
+  },
   -- KEYMAPS
   -- LSP
   {
@@ -206,44 +217,17 @@ lvim.plugins = {
       })
     end
   },
-  -- {
-  --   'ray-x/navigator.lua',
-  --   requires = {
-  --     { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' },
-  --     { 'neovim/nvim-lspconfig' },
-  --   },
-  --   config = function()
-  --     require 'navigator'.setup()
-  --   end
-  -- },
-  -- {
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   config = function()
-  --     local saga = require("lspsaga")
-
-  --     saga.init_lsp_saga({
-  --       -- your configuration
-  --     })
-  --   end,
-  -- },
   {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
+      require("trouble").setup {}
     end
   },
   -- GIT
   { 'tpope/vim-fugitive',
     requires = 'tpope/vim-rhubarb',
-    config = function()
-
-    end
+    config = function() end
   },
   {
     "sindrets/diffview.nvim",
@@ -316,6 +300,11 @@ lvim.plugins = {
       }
     end },
   -- TEST
+  {
+    'vim-test/vim-test',
+    config = function()
+    end,
+  },
   { 'David-Kunz/jester' },
   {
     "nvim-neotest/neotest",
@@ -327,7 +316,7 @@ lvim.plugins = {
     config = function()
       require("neotest").setup({
         adapters = {
-         
+
         },
       })
     end
@@ -397,28 +386,6 @@ lvim.plugins = {
       end)
     end
   },
-
-      vim.cmd([[
-  function! FloatermStrategy(cmd)
-    execute 'silent FloatermKill'
-    execute 'FloatermNew! '.a:cmd.' |less -X'
-  endfunction
-
---       vim.cmd([[
---   function! FloatermStrategy(cmd)
---     execute 'silent FloatermKill'
---     execute 'FloatermNew! '.a:cmd.' |less -X'
---   endfunction
-
---   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
---   let g:test#strategy = 'floaterm'
--- ]]     )
---     end,
---   }
-  -- {
-  -- "folke/trouble.nvim",
-  -- cmd = "TroubleToggle",
-  -- },
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
@@ -474,10 +441,10 @@ vim.keymap.set('n', '<C-g>', ":Telescope live_grep<CR>")
 vim.keymap.set('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 vim.keymap.set('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 vim.keymap.set('n', '<C-r>', ":Telescope npm scripts<CR>")
-local default_opts = {noremap = true, silent = true}
+local default_opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 
-local opts = {buffer = bufnr, remap = false}
+local opts = { buffer = bufnr, remap = false }
 vim.keymap.set("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
 -- NvimTree
 -- 默认打开 NvimTreeOpen
@@ -604,6 +571,15 @@ dap.configurations.typescriptreact = { -- change to typescript if needed
 -- }
 
 -- 编译商家小程序npm
-vim.api.nvim_create_user_command('BuildMerchantNPM', function() 
+vim.api.nvim_create_user_command('BuildMerchantNPM', function()
   vim.api.nvim_command(":!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm")
 end, {})
+
+require("project_nvim").setup {
+  manual_mode = true,
+  patterns = { ".git" },
+
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- refer to the configuration section below
+}
