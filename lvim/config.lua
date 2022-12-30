@@ -87,7 +87,7 @@ lvim.builtin.which_key.mappings["E"] = {
 -- 测试
 lvim.builtin.which_key.mappings["t"] = {
   name = 'Test',
-  t = { "<cmd>TestNearest<CR>", "TestNearest" },
+    t = { '<cmd>lua require("neotest").run.run({strategy = "dap"})<CR>', "TestNearest" },
   f = { "<cmd>TestFile<CR>", "TestFile" },
   s = { "<cmd>TestSuite<CR>", "TestSuite" },
   l = { "<cmd>TestLast<CR>", "TestLast" },
@@ -163,6 +163,13 @@ linters.setup {
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+    "airblade/vim-rooter"
+  },
+  {
+    "terryma/vim-multiple-cursors"
+  },
+  -- Command
   {
   "FeiyouG/command_center.nvim",
   requires = { "nvim-telescope/telescope.nvim" },
@@ -390,14 +397,6 @@ lvim.plugins = {
       end)
     end
   },
-  {
-    'vim-test/vim-test',
-    config = function()
-      vim.keymap.set('n', '<Leader>rt', ':TestNearest<CR>')
-      vim.keymap.set('n', '<Leader>rtf', ':TestFile<CR>')
-      vim.keymap.set('n', '<Leader>rts', ':TestSuite<CR>')
-      vim.keymap.set('n', '<Leader>rtl', ':TestLast<CR>')
-      vim.keymap.set('n', '<Leader>rtv', ':TestVisit<CR>')
 
       vim.cmd([[
   function! FloatermStrategy(cmd)
@@ -405,11 +404,17 @@ lvim.plugins = {
     execute 'FloatermNew! '.a:cmd.' |less -X'
   endfunction
 
-  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
-  let g:test#strategy = 'floaterm'
-]]     )
-    end,
-  }
+--       vim.cmd([[
+--   function! FloatermStrategy(cmd)
+--     execute 'silent FloatermKill'
+--     execute 'FloatermNew! '.a:cmd.' |less -X'
+--   endfunction
+
+--   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
+--   let g:test#strategy = 'floaterm'
+-- ]]     )
+--     end,
+--   }
   -- {
   -- "folke/trouble.nvim",
   -- cmd = "TroubleToggle",
@@ -435,6 +440,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- UI
 -- lvim.transparent_window = true
 
+-- KEYMPAPS BINDING
 vim.keymap.set("n", "<F2>", function() vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) end,
   opts)
 vim.keymap.set("n", "<F11>", function() vim.diagnostic.goto_prev() end, opts)
@@ -471,6 +477,8 @@ vim.keymap.set('n', '<C-r>', ":Telescope npm scripts<CR>")
 local default_opts = {noremap = true, silent = true}
 vim.api.nvim_set_keymap('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 
+local opts = {buffer = bufnr, remap = false}
+vim.keymap.set("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
 -- NvimTree
 -- 默认打开 NvimTreeOpen
 vim.schedule(function()
