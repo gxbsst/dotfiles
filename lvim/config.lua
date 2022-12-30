@@ -106,6 +106,7 @@ lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "startify"
 -- lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
+lvim.builtin.terminal.direction = 'horizontal'
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.update_focused_file = { update_cwd = false, update_focused_file = false, enable = false,
   update_root = false,
@@ -174,6 +175,12 @@ linters.setup {
 
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+    'terryma/vim-expand-region',
+    config = function()
+    -- Press + to expand the visual selection and _ to shrink it.
+    end
+  },
   -- {
   --   "airblade/vim-rooter"
   -- },
@@ -303,6 +310,10 @@ lvim.plugins = {
   {
     'vim-test/vim-test',
     config = function()
+      vim.cmd([[
+        let test#strategy = "neovim"
+        let g:test#preserve_screen = 1
+      ]])
     end,
   },
   { 'David-Kunz/jester' },
