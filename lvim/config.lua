@@ -468,6 +468,9 @@ vim.keymap.set('n', '<C-g>', ":Telescope live_grep<CR>")
 vim.keymap.set('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 vim.keymap.set('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 vim.keymap.set('n', '<C-r>', ":Telescope npm scripts<CR>")
+local default_opts = {noremap = true, silent = true}
+vim.api.nvim_set_keymap('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
+
 -- NvimTree
 -- 默认打开 NvimTreeOpen
 vim.schedule(function()
