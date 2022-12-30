@@ -411,7 +411,7 @@ _G.packer_plugins = {
     url = "https://github.com/junegunn/vim-easy-align"
   },
   ["vim-expand-region"] = {
-    config = { "\27LJ\2\n¬\1\0\0\5\0\b\0\0156\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0B\0\4\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\6\0'\4\a\0B\0\4\1K\0\1\0*<cmd><Plug>(expand_region_shrink)<cr>\n<C-h>*<cmd><Plug>(expand_region_expand)<cr>\n<C-l>\6v\bset\vkeymap\bvim\0" },
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/vim-expand-region",
     url = "https://github.com/terryma/vim-expand-region"
@@ -450,7 +450,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-test"] = {
-    config = { "\27LJ\2\nv\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0W        let test#strategy = \"neovim\"\n        let g:test#preserve_screen = 1\n      \bcmd\bvim\0" },
+    config = { "\27LJ\2\n•\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0õ\1  function! FloatermStrategy(cmd)\n    execute 'silent FloatermKill'\n    execute 'FloatermNew! '.a:cmd.' |less -X'\n  endfunction\n\n  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}\n  let g:test#strategy = 'floaterm'\n\bcmd\bvim\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
@@ -581,7 +581,7 @@ try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K
 time([[Config for project.nvim]], false)
 -- Config for: vim-test
 time([[Config for vim-test]], true)
-try_loadstring("\27LJ\2\nv\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0W        let test#strategy = \"neovim\"\n        let g:test#preserve_screen = 1\n      \bcmd\bvim\0", "config", "vim-test")
+try_loadstring("\27LJ\2\n•\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0õ\1  function! FloatermStrategy(cmd)\n    execute 'silent FloatermKill'\n    execute 'FloatermNew! '.a:cmd.' |less -X'\n  endfunction\n\n  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}\n  let g:test#strategy = 'floaterm'\n\bcmd\bvim\0", "config", "vim-test")
 time([[Config for vim-test]], false)
 -- Config for: nvim-navic
 time([[Config for nvim-navic]], true)
@@ -621,7 +621,7 @@ try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K
 time([[Config for lir.nvim]], false)
 -- Config for: vim-expand-region
 time([[Config for vim-expand-region]], true)
-try_loadstring("\27LJ\2\n¬\1\0\0\5\0\b\0\0156\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0B\0\4\0016\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\6\0'\4\a\0B\0\4\1K\0\1\0*<cmd><Plug>(expand_region_shrink)<cr>\n<C-h>*<cmd><Plug>(expand_region_expand)<cr>\n<C-l>\6v\bset\vkeymap\bvim\0", "config", "vim-expand-region")
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "vim-expand-region")
 time([[Config for vim-expand-region]], false)
 -- Config for: bigfile.nvim
 time([[Config for bigfile.nvim]], true)
@@ -651,9 +651,9 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'Comment.nvim', 'git-blame.nvim', 'nvim-spectre', 'gitsigns.nvim', 'diffview.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'bufferline.nvim', 'toggleterm.nvim', 'which-key.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'nvim-ts-context-commentstring'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'Comment.nvim', 'git-blame.nvim', 'nvim-spectre', 'gitsigns.nvim', 'diffview.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

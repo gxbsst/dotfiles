@@ -311,9 +311,18 @@ lvim.plugins = {
     'vim-test/vim-test',
     config = function()
       vim.cmd([[
-        let test#strategy = "neovim"
-        let g:test#preserve_screen = 1
-      ]])
+  function! FloatermStrategy(cmd)
+    execute 'silent FloatermKill'
+    execute 'FloatermNew! '.a:cmd.' |less -X'
+  endfunction
+
+  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
+  let g:test#strategy = 'floaterm'
+]])
+      -- vim.cmd([[
+      --   let test#strategy = "neovim"
+      --   let g:test#preserve_screen = 1
+      -- ]])
     end,
   },
   { 'David-Kunz/jester' },
