@@ -1,6 +1,6 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- fold 代码折叠
 vim.opt.foldlevel = 20
@@ -34,7 +34,8 @@ lvim.builtin.alpha.mode = "startify"
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = 'horizontal'
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.update_focused_file = { update_cwd = false, update_focused_file = false, enable = false,
+lvim.builtin.nvimtree.setup.update_focused_file = {
+  update_cwd = false, update_focused_file = false, enable = false,
   update_root = false,
   ignore_list = { "package.json", }
 }
@@ -48,18 +49,11 @@ lvim.builtin.nvimtree.setup.update_cwd = false
 -- -- DAP CONFIG
 lvim.builtin.dap.active = true
 
-
--- NvimTree
--- 默认打开 NvimTreeOpen
-vim.schedule(function()
-  vim.cmd "noautocmd NvimTreeOpen"
-end)
-
 -- LunarVim
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.lsp.diagnostics.float.focusable = true
-lvim.reload_config_on_save =  false
+lvim.reload_config_on_save = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.terminal.active = true
@@ -87,7 +81,7 @@ lvim.builtin.cmp.formatting.source_names = {
   copilot = "",
   treesitter = "",
 }
--- lvim.builtin.autopairs.active = false
+-- lvim.builtin.autopairs.active = true
 -- vim.g.netrw_browse_split = 0
 -- vim.g.netrw_banner = 0
 -- vim.g.netrw_winsize = 25
@@ -124,7 +118,7 @@ local options = {
   laststatus = 3,
   showcmd = false,
   ruler = false,
-  relativenumber = true, -- set relative numbered lines
+  -- relativenumber = true, -- set relative numbered lines
   numberwidth = 4, -- set number column width to 2 {default 4}
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
   wrap = false, -- display lines as one long line
@@ -147,9 +141,9 @@ vim.opt.fillchars:append {
 
 vim.opt.shortmess:append "c"
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
+-- for k, v in pairs(options) do
+-- vim.opt[k] = v
+-- end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
@@ -160,3 +154,9 @@ vim.filetype.add {
     conf = "dosini",
   },
 }
+
+-- NvimTree
+-- 默认打开 NvimTreeOpen
+vim.schedule(function()
+  vim.cmd "noautocmd NvimTreeOpen"
+end)

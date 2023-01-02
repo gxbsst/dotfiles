@@ -1,5 +1,4 @@
 local neogit = require "neogit"
-
 neogit.setup {
   disable_signs = false,
   disable_hint = true,

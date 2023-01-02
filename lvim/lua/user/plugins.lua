@@ -1,122 +1,11 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  { 'hkupty/iron.nvim', config = function()
-    local iron = require("iron.core")
-    iron.setup {
-      config = {
-        -- Whether a repl should be discarded or not
-        scratch_repl = true,
-        -- Your repl definitions come here
-        repl_definition = {
-          sh = {
-            -- Can be a table or a function that
-            -- returns a table (see below)
-            command = { "zsh" }
-          }
-        },
-        -- How the repl window will be displayed
-        -- See below for more information
-        repl_open_cmd = require('iron.view').bottom(40),
-      },
-      -- Iron doesn't set keymaps by default anymore.
-      -- You can set them here or manually add keymaps to the functions in iron.core
-      keymaps = {
-        send_motion = "<space>sc",
-        visual_send = "<space>sc",
-        send_file = "<space>sf",
-        send_line = "<space>sl",
-        send_mark = "<space>sm",
-        mark_motion = "<space>mc",
-        mark_visual = "<space>mc",
-        remove_mark = "<space>md",
-        cr = "<space>s<cr>",
-        interrupt = "<space>s<space>",
-        exit = "<space>sq",
-        clear = "<space>cl",
-      },
-      -- If the highlight is on, you can change how it looks
-      -- For the available options, check nvim_set_hl
-      highlight = {
-        italic = true
-      },
-      ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
-    }
-
-    -- iron also has a list of commands, see :h iron-commands for all available commands
-    vim.keymap.set('n', '<space>rs', '<cmd>IronRepl<cr>')
-    vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
-    vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
-    vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
-  end },
+  -- { 'ldelossa/nvim-ide', config = function()
+  --   require('user.plugins.ide')
+  -- end },
+  { 'hkupty/iron.nvim' },
   {
     'michaelb/sniprun', run = 'bash ./install.sh',
-    config = function()
-      require 'sniprun'.setup({
-
-        repl_disable = {}, --# disable REPL-like behavior for the given interpreters
-        selected_interpreters = { "JS_TS_deno" },
-        repl_enable = { "JS_TS_deno" },
-        interpreter_options = { --# interpreter-specific options, see docs / :SnipInfo <name>
-
-          --# use the interpreter name as key
-          -- GFM_original = {
-          --   use_on_filetypes = { "markdown.pandoc" } --# the 'use_on_filetypes' configuration key is
-          --   --# available for every interpreter
-          -- },
-          Python3_original = {
-            error_truncate = "auto" --# Truncate runtime errors 'long', 'short' or 'auto'
-            --# the hint is available for every interpreter
-            --# but may not be always respected
-          }
-        },
-
-        --# you can combo different display modes as desired and with the 'Ok' or 'Err' suffix
-        --# to filter only sucessful runs (or errored-out runs respectively)
-        display = {
-          "Classic", --# display results in the command-line  area
-          "VirtualTextOk", --# display ok results as virtual text (multiline is shortened)
-
-          -- "VirtualText",             --# display results as virtual text
-          -- "TempFloatingWindow",      --# display results in a floating window
-          -- "LongTempFloatingWindow",  --# same as above, but only long results. To use with VirtualText[Ok/Err]
-          -- "Terminal",                --# display results in a vertical split
-          -- "TerminalWithCode",        --# display results and code history in a vertical split
-          -- "NvimNotify",              --# display with the nvim-notify plugin
-          -- "Api"                      --# return output to a programming interface
-        },
-
-        live_display = { "VirtualTextOk" }, --# display mode used in live_mode
-
-        display_options = {
-          terminal_width = 45, --# change the terminal display option width
-          notification_timeout = 5 --# timeout for nvim_notify output
-        },
-
-        --# You can use the same keys to customize whether a sniprun producing
-        --# no output should display nothing or '(no output)'
-        show_no_output = {
-          "Classic",
-          "TempFloatingWindow", --# implies LongTempFloatingWindow, which has no effect on its own
-        },
-
-        --# customize highlight groups (setting this overrides colorscheme)
-        snipruncolors = {
-          SniprunVirtualTextOk  = { bg = "#66eeff", fg = "#000000", ctermbg = "Cyan", cterfg = "Black" },
-          SniprunFloatingWinOk  = { fg = "#66eeff", ctermfg = "Cyan" },
-          SniprunVirtualTextErr = { bg = "#881515", fg = "#000000", ctermbg = "DarkRed", cterfg = "Black" },
-          SniprunFloatingWinErr = { fg = "#881515", ctermfg = "DarkRed" },
-        },
-
-        live_mode_toggle = 'off', --# live mode toggle, see Usage - Running for more info
-
-        --# miscellaneous compatibility/adjustement settings
-        inline_messages = 0, --# inline_message (0/1) is a one-line way to display messages
-        --# to workaround sniprun not being able to display anything
-
-        borders = 'single', --# display borders around floating windows
-        --# possible values are 'none', 'single', 'double', or 'shadow'
-      })
-    end
   },
   -- themes
   {
@@ -176,6 +65,7 @@ lvim.plugins = {
   },
   -- KEYMAPS
   -- LSP
+  "glepnir/lspsaga.nvim",
   {
     'ray-x/lsp_signature.nvim',
     config = function()
@@ -318,8 +208,6 @@ lvim.plugins = {
     config = function()
       vim.g.floaterm_width = 0.8
       vim.g.floaterm_height = 0.8
-      vim.keymap.set('n', '<F1>', ':FloatermToggle<CR>')
-      vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
       vim.cmd([[
       highlight link Floaterm CursorLine
       highlight link FloatermBorder CursorLineBg
@@ -362,23 +250,9 @@ lvim.plugins = {
         },
       }
 
-      vim.keymap.set("n", "<leader>zz", function()
-        require("zen-mode").toggle({
-          window = {
-            width = 120,
-
-            options = {
-              number = true,
-              relativenumber = true,
-            }
-          }
-        })
-        vim.wo.wrap = true
-        -- ColorMyPencils()
-      end)
     end
   },
-   "ellisonleao/gruvbox.nvim",
+  "ellisonleao/gruvbox.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "p00f/nvim-ts-rainbow",
@@ -397,7 +271,6 @@ lvim.plugins = {
   "mattn/vim-gist",
   "mattn/webapi-vim",
   "lvimuser/lsp-inlayhints.nvim",
-  "lunarvim/darkplus.nvim",
   "lunarvim/templeos.nvim",
   "kevinhwang91/nvim-bqf",
   "is0n/jaq-nvim",
