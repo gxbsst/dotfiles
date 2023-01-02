@@ -62,7 +62,7 @@ keyset('n', '<C-o>', "<cmd>Telescope git_files<CR>")
 -- LSP
 keyset("n", ',d', "<cmd>Lspsaga lsp_finder<CR>")
 opts = { remap = false }
-keyset("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
+-- keyset("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
 -- LSPSaga prefix - [;]
 keyset("n", ",f", [[<cmd>Lspsaga lsp_finder<CR>]])
 -- Code action
@@ -85,7 +85,7 @@ keyset("n", "]E", function()
   require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
 end, { silent = true })
 -- Outline
---keyset("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", { silent = true })
+keyset("n", ",o", "<cmd>LSoutlineToggle<CR>", { silent = true })
 -- Hover Doc
 keyset("n", "<C-i>", "<cmd>Lspsaga hover_doc<CR>", { silent = true, remap = true })
 

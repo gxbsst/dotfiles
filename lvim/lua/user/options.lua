@@ -50,37 +50,37 @@ lvim.builtin.nvimtree.setup.update_cwd = false
 lvim.builtin.dap.active = true
 
 -- LunarVim
-lvim.log.level = "warn"
-lvim.builtin.alpha.active = true
-lvim.lsp.diagnostics.float.focusable = true
-lvim.reload_config_on_save = false
-lvim.builtin.illuminate.active = false
-lvim.builtin.bufferline.active = false
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-lvim.builtin.breadcrumbs.active = true
-lvim.builtin.treesitter.highlight.enabled = true
-lvim.builtin.dap.active = true
-lvim.keys.term_mode = { ["<C-l>"] = false }
-lvim.builtin.cmp.cmdline.enable = false
-lvim.builtin.cmp.window.documentation = false
-lvim.builtin.cmp.window.completion = {
-  border = "rounded",
-  winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
-}
-lvim.builtin.cmp.formatting.source_names = {
-  nvim_lsp = "",
-  emoji = "",
-  path = "",
-  calc = "",
-  cmp_tabnine = "",
-  vsnip = "",
-  luasnip = "",
-  buffer = "",
-  tmux = "",
-  copilot = "",
-  treesitter = "",
-}
+-- lvim.log.level = "warn"
+-- lvim.builtin.alpha.active = true
+-- lvim.lsp.diagnostics.float.focusable = true
+-- lvim.reload_config_on_save = false
+-- lvim.builtin.illuminate.active = false
+-- lvim.builtin.bufferline.active = false
+-- lvim.builtin.terminal.active = true
+-- lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+-- lvim.builtin.breadcrumbs.active = true
+-- lvim.builtin.treesitter.highlight.enabled = true
+-- lvim.builtin.dap.active = true
+-- lvim.keys.term_mode = { ["<C-l>"] = false }
+-- lvim.builtin.cmp.cmdline.enable = false
+-- lvim.builtin.cmp.window.documentation = false
+-- lvim.builtin.cmp.window.completion = {
+--   border = "rounded",
+--   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+-- }
+-- lvim.builtin.cmp.formatting.source_names = {
+--   nvim_lsp = "",
+--   emoji = "",
+--   path = "",
+--   calc = "",
+--   cmp_tabnine = "",
+--   vsnip = "",
+--   luasnip = "",
+--   buffer = "",
+--   tmux = "",
+--   copilot = "",
+--   treesitter = "",
+-- }
 -- lvim.builtin.autopairs.active = true
 -- vim.g.netrw_browse_split = 0
 -- vim.g.netrw_banner = 0
@@ -134,12 +134,12 @@ local options = {
 -- vim.opt.fillchars.eob = " "
 -- vim.opt.fillchars = vim.opt.fillchars + "vertleft: "
 -- vim.opt.fillchars = vim.opt.fillchars + "vertright: "
-vim.opt.fillchars = vim.opt.fillchars + "eob: "
-vim.opt.fillchars:append {
-  stl = " ",
-}
+-- vim.opt.fillchars = vim.opt.fillchars + "eob: "
+-- vim.opt.fillchars:append {
+--   stl = " ",
+-- }
 
-vim.opt.shortmess:append "c"
+-- vim.opt.shortmess:append "c"
 
 -- for k, v in pairs(options) do
 -- vim.opt[k] = v
