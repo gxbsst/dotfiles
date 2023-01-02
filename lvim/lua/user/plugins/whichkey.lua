@@ -195,7 +195,7 @@ lvim.builtin.which_key.mappings["sS"] = { "<cmd>lua require('spectre').open()<CR
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["gS"] = { "<cmd>Telescope git_status<CR>", "Git Status" }
 -- Command
-lvim.builtin.which_key.mappings["C"] = { "<cmd>Telescope command_center<CR>", "Command Center" }
+-- lvim.builtin.which_key.mappings["C"] = { "<cmd>Telescope command_center<CR>", "Command Center" }
 -- 项目
 lvim.builtin.which_key.mappings["p"] = {
   name = "Project",
@@ -222,5 +222,3 @@ lvim.builtin.which_key.mappings["t"] = {
   j = { "<cmd>lua require'jester'.debug()<CR>", "Debug nearest test(s) under the cursor" },
   J = { "<cmd>lua require'jester'.debug_file()<CR>", "Debug current file" },
 }
-
-

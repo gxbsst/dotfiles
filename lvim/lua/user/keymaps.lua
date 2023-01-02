@@ -56,9 +56,11 @@ keyset('n', 'L', ':move .-2<CR>==')
 keyset('v', 'j>', ":move '>+1<CR>gv=gv")
 keyset('v', '<A-k>', ":move '<-2<CR>gv=gv")
 -- Telescope
+-- git
 keyset('n', ',km', "<cmd>Telescope keymaps<CR>")
 keyset('n', '<C-o>', "<cmd>Telescope git_files<CR>")
-
+-- command center
+keyset('n', ',c', "<cmd>Telescope command_center<CR>")
 -- LSP
 keyset("n", ',d', "<cmd>Lspsaga lsp_finder<CR>")
 opts = { remap = false }
