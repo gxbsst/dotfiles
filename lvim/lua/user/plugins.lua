@@ -1,5 +1,30 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+  "puremourning/vimspector",
+  config = function()
+      vim.cmd([[
+        let g:vimspector_configurations = {
+      \ "test_debugpy_config": {
+      \   "adapter": "vscode-node",
+      \   "configuration": {
+      \   "name": "Jest Current File",
+      \     "request": "launch",
+      \     "type": "node",
+      \     "cwd": "${workspaceFolder}",
+      \      "args": [
+      \          "${fileBasenameNoExtension}",
+      \          "--config",
+      \          "${workspaceFolder}/jest.config.js"
+      \       ],
+      \      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      \     "stopOnEntry": v:false,
+      \     "console": "integratedTerminal"
+      \   }
+      \ } }
+      ]])
+  end
+},
   -- { 'ldelossa/nvim-ide', config = function()
   --   require('user.plugins.ide')
   -- end },
@@ -187,7 +212,9 @@ lvim.plugins = {
       -- ]])
     end,
   },
-  { 'David-Kunz/jester' },
+  { 'David-Kunz/jester' , config = function() 
+   
+  end},
   {
     "nvim-neotest/neotest",
     requires = {

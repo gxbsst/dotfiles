@@ -2,9 +2,9 @@ reload "user.plugins"
 reload "user.options"
 reload "user.keymaps"
 reload "user.autocommands"
+require('user.plugins.lsp')
 --- plugins
 -- language
-reload "user.plugins.lsp"
 reload "user.plugins.lspsaga"
 reload "user.plugins.smoothie"
 reload "user.plugins.harpoon"
@@ -38,3 +38,5 @@ reload "user.plugins.dap"
 -- code runner
 reload "user.plugins.sniprun"
 reload "user.plugins.iron"
+-- reload "user.plugins.rust-tools"
+
