@@ -118,12 +118,12 @@ dap.configurations.typescriptreact = { -- change to typescript if needed
 -- brew install llvm
 dap.adapters.lldb = {
   type = 'executable',
-  -- command = '/Users/weston/bin/lldb-vscode', -- adjust as needed, must be absolute path
+  command = '/opt/homebrew/opt/llvm/bin/lldb-vscode', -- adjust as needed, must be absolute path
   name = 'lldb'
 }
 dap.adapters.rt_lldb = {
   type = 'executable',
-  -- command = '/Users/weston/bin/lldb-vscode', -- adjust as needed, must be absolute path
+  command = '/opt/homebrew/opt/llvm/bin/lldb-vscode', -- adjust as needed, must be absolute path
   name = 'rt_lldb'
 }
 
