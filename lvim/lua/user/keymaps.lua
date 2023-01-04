@@ -29,6 +29,9 @@ keyset('n', '<F7>', '<cmd>SymbolsOutline<cr>')
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+-- Floatterm
+keyset('n', '<F1>', ':FloatermToggle<CR>')
+keyset('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
 
 -- KEYMPAPS BINDING
 local opts = { silent = true, nowait = true }
@@ -82,6 +85,7 @@ keyset("n", "[E", function()
   require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
 
 
+
 end, { silent = true })
 keyset("n", "]E", function()
   require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
@@ -120,9 +124,7 @@ vim.api.nvim_set_keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<
 -- keyset('n', '<C-n>', ":bnext<CR>")
 -- keyset('n', '<C-p>', ":bprev<CR>")
 
--- Floatterm
-keyset('n', '<F1>', ':FloatermToggle<CR>')
-keyset('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
+
 
 -- Zenmode
 keyset("n", "<leader>zz", function()
