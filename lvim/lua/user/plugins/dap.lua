@@ -25,6 +25,7 @@ dap.configurations.javascript = {
     sourceMaps = true,
     protocol = 'inspector',
     console = 'integratedTerminal',
+    runtimeArgs = { '--inspect-brk', '$path_to_jest', '--no-coverage', '-t', '$result', '--', '$file' },
   },
   {
     -- For this to work you need to make sure the node process is started with the `--inspect` flag.
@@ -134,6 +135,8 @@ dap.configurations.cpp = {
     request = 'launch',
     program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+
+
     end,
     cwd = '${workspaceFolder}',
     stopOnEntry = false,
@@ -155,4 +158,3 @@ dap.configurations.cpp = {
 }
 dap.configurations.c = dap.configurations.cpp
 dap.configurations.rust = dap.configurations.cpp
-

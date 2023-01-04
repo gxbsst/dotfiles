@@ -3,6 +3,9 @@ reload "user.options"
 reload "user.keymaps"
 reload "user.autocommands"
 require('user.plugins.lsp')
+-- debugger
+require "user.plugins.dap"
+-- reload "user.plugins.ide"
 --- plugins
 -- language
 reload "user.plugins.lspsaga"
@@ -32,11 +35,7 @@ reload "user.plugins.neogit"
 reload "user.plugins.scrollbar"
 -- calendar
 reload "user.plugins.zk"
--- debugger
-reload "user.plugins.dap"
--- reload "user.plugins.ide"
 -- code runner
 reload "user.plugins.sniprun"
 reload "user.plugins.iron"
 -- reload "user.plugins.rust-tools"
-

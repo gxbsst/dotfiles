@@ -1,9 +1,26 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
-  "puremourning/vimspector",
-  config = function()
+    "puremourning/vimspector",
+    config = function()
       vim.cmd([[
+
+       let g:vimspector_sign_priority = {
+    \    'vimspectorBP':         998,
+    \    'vimspectorBPCond':     997,
+    \    'vimspectorBPDisabled': 996,
+    \    'vimspectorPC':         999,
+    \ }
+
+       nnoremap <leader>dd :TestNearest -strategy=jest<CR>
+
+      function! JestStrategy(cmd)
+        let testName = matchlist(a:cmd, '\v -t ''(.*)''')[1]
+        call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )
+      endfunction      
+      let g:test#custom_strategies = {'jest': function('JestStrategy')}
+      let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')
+
         let g:vimspector_configurations = {
       \ "test_debugpy_config": {
       \   "adapter": "vscode-node",
@@ -23,8 +40,8 @@ lvim.plugins = {
       \   }
       \ } }
       ]])
-  end
-},
+    end
+  },
   -- { 'ldelossa/nvim-ide', config = function()
   --   require('user.plugins.ide')
   -- end },
@@ -212,9 +229,35 @@ lvim.plugins = {
       -- ]])
     end,
   },
-  { 'David-Kunz/jester' , config = function() 
-   
-  end},
+  { 'David-Kunz/jester', config = function()
+    require("jester").setup({
+      identifiers = { "test", "it" },
+      terminal_cmd = ':vsplit | terminal',
+      path_to_jest_debug = 'node_modules/.bin/jest',
+      path_to_jest_run = 'node_modules/.bin/jest',
+      stringCharacters = { "'", '"' },
+      expressions = { "call_expression" },
+      prepend = { "describe" },
+      regexStartEnd = true,
+      escapeRegex = true,
+      dap = {
+        type = 'node2',
+        request = 'launch',
+        args = { "--no-cache" },
+        -- cwd = '/Users/weston/Projects/WOSAI/FRONTEND/emenu-mini-core',
+        sourceMaps = "inline",
+        protocol = 'inspector',
+        skipFiles = { '<node_internals>/**/*.js' },
+        console = 'integratedTerminal',
+        port = 9229,
+        disableOptimisticBPs = true
+      },
+      cache = { -- used to store the information about the last run
+        last_run = nil,
+        last_used_term_buf = nil
+      }
+    })
+  end },
   {
     "nvim-neotest/neotest",
     requires = {
