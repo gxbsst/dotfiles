@@ -19,7 +19,7 @@ pcall(function()
         use_telescope = true,
       },
       inlay_hints = {
-        auto = true,
+        auto = false,
         only_current_line = false,
         show_parameter_hints = false,
         parameter_hints_prefix = "<-",
