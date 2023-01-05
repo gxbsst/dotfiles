@@ -7,10 +7,10 @@ lvim.plugins = {
       wilder.setup({
         modes = { ':', '/', '?' },
         enable_cmd_enter = 1,
-        next_key = '<C-n>',
-        previous_key = '<C-p>',
-        accept_key = '<Down>',
-        reject_key = '<Up>',
+        next_key = '<Tab>',
+        previous_key = '<S-Tab>',
+        accept_key = '<C-n>', -- hisotry
+        reject_key = '<C-p>', -- hisotry
       })
 
       wilder.set_option('renderer', wilder.popupmenu_renderer({
