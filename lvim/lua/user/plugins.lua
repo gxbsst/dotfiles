@@ -1,5 +1,15 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {"ray-x/web-tools.nvim",
+    config = function ()
+      require'web-tools'.setup({
+  keymaps = {
+    rename = nil,  -- by default use same setup of lspconfig
+    repeat_rename = '.', -- . to repeat
+  },
+})
+    end
+  },
   {"andythigpen/nvim-coverage",  
     config = function()
     require("coverage").setup()
@@ -78,6 +88,13 @@ lvim.plugins = {
       })
 
       vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#22232b' })
+      -- gitsign
+      vim.api.nvim_set_hl(0, 'GitSignsAdd', { fg = '#00ff00' })
+      vim.api.nvim_set_hl(0, 'GitSignsDelete', { fg = '#ff0000' })
+      vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#ffcc00' })
+      vim.cmd('highlight GitSignsDelete guibg=#ff0000')
+      vim.cmd('highlight GitSignsAdd guibg=#00ff00')
+      vim.cmd('highlight GitSignsChange guibg=#ffcc00')
     end
   },
   -- Mark
