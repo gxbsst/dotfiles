@@ -1,7 +1,7 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 -- vim.opt.relativenumber = true
-      
+
 -- fold 代码折叠
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = "expr"
@@ -30,6 +30,8 @@ lvim.builtin.lualine.sections.lualine_c = { "diff" }
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["S"] = ":w<cr>"
+
+lvim.builtin.gitsigns.opts.sign_priority = 100
 
 -- Change theme settings
 -- lvim.colorscheme = "lunar"
@@ -127,7 +129,7 @@ local options = {
   ruler = false,
   -- relativenumber = true, -- set relative numbered lines
   numberwidth = 4, -- set number column width to 2 {default 4}
-  signcolumn = "yes:2", -- always show the sign column, otherwise it would shift the text each time
+  signcolumn = "yes:1", -- always show the sign column, otherwise it would shift the text each time
   wrap = false, -- display lines as one long line
   scrolloff = 0,
   sidescrolloff = 8,
