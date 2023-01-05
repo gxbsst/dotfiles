@@ -77,7 +77,7 @@ lvim.plugins = {
         bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
       })
 
-      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#22232b' })
     end
   },
   -- Mark

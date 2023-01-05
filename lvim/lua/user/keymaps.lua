@@ -83,9 +83,6 @@ keyset("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
 -- Only jump to error
 keyset("n", "[E", function()
   require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
-
-
-
 end, { silent = true })
 keyset("n", "]E", function()
   require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
@@ -94,7 +91,9 @@ end, { silent = true })
 keyset("n", ",o", "<cmd>LSoutlineToggle<CR>", { silent = true })
 -- Hover Doc
 keyset("n", "<C-i>", "<cmd>Lspsaga hover_doc<CR>", { silent = true, remap = true })
-
+-- Quit
+keyset('n', 'q', ':q<CR>')
+-- Telescope
 
 keyset('n', '<C-F>',
   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
@@ -104,27 +103,18 @@ keyset('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 keyset('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 keyset('n', '<C-r>', ":Telescope npm scripts<CR>")
 local default_opts = { noremap = true, silent = true }
-vim.api.nvim_set_keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
--- Quit
-keyset('n', 'q', ':q<CR>')
--- Telescope
+keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 keyset('n', ',km', "<cmd>Telescope keymaps<CR>")
 keyset('n', '<C-o>', "<cmd>Telescope git_files<CR>")
 -- keyset('n', '<C-F>',
 --   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
-keyset('n', '<C-p>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
-keyset('n', '<C-g>', ":Telescope live_grep<CR>")
-keyset('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
-keyset('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
-keyset('n', '<C-r>', ":Telescope npm scripts<CR>")
+-- keyset('n', '<C-p>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 default_opts = { noremap = true, silent = true }
-vim.api.nvim_set_keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
+keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 
 -- Buffer
 -- keyset('n', '<C-n>', ":bnext<CR>")
 -- keyset('n', '<C-p>', ":bprev<CR>")
-
-
 
 -- Zenmode
 keyset("n", "<leader>zz", function()

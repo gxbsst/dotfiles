@@ -9,13 +9,20 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldcolumn = "1"
 vim.g.noautochdir = true
 -- general
--- lvim.colorscheme = 'rose-pine'
+lvim.colorscheme = 'rose-pine'
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
   pattern = "*.lua",
   timeout = 1000,
 }
+vim.opt.list = true
+-- vim.opt.listchars:append "space:⋅"
+-- vim.opt.listchars:append "eol:↴"
+lvim.builtin.indentlines.active = true
+lvim.builtin.indentlines.options.space_char_blankline = " "
+lvim.builtin.indentlines.options.show_current_context = true
+lvim.builtin.indentlines.options.show_current_context_start = false
 -- lualine
 -- lvim.builtin.lualine.style = "default" -- or "none"
 lvim.builtin.lualine.sections.lualine_c = { "diff" }
