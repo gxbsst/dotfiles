@@ -1,5 +1,24 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+    'gelguy/wilder.nvim',
+    config = function()
+      local wilder = require('wilder')
+      wilder.setup({
+        modes = { ':', '/', '?' },
+        enable_cmd_enter = 1,
+        next_key = '<C-n>',
+        previous_key = '<C-p>',
+        accept_key = '<Down>',
+        reject_key = '<Up>',
+      })
+
+      wilder.set_option('renderer', wilder.popupmenu_renderer({
+        -- highlighter applies highlighting to the candidates
+        highlighter = wilder.basic_highlighter(),
+      }))
+    end
+  },
   { "jessarcher/onedark.nvim", config = function()
 
     vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
