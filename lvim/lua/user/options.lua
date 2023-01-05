@@ -1,7 +1,7 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 -- vim.opt.relativenumber = true
-
+      
 -- fold 代码折叠
 vim.opt.foldlevel = 20
 vim.opt.foldmethod = "expr"
@@ -161,6 +161,7 @@ vim.filetype.add {
     conf = "dosini",
   },
 }
+
 
 -- NvimTree
 -- 默认打开 NvimTreeOpen

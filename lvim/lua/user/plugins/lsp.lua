@@ -1,5 +1,5 @@
 require "user.plugins.lsp.languages.rust"
-require "user.plugins.lsp.languages.go"
+-- require "user.plugins.lsp.languages.go"
 require "user.plugins.lsp.languages.python"
 require "user.plugins.lsp.languages.js-ts"
 require "user.plugins.lsp.languages.sh"
@@ -17,6 +17,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "google_java_format", filetypes = { "java" } },
   { command = "stylua", filetypes = { "lua" } },
+
   { command = "shfmt", filetypes = { "sh", "zsh" } },
 }
 

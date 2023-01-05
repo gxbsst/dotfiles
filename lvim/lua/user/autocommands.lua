@@ -7,6 +7,19 @@
 --   end,
 -- })
 
+-- gitsign
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = { "" },
+  callback = function()
+    vim.api.nvim_set_hl(0, 'GitSignsAdd', { fg = '#00ff00' })
+    vim.api.nvim_set_hl(0, 'GitSignsDelete', { fg = '#ff0000' })
+    vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#ffcc00' })
+    vim.cmd('highlight GitSignsDelete guibg=#ff0000')
+    vim.cmd('highlight GitSignsAdd guibg=#00ff00')
+    vim.cmd('highlight GitSignsChange guibg=#ffcc00')
+  end,
+})
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {
     "Jaq",

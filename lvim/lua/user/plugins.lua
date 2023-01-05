@@ -1,19 +1,30 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  {"ray-x/web-tools.nvim",
-    config = function ()
-      require'web-tools'.setup({
-  keymaps = {
-    rename = nil,  -- by default use same setup of lspconfig
-    repeat_rename = '.', -- . to repeat
-  },
-})
+  { "jessarcher/onedark.nvim", config = function()
+
+    vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+
+    vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+      fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+    })
+
+    vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+  end },
+  { "ray-x/web-tools.nvim",
+    config = function()
+      require 'web-tools'.setup({
+        keymaps = {
+          rename = nil, -- by default use same setup of lspconfig
+          repeat_rename = '.', -- . to repeat
+        },
+      })
     end
   },
-  {"andythigpen/nvim-coverage",  
+  { "andythigpen/nvim-coverage",
     config = function()
-    require("coverage").setup()
-  end},
+      require("coverage").setup()
+    end },
   {
     "puremourning/vimspector",
     config = function()
@@ -88,13 +99,6 @@ lvim.plugins = {
       })
 
       vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#22232b' })
-      -- gitsign
-      vim.api.nvim_set_hl(0, 'GitSignsAdd', { fg = '#00ff00' })
-      vim.api.nvim_set_hl(0, 'GitSignsDelete', { fg = '#ff0000' })
-      vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#ffcc00' })
-      vim.cmd('highlight GitSignsDelete guibg=#ff0000')
-      vim.cmd('highlight GitSignsAdd guibg=#00ff00')
-      vim.cmd('highlight GitSignsChange guibg=#ffcc00')
     end
   },
   -- Mark
