@@ -1,7 +1,7 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+      'rcarriga/nvim-notify',
   {
-    'rcarriga/nvim-notify',
     'gelguy/wilder.nvim',
     config = function()
       local wilder = require('wilder')
