@@ -249,6 +249,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/bin:/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/Applications/wechatwebdevtools.app/Contents/MacOS/:$PATH"
+export PATH="$HOME/bin/nvim-macos/bin:$PATH"
 alias python2="/usr/local/bin/python"
 alias k9s="$HOME/dotfiles/k9s"
 export VISUAL="$EDITOR"
@@ -267,5 +268,5 @@ alias wx='cli --project "$(pwd)"'
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-export http_proxy="socks5://127.0.0.1:1080"
-export https_proxy="socks5://127.0.0.1:1080"
+#export http_proxy="socks5://127.0.0.1:1080"
+#export https_proxy="socks5://127.0.0.1:1080"

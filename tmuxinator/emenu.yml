@@ -16,6 +16,7 @@ windows:
             - yarn dev:components:wx:all
         - jjz:
             - cd forever-discount-mp
+            - nvm use 14
             - dev jjz
   - buildSQB:
       layout: ba78,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}

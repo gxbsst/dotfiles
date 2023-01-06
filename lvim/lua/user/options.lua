@@ -164,6 +164,12 @@ vim.filetype.add {
   },
 }
 
+-- telescope
+lvim.builtin.telescope.theme = "ivy"
+lvim.builtin.telescope.defaults.layout_strategy = 'horizontal'
+lvim.builtin.telescope.defaults.layout_config = {
+  horizontal = { width = 0.7 }
+}
 
 -- NvimTree
 -- 默认打开 NvimTreeOpen

@@ -99,6 +99,12 @@ _G.packer_plugins = {
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["bigfile.nvim"] = {
+    config = { "\27LJ\2\nS\0\0\3\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\3\0009\2\4\0029\2\1\0029\2\2\2B\0\2\1K\0\1\0\fbuiltin\tlvim\vconfig\fbigfile\frequire\30\1\0\3\0\2\0\0046\0\0\0003\2\1\0B\0\2\1K\0\1\0\0\npcall\0" },
+    loaded = true,
+    path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/bigfile.nvim",
+    url = "https://github.com/lunarvim/bigfile.nvim"
+  },
   ["bufferline.nvim"] = {
     config = { "\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.bufferline\frequire\0" },
     loaded = false,
@@ -235,7 +241,7 @@ _G.packer_plugins = {
     url = "https://github.com/is0n/jaq-nvim"
   },
   jester = {
-    config = { "\27LJ\2\n≤\4\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\ncache\1\0\0\bdap\14skipFiles\1\2\0\0\29<node_internals>/**/*.js\targs\1\2\0\0\15--no-cache\1\0\a\25disableOptimisticBPs\2\frequest\vlaunch\ttype\nnode2\fconsole\23integratedTerminal\15sourceMaps\vinline\rprotocol\14inspector\tport\3çH\fprepend\1\2\0\0\rdescribe\16expressions\1\2\0\0\20call_expression\21stringCharacters\1\3\0\0\6'\6\"\16identifiers\1\0\5\16escapeRegex\2\18regexStartEnd\2\21path_to_jest_run\27node_modules/.bin/jest\23path_to_jest_debug\27node_modules/.bin/jest\17terminal_cmd\23:vsplit | terminal\1\3\0\0\ttest\ait\nsetup\vjester\frequire\0" },
+    config = { "\27LJ\2\n≤\4\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\ncache\1\0\0\bdap\14skipFiles\1\2\0\0\29<node_internals>/**/*.js\targs\1\2\0\0\15--no-cache\1\0\a\tport\3çH\25disableOptimisticBPs\2\ttype\nnode2\15sourceMaps\vinline\rprotocol\14inspector\frequest\vlaunch\fconsole\23integratedTerminal\fprepend\1\2\0\0\rdescribe\16expressions\1\2\0\0\20call_expression\21stringCharacters\1\3\0\0\6'\6\"\16identifiers\1\0\5\23path_to_jest_debug\27node_modules/.bin/jest\21path_to_jest_run\27node_modules/.bin/jest\18regexStartEnd\2\16escapeRegex\2\17terminal_cmd\23:vsplit | terminal\1\3\0\0\ttest\ait\nsetup\vjester\frequire\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/jester",
     url = "https://github.com/David-Kunz/jester"
@@ -295,7 +301,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["mini.map"] = {
-    config = { "\27LJ\2\n¿\3\0\0\b\0\17\1 6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\a\0004\4\3\0009\5\3\0009\5\4\5B\5\1\2>\5\1\0049\5\3\0009\5\5\0055\a\6\0B\5\2\0?\5\0\0=\4\b\0035\4\f\0009\5\t\0009\5\n\5'\a\v\0B\5\2\2=\5\r\4=\4\14\0035\4\15\0=\4\16\3B\1\2\1K\0\1\0\vwindow\1\0\4\tside\nright\nwidth\3\20\rwinblend\3\15\27show_integration_count\1\fsymbols\vencode\1\0\0\b4x2\bdot\23gen_encode_symbols\17integrations\1\0\0\1\0\4\nerror\28DiagnosticFloatingError\tinfo\27DiagnosticFloatingInfo\thint\27DiagnosticFloatingHint\twarn\27DiagnosticFloatingWarn\15diagnostic\19builtin_search\20gen_integration\nsetup\rmini.map\frequire\5ÄÄ¿ô\4\0" },
+    config = { "\27LJ\2\n¿\3\0\0\b\0\17\1 6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\a\0004\4\3\0009\5\3\0009\5\4\5B\5\1\2>\5\1\0049\5\3\0009\5\5\0055\a\6\0B\5\2\0?\5\0\0=\4\b\0035\4\f\0009\5\t\0009\5\n\5'\a\v\0B\5\2\2=\5\r\4=\4\14\0035\4\15\0=\4\16\3B\1\2\1K\0\1\0\vwindow\1\0\4\27show_integration_count\1\tside\nright\nwidth\3\20\rwinblend\3\15\fsymbols\vencode\1\0\0\b4x2\bdot\23gen_encode_symbols\17integrations\1\0\0\1\0\4\thint\27DiagnosticFloatingHint\twarn\27DiagnosticFloatingWarn\tinfo\27DiagnosticFloatingInfo\nerror\28DiagnosticFloatingError\15diagnostic\19builtin_search\20gen_integration\nsetup\rmini.map\frequire\5ÄÄ¿ô\4\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/mini.map",
     url = "https://github.com/echasnovski/mini.map"
@@ -393,7 +399,7 @@ _G.packer_plugins = {
     url = "https://github.com/rcarriga/nvim-dap-ui"
   },
   ["nvim-dap-virtual-text"] = {
-    config = { "\27LJ\2\n¨\2\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\f\18virt_text_pos\beol\30filter_references_pattern\f<module\fenabled\2\19all_references\1\26only_first_definition\2\14commented\1\21show_stop_reason\2\29highlight_new_as_changed\1 highlight_changed_variables\2\21enabled_commands\2\15all_frames\1\15virt_lines\1\nsetup\26nvim-dap-virtual-text\frequire\0" },
+    config = { "\27LJ\2\n¨\2\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\f\19all_references\1\21enabled_commands\2\29highlight_new_as_changed\1\21show_stop_reason\2\14commented\1\26only_first_definition\2\fenabled\2\18virt_text_pos\beol\30filter_references_pattern\f<module highlight_changed_variables\2\15all_frames\1\15virt_lines\1\nsetup\26nvim-dap-virtual-text\frequire\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
@@ -418,6 +424,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/nvim-navic",
     url = "https://github.com/SmiteshP/nvim-navic"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-scrollbar"] = {
     loaded = true,
@@ -716,7 +727,6 @@ _G.packer_plugins = {
     url = "https://github.com/folke/which-key.nvim"
   },
   ["wilder.nvim"] = {
-    config = { "\27LJ\2\nò\2\0\0\t\0\f\0\0186\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0009\4\b\0005\6\n\0009\a\t\0B\a\1\2=\a\v\6B\4\2\0A\1\1\1K\0\1\0\16highlighter\1\0\0\22basic_highlighter\23popupmenu_renderer\rrenderer\15set_option\nmodes\1\0\5\15reject_key\n<C-p>\rnext_key\n<Tab>\17previous_key\f<S-Tab>\15accept_key\n<C-n>\21enable_cmd_enter\3\1\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/wilder.nvim",
     url = "https://github.com/gelguy/wilder.nvim"
@@ -727,7 +737,7 @@ _G.packer_plugins = {
     url = "https://github.com/chemzqm/wxapp.vim"
   },
   ["zen-mode.nvim"] = {
-    config = { "\27LJ\2\nÇ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\2\vnumber\2\19relativenumber\2\1\0\1\nwidth\3x\nsetup\rzen-mode\frequire\0" },
+    config = { "\27LJ\2\nÇ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\2\19relativenumber\2\vnumber\2\1\0\1\nwidth\3x\nsetup\rzen-mode\frequire\0" },
     loaded = true,
     path = "/Users/weston/.local/share/lunarvim/site/pack/packer/start/zen-mode.nvim",
     url = "https://github.com/folke/zen-mode.nvim"
@@ -763,82 +773,54 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.project\frequire\0", "config", "project.nvim")
-time([[Config for project.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-try_loadstring("\27LJ\2\nÒ\3\0\0\v\0\23\00166\0\0\0'\2\1\0B\0\2\0024\1\0\0006\2\2\0009\2\3\0029\2\4\0029\2\5\0029\2\6\2\15\0\2\0X\3\fÄ\21\2\1\0\22\2\0\0029\3\a\0006\5\b\0B\5\1\2'\6\t\0'\a\n\0'\b\v\0'\t\f\0'\n\r\0B\3\a\2<\3\2\0019\2\a\0006\4\14\0B\4\1\2'\5\15\0B\2\3\0029\3\16\0\18\5\2\0B\3\2\2\15\0\3\0X\4\3Ä\21\3\1\0\22\3\0\3<\2\3\0016\3\0\0'\5\17\0B\3\2\0029\3\18\3B\3\1\0016\3\0\0'\5\19\0B\3\2\0029\3\18\0035\5\20\0=\1\21\5B\3\2\0016\3\0\0'\5\22\0B\3\2\0029\3\18\3B\3\1\1K\0\1\0\"luasnip.loaders.from_snipmate\npaths\1\0\0 luasnip.loaders.from_vscode\14lazy_load\29luasnip.loaders.from_lua\17is_directory\rsnippets\19get_config_dir\22friendly-snippets\nstart\vpacker\tpack\tsite\20get_runtime_dir\15join_paths\22friendly_snippets\fsources\fluasnip\fbuiltin\tlvim\15lvim.utils\frequire\2\0", "config", "LuaSnip")
-time([[Config for LuaSnip]], false)
--- Config for: web-tools.nvim
-time([[Config for web-tools.nvim]], true)
-try_loadstring("\27LJ\2\na\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fkeymaps\1\0\0\1\0\1\18repeat_rename\6.\nsetup\14web-tools\frequire\0", "config", "web-tools.nvim")
-time([[Config for web-tools.nvim]], false)
--- Config for: neotest
-time([[Config for neotest]], true)
-try_loadstring("\27LJ\2\nM\0\0\4\0\5\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\2B\0\2\1K\0\1\0\radapters\1\0\0\nsetup\fneotest\frequire\0", "config", "neotest")
-time([[Config for neotest]], false)
--- Config for: vimspector
-time([[Config for vimspector]], true)
-try_loadstring("\27LJ\2\nç\n\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ì\t\n       let g:vimspector_sign_priority = {\n    \\    'vimspectorBP':         998,\n    \\    'vimspectorBPCond':     997,\n    \\    'vimspectorBPDisabled': 996,\n    \\    'vimspectorPC':         999,\n    \\ }\n\n       nnoremap <leader>dd :TestNearest -strategy=jest<CR>\n\n      function! JestStrategy(cmd)\n        let testName = matchlist(a:cmd, '\\v -t ''(.*)''')[1]\n        call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )\n      endfunction      \n      let g:test#custom_strategies = {'jest': function('JestStrategy')}\n      let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')\n\n        let g:vimspector_configurations = {\n      \\ \"test_debugpy_config\": {\n      \\   \"adapter\": \"vscode-node\",\n      \\   \"configuration\": {\n      \\   \"name\": \"Jest Current File\",\n      \\     \"request\": \"launch\",\n      \\     \"type\": \"node\",\n      \\     \"cwd\": \"${workspaceFolder}\",\n      \\      \"args\": [\n      \\          \"${fileBasenameNoExtension}\",\n      \\          \"--config\",\n      \\          \"${workspaceFolder}/jest.config.js\"\n      \\       ],\n      \\      \"program\": \"${workspaceFolder}/node_modules/.bin/jest\",\n      \\     \"stopOnEntry\": v:false,\n      \\     \"console\": \"integratedTerminal\"\n      \\   }\n      \\ } }\n      \bcmd\bvim\0", "config", "vimspector")
-time([[Config for vimspector]], false)
--- Config for: nvim-navic
-time([[Config for nvim-navic]], true)
-try_loadstring("\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26lvim.core.breadcrumbs\frequire\0", "config", "nvim-navic")
-time([[Config for nvim-navic]], false)
--- Config for: lir.nvim
-time([[Config for lir.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lvim.core.lir\frequire\0", "config", "lir.nvim")
-time([[Config for lir.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: crates.nvim
-time([[Config for crates.nvim]], true)
-try_loadstring("\27LJ\2\nh\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fnull_ls\1\0\0\1\0\2\fenabled\2\tname\16crates.nvim\nsetup\vcrates\frequire\0", "config", "crates.nvim")
-time([[Config for crates.nvim]], false)
--- Config for: vim-test
-time([[Config for vim-test]], true)
-try_loadstring("\27LJ\2\nç\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ì\1  function! FloatermStrategy(cmd)\n    execute 'silent FloatermKill'\n    execute 'FloatermNew! '.a:cmd.' '\n  endfunction\n\n  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}\n  let g:test#strategy = 'floaterm'\n\bcmd\bvim\0", "config", "vim-test")
-time([[Config for vim-test]], false)
--- Config for: nvim-dap
-time([[Config for nvim-dap]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lvim.core.dap\frequire\0", "config", "nvim-dap")
-time([[Config for nvim-dap]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\ns\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\thtml\1\0\1\tmode\15foreground\1\4\0\0\tless\bcss\15javascript\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\næ\4\0\0\t\0\22\0T6\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\3\0005\4\a\0006\5\0\0009\5\1\0059\5\4\5'\a\5\0+\b\2\0B\5\3\0029\5\6\5=\5\b\0046\5\0\0009\5\1\0059\5\4\5'\a\5\0+\b\2\0B\5\3\0029\5\6\5=\5\t\4B\0\4\0016\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\n\0005\4\f\0006\5\0\0009\5\1\0059\5\4\5'\a\v\0+\b\2\0B\5\3\0029\5\6\5=\5\b\0046\5\0\0009\5\1\0059\5\4\5'\a\v\0+\b\2\0B\5\3\0029\5\6\5=\5\t\4B\0\4\0016\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\r\0005\4\14\0B\0\4\0016\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\15\0005\4\18\0006\5\0\0009\5\1\0059\5\4\5'\a\16\0+\b\2\0B\5\3\0029\5\17\5=\5\b\0046\5\0\0009\5\1\0059\5\4\5'\a\19\0+\b\2\0B\5\3\0029\5\6\5=\5\t\4B\0\4\0016\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\20\0005\4\21\0B\0\4\1K\0\1\0\1\0\1\afg\f#22232b\24IndentBlanklineChar\15StatusLine\1\0\0\15foreground\fNonText\22StatusLineNonText\1\0\1\afg\f#30323E\25NvimTreeIndentMarker\1\0\0\15CursorLine\17CursorLineBg\abg\afg\1\0\0\15background\16NormalFloat\24nvim_get_hl_by_name\16FloatBorder\16nvim_set_hl\bapi\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: nvim-dap-virtual-text
+time([[Config for nvim-dap-virtual-text]], true)
+try_loadstring("\27LJ\2\n¨\2\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\f\19all_references\1\21enabled_commands\2\29highlight_new_as_changed\1\21show_stop_reason\2\14commented\1\26only_first_definition\2\fenabled\2\18virt_text_pos\beol\30filter_references_pattern\f<module highlight_changed_variables\2\15all_frames\1\15virt_lines\1\nsetup\26nvim-dap-virtual-text\frequire\0", "config", "nvim-dap-virtual-text")
+time([[Config for nvim-dap-virtual-text]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26lvim.core.indentlines\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: nvim-coverage
+time([[Config for nvim-coverage]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
+time([[Config for nvim-coverage]], false)
+-- Config for: bigfile.nvim
+time([[Config for bigfile.nvim]], true)
+try_loadstring("\27LJ\2\nS\0\0\3\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\3\0009\2\4\0029\2\1\0029\2\2\2B\0\2\1K\0\1\0\fbuiltin\tlvim\vconfig\fbigfile\frequire\30\1\0\3\0\2\0\0046\0\0\0003\2\1\0B\0\2\1K\0\1\0\0\npcall\0", "config", "bigfile.nvim")
+time([[Config for bigfile.nvim]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\ns\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\thtml\1\0\1\tmode\15foreground\1\4\0\0\tless\bcss\15javascript\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: crates.nvim
+time([[Config for crates.nvim]], true)
+try_loadstring("\27LJ\2\nh\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fnull_ls\1\0\0\1\0\2\fenabled\2\tname\16crates.nvim\nsetup\vcrates\frequire\0", "config", "crates.nvim")
+time([[Config for crates.nvim]], false)
 -- Config for: symbols-outline.nvim
 time([[Config for symbols-outline.nvim]], true)
 try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19autofold_depth\3\1\nsetup\20symbols-outline\frequire\0", "config", "symbols-outline.nvim")
 time([[Config for symbols-outline.nvim]], false)
--- Config for: jester
-time([[Config for jester]], true)
-try_loadstring("\27LJ\2\n≤\4\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\ncache\1\0\0\bdap\14skipFiles\1\2\0\0\29<node_internals>/**/*.js\targs\1\2\0\0\15--no-cache\1\0\a\25disableOptimisticBPs\2\frequest\vlaunch\ttype\nnode2\fconsole\23integratedTerminal\15sourceMaps\vinline\rprotocol\14inspector\tport\3çH\fprepend\1\2\0\0\rdescribe\16expressions\1\2\0\0\20call_expression\21stringCharacters\1\3\0\0\6'\6\"\16identifiers\1\0\5\16escapeRegex\2\18regexStartEnd\2\21path_to_jest_run\27node_modules/.bin/jest\23path_to_jest_debug\27node_modules/.bin/jest\17terminal_cmd\23:vsplit | terminal\1\3\0\0\ttest\ait\nsetup\vjester\frequire\0", "config", "jester")
-time([[Config for jester]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.treesitter\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20lvim.core.mason\frequire\0", "config", "mason.nvim")
+time([[Config for mason.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20lvim.core.alpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 -- Config for: onedark.nvim
 time([[Config for onedark.nvim]], true)
 try_loadstring("\27LJ\2\n–\2\0\0\t\0\16\0&6\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\3\0005\4\4\0B\0\4\0016\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\5\0005\4\t\0006\5\0\0009\5\1\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\1\0059\5\6\5'\a\v\0+\b\2\0B\5\3\0029\5\f\5=\5\r\4B\0\4\0016\0\0\0009\0\1\0009\0\2\0)\2\0\0'\3\14\0005\4\15\0B\0\4\1K\0\1\0\1\0\1\afg\f#2F313C\24IndentBlanklineChar\abg\15background\15StatusLine\afg\1\0\0\15foreground\fNonText\24nvim_get_hl_by_name\22StatusLineNonText\1\0\1\afg\f#30323E\25NvimTreeIndentMarker\16nvim_set_hl\bapi\bvim\0", "config", "onedark.nvim")
 time([[Config for onedark.nvim]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+try_loadstring("\27LJ\2\nÒ\3\0\0\v\0\23\00166\0\0\0'\2\1\0B\0\2\0024\1\0\0006\2\2\0009\2\3\0029\2\4\0029\2\5\0029\2\6\2\15\0\2\0X\3\fÄ\21\2\1\0\22\2\0\0029\3\a\0006\5\b\0B\5\1\2'\6\t\0'\a\n\0'\b\v\0'\t\f\0'\n\r\0B\3\a\2<\3\2\0019\2\a\0006\4\14\0B\4\1\2'\5\15\0B\2\3\0029\3\16\0\18\5\2\0B\3\2\2\15\0\3\0X\4\3Ä\21\3\1\0\22\3\0\3<\2\3\0016\3\0\0'\5\17\0B\3\2\0029\3\18\3B\3\1\0016\3\0\0'\5\19\0B\3\2\0029\3\18\0035\5\20\0=\1\21\5B\3\2\0016\3\0\0'\5\22\0B\3\2\0029\3\18\3B\3\1\1K\0\1\0\"luasnip.loaders.from_snipmate\npaths\1\0\0 luasnip.loaders.from_vscode\14lazy_load\29luasnip.loaders.from_lua\17is_directory\rsnippets\19get_config_dir\22friendly-snippets\nstart\vpacker\tpack\tsite\20get_runtime_dir\15join_paths\22friendly_snippets\fsources\fluasnip\fbuiltin\tlvim\15lvim.utils\frequire\2\0", "config", "LuaSnip")
+time([[Config for LuaSnip]], false)
 -- Config for: nvim-dap-ui
 time([[Config for nvim-dap-ui]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\rsetup_ui\18lvim.core.dap\frequire\0", "config", "nvim-dap-ui")
@@ -847,6 +829,10 @@ time([[Config for nvim-dap-ui]], false)
 time([[Config for eyeliner.nvim]], true)
 try_loadstring("\27LJ\2\nO\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\21highlight_on_key\2\nsetup\reyeliner\frequire\0", "config", "eyeliner.nvim")
 time([[Config for eyeliner.nvim]], false)
+-- Config for: neotest
+time([[Config for neotest]], true)
+try_loadstring("\27LJ\2\nM\0\0\4\0\5\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\2B\0\2\1K\0\1\0\radapters\1\0\0\nsetup\fneotest\frequire\0", "config", "neotest")
+time([[Config for neotest]], false)
 -- Config for: vim-fugitive
 time([[Config for vim-fugitive]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "vim-fugitive")
@@ -859,75 +845,105 @@ time([[Config for vim-floaterm]], false)
 time([[Config for vim-expand-region]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "vim-expand-region")
 time([[Config for vim-expand-region]], false)
--- Config for: wilder.nvim
-time([[Config for wilder.nvim]], true)
-try_loadstring("\27LJ\2\nò\2\0\0\t\0\f\0\0186\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0009\4\b\0005\6\n\0009\a\t\0B\a\1\2=\a\v\6B\4\2\0A\1\1\1K\0\1\0\16highlighter\1\0\0\22basic_highlighter\23popupmenu_renderer\rrenderer\15set_option\nmodes\1\0\5\15reject_key\n<C-p>\rnext_key\n<Tab>\17previous_key\f<S-Tab>\15accept_key\n<C-n>\21enable_cmd_enter\3\1\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\0", "config", "wilder.nvim")
-time([[Config for wilder.nvim]], false)
--- Config for: nvim-coverage
-time([[Config for nvim-coverage]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rcoverage\frequire\0", "config", "nvim-coverage")
-time([[Config for nvim-coverage]], false)
 -- Config for: command_center.nvim
 time([[Config for command_center.nvim]], true)
 try_loadstring("\27LJ\2\nÖ\2\0\0\5\0\6\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0029\1\4\0004\3\3\0005\4\5\0>\4\1\3B\1\2\1K\0\1\0\1\0\2\bcmdm<CMD>:!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>\tdesc\29ÁºñËØëÂïÜÂÆ∂Â∞èÁ®ãÂ∫ènpm\badd\19command_center\19load_extension\14telescope\frequire\0", "config", "command_center.nvim")
 time([[Config for command_center.nvim]], false)
--- Config for: mason.nvim
-time([[Config for mason.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20lvim.core.mason\frequire\0", "config", "mason.nvim")
-time([[Config for mason.nvim]], false)
 -- Config for: zen-mode.nvim
 time([[Config for zen-mode.nvim]], true)
-try_loadstring("\27LJ\2\nÇ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\2\vnumber\2\19relativenumber\2\1\0\1\nwidth\3x\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
+try_loadstring("\27LJ\2\nÇ\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\2\19relativenumber\2\vnumber\2\1\0\1\nwidth\3x\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
 time([[Config for zen-mode.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23lvim.core.nvimtree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-dap-virtual-text
-time([[Config for nvim-dap-virtual-text]], true)
-try_loadstring("\27LJ\2\n¨\2\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\f\18virt_text_pos\beol\30filter_references_pattern\f<module\fenabled\2\19all_references\1\26only_first_definition\2\14commented\1\21show_stop_reason\2\29highlight_new_as_changed\1 highlight_changed_variables\2\21enabled_commands\2\15all_frames\1\15virt_lines\1\nsetup\26nvim-dap-virtual-text\frequire\0", "config", "nvim-dap-virtual-text")
-time([[Config for nvim-dap-virtual-text]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26lvim.core.indentlines\frequire\0", "config", "indent-blankline.nvim")
-time([[Config for indent-blankline.nvim]], false)
--- Config for: mini.map
-time([[Config for mini.map]], true)
-try_loadstring("\27LJ\2\n¿\3\0\0\b\0\17\1 6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\a\0004\4\3\0009\5\3\0009\5\4\5B\5\1\2>\5\1\0049\5\3\0009\5\5\0055\a\6\0B\5\2\0?\5\0\0=\4\b\0035\4\f\0009\5\t\0009\5\n\5'\a\v\0B\5\2\2=\5\r\4=\4\14\0035\4\15\0=\4\16\3B\1\2\1K\0\1\0\vwindow\1\0\4\tside\nright\nwidth\3\20\rwinblend\3\15\27show_integration_count\1\fsymbols\vencode\1\0\0\b4x2\bdot\23gen_encode_symbols\17integrations\1\0\0\1\0\4\nerror\28DiagnosticFloatingError\tinfo\27DiagnosticFloatingInfo\thint\27DiagnosticFloatingHint\twarn\27DiagnosticFloatingWarn\15diagnostic\19builtin_search\20gen_integration\nsetup\rmini.map\frequire\5ÄÄ¿ô\4\0", "config", "mini.map")
-time([[Config for mini.map]], false)
--- Config for: vim-illuminate
-time([[Config for vim-illuminate]], true)
-try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.illuminate\frequire\0", "config", "vim-illuminate")
-time([[Config for vim-illuminate]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lvim.core.dap\frequire\0", "config", "nvim-dap")
+time([[Config for nvim-dap]], false)
+-- Config for: nvim-navic
+time([[Config for nvim-navic]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26lvim.core.breadcrumbs\frequire\0", "config", "nvim-navic")
+time([[Config for nvim-navic]], false)
 -- Config for: lsp_signature.nvim
 time([[Config for lsp_signature.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
 time([[Config for lsp_signature.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20lvim.core.alpha\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
+-- Config for: jester
+time([[Config for jester]], true)
+try_loadstring("\27LJ\2\n≤\4\0\0\5\0\20\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0005\4\r\0=\4\14\0035\4\15\0=\4\16\3=\3\17\0025\3\18\0=\3\19\2B\0\2\1K\0\1\0\ncache\1\0\0\bdap\14skipFiles\1\2\0\0\29<node_internals>/**/*.js\targs\1\2\0\0\15--no-cache\1\0\a\tport\3çH\25disableOptimisticBPs\2\ttype\nnode2\15sourceMaps\vinline\rprotocol\14inspector\frequest\vlaunch\fconsole\23integratedTerminal\fprepend\1\2\0\0\rdescribe\16expressions\1\2\0\0\20call_expression\21stringCharacters\1\3\0\0\6'\6\"\16identifiers\1\0\5\23path_to_jest_debug\27node_modules/.bin/jest\21path_to_jest_run\27node_modules/.bin/jest\18regexStartEnd\2\16escapeRegex\2\17terminal_cmd\23:vsplit | terminal\1\3\0\0\ttest\ait\nsetup\vjester\frequire\0", "config", "jester")
+time([[Config for jester]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: lir.nvim
+time([[Config for lir.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18lvim.core.lir\frequire\0", "config", "lir.nvim")
+time([[Config for lir.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
+-- Config for: vim-illuminate
+time([[Config for vim-illuminate]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\25lvim.core.illuminate\frequire\0", "config", "vim-illuminate")
+time([[Config for vim-illuminate]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23lvim.core.nvimtree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\n`\0\0\3\0\6\0\v6\0\0\0009\0\1\0009\0\2\0\15\0\0\0X\1\5Ä6\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18lvim.core.cmp\frequire\bcmp\fbuiltin\tlvim\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: vim-test
+time([[Config for vim-test]], true)
+try_loadstring("\27LJ\2\nç\2\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ì\1  function! FloatermStrategy(cmd)\n    execute 'silent FloatermKill'\n    execute 'FloatermNew! '.a:cmd.' '\n  endfunction\n\n  let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}\n  let g:test#strategy = 'floaterm'\n\bcmd\bvim\0", "config", "vim-test")
+time([[Config for vim-test]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.project\frequire\0", "config", "project.nvim")
+time([[Config for project.nvim]], false)
+-- Config for: web-tools.nvim
+time([[Config for web-tools.nvim]], true)
+try_loadstring("\27LJ\2\na\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fkeymaps\1\0\0\1\0\1\18repeat_rename\6.\nsetup\14web-tools\frequire\0", "config", "web-tools.nvim")
+time([[Config for web-tools.nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22lvim.core.lualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lvim.core.autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: vimspector
+time([[Config for vimspector]], true)
+try_loadstring("\27LJ\2\nç\n\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ì\t\n       let g:vimspector_sign_priority = {\n    \\    'vimspectorBP':         998,\n    \\    'vimspectorBPCond':     997,\n    \\    'vimspectorBPDisabled': 996,\n    \\    'vimspectorPC':         999,\n    \\ }\n\n       nnoremap <leader>dd :TestNearest -strategy=jest<CR>\n\n      function! JestStrategy(cmd)\n        let testName = matchlist(a:cmd, '\\v -t ''(.*)''')[1]\n        call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )\n      endfunction      \n      let g:test#custom_strategies = {'jest': function('JestStrategy')}\n      let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')\n\n        let g:vimspector_configurations = {\n      \\ \"test_debugpy_config\": {\n      \\   \"adapter\": \"vscode-node\",\n      \\   \"configuration\": {\n      \\   \"name\": \"Jest Current File\",\n      \\     \"request\": \"launch\",\n      \\     \"type\": \"node\",\n      \\     \"cwd\": \"${workspaceFolder}\",\n      \\      \"args\": [\n      \\          \"${fileBasenameNoExtension}\",\n      \\          \"--config\",\n      \\          \"${workspaceFolder}/jest.config.js\"\n      \\       ],\n      \\      \"program\": \"${workspaceFolder}/node_modules/.bin/jest\",\n      \\     \"stopOnEntry\": v:false,\n      \\     \"console\": \"integratedTerminal\"\n      \\   }\n      \\ } }\n      \bcmd\bvim\0", "config", "vimspector")
+time([[Config for vimspector]], false)
+-- Config for: mini.map
+time([[Config for mini.map]], true)
+try_loadstring("\27LJ\2\n¿\3\0\0\b\0\17\1 6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\a\0004\4\3\0009\5\3\0009\5\4\5B\5\1\2>\5\1\0049\5\3\0009\5\5\0055\a\6\0B\5\2\0?\5\0\0=\4\b\0035\4\f\0009\5\t\0009\5\n\5'\a\v\0B\5\2\2=\5\r\4=\4\14\0035\4\15\0=\4\16\3B\1\2\1K\0\1\0\vwindow\1\0\4\27show_integration_count\1\tside\nright\nwidth\3\20\rwinblend\3\15\fsymbols\vencode\1\0\0\b4x2\bdot\23gen_encode_symbols\17integrations\1\0\0\1\0\4\thint\27DiagnosticFloatingHint\twarn\27DiagnosticFloatingWarn\tinfo\27DiagnosticFloatingInfo\nerror\28DiagnosticFloatingError\15diagnostic\19builtin_search\20gen_integration\nsetup\rmini.map\frequire\5ÄÄ¿ô\4\0", "config", "mini.map")
+time([[Config for mini.map]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file CodeActionMenu lua require("packer.load")({'nvim-code-action-menu'}, { cmd = "CodeActionMenu", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.api.nvim_create_user_command, 'CodeActionMenu', function(cmdargs)
+          require('packer.load')({'nvim-code-action-menu'}, { cmd = 'CodeActionMenu', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'nvim-code-action-menu'}, { cmd = 'CodeActionMenu' }, _G.packer_plugins)
+          return vim.fn.getcompletion('CodeActionMenu ', 'cmdline')
+      end})
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'toggleterm.nvim', 'which-key.nvim', 'bufferline.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'Comment.nvim', 'gitsigns.nvim', 'git-blame.nvim', 'diffview.nvim', 'nvim-spectre'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPost * ++once lua require("packer.load")({'nvim-ts-context-commentstring'}, { event = "BufReadPost *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'bufferline.nvim', 'which-key.nvim', 'toggleterm.nvim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'gitsigns.nvim', 'Comment.nvim', 'git-blame.nvim', 'nvim-spectre', 'diffview.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
