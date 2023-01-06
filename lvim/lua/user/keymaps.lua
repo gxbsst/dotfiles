@@ -98,19 +98,26 @@ keyset('n', 'q', ':q<CR>')
 keyset('n', '<C-F>',
   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
 keyset('n', '<C-b>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
-keyset('n', '<C-g>', ":Telescope live_grep<CR>")
+-- keyset('n', '<C-g>', ":Telescope live_grep<CR>")
+keyset('n', '<C-g>',
+  [[<cmd>lua require('telescope.builtin').live_grep({ theme = 'ivy', layout_strategy='horizontal',layout_config={width=0.5}})<CR>]])
+-- keyset('v', '<C-g>',
+--   [[<cmd>y<ESC>lua require('telescope.builtin').live_grep({ default_text =<cr>0, theme = 'ivy', layout_strategy='horizontal',layout_config={width=0.5}})<CR>]])
 keyset('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 keyset('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 keyset('n', '<C-r>', ":Telescope npm scripts<CR>")
 local default_opts = { noremap = true, silent = true }
-keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
+-- keyset('v', '<C-g>', "y<ESC>:lua require('telescope.builtin').live_grep({ default_text ='aa' ,theme = 'ivy', layout_strategy='horizontal',layout_config={width=0.5}})<CR>", default_opts)
+keyset('v', '<C-g>',
+  'y<ESC>:Telescope live_grep default_text=<c-r>0 layout_strategy=horizontal theme=ivy layout_config={"width":0.8}<CR>',
+  default_opts)
 keyset('n', ',km', "<cmd>Telescope keymaps<CR>")
 keyset('n', '<C-o>', "<cmd>Telescope git_files<CR>")
 -- keyset('n', '<C-F>',
 --   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
 -- keyset('n', '<C-p>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
-default_opts = { noremap = true, silent = true }
-keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
+-- default_opts = { noremap = true, silent = true }
+-- keyset('v', '<C-g>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
 
 -- Buffer
 -- keyset('n', '<C-n>', ":bnext<CR>")

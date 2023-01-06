@@ -165,11 +165,22 @@ vim.filetype.add {
 }
 
 -- telescope
-lvim.builtin.telescope.theme = "ivy"
-lvim.builtin.telescope.defaults.layout_strategy = 'horizontal'
-lvim.builtin.telescope.defaults.layout_config = {
-  horizontal = { width = 0.7 }
+-- lvim.builtin.telescope.theme = "ivy"
+-- lvim.builtin.telescope.defaults.layout_strategy = 'horizontal'
+lvim.builtin.telescope.defaults = {
+  theme = 'ivy',
+  layout_strategy = 'horizontal',
+  layout_config = {
+    horizontal = { width = 0.7 }
+  }
 }
+-- lvim.builtin.telescope.extensions.live_grep_args = {
+--   theme = 'ivy',
+--   layout_strategy = 'horizontal',
+--   layout_config = {
+--     mirror = true
+--   }
+-- }
 
 -- NvimTree
 -- 默认打开 NvimTreeOpen
