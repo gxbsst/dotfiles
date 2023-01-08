@@ -17,6 +17,9 @@ vim.api.nvim_create_autocmd({ "User" }, {
     vim.cmd('highlight GitSignsDelete guibg=#ff0000')
     vim.cmd('highlight GitSignsAdd guibg=#00ff00')
     vim.cmd('highlight GitSignsChange guibg=#ffcc00')
+
+    -- fold
+    vim.cmd('hi FoldColumn guibg=transparent')
   end,
 })
 
@@ -94,7 +97,9 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "gitcommit", "markdown" },
   callback = function()
+    ---@diagnostic disable-next-line: assign-type-mismatch
     vim.opt_local.wrap = true
+    ---@diagnostic disable-next-line: assign-type-mismatch
     vim.opt_local.spell = true
   end,
 })
@@ -102,7 +107,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "NeogitCommitMessage" },
   callback = function()
+    ---@diagnostic disable-next-line: assign-type-mismatch
     vim.opt_local.wrap = true
+    ---@diagnostic disable-next-line: assign-type-mismatch
     vim.opt_local.spell = true
     vim.cmd "startinsert!"
   end,

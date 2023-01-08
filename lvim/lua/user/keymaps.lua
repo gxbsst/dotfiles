@@ -94,7 +94,7 @@ keyset("n", "<C-i>", "<cmd>Lspsaga hover_doc<CR>", { silent = true, remap = true
 -- Quit
 keyset('n', 'q', ':q<CR>')
 -- Telescope
-
+keyset('n', '<leader>p', '<cmd>Telescope<CR>')
 keyset('n', '<C-F>',
   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
 keyset('n', '<C-b>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
@@ -111,8 +111,8 @@ local default_opts = { noremap = true, silent = true }
 keyset('v', '<C-g>',
   'y<ESC>:Telescope live_grep default_text=<c-r>0 layout_strategy=horizontal theme=ivy layout_config={"width":0.8}<CR>',
   default_opts)
-keyset('n', ',km', "<cmd>Telescope keymaps<CR>")
-keyset('n', '<C-o>', "<cmd>Telescope git_files<CR>")
+keyset('n', ',km', '<cmd>Telescope keymaps layout_strategy=horizontal theme=ivy layout_config={"width":0.8}<CR>')
+keyset('n', '<C-o>', '<cmd>Telescope git_files layout_strategy=horizontal theme=ivy layout_config={"width":0.8}<CR>')
 -- keyset('n', '<C-F>',
 --   [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All Files' })<CR>]])
 -- keyset('n', '<C-p>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])

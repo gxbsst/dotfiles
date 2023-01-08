@@ -20,8 +20,8 @@ formatters.setup {
   { command = "shfmt", filetypes = { "sh", "zsh" } },
 }
 
-lvim.lsp.on_attach_callback = function(client, bufnr)
-end
+-- lvim.lsp.on_attach_callback = function(client, bufnr)
+-- end
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {

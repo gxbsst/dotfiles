@@ -33,6 +33,61 @@ lvim.keys.normal_mode["S"] = ":w<cr>"
 
 lvim.builtin.gitsigns.opts.sign_priority = 100
 
+-- lvim.builtin.nvimnavic.active = true
+vim.g.navic_silence = true
+local navic = require("nvim-navic")
+navic.setup {
+  icons = {
+    File          = " ",
+    Module        = " ",
+    Namespace     = " ",
+    Package       = " ",
+    Class         = " ",
+    Method        = " ",
+    Property      = " ",
+    Field         = " ",
+    Constructor   = " ",
+    Enum          = "練",
+    Interface     = "練",
+    Function      = " ",
+    Variable      = " ",
+    Constant      = " ",
+    String        = " ",
+    Number        = " ",
+    Boolean       = "◩ ",
+    Array         = " ",
+    Object        = " ",
+    Key           = " ",
+    Null          = "ﳠ ",
+    EnumMember    = " ",
+    Struct        = " ",
+    Event         = " ",
+    Operator      = " ",
+    TypeParameter = " ",
+  },
+  highlight = true,
+  separator = " - ",
+  depth_limit = 0,
+  depth_limit_indicator = "..",
+  safe_output = true
+}
+lvim.lsp.on_attach_callback = function(client, bufnr)
+  if client.server_capabilities.documentSymbolProvider then
+    navic.attach(client, bufnr)
+  end
+end
+
+local function getnavic()
+  if navic.is_available() then
+    return navic.get_location()
+  else
+    return
+  end
+end
+
+lvim.builtin.lualine.sections.lualine_c = { { getnavic } }
+
+
 -- Change theme settings
 -- lvim.colorscheme = "lunar"
 
@@ -185,5 +240,18 @@ lvim.builtin.telescope.defaults = {
 -- NvimTree
 -- 默认打开 NvimTreeOpen
 vim.schedule(function()
-  vim.cmd "noautocmd NvimTreeOpen"
+  -- vim.cmd "noautocmd NvimTreeOpen"
 end)
+
+-- local bufnr = vim.cmd('vs');
+-- vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { "hello", "world" })
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   group = vim.api.nvim_create_augroup("TjsCoolTuturial", { clear = true }),
+--   callback = function()
+--     vim.fn.jobstart({ "cli", "build-npm" }, { stdout_buffered = true, on_stdout = function(_, data)
+--       vim.api.nvim_buf_set_lines(bufnr, -1, -1, false, data)
+--     end })
+--   end
+-- })
+-- 设置fold
+vim.opt.background = "dark"
