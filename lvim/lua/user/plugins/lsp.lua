@@ -28,3 +28,21 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { command = "eslint_d", filetypes = { "javascript" } },
 }
+
+-- support wx wxml
+-- need to npm install -g wxml-langserver
+local lsp = vim.api.nvim_create_augroup('LSP', { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = lsp,
+  pattern = "wxml",
+  callback = function()
+    local path = vim.fs.find({ "app.json" }, { type = "file" })
+    vim.lsp.start({
+      name = "wxml-langserver",
+      cmd = { "wxml-langserver" },
+      root_dir = vim.fs.dirname(path[1]),
+      settings = {
+      },
+    })
+  end
+})
