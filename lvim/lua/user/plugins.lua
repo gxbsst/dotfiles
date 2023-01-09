@@ -1,6 +1,7 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-      'rcarriga/nvim-notify',
+  { "heavenshell/vim-jsdoc", run = "make install" },
+  'rcarriga/nvim-notify',
   {
     'gelguy/wilder.nvim',
     config = function()
