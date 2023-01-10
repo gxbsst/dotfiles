@@ -9,7 +9,8 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldcolumn = "1"
 vim.g.noautochdir = true
 -- general
-lvim.colorscheme = 'rose-pine'
+-- lvim.colorscheme = 'rose-pine'
+lvim.colorscheme = 'gruvbox'
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,

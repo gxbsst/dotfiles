@@ -20,6 +20,9 @@ vim.api.nvim_create_autocmd({ "User" }, {
 
     -- fold
     vim.cmd('hi FoldColumn guibg=transparent')
+    vim.cmd('hi SignColumn guibg=transparent')
+    vim.cmd('set fillchars+=vert:\\') -- 设置panel线条为无
+    vim.cmd('hi! VertSplit guifg=bg guibg=none ctermfg=none ctermbg=none')
   end,
 })
 
