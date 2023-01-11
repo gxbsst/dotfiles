@@ -21,8 +21,12 @@ vim.api.nvim_create_autocmd({ "User" }, {
     -- fold
     vim.cmd('hi FoldColumn guibg=transparent')
     vim.cmd('hi SignColumn guibg=transparent')
-    vim.cmd('set fillchars+=vert:\\') -- 设置panel线条为无
-    vim.cmd('hi! VertSplit guifg=bg guibg=none ctermfg=none ctermbg=none')
+    --vim.cmd('set fillchars+=vert:\\') -- 设置panel线条为无
+    vim.cmd('hi! VertSplit guifg=#333333 guibg=none ctermfg=none ctermbg=none')
+
+    -- local color = vim.cmd('echo synIDattr(hlID("Normal"), "bg")')
+    -- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = 'none' })
+    vim.cmd('hi! IndentBlanklineChar guifg=#282828 guibg=none ctermfg=none ctermbg=none')
   end,
 })
 

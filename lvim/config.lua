@@ -39,3 +39,5 @@ reload "user.plugins.zk"
 reload "user.plugins.sniprun"
 reload "user.plugins.iron"
 -- reload "user.plugins.rust-tools"
+-- reload 'user.plugins.cmp-npm'
+reload 'user.plugins.cmp'
