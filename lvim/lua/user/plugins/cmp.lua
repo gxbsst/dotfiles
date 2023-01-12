@@ -1,3 +1,34 @@
+local source = {}
+local opts = {
+  ignore = {},
+}
+source.new = function()
+  local self = setmetatable({}, { __index = source })
+  return self;
+end
+
+function source:is_available()
+  local ext = vim.fn.expand('%:e')
+  return ext == 'wxml';
+end
+
+function source:get_debug_name()
+  return 'wxml'
+end
+
+function source:complete(params, callback)
+  local cur_line = params.context.curos_line
+  local cur_col = params.context.cursor.col
+  local isMatch = string.match(cur_line, '{{')
+  -- read js file
+  local jsFile = vim.fn.expand('%:r') .. '.js'
+
+  if vim.fn.filereadable(jsFile) == 0 then
+    return
+  end
+  print(vim.fn.readfile(jsFile))
+end
+
 local status_ok, cmp = pcall(require, "cmp")
 if not status_ok then
   return
