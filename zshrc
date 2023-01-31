@@ -265,8 +265,8 @@ alias wx='cli --project "$(pwd)"'
 
 #source /Users/weston/.config/broot/launcher/bash/br
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 #export http_proxy="socks5://127.0.0.1:1080"
 #export https_proxy="socks5://127.0.0.1:1080"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

@@ -6,6 +6,9 @@ end
 
 -- local saga = require("lspsaga")
 
-lspsaga.init_lsp_saga({
-  -- your configuration
-})
+-- lspsaga.init_lsp_saga({
+--   -- your configuration
+-- })
+
+  lspsaga.setup({})
+

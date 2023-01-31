@@ -39,31 +39,31 @@ lvim.plugins = {
   },
   {
     'VonHeikemen/fine-cmdline.nvim',
-    requires = {
+    dependencies = {
       { 'MunifTanjim/nui.nvim' }
     }
   },
-  { "heavenshell/vim-jsdoc", run = "make install" },
+  { "heavenshell/vim-jsdoc", build = "make install" },
   'rcarriga/nvim-notify',
-  {
-    'gelguy/wilder.nvim',
-    config = function()
-      local wilder = require('wilder')
-      wilder.setup({
-        modes = { ':', '/', '?' },
-        enable_cmd_enter = 1,
-        next_key = '<Tab>',
-        previous_key = '<S-Tab>',
-        accept_key = '<C-n>', -- hisotry
-        reject_key = '<C-p>', -- hisotry
-      })
+  -- {
+  --   'gelguy/wilder.nvim',
+  --   config = function()
+  --     local wilder = require('wilder')
+  --     wilder.setup({
+  --       modes = { ':', '/', '?' },
+  --       enable_cmd_enter = 1,
+  --       next_key = '<Tab>',
+  --       previous_key = '<S-Tab>',
+  --       accept_key = '<C-n>', -- hisotry
+  --       reject_key = '<C-p>', -- hisotry
+  --     })
 
-      wilder.set_option('renderer', wilder.popupmenu_renderer({
-        -- highlighter applies highlighting to the candidates
-        highlighter = wilder.basic_highlighter(),
-      }))
-    end
-  },
+  --     wilder.set_option('renderer', wilder.popupmenu_renderer({
+  --       -- highlighter applies highlighting to the candidates
+  --       highlighter = wilder.basic_highlighter(),
+  --     }))
+  --   end
+  -- },
   { "jessarcher/onedark.nvim", config = function()
 
     vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
@@ -136,12 +136,12 @@ lvim.plugins = {
   -- end },
   { 'hkupty/iron.nvim' },
   {
-    'michaelb/sniprun', run = 'bash ./install.sh',
+    'michaelb/sniprun', build = 'bash ./install.sh',
   },
   -- themes
   {
     'rose-pine/neovim',
-    as = 'rose-pine',
+    name = 'rose-pine',
     config = function()
       -- vim.cmd('colorscheme rose-pine')
       vim.api.nvim_set_hl(0, 'FloatBorder', {
@@ -181,7 +181,7 @@ lvim.plugins = {
   -- Command
   {
     "FeiyouG/command_center.nvim",
-    requires = { "nvim-telescope/telescope.nvim" },
+    dependencies = { "nvim-telescope/telescope.nvim" },
     config = function()
       require("telescope").load_extension("command_center")
       local command_center = require("command_center")
@@ -218,14 +218,14 @@ lvim.plugins = {
   },
   {
     "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
+    -- dependencies = "kyazdani42/nvim-web-devicons",
     config = function()
       require("trouble").setup {}
     end
   },
   -- GIT
   { 'tpope/vim-fugitive',
-    requires = 'tpope/vim-rhubarb',
+    dependencies = 'tpope/vim-rhubarb',
     config = function() end
   },
   {
@@ -348,7 +348,7 @@ lvim.plugins = {
   end },
   {
     "nvim-neotest/neotest",
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim"
@@ -448,8 +448,8 @@ lvim.plugins = {
   "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("crates").setup {
         null_ls = {
@@ -471,9 +471,9 @@ lvim.plugins = {
   "monaqa/dial.nvim",
   {
     "0x100101/lab.nvim",
-    run = "cd js && npm ci",
+    build = "cd js && npm ci",
   },
-  { "tzachar/cmp-tabnine", run = "./install.sh" },
+  { "tzachar/cmp-tabnine", build = "./install.sh" },
   -- {
   --   "zbirenbaum/copilot.lua",
   --   -- event = { "VimEnter" },
