@@ -93,23 +93,23 @@ map <c-i> :action Forward<CR>
 noremap <Leader>r :action RenameElement<CR>
 "noremap <Leader>e :action RecentChangedFiles<CR>
 
-noremap zz :action CollapseRegion<CR>
-noremap zZ :action CollapseAllRegions<CR>
-noremap za :action ExpandRegion<CR>
-noremap zA :action ExpandToLevel5<CR>
+noremap za :action CollapseRegion<CR>
+noremap zA :action CollapseAllRegions<CR>
+noremap zo :action ExpandRegion<CR>
+noremap zO :action ExpandToLevel5<CR>
 
 "noremap <Leader>w :action UnsplitAll<CR>
 noremap q :action UnsplitAll<CR>
 
-noremap <Leader>z :action ToggleZenMode<CR>
+noremap zz :action ToggleZenMode<CR>
 
 """ Split ----------------------------------
 "map <M-S-D> :action SplitHorizontally<CR>
 "map <M-D> :action  SplitVertically<CR>
-noremap <C-l> :action NextSplitter<CR>
-noremap <C-j> :action NextSplitter<CR>
-noremap <C-h> :action PrevSplitter<CR>
-noremap <C-k> :action PrevSplitter<CR>
+noremap <S-l> :action NextSplitter<CR>
+noremap <S-j> :action NextSplitter<CR>
+noremap <S-h> :action PrevSplitter<CR>
+noremap <S-k> :action QuickJavaDoc<CR>
 
 " GIT 
 noremap \h :action Vcs.ShowHistoryForBlock<CR>
@@ -230,18 +230,18 @@ map <M-S-E> :action RecentLocations<CR>
 " nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 " nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 "" Navigation
-" nnoremap <c-\> :action SplitVertically<CR>
-" nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <Leader>v :action SplitVertically<CR>
+nnoremap <Leader>h :action SplitHorizontally<CR>
 " nnoremap <c-=> :action Unsplit<CR>
 " nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-" sethandler <c-j> a:vim
-" sethandler <c-k> a:vim
+ "sethandler <c-j> a:vim
+ "sethandler <c-k> a:vim
 " nnoremap <c-h> <c-w>h
 " nnoremap <c-l> <c-w>l
 " nnoremap <c-j> <c-w>j
 " nnoremap <c-k> <c-w>k
-" nnoremap <TAB> :action PreviousTab<CR>
-" nnoremap <s-TAB> :action NextTab<CR>
+nnoremap <C-h> :action PreviousTab<CR>
+nnoremap <C-l> :action NextTab<CR>
 " nnoremap <Leader>en :action EditSourceInNewWindow<CR>
 " nnoremap <Leader>n :action NextWindow<CR>
 " nnoremap <Leader>q :action CloseContent<CR>
