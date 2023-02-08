@@ -117,6 +117,7 @@ noremap <S-i> :action QuickJavaDoc<CR>
  nnoremap <S-l> <c-w>l
  nnoremap <S-j> <c-w>j
  nnoremap <S-k> <c-w>k
+ "nnoremap <S-s> <M><F12>
 
 " GIT 
 noremap \h :action Vcs.ShowHistoryForBlock<CR>
@@ -180,7 +181,8 @@ nnoremap <C-8> :b8<CR>
 nnoremap <C-9>  :b9<CR>
 nnoremap <C-n>  :bn<CR>
 nnoremap <C-p>  :bp<CR>
-nnoremap <C-s> :b#<CR>
+"nnoremap <C-s> :b#<CR>
+nnoremap <C-s> :action FileStructurePopup<CR>
 
 " 显示执行命令
 nnoremap <C-R> :action ChooseRunConfiguration<CR>
