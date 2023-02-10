@@ -109,7 +109,7 @@ noremap zz :action ToggleZenMode<CR>
 " noremap <S-l> :action NextSplitter<CR>
 " noremap <S-j> :action NextSplitter<CR>
 " noremap <S-h> :action PrevSplitter<CR>
-noremap <S-i> :action QuickJavaDoc<CR>
+noremap <Leader><Leader> :action QuickJavaDoc<CR>
 
  "sethandler <c-j> a:vim
  "sethandler <c-k> a:vim
@@ -131,7 +131,7 @@ noremap \f :action FileMenu<CR>
 noremap \s :action ScopeViewPopupMenu<CR>
 noremap \b :action Bookmarks<CR>
 noremap \j :action jmix.toolbar<CR>
-noremap <Leader>g :action Generate<CR>
+"noremap <Leader>g :action Generate<CR>
 "noremap <Leader>b :action Git.Branches<CR>
 noremap <C-E> :action Git.Branches<CR>
 "noremap <C><Tab> :action Git.Branches<CR>
@@ -140,7 +140,10 @@ noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 " commit history
 noremap <Leader>m :action Vcs.ShowTabbedFileHistory<CR>
 " commit merge
-noremap <Leader>M :action Git.Merge<CR>
+noremap <Leader>gm :action Git.Merge<CR>
+noremap <Leader>gj :action VcsShowNextChangeMarker<CR>
+noremap <Leader>gk :action VcsShowPrevChangeMarker<CR>
+noremap <Leader>gh :action VcsShowCurrentChangeMarker<CR>
 " git commit
 noremap <Leader>k :action CheckinProject<CR>
 noremap <Leader>H :action VcsSelectionHistoryDialog.Popup<CR>
