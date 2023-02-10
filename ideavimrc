@@ -3,6 +3,7 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'easymotion/vim-easymotion'
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
@@ -306,3 +307,7 @@ nnoremap <C-l> :action NextTab<CR>
 " nnoremap ,n :action ActivateDebugToolWindow<CR>
 " 切换TogglePowerSave
 map <C-A-M-p> :action TogglePowerSave<CR>
+
+" easymotion
+map <leader>J <Plug>(easymotion-s)
+map <leader>j <Plug>(easymotion-f)
