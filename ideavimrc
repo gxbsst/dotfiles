@@ -215,7 +215,7 @@ map <M-S-0> :action ViewToolButtons<CR>
 map <M-S-P> :action GotoAction<CR>
 "map <M-J> :action ShowNavBar<CR>
 " 选择
-" map <C-W> :action EditorSelectWord<CR>
+map ,w :action EditorSelectWord<CR>
 " 切换所有窗口
 map <A-M-0> :action HideAllWindows<CR>
 map <ESC><ESC> :action HideAllWindows<CR>
@@ -311,3 +311,6 @@ map <C-A-M-p> :action TogglePowerSave<CR>
 " easymotion
 map <leader>J <Plug>(easymotion-s)
 map <leader>j <Plug>(easymotion-f)
+
+inoremap ;; <Esc>A;<Esc>
+inoremap ,, <Esc>A,<Esc>
