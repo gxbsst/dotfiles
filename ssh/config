@@ -1,3 +1,12 @@
+Host o1
+HostName 138.2.225.6
+User ubuntu
+Port 22
+Host o2
+HostName 192.9.131.229
+User opc
+Port 22
+
 Host yp-vpn
 HostName 180.168.249.219
 User root
