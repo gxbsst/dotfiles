@@ -13,11 +13,16 @@
 local wezterm = require 'wezterm'
 
 return {
-  font_size = 13,
-  line_height = 1.2,
+  font_size = 15,
+  line_height = 1.3,
   leader = { key="A", mods="CTRL" },
 
   keys = {
+     {
+      key = 'm',
+      mods = 'LEADER',
+      action = wezterm.action.TogglePaneZoomState,
+    },
     {
       key = 'f',
       mods = 'LEADER',
@@ -42,17 +47,20 @@ return {
   enable_tab_bar = false,
   -- window_decorations = "NONE",
 
-  font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true }),
+ -- font = wezterm.font('JetBrains Mono', { weight = 'Bold', italic = true }),
+  -- font = wezterm.font('Monaco', { weight = 'Bold', italic = false }),
 
-  -- font = wezterm.font_with_fallback {
-  --   {
-  --     family = 'JetBrains Mono',
-  --     weight = 'Medium',
-  --     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
-  --     line_height = 2,
-  --   },
-  --   { family = 'Terminus', weight = 'Bold', line_height = 1.3 }, 
+  font = wezterm.font_with_fallback {
+    {
+      family = 'JetBrains Mono',
+      -- weight = 'Medium',
+      weight = 'Bold',
+      harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+      line_height = 2,
+    },
+   --  { family = 'Terminus', weight = 'Bold' }, 
+    { family = 'JetBrains Mono', weight = 'Bold' }, 
 
-  --   'Noto Color Emoji',
-  -- },
+    'Noto Color Emoji',
+  },
 }
