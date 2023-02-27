@@ -34,8 +34,8 @@ if not status_ok then
   return
 end
 
-local cmp_npm = require('user.plugins.cmp-npm');
-cmp_npm.setup()
+-- local cmp_npm = require('user.plugins.cmp-npm');
+-- cmp_npm.setup()
 
 cmp.setup.filetype('json', {
   sources = cmp.config.sources({
@@ -45,7 +45,7 @@ cmp.setup.filetype('json', {
     { name = 'calc' },
     { name = 'emoji' },
     { name = 'path' },
-    { name = 'npm' },
+    -- { name = 'npm' },
   })
 })
 
