@@ -11,7 +11,7 @@
 -- }
 
 local wezterm = require 'wezterm'
-local dimmer = { brightness = 0.01, hue = 1.0, saturation = 1.0 }
+local dimmer = { brightness = 0.008, hue = 0.1, saturation = 1.0 }
 
 return {
   background = {
