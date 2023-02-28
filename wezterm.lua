@@ -11,8 +11,41 @@
 -- }
 
 local wezterm = require 'wezterm'
+local dimmer = { brightness = 0.01, hue = 1.0, saturation = 1.0 }
 
 return {
+  background = {
+    {
+      source = {
+        File = '/Users/weston/dotfiles/RED_LOGO.png',
+      },
+      width = 'Cover',
+      height = 'Cover',
+
+      opacity = 1.0,
+      repeat_x = 'NoRepeat',
+      repeat_y = 'NoRepeat',
+      vertical_align = 'Middle',
+      horizontal_align = "Center",
+      hsb = dimmer,
+      -- attachment = { Parallax = 0.3 },
+
+    }
+  },
+  -- window_background_image = '/Users/weston/dotfiles/RED_LOGO.png',
+  window_background_opacity = 1.0,
+  -- window_background_image_hsb = {
+  --   -- Darken the background image by reducing it to 1/3rd
+  --   brightness = 0.05,
+
+  --   -- You can adjust the hue by scaling its value.
+  --   -- a multiplier of 1.0 leaves the value unchanged.
+  --   hue = 1.0,
+
+  --   -- You can adjust the saturation also.
+  --   saturation = 1.0,
+  -- },
+
   -- FONT
   font_size = 15,
   line_height = 1.6,
@@ -48,8 +81,6 @@ return {
       -- The color of the strip that goes along the top of the window
       -- (does not apply when fancy tab bar is in use)
       background = '#0b0022',
-
-      font_size = '12.0',
 
       -- The active tab is the one that has focus in the window
       active_tab = {
