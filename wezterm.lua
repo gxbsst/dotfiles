@@ -16,7 +16,7 @@ return {
   -- FONT
   font_size = 15,
   line_height = 1.6,
-  leader = { key="A", mods="CTRL" },
+  leader = { key = "A", mods = "CTRL" },
   window_frame = {
     -- The font used in the tab bar.
     -- Roboto Bold is the default; this font is bundled
@@ -28,7 +28,6 @@ return {
 
     -- The size of the font in the tab bar.
     -- Default to 10. on Windows but 12.0 on other systems
-    font_size = 12.0,
 
     -- The overall background color of the tab bar when
     -- the window is focused
@@ -135,10 +134,10 @@ return {
       key = '|',
       mods = 'LEADER',
       action = wezterm.action.SplitHorizontal {
-        args = { },
+        args = {},
       },
     },
-    { key = "-", mods = "LEADER", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}} },
+    { key = "-", mods = "LEADER", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
 
   },
   --  color_scheme = 'Galaxy',
@@ -162,8 +161,8 @@ return {
       weight = 'Bold',
       harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
     },
-    --  { family = 'Terminus', weight = 'Bold' }, 
-    { family = 'JetBrains Mono', weight = 'Bold' }, 
+    --  { family = 'Terminus', weight = 'Bold' },
+    { family = 'JetBrains Mono', weight = 'Bold' },
 
     'Noto Color Emoji',
   },
