@@ -12,8 +12,59 @@
 
 local wezterm = require 'wezterm'
 local dimmer = { brightness = 0.008, hue = 0.1, saturation = 1.0 }
+local launch_menu = {
+	{
+		args = { "btop" },
+	},
+	{
+		label = "Scratchpad",
+		-- args = { "nvim", "" }，
+		set_environment_variables = { KITTY_COLORS = "dark" },
+	},
+}
+
+local colors = {
+	foreground = "#fbf1c7",
+	background = "#1d2021",
+
+	cursor_bg = "#928374",
+	cursor_fg = "black",
+	cursor_border = "#928374",
+
+	selection_fg = "#928374",
+	selection_bg = "#ebdbb2",
+
+	scrollbar_thumb = "#222222",
+
+	-- The color of the split lines between panes
+	split = "#444444",
+
+	ansi = {
+		"#1d2021", -- black, color 0
+		"#cc241d", -- red, color 1
+		"#98971a", -- green, color 2
+		"#d79921",
+		"#458588",
+		"#b16286",
+		"#689d6a",
+		"#a89984",
+	},
+	brights = {
+		"#7c6f64", -- black, color 0
+		"#fb4934", -- red, color 1
+		"#b8bb26", -- green, color 2
+		"#fabd2f",
+		"#83a598",
+		"#d3869b",
+		"#8ec07c",
+		"#fbf1c7",
+	},
+}
+
 
 return {
+  color = color,
+  	launch_menu = launch_menu,
   background = {
     {
       source = {
@@ -49,7 +100,7 @@ return {
   -- FONT
   font_size = 15,
   line_height = 1.6,
-  leader = { key = "A", mods = "CTRL" },
+  leader = { key = "a", mods = "OPT" },
   window_frame = {
     -- The font used in the tab bar.
     -- Roboto Bold is the default; this font is bundled
@@ -157,18 +208,18 @@ return {
     },
     {
       key = 'f',
-      mods = 'LEADER',
+      mods = 'CMD|SHIFT',
       action = wezterm.action.ToggleFullScreen,
     },
     -- This will create a new split and run the `top` program inside it
     {
-      key = '|',
-      mods = 'LEADER',
+      key = 'd',
+      mods = 'CMD',
       action = wezterm.action.SplitHorizontal {
         args = {},
       },
     },
-    { key = "-", mods = "LEADER", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
+    { key = "d", mods = "CMD|SHIFT", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
 
   },
   --  color_scheme = 'Galaxy',
