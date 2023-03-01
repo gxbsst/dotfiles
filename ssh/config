@@ -1,5 +1,5 @@
 Host o1
-HostName 192.9.128.36
+HostName nsng.ml
 User ubuntu
 Port 22
 Host o2
