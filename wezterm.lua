@@ -206,6 +206,19 @@ local font = wezterm.font_with_fallback {
 --   end
 -- )
 
+-- wezterm.on(
+--   'format-tab-title',
+--   function(tab, tabs, panes, config, hover, max_width)
+--      local title = wezterm.truncate_left(tab.active_pane.title, 50)
+--     if tab.is_active then
+--       return {
+--         { Text = ' ' .. title .. ' ' },
+--       }
+--     end
+--     return title
+--   end
+-- )
+
 
 return {
   --  color_scheme = "Gruvbox (Gogh)",

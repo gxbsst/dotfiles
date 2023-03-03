@@ -271,3 +271,4 @@ alias wx='cli --project "$(pwd)"'
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 alias ls='exa --git --icons --color=always --group-directories-first'
+
