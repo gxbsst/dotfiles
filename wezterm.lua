@@ -135,12 +135,19 @@ local keys = {
 
 local font = wezterm.font_with_fallback {
   {
-    family = 'JetBrains Mono',
+    -- family = 'JetBrains Mono',
+    -- family = 'Menlo',
+    -- family = 'Fira Mono for Powerline',
+    -- family = 'FiraCode Nerd Font Mono',
+    -- family = 'Hack Nerd Font Mono',
+    -- family = 'Fira Code',
+    family = 'Monaco',
     weight = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+    italic  = false
   },
-  --  { family = 'Terminus', weight = 'Bold' },
-  { family = 'JetBrains Mono', weight = 'Bold' },
+  { family = 'Terminus', weight = 'Bold' },
+  -- { family = 'JetBrains Mono', weight = 'Bold', italic = false },
 
   'Noto Color Emoji',
 }
@@ -204,10 +211,23 @@ return {
   --  color_scheme = "Gruvbox (Gogh)",
   -- color_scheme = "Gruvbox dark, medium (base16)",
   -- color_scheme = 'carbonfox',
-  color_scheme = 'Galaxy',
+  -- color_scheme = 'Galaxy',
+  --   color_scheme = "tokyonight",
+  --  color_scheme = "TokyoNight (Gogh)",
+  --    color_scheme = "tokyonight-day",
+  --     color_scheme = "tokyonight-storm",
+  --     color_scheme = "TokyoNightLight (Gogh)",
+  color_scheme = "TokyoNightStorm (Gogh)",
+  -- color_scheme = "Tomorrow (dark) (terminal.sexy)",
+
+
+
+
+
+
   -- FONT
   font_size = 16,
-  line_height = 1.6,
+  line_height = 1.8,
   leader = { key = "a", mods = "OPT" },
   -- TABAR
   tab_bar_at_bottom = true,
