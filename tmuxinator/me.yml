@@ -17,6 +17,9 @@ windows:
   - slidev:
     - cd slidev 
     - v
+  - blog:
+    - cd blog2024 
+    - v
   - git:
     - cd slidev 
     - lazygit
