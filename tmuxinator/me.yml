@@ -1,0 +1,22 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: Me
+root: ~/Projects/Me/
+
+windows:
+  - slideBuild:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - slidev:
+            - cd slidev 
+            - pnpm dev
+        - p1:
+            - echo 'p1'
+        - p2:
+            - echo 'p2'
+  - slidev:
+    - cd slidev 
+    - v
+  - git:
+    - cd slidev 
+    - lazygit
