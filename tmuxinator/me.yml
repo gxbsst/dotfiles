@@ -10,8 +10,9 @@ windows:
         - slidev:
             - cd slidev 
             - pnpm dev
-        - p1:
-            - echo 'p1'
+        - dev-demo:
+            - cd dev-demo
+            - yarn dev
         - p2:
             - echo 'p2'
   - slidev:
@@ -20,6 +21,10 @@ windows:
   - blog:
     - cd blog2024 
     - v
+  - dev-demo:
+    - cd dev-demo
+    - v
+  - git:
   - git:
     - cd slidev 
     - lazygit
