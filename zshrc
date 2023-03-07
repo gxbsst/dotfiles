@@ -271,4 +271,4 @@ alias wx='cli --project "$(pwd)"'
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 alias ls='exa --git --icons --color=always --group-directories-first'
-
+export OPENAI_API_KEY="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"

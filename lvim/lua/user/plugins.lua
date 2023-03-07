@@ -1,6 +1,19 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+  "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup({
+        -- optional configuration
+      })
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+  },
+  {
     "luukvbaal/statuscol.nvim",
     config = function()
       local builtin = require("statuscol.builtin")
@@ -75,7 +88,8 @@ lvim.plugins = {
     })
 
     vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
-  end },
+  end 
+  },
   { "ray-x/web-tools.nvim",
     config = function()
       require 'web-tools'.setup({
@@ -411,7 +425,9 @@ lvim.plugins = {
 
     end
   },
-  "ellisonleao/gruvbox.nvim",
+  {
+    "ellisonleao/gruvbox.nvim"
+  },
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "p00f/nvim-ts-rainbow",

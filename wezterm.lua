@@ -222,9 +222,9 @@ local font = wezterm.font_with_fallback {
 
 return {
   --  color_scheme = "Gruvbox (Gogh)",
-  color_scheme = "Gruvbox dark, medium (base16)",
+  -- color_scheme = "Gruvbox dark, medium (base16)",
   -- color_scheme = 'carbonfox',
-  -- color_scheme = 'Galaxy',
+  color_scheme = 'Galaxy',
   -- color_scheme = 'Batman',
   --   color_scheme = "tokyonight",
   --  color_scheme = "TokyoNight (Gogh)",

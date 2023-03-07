@@ -30,6 +30,26 @@ vim.api.nvim_create_autocmd({ "User" }, {
 
     -- 设置背景为无
     vim.cmd('hi Normal ctermbg=none guibg=none')
+
+    -- vim.cmd('colorscheme rose-pine')
+    vim.api.nvim_set_hl(0, 'FloatBorder', {
+      fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+      bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+    })
+
+    -- Make the cursor line background invisible
+    vim.api.nvim_set_hl(0, 'CursorLineBg', {
+      fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+      bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+    })
+
+    vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+
+    vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+      fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+    })
+
   end,
 })
 
