@@ -2,6 +2,8 @@ reload "user.plugins"
 reload "user.options"
 reload "user.keymaps"
 reload "user.autocommands"
+reload "user.commands"
+
 require('user.plugins.lsp')
 -- debugger
 require "user.plugins.dap"
@@ -41,3 +43,4 @@ reload "user.plugins.iron"
 -- reload "user.plugins.rust-tools"
 -- reload 'user.plugins.cmp-npm'
 reload 'user.plugins.cmp'
+
