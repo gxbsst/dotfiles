@@ -8,23 +8,28 @@ windows:
       layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
       panes:
         - slidev:
-            - cd slidev 
-            - pnpm dev
+            - echo 'p2'
         - dev-demo:
-            - cd dev-demo
+            - cd dev-demo && git pull
             - yarn dev
         - p2:
-            - echo 'p2'
+            - cd slidev && git pull 
+            - pnpm dev
   - slidev:
     - cd slidev 
     - v
   - blog:
     - cd blog2024 
     - v
+  - ppt-demo:
+    - cd ppt-demo
+    - v
   - dev-demo:
     - cd dev-demo
     - v
-  - git:
-  - git:
+  - git-demo:
+    - cd dev-demo
+    - lazygit
+  - git-slidev:
     - cd slidev 
     - lazygit
