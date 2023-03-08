@@ -1,6 +1,9 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+    "nyoom-engineering/oxocarbon.nvim"
+  },
+  {
   "jackMort/ChatGPT.nvim",
     config = function()
       require("chatgpt").setup({
