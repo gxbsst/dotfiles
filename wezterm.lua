@@ -11,6 +11,7 @@
 -- }
 
 local wezterm = require 'wezterm'
+local act = wezterm.action
 local dimmer = { brightness = 0.008, hue = 0.1, saturation = 1.0 }
 local launch_menu = {
   {
@@ -112,6 +113,26 @@ local window_frame = {
 }
 
 local keys = {
+  {
+    key = 'h',
+    mods = 'CTRL',
+    action = act.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'l',
+    mods = 'CTRL',
+    action = act.ActivatePaneDirection 'Right',
+  },
+  {
+    key = 'k',
+    mods = 'CTRL',
+    action = act.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'j',
+    mods = 'CTRL',
+    action = act.ActivatePaneDirection 'Down',
+  },
   {
     key = 'm',
     mods = 'LEADER',
