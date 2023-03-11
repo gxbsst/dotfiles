@@ -194,7 +194,7 @@ export CPPFLAGS="-I/usr/local/opt/libxml2/include"
 export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
 autoload bashcompinit
 bashcompinit
-source $HOME/development/wp-completion.bash
+#source $HOME/development/wp-completion.bash
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 # export PATH="$PATH:$(yarn global bin):$HOME/bin"
@@ -203,7 +203,7 @@ source $HOME/development/wp-completion.bash
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/weston/.sdkman"
 [[ -s "/Users/weston/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/weston/.sdkman/bin/sdkman-init.sh"
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 export EDITOR=lvim
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
@@ -250,6 +250,7 @@ export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 export PATH="$HOME/bin:/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/Applications/wechatwebdevtools.app/Contents/MacOS/:$PATH"
 export PATH="$HOME/bin/nvim-macos/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 alias python2="/usr/local/bin/python"
 alias k9s="$HOME/dotfiles/k9s"
 export VISUAL="$EDITOR"
