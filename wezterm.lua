@@ -113,26 +113,26 @@ local window_frame = {
 }
 
 local keys = {
-  {
-    key = 'h',
-    mods = 'CTRL',
-    action = act.ActivatePaneDirection 'Left',
-  },
-  {
-    key = 'l',
-    mods = 'CTRL',
-    action = act.ActivatePaneDirection 'Right',
-  },
-  {
-    key = 'k',
-    mods = 'CTRL',
-    action = act.ActivatePaneDirection 'Up',
-  },
-  {
-    key = 'j',
-    mods = 'CTRL',
-    action = act.ActivatePaneDirection 'Down',
-  },
+  -- {
+  --   key = 'h',
+  --   mods = 'CTRL',
+  --   action = act.ActivatePaneDirection 'Left',
+  -- },
+  -- {
+  --   key = 'l',
+  --   mods = 'CTRL',
+  --   action = act.ActivatePaneDirection 'Right',
+  -- },
+  -- {
+  --   key = 'k',
+  --   mods = 'CTRL',
+  --   action = act.ActivatePaneDirection 'Up',
+  -- },
+  -- {
+  --   key = 'j',
+  --   mods = 'CTRL',
+  --   action = act.ActivatePaneDirection 'Down',
+  -- },
   {
     key = 'm',
     mods = 'LEADER',

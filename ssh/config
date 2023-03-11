@@ -1,3 +1,8 @@
+Host route
+HostName 192.168.71.101
+User root
+Port 22
+
 Host o1
 HostName nsng.ml
 User ubuntu
