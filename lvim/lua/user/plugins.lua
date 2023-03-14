@@ -1,10 +1,29 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+    'petertriho/nvim-scrollbar',
+  },
+  {
+    "kevinhwang91/nvim-hlslens",
+    config = function()
+      require("hlslens").setup({
+        build_position_cb = function(plist, _, _, _)
+          require("scrollbar.handlers.search").handler.show(plist.start_pos)
+        end,
+      })
+      vim.cmd([[
+        augroup scrollbar_search_hide
+        autocmd!
+        autocmd CmdlineLeave : lua require('scrollbar.handlers.search').handler.hide()
+        augroup END
+        ]])
+    end,
+  },
+  {
     "nyoom-engineering/oxocarbon.nvim"
   },
   {
-  "jackMort/ChatGPT.nvim",
+    "jackMort/ChatGPT.nvim",
     config = function()
       require("chatgpt").setup({
         -- optional configuration
@@ -30,26 +49,26 @@ lvim.plugins = {
         -- reeval                 = false, -- whether or not the string returned by lnumfunc should be reevaluated
         -- Builtin 'statuscolumn' options
         -- setopt                 = false, -- whether to set the 'statuscolumn', providing builtin click actions
-       -- ft_ignore = nil,       -- lua table with filetypes for which 'statuscolumn' will be unset
+        -- ft_ignore = nil,       -- lua table with filetypes for which 'statuscolumn' will be unset
         -- order                  = "ScLa", -- order of the fold, sign, line number and separator segments
-      --   -- Click actions
-      --   -- Lnum                   = builtin.lnum_click,
-      --   FoldPlus               = builtin.foldplus_click,
-      --   FoldMinus              = builtin.foldminus_click,
-      --   FoldEmpty              = builtin.foldempty_click,
-      --   DapBreakpointRejected  = builtin.toggle_breakpoint,
-      --   DapBreakpoint          = builtin.toggle_breakpoint,
-      --   DapBreakpointCondition = builtin.toggle_breakpoint,
-      --   DiagnosticSignError    = builtin.diagnostic_click,
-      --   DiagnosticSignHint     = builtin.diagnostic_click,
-      --   DiagnosticSignInfo     = builtin.diagnostic_click,
-      --   DiagnosticSignWarn     = builtin.diagnostic_click,
-      --   GitSignsTopdelete      = builtin.gitsigns_click,
-      --   GitSignsUntracked      = builtin.gitsigns_click,
-      --   GitSignsAdd            = builtin.gitsigns_click,
-      --   GitSignsChangedelete   = builtin.gitsigns_click,
-      --   GitSignsDelete         = builtin.gitsigns_click,
-     }
+        --   -- Click actions
+        --   -- Lnum                   = builtin.lnum_click,
+        --   FoldPlus               = builtin.foldplus_click,
+        --   FoldMinus              = builtin.foldminus_click,
+        --   FoldEmpty              = builtin.foldempty_click,
+        --   DapBreakpointRejected  = builtin.toggle_breakpoint,
+        --   DapBreakpoint          = builtin.toggle_breakpoint,
+        --   DapBreakpointCondition = builtin.toggle_breakpoint,
+        --   DiagnosticSignError    = builtin.diagnostic_click,
+        --   DiagnosticSignHint     = builtin.diagnostic_click,
+        --   DiagnosticSignInfo     = builtin.diagnostic_click,
+        --   DiagnosticSignWarn     = builtin.diagnostic_click,
+        --   GitSignsTopdelete      = builtin.gitsigns_click,
+        --   GitSignsUntracked      = builtin.gitsigns_click,
+        --   GitSignsAdd            = builtin.gitsigns_click,
+        --   GitSignsChangedelete   = builtin.gitsigns_click,
+        --   GitSignsDelete         = builtin.gitsigns_click,
+      }
 
       require("statuscol").setup()
     end
@@ -112,23 +131,23 @@ lvim.plugins = {
     config = function()
       vim.cmd([[
 
-       let g:vimspector_sign_priority = {
-    \    'vimspectorBP':         998,
-    \    'vimspectorBPCond':     997,
-    \    'vimspectorBPDisabled': 996,
-    \    'vimspectorPC':         999,
-    \ }
+      let g:vimspector_sign_priority = {
+      \    'vimspectorBP':         998,
+      \    'vimspectorBPCond':     997,
+      \    'vimspectorBPDisabled': 996,
+      \    'vimspectorPC':         999,
+      \ }
 
-       nnoremap <leader>dd :TestNearest -strategy=jest<CR>
+      nnoremap <leader>dd :TestNearest -strategy=jest<CR>
 
       function! JestStrategy(cmd)
-        let testName = matchlist(a:cmd, '\v -t ''(.*)''')[1]
-        call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )
+      let testName = matchlist(a:cmd, '\v -t ''(.*)''')[1]
+      call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )
       endfunction      
       let g:test#custom_strategies = {'jest': function('JestStrategy')}
       let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')
 
-        let g:vimspector_configurations = {
+      let g:vimspector_configurations = {
       \ "test_debugpy_config": {
       \   "adapter": "vscode-node",
       \   "configuration": {
@@ -322,8 +341,8 @@ lvim.plugins = {
     config = function()
       vim.cmd([[
   function! FloatermStrategy(cmd)
-    execute 'silent FloatermKill'
-    execute 'FloatermNew! '.a:cmd.' '
+  execute 'silent FloatermKill'
+  execute 'FloatermNew! '.a:cmd.' '
   endfunction
 
   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
@@ -341,7 +360,7 @@ lvim.plugins = {
       terminal_cmd = ':vsplit | terminal',
       path_to_jest_debug = 'node_modules/.bin/jest',
       path_to_jest_run = 'node_modules/.bin/jest',
-      stringCharacters = { "'", '"' },
+      stringCharaters = { "'", '"' },
       expressions = { "call_expression" },
       prepend = { "describe" },
       regexStartEnd = true,
@@ -387,7 +406,7 @@ lvim.plugins = {
       vim.cmd([[
       highlight link Floaterm CursorLine
       highlight link FloatermBorder CursorLineBg
-    ]] )
+      ]] )
     end
   },
   -- WX

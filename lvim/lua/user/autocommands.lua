@@ -19,8 +19,8 @@ vim.api.nvim_create_autocmd({ "User" }, {
     vim.cmd('highlight GitSignsChange guibg=#ffcc00')
 
     -- fold
-    vim.cmd('hi FoldColumn guibg=transparent')
-    vim.cmd('hi SignColumn guibg=transparent')
+    vim.cmd('hi FoldColumn guibg=none')
+    vim.cmd('hi SignColumn guibg=none')
     --vim.cmd('set fillchars+=vert:\\') -- 设置panel线条为无
     vim.cmd('hi! VertSplit guifg=#333333 guibg=none ctermfg=none ctermbg=none')
 
