@@ -431,7 +431,14 @@ lvim.plugins = {
   -- NPM
   { 'elianiva/telescope-npm.nvim' },
   -- 错误开关
-  { 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim' },
+  { 
+    'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim',
+    config = function() 
+--       require('toggle-lsp-diagnostics').init()
+      require('toggle_lsp_diagnostics').init { underline = false, virtual_text = { prefix = 'SMART', spacing = 5 } }
+    end
+
+  },
   -- Window Zoom
   --  use <C-w>m
   { 'dhruvasagar/vim-zoom' },
