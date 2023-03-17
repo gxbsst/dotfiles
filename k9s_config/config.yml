@@ -1,0 +1,17 @@
+k9s:
+  refreshRate: 2
+  headless: false
+  logBufferSize: 200
+  logRequestSize: 200
+  currentContext: readonly
+  currentCluster: kubernetes
+  clusters:
+    kubernetes:
+      namespace:
+        active: sqb
+        favorites:
+        - sqb
+        - all
+        - default
+      view:
+        active: pods
