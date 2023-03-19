@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 612
+Audit-Id: 2e8ca266-ea2b-46c1-bda4-5b4447bddcfe
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"apps.kruise.io/v1beta1","resources":[{"name":"statefulsets","singularName":"statefulset","namespaced":true,"kind":"StatefulSet","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["sts","asts"],"storageVersionHash":"AbpDaPj+6qU="},{"name":"statefulsets/status","singularName":"","namespaced":true,"kind":"StatefulSet","verbs":["get","patch","update"]},{"name":"statefulsets/scale","singularName":"","namespaced":true,"group":"autoscaling","version":"v1","kind":"Scale","verbs":["get","patch","update"]}]}

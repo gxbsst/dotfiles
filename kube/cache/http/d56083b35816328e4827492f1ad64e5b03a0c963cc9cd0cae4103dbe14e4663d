@@ -1,0 +1,10 @@
+úEÛ5iÞDHOŠwlð	¾b¥—+Ùw“bÝ´ º”"ÖÿHTTP/2.0 200 OK
+Content-Length: 819
+Audit-Id: 1b8d7a24-9fbe-46c2-9cb1-beb5ee6b62f8
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 19 Mar 2023 07:14:07 GMT
+X-Kubernetes-Pf-Flowschema-Uid: d6405893-96d7-44c4-811e-a7731630e5c4
+X-Kubernetes-Pf-Prioritylevel-Uid: c41d4a04-f3f0-4f9a-a323-bff0f90637ad
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"flowcontrol.apiserver.k8s.io/v1beta1","resources":[{"name":"flowschemas","singularName":"","namespaced":false,"kind":"FlowSchema","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"9bSnTLYweJ0="},{"name":"flowschemas/status","singularName":"","namespaced":false,"kind":"FlowSchema","verbs":["get","patch","update"]},{"name":"prioritylevelconfigurations","singularName":"","namespaced":false,"kind":"PriorityLevelConfiguration","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"BFVwf8eYnsw="},{"name":"prioritylevelconfigurations/status","singularName":"","namespaced":false,"kind":"PriorityLevelConfiguration","verbs":["get","patch","update"]}]}

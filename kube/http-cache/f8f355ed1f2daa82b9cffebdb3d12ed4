@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 1629
+Audit-Id: 91ed52cc-7355-45d7-b76e-3deeb63d8088
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"cert-manager.io/v1","resources":[{"name":"certificates","singularName":"certificate","namespaced":true,"kind":"Certificate","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["cert","certs"],"categories":["cert-manager"],"storageVersionHash":"QwYBQGuMyKo="},{"name":"certificates/status","singularName":"","namespaced":true,"kind":"Certificate","verbs":["get","patch","update"]},{"name":"certificaterequests","singularName":"certificaterequest","namespaced":true,"kind":"CertificateRequest","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["cr","crs"],"categories":["cert-manager"],"storageVersionHash":"tuxiikMaACg="},{"name":"certificaterequests/status","singularName":"","namespaced":true,"kind":"CertificateRequest","verbs":["get","patch","update"]},{"name":"clusterissuers","singularName":"clusterissuer","namespaced":false,"kind":"ClusterIssuer","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["cert-manager"],"storageVersionHash":"IJyJPITm/AY="},{"name":"clusterissuers/status","singularName":"","namespaced":false,"kind":"ClusterIssuer","verbs":["get","patch","update"]},{"name":"issuers","singularName":"issuer","namespaced":true,"kind":"Issuer","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["cert-manager"],"storageVersionHash":"P8OOH0cQiDA="},{"name":"issuers/status","singularName":"","namespaced":true,"kind":"Issuer","verbs":["get","patch","update"]}]}

@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 1115
+Audit-Id: 42e16930-de7e-45bc-8808-3497bcb50724
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"qa.shouqianba.com/v1alpha1","resources":[{"name":"sqbdeployments","singularName":"sqbdeployment","namespaced":true,"kind":"SQBDeployment","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"evvf2oS3qWI="},{"name":"sqbdeployments/status","singularName":"","namespaced":true,"kind":"SQBDeployment","verbs":["get","patch","update"]},{"name":"sqbapplications","singularName":"sqbapplication","namespaced":true,"kind":"SQBApplication","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"cRa13FnUX04="},{"name":"sqbapplications/status","singularName":"","namespaced":true,"kind":"SQBApplication","verbs":["get","patch","update"]},{"name":"sqbplanes","singularName":"sqbplane","namespaced":true,"kind":"SQBPlane","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"EFFUJy8gDUI="},{"name":"sqbplanes/status","singularName":"","namespaced":true,"kind":"SQBPlane","verbs":["get","patch","update"]}]}

@@ -1,0 +1,1 @@
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"alert.alibabacloud.com/v1beta1","resources":[{"name":"ackalertrules","singularName":"ackalertrule","namespaced":true,"kind":"AckAlertRule","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["alertrule"],"storageVersionHash":"HYlneIw4Ci4="}]}

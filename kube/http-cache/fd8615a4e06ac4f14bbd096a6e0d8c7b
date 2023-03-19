@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 502
+Audit-Id: 36a3451b-ec5b-46bf-9aaa-01b6e8f6b786
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"policy.kruise.io/v1alpha1","resources":[{"name":"podunavailablebudgets","singularName":"podunavailablebudget","namespaced":true,"kind":"PodUnavailableBudget","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["pub"],"storageVersionHash":"lRNuau1WxHc="},{"name":"podunavailablebudgets/status","singularName":"","namespaced":true,"kind":"PodUnavailableBudget","verbs":["get","patch","update"]}]}

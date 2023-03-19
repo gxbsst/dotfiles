@@ -1,0 +1,10 @@
+bºï…™>¥p¨=≥⁄è}Í†9µˆ"Uyö´˛*©√HTTP/2.0 200 OK
+Content-Length: 1276
+Audit-Id: 55db5ffe-99d9-4982-8105-21f53edb5479
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 19 Mar 2023 05:50:16 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 8916b27c-2b5a-4032-bb81-adf9cd43166b
+X-Kubernetes-Pf-Prioritylevel-Uid: fd2fed91-a108-4296-98d9-909f5642239f
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"storage.k8s.io/v1","resources":[{"name":"csidrivers","singularName":"","namespaced":false,"kind":"CSIDriver","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"hL6j/rwBV5w="},{"name":"csinodes","singularName":"","namespaced":false,"kind":"CSINode","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"Pe62DkZtjuo="},{"name":"csistoragecapacities","singularName":"","namespaced":true,"kind":"CSIStorageCapacity","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"xeVl+2Ly1kE="},{"name":"storageclasses","singularName":"","namespaced":false,"kind":"StorageClass","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"shortNames":["sc"],"storageVersionHash":"K+m6uJwbjGY="},{"name":"volumeattachments","singularName":"","namespaced":false,"kind":"VolumeAttachment","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"tJx/ezt6UDU="},{"name":"volumeattachments/status","singularName":"","namespaced":false,"kind":"VolumeAttachment","verbs":["get","patch","update"]}]}

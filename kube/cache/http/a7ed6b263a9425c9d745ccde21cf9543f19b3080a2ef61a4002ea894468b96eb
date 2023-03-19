@@ -1,0 +1,10 @@
+rZ1ª±T-}2êÊ¡.C{-_…µ\}¤Eã@=x¢ÇHTTP/2.0 200 OK
+Content-Length: 915
+Audit-Id: 263d2599-5069-41a6-a5c9-33794386e0cc
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sat, 18 Mar 2023 15:56:40 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 4af1e660-0a14-4f10-a9ed-f5e66c8c394a
+X-Kubernetes-Pf-Prioritylevel-Uid: 9247fe68-b197-4486-a4f4-a71c3ac9aa79
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"rbac.authorization.k8s.io/v1","resources":[{"name":"clusterrolebindings","singularName":"","namespaced":false,"kind":"ClusterRoleBinding","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"48tpQ8gZHFc="},{"name":"clusterroles","singularName":"","namespaced":false,"kind":"ClusterRole","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"bYE5ZWDrJ44="},{"name":"rolebindings","singularName":"","namespaced":true,"kind":"RoleBinding","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"eGsCzGH6b1g="},{"name":"roles","singularName":"","namespaced":true,"kind":"Role","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"7FuwZcIIItM="}]}

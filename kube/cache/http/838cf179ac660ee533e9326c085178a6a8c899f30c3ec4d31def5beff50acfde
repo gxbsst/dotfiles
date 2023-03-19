@@ -1,0 +1,10 @@
+ô.tTÕ›CE`¶rP„d>+›Ø›ÍÁ™OÎ%$Ïˆ+‹HTTP/2.0 200 OK
+Content-Length: 653
+Audit-Id: da22e57c-148e-4494-87f5-b19e33ca234b
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sat, 18 Mar 2023 09:04:46 GMT
+X-Kubernetes-Pf-Flowschema-Uid: ebeff2b5-36d3-4518-9bc8-7c7a53565fe2
+X-Kubernetes-Pf-Prioritylevel-Uid: a6720742-990d-4e58-bcdb-0b417cc9b80b
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"certificates.k8s.io/v1","resources":[{"name":"certificatesigningrequests","singularName":"","namespaced":false,"kind":"CertificateSigningRequest","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"shortNames":["csr"],"storageVersionHash":"95fRKMXA+00="},{"name":"certificatesigningrequests/approval","singularName":"","namespaced":false,"kind":"CertificateSigningRequest","verbs":["get","patch","update"]},{"name":"certificatesigningrequests/status","singularName":"","namespaced":false,"kind":"CertificateSigningRequest","verbs":["get","patch","update"]}]}

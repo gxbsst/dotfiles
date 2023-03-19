@@ -1,0 +1,10 @@
+Úc ƒ8iaÍbCöÕßó²kdh‹1VÃæÛÏú‡HTTP/2.0 200 OK
+Content-Length: 325
+Audit-Id: 25142019-ab00-46b6-b3c4-d0566e4b5c97
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sat, 18 Mar 2023 15:56:40 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 4af1e660-0a14-4f10-a9ed-f5e66c8c394a
+X-Kubernetes-Pf-Prioritylevel-Uid: 9247fe68-b197-4486-a4f4-a71c3ac9aa79
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"scheduling.k8s.io/v1","resources":[{"name":"priorityclasses","singularName":"","namespaced":false,"kind":"PriorityClass","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"shortNames":["pc"],"storageVersionHash":"1QwjyaZjj3Y="}]}

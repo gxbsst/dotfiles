@@ -1,0 +1,1 @@
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"log.alibabacloud.com/v1alpha1","resources":[{"name":"aliyunlogconfigs","singularName":"aliyunlogconfig","namespaced":true,"kind":"AliyunLogConfig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"ErdevPiEhQI="}]}

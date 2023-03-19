@@ -1,0 +1,12 @@
+}ïyÔç
+–2¸
+ ‚4K&œLùm+,‘5È‰h}HTTP/2.0 200 OK
+Content-Length: 650
+Audit-Id: 8a6112cb-faec-4829-be85-069b639da73b
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 19 Mar 2023 06:52:37 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 838ecb61-31d6-4dd7-9517-6c56f5c345bc
+X-Kubernetes-Pf-Prioritylevel-Uid: 387dfd15-2e49-4668-8c6b-e3257027524e
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"admissionregistration.k8s.io/v1","resources":[{"name":"mutatingwebhookconfigurations","singularName":"","namespaced":false,"kind":"MutatingWebhookConfiguration","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"categories":["api-extensions"],"storageVersionHash":"Sqi0GUgDaX0="},{"name":"validatingwebhookconfigurations","singularName":"","namespaced":false,"kind":"ValidatingWebhookConfiguration","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"categories":["api-extensions"],"storageVersionHash":"B0wHjQmsGNk="}]}

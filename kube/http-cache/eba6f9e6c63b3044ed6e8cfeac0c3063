@@ -1,0 +1,19 @@
+HTTP/2.0 200 OK
+Content-Length: 275
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:50:01 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{
+  "major": "1",
+  "minor": "20+",
+  "gitVersion": "v1.20.11-aliyun.1",
+  "gitCommit": "757dfe7e010afcfa31591df65f26b4b80540975e",
+  "gitTreeState": "clean",
+  "buildDate": "2022-04-20T09:01:29Z",
+  "goVersion": "go1.15.15",
+  "compiler": "gc",
+  "platform": "linux/amd64"
+}

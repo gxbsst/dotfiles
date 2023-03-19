@@ -1,0 +1,10 @@
+H5¥¶;‹æá4‰’(g,ñãa·≠Ë≥Ù˜¨êíHTTP/2.0 200 OK
+Content-Length: 316
+Audit-Id: 54e67ba2-9198-4057-a52b-d0a455f25c0a
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 19 Mar 2023 09:02:15 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 8ee80a42-c026-421e-834b-dbcad8a28abc
+X-Kubernetes-Pf-Prioritylevel-Uid: de3bb608-ac03-4725-a9ed-26442a2704cc
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"storage.k8s.io/v1beta1","resources":[{"name":"csistoragecapacities","singularName":"","namespaced":true,"kind":"CSIStorageCapacity","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"storageVersionHash":"xeVl+2Ly1kE="}]}

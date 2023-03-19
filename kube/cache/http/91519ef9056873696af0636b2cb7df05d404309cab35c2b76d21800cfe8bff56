@@ -1,0 +1,10 @@
+.тHƒтаЪ(B§-hт"ЄПзё≠≈=_CG§ќА<HTTP/2.0 200 OK
+Content-Length: 591
+Audit-Id: 6355b81c-9021-445b-bf61-792c13b8425b
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 19 Mar 2023 08:17:30 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 85676785-14c0-4031-8a7c-febb4c17f0b2
+X-Kubernetes-Pf-Prioritylevel-Uid: 9a6765d5-6665-47c9-b38d-483db914321f
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"authorization.k8s.io/v1","resources":[{"name":"localsubjectaccessreviews","singularName":"","namespaced":true,"kind":"LocalSubjectAccessReview","verbs":["create"]},{"name":"selfsubjectaccessreviews","singularName":"","namespaced":false,"kind":"SelfSubjectAccessReview","verbs":["create"]},{"name":"selfsubjectrulesreviews","singularName":"","namespaced":false,"kind":"SelfSubjectRulesReview","verbs":["create"]},{"name":"subjectaccessreviews","singularName":"","namespaced":false,"kind":"SubjectAccessReview","verbs":["create"]}]}

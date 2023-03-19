@@ -1,0 +1,1 @@
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"kubepi.org/v1","resources":[{"name":"appmarkets","singularName":"appmarket","namespaced":false,"kind":"Appmarket","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["am"],"storageVersionHash":"rGlFrrrKOYM="}]}
