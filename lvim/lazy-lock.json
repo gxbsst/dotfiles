@@ -13,6 +13,7 @@
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp-tabnine": { "branch": "main", "commit": "a6cb553143573861d2d98da86ceb3074c87fc536" },
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
+  "codeium.vim": { "branch": "main", "commit": "ded478dd5b6f50067d66f70e4061704ee4063455" },
   "command_center.nvim": { "branch": "main", "commit": "0d820c438c871fe31ed942bc592a070da1564141" },
   "crates.nvim": { "branch": "main", "commit": "1dffccc0a95f656ebe00cacb4de282473430c5a1" },
   "cybu.nvim": { "branch": "main", "commit": "395791b1e1177e3459c85415970ab8216b19a5dc" },
