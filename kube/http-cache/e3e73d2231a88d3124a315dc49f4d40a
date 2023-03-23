@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 313
+Audit-Id: 4a878d10-9c6a-40f0-be9c-32d1ea7df8d3
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"alicloud.com/v1beta1","resources":[{"name":"batchreleases","singularName":"batchrelease","namespaced":true,"kind":"BatchRelease","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"haNhJTQWsTk="}]}

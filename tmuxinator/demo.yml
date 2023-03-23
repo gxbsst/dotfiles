@@ -1,0 +1,31 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: Me
+root: ~/Projects/Me/
+
+windows:
+  - slideBuild:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - pane1:
+            - echo 'vuejs' 
+        - react:
+            - cd reactjs/react && git pull
+            - yarn test
+        - vue:
+            - cd vuejs/core && git pull 
+            - pnpm test
+  - vue-core:
+    - cd vuejs/core
+    - v
+  - react:
+    - cd reactjs/react
+    - v
+  - dev-demo:
+    - cd dev-demo
+    - v
+  - git-react:
+    - cd reactjs/react
+  - git-vue-core:
+    - cd vuejs/core 
+    - lazygit

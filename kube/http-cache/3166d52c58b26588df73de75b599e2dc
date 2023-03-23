@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 844
+Audit-Id: 8dddc157-831f-4053-8921-1b6dd0478dc2
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"kafka.strimzi.io/v1beta1","resources":[{"name":"kafkausers","singularName":"kafkauser","namespaced":true,"kind":"KafkaUser","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["ku"],"categories":["strimzi"],"storageVersionHash":"223XaLumYs8="},{"name":"kafkausers/status","singularName":"","namespaced":true,"kind":"KafkaUser","verbs":["get","patch","update"]},{"name":"kafkatopics","singularName":"kafkatopic","namespaced":true,"kind":"KafkaTopic","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["kt"],"categories":["strimzi"],"storageVersionHash":"FYu1bLsUcx4="},{"name":"kafkatopics/status","singularName":"","namespaced":true,"kind":"KafkaTopic","verbs":["get","patch","update"]}]}

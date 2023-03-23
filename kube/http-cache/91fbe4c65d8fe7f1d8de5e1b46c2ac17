@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 438
+Audit-Id: 670cf8bb-9e56-4de8-ac38-da40edae88b3
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"nodes.alibabacloud.com/v1beta1","resources":[{"name":"nodemetrics","singularName":"nodemetric","namespaced":false,"kind":"NodeMetric","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"zr/0v3OlVsk="},{"name":"nodemetrics/status","singularName":"","namespaced":false,"kind":"NodeMetric","verbs":["get","patch","update"]}]}

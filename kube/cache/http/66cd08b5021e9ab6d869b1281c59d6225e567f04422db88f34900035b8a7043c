@@ -1,0 +1,10 @@
+˜ª"Ã”–åº~	˚PXx™Dèòß…§'/≈AÍ‘2HTTP/2.0 200 OK
+Content-Length: 462
+Audit-Id: e94dfa32-6405-4cf6-b38e-eb6c6674f153
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sat, 18 Mar 2023 14:54:30 GMT
+X-Kubernetes-Pf-Flowschema-Uid: a316604d-d164-46d0-9f33-9d7dc253c791
+X-Kubernetes-Pf-Prioritylevel-Uid: 2d4942be-c73c-40e5-b967-0de2c6b18f1a
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"policy/v1","resources":[{"name":"poddisruptionbudgets","singularName":"","namespaced":true,"kind":"PodDisruptionBudget","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"shortNames":["pdb"],"storageVersionHash":"6BGBu0kpHtk="},{"name":"poddisruptionbudgets/status","singularName":"","namespaced":true,"kind":"PodDisruptionBudget","verbs":["get","patch","update"]}]}

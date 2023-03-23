@@ -1,0 +1,10 @@
+z*ÕA³b(Êl†ELuí½ŽJ«1[#<F‡Z¡HTTP/2.0 200 OK
+Content-Length: 504
+Audit-Id: 5b611825-94a3-4854-a163-260f9622cfac
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Sun, 19 Mar 2023 04:46:48 GMT
+X-Kubernetes-Pf-Flowschema-Uid: a6b54480-3f03-473f-ac6a-338f8c01f1d7
+X-Kubernetes-Pf-Prioritylevel-Uid: 9b697fd9-6168-43f4-a6e3-c9cfd96bdb51
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"autoscaling/v1","resources":[{"name":"horizontalpodautoscalers","singularName":"","namespaced":true,"kind":"HorizontalPodAutoscaler","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"shortNames":["hpa"],"categories":["all"],"storageVersionHash":"oQlkt7f5j/A="},{"name":"horizontalpodautoscalers/status","singularName":"","namespaced":true,"kind":"HorizontalPodAutoscaler","verbs":["get","patch","update"]}]}

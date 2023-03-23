@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 918
+Audit-Id: 8e00d1f6-d64b-4562-9377-37e1449a9fa2
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"core.oam.dev/v1alpha1","resources":[{"name":"policies","singularName":"policy","namespaced":true,"kind":"Policy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["oam"],"storageVersionHash":"gbUMC73DPVc="},{"name":"envbindings","singularName":"envbinding","namespaced":true,"kind":"EnvBinding","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["envbind"],"categories":["oam"],"storageVersionHash":"0Aqed4y/cpc="},{"name":"envbindings/status","singularName":"","namespaced":true,"kind":"EnvBinding","verbs":["get","patch","update"]},{"name":"workflows","singularName":"workflow","namespaced":true,"kind":"Workflow","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["oam"],"storageVersionHash":"Z4uUs+ft6Zw="}]}

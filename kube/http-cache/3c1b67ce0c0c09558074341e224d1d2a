@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 399
+Audit-Id: 30b88ce1-f9d7-4333-9309-e136d7ea665d
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"autoscaling.alibabacloud.com/v1beta1","resources":[{"name":"cronhorizontalpodautoscalers","singularName":"cronhorizontalpodautoscaler","namespaced":true,"kind":"CronHorizontalPodAutoscaler","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["cronhpa"],"storageVersionHash":"8KZRjFlVr38="}]}

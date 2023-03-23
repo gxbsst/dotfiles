@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 378
+Audit-Id: 2cbf3bbe-7571-4ce0-8c16-9492421bf503
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"monitoring.coreos.com/v1alpha1","resources":[{"name":"alertmanagerconfigs","singularName":"alertmanagerconfig","namespaced":true,"kind":"AlertmanagerConfig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"95DNJ6wsUCg="}]}

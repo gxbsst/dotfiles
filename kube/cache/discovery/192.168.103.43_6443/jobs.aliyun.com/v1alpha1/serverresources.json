@@ -1,0 +1,1 @@
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"jobs.aliyun.com/v1alpha1","resources":[{"name":"globaljobs","singularName":"globaljob","namespaced":true,"kind":"GlobalJob","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["globaljob"],"storageVersionHash":"0DpXOY4h9EM="}]}

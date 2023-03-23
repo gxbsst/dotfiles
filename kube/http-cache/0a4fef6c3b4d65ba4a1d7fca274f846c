@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 350
+Audit-Id: 7c12f9ab-f89a-46da-859f-e0976722ccf2
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"alert.alibabacloud.com/v1beta1","resources":[{"name":"ackalertrules","singularName":"ackalertrule","namespaced":true,"kind":"AckAlertRule","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["alertrule"],"storageVersionHash":"HYlneIw4Ci4="}]}

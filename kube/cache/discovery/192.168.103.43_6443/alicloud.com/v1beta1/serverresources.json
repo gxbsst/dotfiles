@@ -1,0 +1,1 @@
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"alicloud.com/v1beta1","resources":[{"name":"batchreleases","singularName":"batchrelease","namespaced":true,"kind":"BatchRelease","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"haNhJTQWsTk="}]}

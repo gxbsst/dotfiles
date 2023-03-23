@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 396
+Audit-Id: 71a9a8ff-dc79-4d4a-b916-99a1d2704238
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"kubeflow.org/v1","resources":[{"name":"tfjobs","singularName":"tfjob","namespaced":true,"kind":"TFJob","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"foGvIv9oZ5U="},{"name":"tfjobs/status","singularName":"","namespaced":true,"kind":"TFJob","verbs":["get","patch","update"]}]}

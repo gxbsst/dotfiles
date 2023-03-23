@@ -1,0 +1,10 @@
+HTTP/2.0 200 OK
+Content-Length: 1058
+Audit-Id: 7d76d01c-fdba-4e99-8017-9dd749956cf9
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"apps.abm.io/v1","resources":[{"name":"jobs","singularName":"job","namespaced":true,"kind":"Job","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"7gnPHju5L+I="},{"name":"jobs/status","singularName":"","namespaced":true,"kind":"Job","verbs":["get","patch","update"]},{"name":"applications","singularName":"application","namespaced":true,"kind":"Application","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"kyzk5dQiu5E="},{"name":"applications/status","singularName":"","namespaced":true,"kind":"Application","verbs":["get","patch","update"]},{"name":"microservices","singularName":"microservice","namespaced":true,"kind":"Microservice","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"wAHSEqEFZa8="},{"name":"microservices/status","singularName":"","namespaced":true,"kind":"Microservice","verbs":["get","patch","update"]}]}

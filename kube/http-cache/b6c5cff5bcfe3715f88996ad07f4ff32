@@ -1,0 +1,11 @@
+HTTP/2.0 200 OK
+Content-Length: 502
+Audit-Id: c23b9f67-a5d1-4f1c-b701-156fab7244f9
+Cache-Control: no-cache, private
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 16 Mar 2023 15:47:18 GMT
+X-Kubernetes-Pf-Flowschema-Uid: f8ff8bc3-e622-4594-a39f-edf3f0fb5f45
+X-Kubernetes-Pf-Prioritylevel-Uid: 0ab0e656-4515-4a87-a046-5cec7b32d660
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"cluster.core.oam.dev/v1alpha1","resources":[{"name":"clustergateways","singularName":"","namespaced":false,"kind":"ClusterGateway","verbs":["get","list"]},{"name":"clustergateways/health","singularName":"","namespaced":false,"kind":"ClusterGateway","verbs":["get","patch","update"]},{"name":"clustergateways/proxy","singularName":"","namespaced":false,"kind":"ClusterGatewayProxyOptions","verbs":["create","delete","get","patch","update"]}]}
