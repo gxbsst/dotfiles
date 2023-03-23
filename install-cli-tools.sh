@@ -28,3 +28,4 @@ for tool in ${TOOLS[@]}; do
     # echo "Retry #$RETRY for $tool"
   done
 done
+
