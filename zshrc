@@ -268,8 +268,8 @@ alias wx='cli --project "$(pwd)"'
 #export http_proxy="socks5://127.0.0.1:1080"
 #export https_proxy="socks5://127.0.0.1:1080"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 alias ls='exa --git --icons --color=always --group-directories-first'
 export OPENAI_API_KEY="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"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
