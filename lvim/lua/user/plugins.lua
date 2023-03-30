@@ -103,32 +103,36 @@ lvim.plugins = {
   --     }))
   --   end
   -- },
-  { "jessarcher/onedark.nvim", config = function()
+  {
+    "jessarcher/onedark.nvim",
+    config = function()
+      vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
 
-    vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+      vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+        fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+        bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+      })
 
-    vim.api.nvim_set_hl(0, 'StatusLineNonText', {
-      fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
-      bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
-    })
-
-    vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
-  end 
+      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+    end
   },
-  { "ray-x/web-tools.nvim",
+  {
+    "ray-x/web-tools.nvim",
     config = function()
       require 'web-tools'.setup({
         keymaps = {
-          rename = nil, -- by default use same setup of lspconfig
+          rename = nil,        -- by default use same setup of lspconfig
           repeat_rename = '.', -- . to repeat
         },
       })
     end
   },
-  { "andythigpen/nvim-coverage",
+  {
+    "andythigpen/nvim-coverage",
     config = function()
       require("coverage").setup()
-    end },
+    end
+  },
   {
     "puremourning/vimspector",
     config = function()
@@ -146,7 +150,7 @@ lvim.plugins = {
       function! JestStrategy(cmd)
       let testName = matchlist(a:cmd, '\v -t ''(.*)''')[1]
       call vimspector#LaunchWithSettings( #{ configuration: 'jest', TestName: testName } )
-      endfunction      
+      endfunction
       let g:test#custom_strategies = {'jest': function('JestStrategy')}
       let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')
 
@@ -201,7 +205,6 @@ lvim.plugins = {
         fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
         bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
       })
-
     end
   },
   -- Mark
@@ -228,7 +231,8 @@ lvim.plugins = {
       command_center.add({
         {
           desc = "编译商家小程序npm",
-          cmd = "<CMD>:!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
+          cmd =
+          "<CMD>:!cd /Users/weston/Projects/WOSAI/FRONTEND/merchant-mp-default && cli --project `pwd` build-npm<CR>",
         }
       })
     end
@@ -264,9 +268,11 @@ lvim.plugins = {
     end
   },
   -- GIT
-  { 'tpope/vim-fugitive',
+  {
+    'tpope/vim-fugitive',
     dependencies = 'tpope/vim-rhubarb',
-    config = function() end
+    config = function()
+    end
   },
   {
     "sindrets/diffview.nvim",
@@ -318,26 +324,28 @@ lvim.plugins = {
     end,
   },
   { 'prettier/vim-prettier' },
-  { 'theHamsta/nvim-dap-virtual-text',
+  {
+    'theHamsta/nvim-dap-virtual-text',
     config = function()
       require("nvim-dap-virtual-text").setup {
-        enabled = true, -- enable this plugin (the default)
-        enabled_commands = true, -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
-        highlight_changed_variables = true, -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
-        highlight_new_as_changed = false, -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
-        show_stop_reason = true, -- show stop reason when stopped for exceptions
-        commented = false, -- prefix virtual text with comment string
-        only_first_definition = true, -- only show virtual text at first definition (if there are multiple)
-        all_references = false, -- show virtual text on all all references of the variable (not only definitions)
+        enabled = true,                        -- enable this plugin (the default)
+        enabled_commands = true,               -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
+        highlight_changed_variables = true,    -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
+        highlight_new_as_changed = false,      -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
+        show_stop_reason = true,               -- show stop reason when stopped for exceptions
+        commented = false,                     -- prefix virtual text with comment string
+        only_first_definition = true,          -- only show virtual text at first definition (if there are multiple)
+        all_references = false,                -- show virtual text on all all references of the variable (not only definitions)
         filter_references_pattern = '<module', -- filter references (not definitions) pattern when all_references is activated (Lua gmatch pattern, default filters out Python modules)
         -- experimental features:
-        virt_text_pos = 'eol', -- position of virtual text, see `:h nvim_buf_set_extmark()`
-        all_frames = false, -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
-        virt_lines = false, -- show virtual lines instead of virtual text (will flicker!)
-        virt_text_win_col = nil -- position the virtual text at a fixed window column (starting from the first text column) ,
+        virt_text_pos = 'eol',                 -- position of virtual text, see `:h nvim_buf_set_extmark()`
+        all_frames = false,                    -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
+        virt_lines = false,                    -- show virtual lines instead of virtual text (will flicker!)
+        virt_text_win_col = nil                -- position the virtual text at a fixed window column (starting from the first text column) ,
         -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
       }
-    end },
+    end
+  },
   -- TEST
   {
     'vim-test/vim-test',
@@ -350,42 +358,46 @@ lvim.plugins = {
 
   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
   let g:test#strategy = 'floaterm'
-]]     )
+]])
       -- vim.cmd([[
       --   let test#strategy = "neovim"
       --   let g:test#preserve_screen = 1
       -- ]])
     end,
   },
-  { 'David-Kunz/jester', config = function()
-    require("jester").setup({
-      identifiers = { "test", "it" },
-      terminal_cmd = ':vsplit | terminal',
-      path_to_jest_debug = 'node_modules/.bin/jest',
-      path_to_jest_run = 'node_modules/.bin/jest',
-      stringCharaters = { "'", '"' },
-      expressions = { "call_expression" },
-      prepend = { "describe" },
-      regexStartEnd = true,
-      escapeRegex = true,
-      dap = {
-        type = 'node2',
-        request = 'launch',
-        args = { "--no-cache" },
-        -- cwd = '/Users/weston/Projects/WOSAI/FRONTEND/emenu-mini-core',
-        sourceMaps = "inline",
-        protocol = 'inspector',
-        skipFiles = { '<node_internals>/**/*.js' },
-        console = 'integratedTerminal',
-        port = 9229,
-        disableOptimisticBPs = true
-      },
-      cache = { -- used to store the information about the last run
-        last_run = nil,
-        last_used_term_buf = nil
-      }
-    })
-  end },
+  {
+    'David-Kunz/jester',
+    config = function()
+      require("jester").setup({
+        identifiers = { "test", "it" },
+        terminal_cmd = ':vsplit | terminal',
+        path_to_jest_debug = 'node_modules/.bin/jest',
+        path_to_jest_run = 'node_modules/.bin/jest',
+        stringCharaters = { "'", '"' },
+        expressions = { "call_expression" },
+        prepend = { "describe" },
+        regexStartEnd = true,
+        escapeRegex = true,
+        dap = {
+          type = 'node2',
+          request = 'launch',
+          args = { "--no-cache" },
+          -- cwd = '/Users/weston/Projects/WOSAI/FRONTEND/emenu-mini-core',
+          sourceMaps = "inline",
+          protocol = 'inspector',
+          skipFiles = { '<node_internals>/**/*.js' },
+          console = 'integratedTerminal',
+          port = 9229,
+          disableOptimisticBPs = true
+        },
+        cache = {
+          -- used to store the information about the last run
+          last_run = nil,
+          last_used_term_buf = nil
+        }
+      })
+    end
+  },
   {
     "nvim-neotest/neotest",
     dependencies = {
@@ -409,19 +421,20 @@ lvim.plugins = {
       vim.cmd([[
       highlight link Floaterm CursorLine
       highlight link FloatermBorder CursorLineBg
-      ]] )
+      ]])
     end
   },
   -- WX
   { 'chemzqm/wxapp.vim' },
-  { 'norcalli/nvim-colorizer.lua',
+  {
+    'norcalli/nvim-colorizer.lua',
     config = function()
       require 'colorizer'.setup {
         'less',
-        'css';
-        'javascript';
+        'css',
+        'javascript',
         html = {
-          mode = 'foreground';
+          mode = 'foreground',
         }
       }
     end
@@ -431,19 +444,19 @@ lvim.plugins = {
   -- NPM
   { 'elianiva/telescope-npm.nvim' },
   -- 错误开关
-  { 
+  {
     'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim',
-    config = function() 
---       require('toggle-lsp-diagnostics').init()
+    config = function()
+      --       require('toggle-lsp-diagnostics').init()
       require('toggle_lsp_diagnostics').init { underline = false, virtual_text = { prefix = 'SMART', spacing = 5 } }
     end
-
   },
   -- Window Zoom
   --  use <C-w>m
   { 'dhruvasagar/vim-zoom' },
   { 'christoomey/vim-tmux-navigator' },
-  { "folke/zen-mode.nvim",
+  {
+    "folke/zen-mode.nvim",
     config = function()
       require("zen-mode").setup {
         window = {
@@ -454,7 +467,6 @@ lvim.plugins = {
           }
         },
       }
-
     end
   },
   {
@@ -522,29 +534,29 @@ lvim.plugins = {
     "0x100101/lab.nvim",
     build = "cd js && npm ci",
   },
-  { "tzachar/cmp-tabnine", build = "./install.sh" },
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   -- event = { "VimEnter" },
-  --   config = function()
-  --     vim.defer_fn(function()
-  --       require("copilot").setup {
-  --         plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-  --       }
-  --     end, 100)
-  --   end,
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup {
-  --       formatters = {
-  --         insert_text = require("copilot_cmp.format").remove_existing,
-  --       },
-  --     }
-  --   end,
-  -- },
+  { "tzachar/cmp-tabnine",               build = "./install.sh" },
+  {
+    "zbirenbaum/copilot.lua",
+    -- event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup {
+        formatters = {
+          insert_text = require("copilot_cmp.format").remove_existing,
+        },
+      }
+    end,
+  },
   -- "MunifTanjim/nui.nvim",
   -- {
   --   "folke/noice.nvim",
