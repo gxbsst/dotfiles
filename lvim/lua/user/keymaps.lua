@@ -69,7 +69,7 @@ keyset("n", ',d', "<cmd>Lspsaga lsp_finder<CR>")
 opts = { remap = false }
 -- keyset("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
 -- LSPSaga prefix - [;]
-keyset("n", ",f", [[<cmd>Lspsaga lsp_finder<CR>]])
+keyset("n", ",,", [[<cmd>Lspsaga lsp_finder<CR>]])
 -- Code action
 keyset({ "n", "v" }, ',a', "<cmd>Lspsaga code_action<CR>", { silent = true })
 -- Rename
