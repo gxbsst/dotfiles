@@ -257,6 +257,7 @@ export PATH="$HOME/bin/nvim-macos/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 alias python2="/usr/local/bin/python"
 alias k9s="$HOME/dotfiles/k9s"
+alias k="kubectl"
 export VISUAL="$EDITOR"
 
 export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
