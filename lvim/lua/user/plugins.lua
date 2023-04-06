@@ -11,6 +11,9 @@ lvim.plugins = {
   --   end
   -- },
   {
+  'metakirby5/codi.vim'
+  },
+  {
     'petertriho/nvim-scrollbar',
   },
   {
