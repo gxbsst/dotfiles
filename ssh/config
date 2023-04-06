@@ -1,3 +1,5 @@
+Include ~/.orbstack/ssh/config
+
 Host route
 HostName 192.168.71.101
 User root
