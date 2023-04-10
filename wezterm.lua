@@ -156,7 +156,7 @@ local font = wezterm.font_with_fallback {
     -- family = 'Hack Nerd Font Mono',
     -- family = 'Fira Code',
     -- family            = 'Monaco',
-    weight            = 'Bold',
+    -- weight            = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
     italic            = false
   },
@@ -255,7 +255,7 @@ return {
 
   -- FONT
   font_size = 16,
-  line_height = 1.8,
+  line_height = 2.0,
   leader = { key = "a", mods = "OPT" },
   -- TABAR
   tab_bar_at_bottom = true,
