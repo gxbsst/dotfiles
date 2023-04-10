@@ -49,6 +49,13 @@ cmp.setup.filetype('json', {
   })
 })
 
+cmp.setup.filetype('javascript', {
+  sources = cmp.config.sources({
+    { name = 'lab.quick_data', keyword_length = 4 }
+  }),
+})
+
+
 cmp.setup.filetype('wxml', {
   sources = cmp.config.sources({
     { name = 'cmp_tabnine' },
