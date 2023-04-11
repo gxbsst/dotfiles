@@ -1,5 +1,15 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {
+    '0x100101/lab.nvim',
+    config = function()
+      require('lab').setup {
+        quick_data = {
+          enabled = true,
+        }
+      }
+    end
+  },
   -- {
   --   'Exafunction/codeium.vim',
   --   config = function()
@@ -11,7 +21,7 @@ lvim.plugins = {
   --   end
   -- },
   {
-  'metakirby5/codi.vim'
+    'metakirby5/codi.vim'
   },
   {
     'petertriho/nvim-scrollbar',
@@ -64,23 +74,23 @@ lvim.plugins = {
         setopt                 = true, -- whether to set the 'statuscolumn', providing builtin click actions
         -- ft_ignore = nil,       -- lua table with filetypes for which 'statuscolumn' will be unset
         -- order                  = "ScLa", -- order of the fold, sign, line number and separator segments
-          -- Click actions
-          -- Lnum                   = builtin.lnum_click,
-          FoldPlus               = builtin.foldplus_click,
-          FoldMinus              = builtin.foldminus_click,
-          FoldEmpty              = builtin.foldempty_click,
-          DapBreakpointRejected  = builtin.toggle_breakpoint,
-          DapBreakpoint          = builtin.toggle_breakpoint,
-          DapBreakpointCondition = builtin.toggle_breakpoint,
-          DiagnosticSignError    = builtin.diagnostic_click,
-          DiagnosticSignHint     = builtin.diagnostic_click,
-          DiagnosticSignInfo     = builtin.diagnostic_click,
-          DiagnosticSignWarn     = builtin.diagnostic_click,
-          GitSignsTopdelete      = builtin.gitsigns_click,
-          GitSignsUntracked      = builtin.gitsigns_click,
-          GitSignsAdd            = builtin.gitsigns_click,
-          GitSignsChangedelete   = builtin.gitsigns_click,
-          GitSignsDelete         = builtin.gitsigns_click,
+        -- Click actions
+        -- Lnum                   = builtin.lnum_click,
+        FoldPlus               = builtin.foldplus_click,
+        FoldMinus              = builtin.foldminus_click,
+        FoldEmpty              = builtin.foldempty_click,
+        DapBreakpointRejected  = builtin.toggle_breakpoint,
+        DapBreakpoint          = builtin.toggle_breakpoint,
+        DapBreakpointCondition = builtin.toggle_breakpoint,
+        DiagnosticSignError    = builtin.diagnostic_click,
+        DiagnosticSignHint     = builtin.diagnostic_click,
+        DiagnosticSignInfo     = builtin.diagnostic_click,
+        DiagnosticSignWarn     = builtin.diagnostic_click,
+        GitSignsTopdelete      = builtin.gitsigns_click,
+        GitSignsUntracked      = builtin.gitsigns_click,
+        GitSignsAdd            = builtin.gitsigns_click,
+        GitSignsChangedelete   = builtin.gitsigns_click,
+        GitSignsDelete         = builtin.gitsigns_click,
       }
 
       require("statuscol").setup(cfg)
@@ -540,10 +550,10 @@ lvim.plugins = {
   },
   { "christianchiarulli/telescope-tabs", branch = "chris" },
   "monaqa/dial.nvim",
-  {
-    "0x100101/lab.nvim",
-    build = "cd js && npm ci",
-  },
+  -- {
+  --   "0x100101/lab.nvim",
+  --   build = "cd js && npm ci",
+  -- },
   { "tzachar/cmp-tabnine",               build = "./install.sh" },
   {
     "zbirenbaum/copilot.lua",
