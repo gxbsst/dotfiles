@@ -1,14 +1,7 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
-    '0x100101/lab.nvim',
-    config = function()
-      require('lab').setup {
-        quick_data = {
-          enabled = true,
-        }
-      }
-    end
+    'folke/tokyonight.nvim'
   },
   -- {
   --   'Exafunction/codeium.vim',
@@ -555,16 +548,23 @@ lvim.plugins = {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine",               build = "./install.sh" },
+
   {
     "zbirenbaum/copilot.lua",
-    -- event = { "VimEnter" },
+    cmd = "Copilot",
+    event = "InsertEnter",
     config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-        }
-      end, 100)
+      require("copilot").setup({})
     end,
+    -- "zbirenbaum/copilot.lua",
+    -- -- event = { "VimEnter" },
+    -- config = function()
+    --   vim.defer_fn(function()
+    --     require("copilot").setup {
+    --       plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+    --     }
+    --   end, 100)
+    -- end,
   },
   -- {
   --   "zbirenbaum/copilot-cmp",

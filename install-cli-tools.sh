@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+set -x
+set -e
+
 TOOLS=(wget bat lsd exa rip xcp zoxide dust ripgrep fd sd procs bottom topgrade broot tokei tmuxinator lazygit zurawiki/brews/gptcommit)
 MAX_RETRY=3
 RETRY=0
