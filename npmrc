@@ -41,6 +41,6 @@ utp-native-binary-host-mirror=https://npm.taobao.org/mirrors/utp-native/v{versio
 zmq-prebuilt-binary-host-mirror=https://npm.taobao.org/mirrors/zmq-prebuilt/v{version}
 //registry-npm.wosai-inc.com/:username=weixuhong
 //registry-npm.wosai-inc.com/:_password="d3hoNTE0NDg4ODg="
-registry=https://registry-npm.wosai-inc.com/
+// registry=https://registry-npm.wosai-inc.com/
 init-author-name=Weston Wei
 email=weixuhong@shouqianba.com
