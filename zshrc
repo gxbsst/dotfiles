@@ -276,7 +276,7 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #export https_proxy="socks5://127.0.0.1:1080"
 
 alias ls='exa --git --icons --color=always --group-directories-first'
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY="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"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
