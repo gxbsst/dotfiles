@@ -548,7 +548,7 @@ lvim.plugins = {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine",               build = "./install.sh" },
-
+    {"github/copilot.vim"},
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",

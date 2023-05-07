@@ -149,10 +149,10 @@ local keys = {
 
 local font = wezterm.font_with_fallback {
   {
-    family            = 'menlo',
-    -- family = 'Menlo',
+    -- family            = 'menlo',
+    family = 'Menlo',
     -- family = 'Fira Mono for Powerline',
-    -- family = 'FiraCode Nerd Font Mono',
+--     family = 'FiraCode Nerd Font Mono',
     -- family = 'Hack Nerd Font Mono',
     -- family = 'Fira Code',
     -- family            = 'Monaco',
@@ -162,8 +162,6 @@ local font = wezterm.font_with_fallback {
   },
   { family = 'Terminus', weight = 'Bold' },
   -- { family = 'JetBrains Mono', weight = 'Bold', italic = false },
-
-  'Noto Color Emoji',
 }
 
 -- wezterm.on(

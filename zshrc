@@ -276,7 +276,7 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #export https_proxy="socks5://127.0.0.1:1080"
 
 alias ls='exa --git --icons --color=always --group-directories-first'
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY="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"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
@@ -285,18 +285,4 @@ export OPENAI_API_KEY="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"
 export PNPM_HOME="/Users/weston/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/weston/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/weston/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/weston/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/weston/mambaforge/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+eval "$(zoxide init zsh)"
