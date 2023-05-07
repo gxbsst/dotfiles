@@ -12,7 +12,9 @@
 
 local wezterm = require 'wezterm'
 local act = wezterm.action
-local dimmer = { brightness = 0.008, hue = 0.1, saturation = 1.0 }
+-- local dimmer = { brightness = 0.008, hue = 0.1, saturation = 1.0 }
+-- brightness 参数影响是否显示背景图片
+local dimmer = { brightness = 0, hue = 0.1, saturation = 1.0 }
 local launch_menu = {
   {
     args = { "btop" },
@@ -150,9 +152,9 @@ local keys = {
 local font = wezterm.font_with_fallback {
   {
     -- family            = 'menlo',
-    family = 'Menlo',
+    family            = 'Menlo',
     -- family = 'Fira Mono for Powerline',
---     family = 'FiraCode Nerd Font Mono',
+    --     family = 'FiraCode Nerd Font Mono',
     -- family = 'Hack Nerd Font Mono',
     -- family = 'Fira Code',
     -- family            = 'Monaco',

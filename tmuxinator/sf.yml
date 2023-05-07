@@ -1,0 +1,15 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: Me
+root: ~/Projects/SFH/
+
+windows:
+  - sfh:
+    - cd sfh-mp 
+    - v
+  - test:
+    - cd sfh-mp 
+    - echo 'testing'
+  - git-sfh-mp:
+    - cd stf-mp
+    - lazygit

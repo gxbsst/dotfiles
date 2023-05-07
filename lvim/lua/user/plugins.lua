@@ -1,6 +1,9 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+    'rebelot/kanagawa.nvim'
+  },
+  {
     'folke/tokyonight.nvim'
   },
   -- {
@@ -548,7 +551,7 @@ lvim.plugins = {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine",               build = "./install.sh" },
-    {"github/copilot.vim"},
+  { "github/copilot.vim" },
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",

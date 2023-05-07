@@ -1,49 +1,3 @@
--- local kind_icons = {
---   Text = "",
---   Method = "m",
---   Function = "",
---   Constructor = "",
---   Field = "",
---   Variable = "",
---   Class = "",
---   Interface = "",
---   Module = "",
---   Property = "",
---   Unit = "",
---   Value = "",
---   Enum = "",
---   Keyword = "",
---   Snippet = "",
---   Color = "",
---   File = "",
---   Reference = "",
---   Folder = "",
---   EnumMember = "",
---   Constant = "",
---   Struct = "",
---   Event = "",
---   Operator = "",
---   TypeParameter = "",
--- }
--- lvim.builtin.cmp.formatting = {
---   formatting = {
---     -- fields = { "kind", "abbr", "menu" },
---     format = function(entry, vim_item)
---       -- Kind icons
---       -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
---       vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
---       vim_item.menu = ({
---         nvim_lsp = "[LSP]",
---         luasnip = "[Snippet]",
---         buffer = "[Buffer]",
---         path = "[Path]",
---       })[entry.source.name]
---       return vim_item
---     end,
---   },
--- }
-
-
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 -- vim.opt.relativenumber = true
@@ -56,6 +10,7 @@ vim.opt.foldcolumn = "1"
 vim.g.noautochdir = true
 -- general
 lvim.colorscheme = 'rose-pine'
+--lvim.colorscheme = 'kanagawa'
 -- lvim.colorscheme = 'gruvbox'
 lvim.log.level = "info"
 lvim.format_on_save = {
@@ -146,7 +101,9 @@ lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = 'horizontal'
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.update_focused_file = {
-  update_cwd = false, update_focused_file = false, enable = false,
+  update_cwd = false,
+  update_focused_file = false,
+  enable = false,
   update_root = false,
   ignore_list = { "package.json", }
 }
@@ -199,40 +156,40 @@ lvim.builtin.dap.active = true
 vim.opt.showtabline = 0
 
 local options = {
-  backup = false, -- creates a backup file
-  clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-  cmdheight = 1, -- more space in the neovim command line for displaying messages
+  backup = false,                          -- creates a backup file
+  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+  cmdheight = 1,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0, -- so that `` is visible in markdown files
-  fileencoding = "utf-8", -- the encoding written to a file
-  hlsearch = true, -- highlight all matches on previous search pattern
-  ignorecase = true, -- ignore case in search patterns
-  mouse = "a", -- allow the mouse to be used in neovim
-  pumheight = 10, -- pop up menu height
-  showmode = false, -- we don't need to see things like -- INSERT -- anymore
-  showtabline = 0, -- always show tabs
-  smartcase = true, -- smart case
-  smartindent = true, -- make indenting smarter again
-  splitbelow = true, -- force all horizontal splits to go below current window
-  splitright = true, -- force all vertical splits to go to the right of current window
-  swapfile = false, -- creates a swapfile
-  termguicolors = true, -- set term gui colors (most terminals support this)
-  timeoutlen = 1000, -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true, -- enable persistent undo
-  updatetime = 100, -- faster completion (4000ms default)
-  writebackup = false, -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-  expandtab = true, -- convert tabs to spaces
-  shiftwidth = 2, -- the number of spaces inserted for each indentation
-  tabstop = 2, -- insert 2 spaces for a tab
-  cursorline = true, -- highlight the current line
-  number = true, -- set numbered lines
+  conceallevel = 0,                        -- so that `` is visible in markdown files
+  fileencoding = "utf-8",                  -- the encoding written to a file
+  hlsearch = true,                         -- highlight all matches on previous search pattern
+  ignorecase = true,                       -- ignore case in search patterns
+  mouse = "a",                             -- allow the mouse to be used in neovim
+  pumheight = 10,                          -- pop up menu height
+  showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
+  showtabline = 0,                         -- always show tabs
+  smartcase = true,                        -- smart case
+  smartindent = true,                      -- make indenting smarter again
+  splitbelow = true,                       -- force all horizontal splits to go below current window
+  splitright = true,                       -- force all vertical splits to go to the right of current window
+  swapfile = false,                        -- creates a swapfile
+  termguicolors = true,                    -- set term gui colors (most terminals support this)
+  timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
+  undofile = true,                         -- enable persistent undo
+  updatetime = 100,                        -- faster completion (4000ms default)
+  writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+  expandtab = true,                        -- convert tabs to spaces
+  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
+  tabstop = 2,                             -- insert 2 spaces for a tab
+  cursorline = true,                       -- highlight the current line
+  number = true,                           -- set numbered lines
   laststatus = 3,
   showcmd = false,
   ruler = false,
   -- relativenumber = true, -- set relative numbered lines
-  numberwidth = 4, -- set number column width to 2 {default 4}
+  numberwidth = 4,    -- set number column width to 2 {default 4}
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-  wrap = false, -- display lines as one long line
+  wrap = false,       -- display lines as one long line
   scrolloff = 0,
   sidescrolloff = 8,
   guifont = "monospace:h17", -- the font used in graphical neovim applications
