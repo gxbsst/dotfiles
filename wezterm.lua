@@ -27,6 +27,22 @@ local launch_menu = {
 }
 
 local colors = {
+  foreground = "#dcd7ba",
+  background = "#1f1f28",
+
+  cursor_bg = "#c8c093",
+  cursor_fg = "#c8c093",
+  cursor_border = "#c8c093",
+
+  selection_fg = "#c8c093",
+  selection_bg = "#2d4f67",
+
+  scrollbar_thumb = "#16161d",
+  split = "#16161d",
+
+  ansi = { "#090618", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#6a9589", "#c8c093" },
+  brights = { "#727169", "#e82424", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#dcd7ba" },
+  indexed = { [16] = "#ffa066", [17] = "#ff5d62" },
   tab_bar = {
     inactive_tab_edge = '#000000',
     background = '#0b0022',
@@ -152,12 +168,12 @@ local keys = {
 local font = wezterm.font_with_fallback {
   {
     -- family            = 'menlo',
-    family            = 'Menlo',
+    -- family            = 'Menlo',
     -- family = 'Fira Mono for Powerline',
     --     family = 'FiraCode Nerd Font Mono',
     -- family = 'Hack Nerd Font Mono',
     -- family = 'Fira Code',
-    -- family            = 'Monaco',
+    family            = 'Monaco',
     -- weight            = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
     italic            = false
@@ -248,11 +264,6 @@ return {
   -- color_scheme = "TokyoNightStorm (Gogh)",
   -- color_scheme = "Tomorrow (dark) (terminal.sexy)",
 
-
-
-
-
-
   -- FONT
   font_size = 16,
   line_height = 2.0,
@@ -270,6 +281,7 @@ return {
   window_decorations = "RESIZE",
   window_frame = window_frame,
   font = font,
+  -- force_reverse_video_cursor = true,
   colors = colors,
   launch_menu = launch_menu,
   background = background,

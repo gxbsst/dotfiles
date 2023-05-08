@@ -30,7 +30,8 @@ vim.api.nvim_create_autocmd({ "User" }, {
 
     -- 设置背景为无
     vim.cmd('hi Normal ctermbg=none guibg=none')
-
+    -- 数字背景LineNr
+    vim.cmd('hi LineNr ctermbg=none guibg=none')
     -- vim.cmd('colorscheme rose-pine')
     vim.api.nvim_set_hl(0, 'FloatBorder', {
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
