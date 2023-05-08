@@ -226,13 +226,36 @@ vim.filetype.add {
 -- telescope
 -- lvim.builtin.telescope.theme = "ivy"
 -- lvim.builtin.telescope.defaults.layout_strategy = 'horizontal'
-lvim.builtin.telescope.defaults = {
-  theme = 'ivy',
-  layout_strategy = 'horizontal',
-  layout_config = {
-    horizontal = { width = 0.7 }
+-- lvim.builtin.telescope.defaults = {
+  -- theme = 'ivy',
+  -- layout_strategy = 'horizontal',
+  -- layout_config = {
+  --   horizontal = { width = 0.7 }
+  -- }
+-- }
+  lvim.builtin.telescope.defaults.layout_config = {
+    width = 0.70,
+    height = 0.75,
+    preview_cutoff = 120,
+    prompt_position = "bottom",
+    horizontal = {
+      preview_width = function(_, cols, _)
+        return math.floor(cols * 0.6)
+      end,
+    },
+    vertical = {
+      width = 0.9,
+      height = 0.95,
+      preview_height = 0.5,
+    },
+
+    flex = {
+      horizontal = {
+        preview_width = 0.9,
+      },
+    },
   }
-}
+  lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
 -- lvim.builtin.telescope.extensions.live_grep_args = {
 --   theme = 'ivy',
 --   layout_strategy = 'horizontal',
