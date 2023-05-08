@@ -21,12 +21,12 @@ lvim.plugins = {
         overrides = function(colors) -- add/modify highlights
           local theme = colors.theme
           return {
-            NormalFloat = { bg = "none" },
-            FloatBorder = { bg = "none"},
-            FloatTitle = { bg = "none"},
-            NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-            LazyNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
-            MasonNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+            -- NormalFloat = { bg = "none" },
+            -- FloatBorder = { bg = "none"},
+            -- FloatTitle = { bg = "none"},
+            -- NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+            -- LazyNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+            -- MasonNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
 
             TelescopeTitle = { fg = theme.ui.special, bold = bold },
             TelescopePromptNormal = { bg = theme.ui.bg_m3 },

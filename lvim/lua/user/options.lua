@@ -281,7 +281,7 @@ end)
 --   end
 -- })
 -- 设置fold
-vim.opt.background = "dark"
+-- vim.opt.background = "dark"
 
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
