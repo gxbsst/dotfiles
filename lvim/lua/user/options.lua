@@ -310,3 +310,10 @@ lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
     end
   end
 end
+
+lvim.builtin.alpha.startify.section.header.val = {
+  '🌽🥝🍉🍊🍏🥭🍒🍑🍅🫒🥥🥑🫑🥦🥦',
+  "🍅       🈶 🆚 🈚           🍅",
+  '🥀🌻💐🌸🪷🏵️🌹🌼🌹🌹🌼🌺🌷🌺🌷',
+}
+
