@@ -1,7 +1,7 @@
 -- 给panel发送指令
 
 -- Helper function to handle the arguments
-local function handle_args(args)
+function handle_args(args)
     local merged_args = {}
     local temp_arg = nil
 
@@ -22,7 +22,7 @@ local function handle_args(args)
 end
 
 -- Function to send command to tmux
-local function send_to_tmux(...)
+function send_to_tmux(...)
     local args = {...}
 
     if #args == 0 then
