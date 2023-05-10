@@ -166,6 +166,8 @@ local keys = {
 }
 
 local font = wezterm.font_with_fallback {
+  -- { family = 'Menlo' },
+  -- { family = 'JetBrains Mono' },
   {
     -- family            = 'menlo',
     -- family            = 'Menlo',
@@ -266,7 +268,7 @@ return {
 
   -- FONT
   font_size = 16,
-  line_height = 2.0,
+  line_height = 1.3,
   leader = { key = "a", mods = "OPT" },
   -- TABAR
   tab_bar_at_bottom = true,
