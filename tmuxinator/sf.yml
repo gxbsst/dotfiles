@@ -11,5 +11,5 @@ windows:
     - cd sfh-mp 
     - echo 'testing'
   - git-sfh-mp:
-    - cd stf-mp
+    - cd sth-mp
     - lazygit
