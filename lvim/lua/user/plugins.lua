@@ -1,6 +1,17 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
   {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  },
+  {
     'rebelot/kanagawa.nvim',
     config = function()
       require('kanagawa').setup({
@@ -544,7 +555,6 @@ lvim.plugins = {
   "MattesGroeger/vim-bookmarks",
   "ghillb/cybu.nvim",
   "moll/vim-bbye",
-  "folke/todo-comments.nvim",
   "ruifm/gitlinker.nvim",
   "mattn/vim-gist",
   "mattn/webapi-vim",
