@@ -2,7 +2,7 @@
 lvim.plugins = {
   {
     "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("todo-comments").setup {
         -- your configuration comes here
@@ -333,6 +333,7 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     -- dependencies = "kyazdani42/nvim-web-devicons",
+    dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
       require("trouble").setup {}
     end
