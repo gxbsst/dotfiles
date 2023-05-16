@@ -124,17 +124,18 @@ local default_opts = { noremap = true, silent = true }
 -- keyset('n', '<C-p>', ":bprev<CR>")
 
 -- Zenmode
-keyset("n", "<leader>zz", function()
-  require("zen-mode").toggle({
-    window = {
-      width = 120,
+keyset("n", "zz", ":ZenMode<CR>")
+-- keyset("n", "<leader>zz", function()
+--   require("zen-mode").toggle({
+--     window = {
+--       width = 120,
 
-      options = {
-        number = true,
-        relativenumber = true,
-      }
-    }
-  })
-  vim.wo.wrap = true
-  -- ColorMyPencils()
-end)
+--       options = {
+--         number = true,
+--         relativenumber = true,
+--       }
+--     }
+--   })
+--   vim.wo.wrap = true
+--   -- ColorMyPencils()
+-- end)

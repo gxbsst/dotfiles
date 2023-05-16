@@ -49,6 +49,7 @@
   "neogit": { "branch": "master", "commit": "d7c66e5e8752e0cc76336a78c4432648cf3102e1" },
   "neotest": { "branch": "master", "commit": "f3570eb751de11b30438eda89a6988e55f41e985" },
   "nlsp-settings.nvim": { "branch": "main", "commit": "23705ee0f2fb7f63fb3e8751904513eb1aa0bb63" },
+  "no-neck-pain.nvim": { "branch": "main", "commit": "d3527936c4944baf0227c4f5b7fd64e7119ac13c" },
   "nui.nvim": { "branch": "main", "commit": "698e75814cd7c56b0dd8af4936bcef2d13807f3c" },
   "null-ls.nvim": { "branch": "main", "commit": "0180603b6f3cee40f83c6fc226b9ac5f85e691c4" },
   "numb.nvim": { "branch": "master", "commit": "2c89245d1185e02fec1494c45bc765a38b6b40b3" },

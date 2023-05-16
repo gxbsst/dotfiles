@@ -1,5 +1,6 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {"shortcuts/no-neck-pain.nvim", version = "*" },
   {
     "dmmulroy/tsc.nvim",
     config = function() 
