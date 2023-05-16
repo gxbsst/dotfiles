@@ -16,12 +16,17 @@ require("typescript").setup {
   },
 }
 
+
+
 -- Set a formatter.
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "prettier", filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" } },
 }
 
+formatters.setup {
+  { command = "rome", filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" } },
+}
 local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
 require("dap-vscode-js").setup {
   -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
