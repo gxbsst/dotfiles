@@ -1,5 +1,20 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
+  {"shortcuts/no-neck-pain.nvim", version = "*" },
+  {
+    "dmmulroy/tsc.nvim",
+    config = function() 
+      require('tsc').setup{
+        auto_open_qflist = true,
+        enable_progress_notifications = true,
+         flags = {
+    build = true,
+  },
+        hide_progress_notifications_from_history = true,
+        spinner = { "⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷" },
+      }
+    end
+  },
   {
     "folke/todo-comments.nvim",
     dependencies = "nvim-lua/plenary.nvim",
@@ -153,7 +168,12 @@ lvim.plugins = {
     }
   },
   { "heavenshell/vim-jsdoc", build = "make install" },
-  'rcarriga/nvim-notify',
+  { 
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.notify = require("notify")
+    end
+  },
   -- {
   --   'gelguy/wilder.nvim',
   --   config = function()
