@@ -65,7 +65,7 @@ keyset('n', '<C-o>', "<cmd>Telescope git_files<CR>")
 -- command center
 keyset('n', ',c', "<cmd>Telescope command_center<CR>")
 -- LSP
-keyset("n", ',d', "<cmd>Lspsaga lsp_finder<CR>")
+-- keyset("n", ',d', "<cmd>Lspsaga lsp_finder<CR>")
 opts = { remap = false }
 -- keyset("n", "<C-i>", function() vim.lsp.buf.hover() end, opts)
 -- LSPSaga prefix - [;]
@@ -88,7 +88,7 @@ keyset("n", "]E", function()
   require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
 end, { silent = true })
 -- Outline
-keyset("n", ",o", "<cmd>LSoutlineToggle<CR>", { silent = true })
+keyset("n", ",o", "<cmd>Lspsaga outline<CR>", { silent = true })
 -- Hover Doc
 keyset("n", "<C-i>", "<cmd>Lspsaga hover_doc<CR>", { silent = true, remap = true })
 -- Quit
@@ -103,7 +103,7 @@ keyset('n', '<C-g>', ":Telescope live_grep<CR>")
 --   [[<cmd>lua require('telescope.builtin').live_grep({ theme = 'ivy', layout_strategy='horizontal',layout_config={width=0.5}})<CR>]])
 -- keyset('v', '<C-g>',
 --   [[<cmd>y<ESC>lua require('telescope.builtin').live_grep({ default_text =<cr>0, theme = 'ivy', layout_strategy='horizontal',layout_config={width=0.5}})<CR>]])
-keyset('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
+-- keyset('n', '<C-e>', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 keyset('n', '<C-s>', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]])
 keyset('n', '<C-r>', ":Telescope npm scripts<CR>")
 local default_opts = { noremap = true, silent = true }

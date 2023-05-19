@@ -10,7 +10,8 @@ vim.opt.foldcolumn = "1"
 vim.g.noautochdir = true
 -- general
 -- lvim.colorscheme = 'rose-pine'
-lvim.colorscheme = 'kanagawa'
+-- lvim.colorscheme = 'kanagawa'
+lvim.colorscheme = 'onedark'
 -- lvim.colorscheme = 'gruvbox'
 lvim.log.level = "info"
 lvim.format_on_save = {
