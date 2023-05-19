@@ -204,6 +204,55 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
   end,
 })
 
+
+
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = { "" },
+  callback = function()
+
+    local color = {
+      fg = "#838994",
+      bg = "#252829",
+    }
+
+    require("lualine").setup({
+      options = {
+        theme = {
+          normal = {
+            a = { fg = color.fg, bg = color.bg, gui = "bold" },
+            b = { fg = color.fg, bg = color.bg, gui = "bold" },
+            c = { fg = color.fg, bg = color.bg, gui = "bold" },
+            insert = { 
+              a = { fg = color.fg, bg = color.bg, gui = "bold" },
+              b = { fg = color.fg, bg = color.bg, gui = "bold" },
+            },
+            visual = { 
+              a = { fg = color.fg, bg = color.bg, gui = "bold" },
+              b = { fg = color.fg, bg = color.bg, gui = "bold" },
+            },
+            command = { 
+              a = { fg = color.fg, bg = color.bg, gui = "bold" },
+              b = { fg = color.fg, bg = color.bg, gui = "bold" },
+            },
+            replace = { 
+              a = { fg = color.fg, bg = color.bg, gui = "bold" },
+              b = { fg = color.fg, bg = color.bg, gui = "bold" },
+            },
+            inative = { 
+              a = { fg = color.fg, bg = color.bg, gui = "bold" },
+              b = { fg = color.fg, bg = color.bg, gui = "bold" },
+              c = { fg = color.fg, bg = color.bg, gui = "bold" },
+            },
+          }
+        }
+      }
+    })
+
+  end,
+})
+
+
+
 -- vim.api.nvim_create_autocmd({ "ModeChanged" }, {
 --   callback = function()
 --     local luasnip = require "luasnip"
