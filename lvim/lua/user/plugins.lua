@@ -1,15 +1,39 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  {"shortcuts/no-neck-pain.nvim", version = "*" },
+  "neovim/nvim-lspconfig",
+  dependencies = {
+    {
+      "SmiteshP/nvim-navbuddy",
+      dependencies = {
+        "SmiteshP/nvim-navic",
+        "MunifTanjim/nui.nvim"
+      },
+      opts = { lsp = { auto_attach = true } }
+    }
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end
+  },
+  {
+    'mvllow/modes.nvim',
+    tag = 'v0.2.0',
+    config = function()
+      require('modes').setup()
+    end
+  },
+  { "shortcuts/no-neck-pain.nvim", version = "*" },
   {
     "dmmulroy/tsc.nvim",
-    config = function() 
-      require('tsc').setup{
+    config = function()
+      require('tsc').setup {
         auto_open_qflist = true,
         enable_progress_notifications = true,
-         flags = {
-    build = true,
-  },
+        flags = {
+          build = true,
+        },
         hide_progress_notifications_from_history = true,
         spinner = { "⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷" },
       }
@@ -30,17 +54,18 @@ lvim.plugins = {
     'rebelot/kanagawa.nvim',
     config = function()
       require('kanagawa').setup({
-        compile = false,             -- enable compiling the colorscheme
-        undercurl = true,            -- enable undercurls
+        compile = false,  -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
         commentStyle = { italic = true },
         functionStyle = {},
-        keywordStyle = { italic = true},
+        keywordStyle = { italic = true },
         statementStyle = { bold = true },
         typeStyle = {},
-        transparent = true,         -- do not set background color
-        dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-        terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-        colors = {                   -- add/modify theme and palette colors
+        transparent = true,    -- do not set background color
+        dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = {
+          -- add/modify theme and palette colors
           palette = {},
           theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
         },
@@ -167,8 +192,8 @@ lvim.plugins = {
       { 'MunifTanjim/nui.nvim' }
     }
   },
-  { "heavenshell/vim-jsdoc", build = "make install" },
-  { 
+  { "heavenshell/vim-jsdoc",       build = "make install" },
+  {
     'rcarriga/nvim-notify',
     config = function()
       vim.notify = require("notify")
@@ -330,15 +355,15 @@ lvim.plugins = {
   -- KEYMAPS
   -- LSP
   {
-   "glepnir/lspsaga.nvim",
+    "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-        require("lspsaga").setup({})
+      require("lspsaga").setup({})
     end,
     dependencies = {
-      {"nvim-tree/nvim-web-devicons"},
+      { "nvim-tree/nvim-web-devicons" },
       --Please make sure you install markdown and markdown_inline parser
-      {"nvim-treesitter/nvim-treesitter"}
+      { "nvim-treesitter/nvim-treesitter" }
     }
   },
   {

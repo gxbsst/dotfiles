@@ -93,6 +93,8 @@ plugins=(
   zsh-syntax-highlighting
   zsh-history-substring-search
 )
+plugins+=(zsh-vi-mode)
+
 
 source $ZSH/oh-my-zsh.sh
 
