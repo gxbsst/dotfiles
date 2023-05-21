@@ -1,16 +1,5 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
-  "neovim/nvim-lspconfig",
-  dependencies = {
-    {
-      "SmiteshP/nvim-navbuddy",
-      dependencies = {
-        "SmiteshP/nvim-navic",
-        "MunifTanjim/nui.nvim"
-      },
-      opts = { lsp = { auto_attach = true } }
-    }
-  },
   {
     'windwp/nvim-ts-autotag',
     config = function()
@@ -530,11 +519,21 @@ lvim.plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim"
+      "antoinemadec/FixCursorHold.nvim",
+      'haydenmeade/neotest-jest',
     },
     config = function()
       require("neotest").setup({
+        library = { plugins = { "neotest" }, types = true },
         adapters = {
+          require('neotest-jest')({
+            jestCommand = "npm test --",
+            jestConfigFile = "custom.jest.config.ts",
+            env = { CI = true },
+            cwd = function(path)
+              return vim.fn.getcwd()
+            end,
+          }),
 
         },
       })

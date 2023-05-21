@@ -209,7 +209,6 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
 vim.api.nvim_create_autocmd({ "User" }, {
   pattern = { "" },
   callback = function()
-
     local color = {
       fg = "#838994",
       bg = "#252829",
@@ -222,23 +221,23 @@ vim.api.nvim_create_autocmd({ "User" }, {
             a = { fg = color.fg, bg = color.bg, gui = "bold" },
             b = { fg = color.fg, bg = color.bg, gui = "bold" },
             c = { fg = color.fg, bg = color.bg, gui = "bold" },
-            insert = { 
+            insert = {
               a = { fg = color.fg, bg = color.bg, gui = "bold" },
               b = { fg = color.fg, bg = color.bg, gui = "bold" },
             },
-            visual = { 
+            visual = {
               a = { fg = color.fg, bg = color.bg, gui = "bold" },
               b = { fg = color.fg, bg = color.bg, gui = "bold" },
             },
-            command = { 
+            command = {
               a = { fg = color.fg, bg = color.bg, gui = "bold" },
               b = { fg = color.fg, bg = color.bg, gui = "bold" },
             },
-            replace = { 
+            replace = {
               a = { fg = color.fg, bg = color.bg, gui = "bold" },
               b = { fg = color.fg, bg = color.bg, gui = "bold" },
             },
-            inative = { 
+            inative = {
               a = { fg = color.fg, bg = color.bg, gui = "bold" },
               b = { fg = color.fg, bg = color.bg, gui = "bold" },
               c = { fg = color.fg, bg = color.bg, gui = "bold" },
@@ -247,7 +246,6 @@ vim.api.nvim_create_autocmd({ "User" }, {
         }
       }
     })
-
   end,
 })
 

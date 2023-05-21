@@ -152,12 +152,12 @@ lvim.builtin.which_key.mappings["s"] = nil
 lvim.builtin.which_key.mappings["w"] = nil
 
 local m_opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",     -- NORMAL mode
   prefix = "m",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local status_ok, which_key = pcall(require, "which-key")
@@ -221,4 +221,7 @@ lvim.builtin.which_key.mappings["t"] = {
   v = { "<cmd>TestVisit<CR>", "TestVisit" },
   j = { "<cmd>lua require'jester'.debug()<CR>", "Debug nearest test(s) under the cursor" },
   J = { "<cmd>lua require'jester'.debug_file()<CR>", "Debug current file" },
+  S = { "<cmd>lua require('neotest').summary.toggle()<CR>", "Neotest Summary" },
+  n = { "<cmd>lua require('neotest').run.run()<CR>", "Neotest Test Near" },
+  a = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Neotest Test Near" }
 }
