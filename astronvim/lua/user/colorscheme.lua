@@ -1,1 +1,2 @@
-return 'kanagawa'
+-- return 'kanagawa'
+return 'onedark'

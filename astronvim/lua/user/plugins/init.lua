@@ -1,13 +1,11 @@
 return {
   {
-    "goolord/alpha-nvim",
-  config = function ()
-    require'alpha'.setup(require'alpha.themes.startify'.config)
-  end
-},
-  {"akinsho/bufferline.nvim", event = "UIEnter", config = function()  
-    require('bufferline').setup{}
-  end },
+    "akinsho/bufferline.nvim",
+    event = "UIEnter",
+    config = function()
+      require('bufferline').setup {}
+    end
+  },
   {
     'windwp/nvim-ts-autotag',
     lazy = false,
@@ -673,7 +671,7 @@ return {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine",               build = "./install.sh" },
-  { "github/copilot.vim", lazy = false },
+  { "github/copilot.vim",                lazy = false },
   {
     "zbirenbaum/copilot.lua",
     lazy = false,
