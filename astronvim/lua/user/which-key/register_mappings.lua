@@ -10,25 +10,25 @@ return {
         ["."] = { ":cd ~/Notes<cr>", "Go Notes" },
         b = {
           function()
-            require "zk.commands" "ZkBacklinks"()
+            require "zk.commands" "ZkBacklinks" ()
           end,
           "Backlink Picker",
         },
         d = {
           function()
-            require "zk.commands" "ZkCd"()
+            require "zk.commands" "ZkCd" ()
           end,
           "Change Directory",
         },
         r = {
           function()
-            require "zk.commands" "ZkIndex"()
+            require "zk.commands" "ZkIndex" ()
           end,
           "Refresh Index",
         },
         l = {
           function()
-            require "zk.commands" "ZkLinks"()
+            require "zk.commands" "ZkLinks" ()
           end,
           "Link Picker",
         },
@@ -52,7 +52,7 @@ return {
         },
         t = {
           function()
-            require("zk.commands").get "ZkTags"()
+            require("zk.commands").get "ZkTags" ()
           end,
           "Tags",
         },

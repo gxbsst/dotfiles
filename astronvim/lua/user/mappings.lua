@@ -14,65 +14,68 @@ end
 
 return {
   i = {
-    [';;'] = {'<Esc>A;'},
-    [',,'] = {'<Esc>A,'}
+    [';;'] = { '<Esc>A;' },
+    [',,'] = { '<Esc>A,' }
   },
   n = {
-    ['<F7'] = {'<cmd>SymbolsOutline<cr>'},
-    ['<S-l>'] = {":BufferLineCycleNext<CR>"},
-    ['<S-h>'] = {":BufferLineCyclePrev<CR>"},
-    ['<F1>'] = {":FloatermToggle<CR>"},
+    ['<S-l>'] = { ":BufferLineCycleNext<CR>" },
+    ['<S-h>'] = { ":BufferLineCyclePrev<CR>" },
+    -- ['<F1>'] = { ":FloatermToggle<CR>" },
+    ['<F7>'] = { ':SymbolsOutline<cr>' },
     ['<F2>'] = {
-      function() 
-        vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR }) 
-     end
+      function()
+        vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+      end
     },
     ['F11'] = {
-      function() 
-        vim.diagnostic.goto_prev() 
+      function()
+        vim.diagnostic.goto_prev()
       end
     },
     ['F3'] = {
-      function() 
-        vim.lsp.buf.code_action() 
+      function()
+        vim.lsp.buf.code_action()
       end
     },
-    ['<leader>H'] =  {':nohlsearch<cr>'},
+    ['<leader>H'] = { ':nohlsearch<cr>' },
     ['q'] = { ':q<cr>', desc = "" },
-    ['<C-o>'] = { "<cmd>Telescope git_files<cr>"},
-    [',,'] = {'<cmd>Lspsaga lsp_finder<cr>'},
-     [',,'] = {'<cmd>Lspsaga code_action<cr>'},
-  [',r'] = {'<cmd>Lspsaga rename<cr>'},
-  [',p'] = {'<cmd>Lspsaga peek_definition<cr>'},
-  [',e'] = {'<cmd>Lspsaga show_line_diagnostics<cr>'},
-  [',E'] = {'<cmd>Lspsaga show_cursor_diagnostics<cr>'},
-  ['[e'] = {'<cmd>Lspsaga diagnostic_jump_prev<cr>'},
-  [']e'] = {'<cmd>Lspsaga diagnostic_jump_next<cr>'},
-  ['[E'] = {function()
+    ['<C-o>'] = { "<cmd>Telescope git_files<cr>" },
+    [',,'] = { '<cmd>Lspsaga lsp_finder<cr>' },
+    [',r'] = { '<cmd>Lspsaga rename<cr>' },
+    [',p'] = { '<cmd>Lspsaga peek_definition<cr>' },
+    [',e'] = { '<cmd>Lspsaga show_line_diagnostics<cr>' },
+    [',E'] = { '<cmd>Lspsaga show_cursor_diagnostics<cr>' },
+    ['[e'] = { '<cmd>Lspsaga diagnostic_jump_prev<cr>' },
+    [']e'] = { '<cmd>Lspsaga diagnostic_jump_next<cr>' },
+    ['[E'] = { function()
       require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
-  end},
-  [']E'] = {function()
+    end },
+    [']E'] = { function()
       require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
-  end},
-  [',o'] = {'<cmd>Lspsaga outline<cr>'},
-  ['<C-i>'] = {'<cmd>Lspsaga hover_doc<cr>'},
-  ['q'] = {':q<cr>'},
-  ['<leader>p'] = {'<cmd>Telescope<cr>'},
-  ['<C-F>'] = {'<cmd>lua require(\'telescope.builtin\').find_files({ no_ignore = true, prompt_title = \'All Files\' })<cr>'},
-  ['<C-b>'] = {'<cmd>lua require(\'telescope.builtin\').buffers()<cr>'},
-  ['<C-g>'] = {':Telescope live_grep<cr>'},
-  ['<C-s>'] = {'<cmd>lua require(\'telescope.builtin\').lsp_document_symbols()<cr>'},
-  ['<C-r>'] = {':Telescope npm scripts<cr>'},
-  ['zz'] = {':ZenMode<cr>'},
+    end },
+    [',o'] = { '<cmd>Lspsaga outline<cr>' },
+    ['<C-i>'] = { '<cmd>Lspsaga hover_doc<cr>' },
+    ['<leader>p'] = { '<cmd>Telescope<cr>' },
+    ['<C-F>'] = {
+      '<cmd>lua require(\'telescope.builtin\').find_files({ no_ignore = true, prompt_title = \'All Files\' })<cr>' },
+    ['<C-b>'] = { '<cmd>lua require(\'telescope.builtin\').buffers()<cr>' },
+    ['<C-g>'] = { ':Telescope live_grep<cr>' },
+    ['<C-s>'] = { '<cmd>lua require(\'telescope.builtin\').lsp_document_symbols()<cr>' },
+    ['<C-r>'] = { ':Telescope npm scripts<cr>' },
+    ['zz'] = { ':ZenMode<cr>' },
+    ['<leader>v'] = { "<cmd>vsplit<cr>", desc = "vsplit" },
+    ['<leader>rr'] = { "<cmd>lua require('spectre').open()<cr>", desc = "replace" },
+    ['<leader>gj'] = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "next_hunk" },
+    ['<leader>gk'] = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "prev_hunk" },
   },
   v = {
     ['F3'] = {
-      function() 
-        vim.lsp.buf.code_action() 
+      function()
+        vim.lsp.buf.code_action()
       end
     }
   }
- 
+
   -- n = {
   --   ["<leader>lF"] = {
   --     function()

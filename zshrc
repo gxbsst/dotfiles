@@ -171,7 +171,7 @@ alias loop='f() { while true; do sleep 0.5 && $1 $2 $3 $4; done  };f'
 alias which='which -a'
 alias s='webstorm .'
 alias wxcli="/Applications/wechatwebdevtools.app/Contents/MacOS/cli"
-alias v="lvim"
+alias v="nvim"
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug

@@ -15,6 +15,7 @@ return {
   },
   {
     'mvllow/modes.nvim',
+    event = 'BufRead',
     tag = 'v0.2.0',
     config = function()
       require('modes').setup()
@@ -23,6 +24,7 @@ return {
   { "shortcuts/no-neck-pain.nvim", version = "*" },
   {
     "dmmulroy/tsc.nvim",
+    lazy = false,
     config = function()
       require('tsc').setup {
         auto_open_qflist = true,
@@ -37,6 +39,7 @@ return {
   },
   {
     "folke/todo-comments.nvim",
+    lazy = false,
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("todo-comments").setup {
@@ -107,13 +110,14 @@ return {
   --   end
   -- },
   {
-    'metakirby5/codi.vim'
+    'metakirby5/codi.vim', lazy = false,
   },
   {
     'petertriho/nvim-scrollbar',
   },
   {
     "kevinhwang91/nvim-hlslens",
+    lazy = false,
     config = function()
       require("hlslens").setup({
         build_position_cb = function(plist, _, _, _)
@@ -146,6 +150,7 @@ return {
   },
   {
     "luukvbaal/statuscol.nvim",
+    event = "BufRead",
     config = function()
       local builtin = require("statuscol.builtin")
       local cfg = {
@@ -195,25 +200,6 @@ return {
       vim.notify = require("notify")
     end
   },
-  -- {
-  --   'gelguy/wilder.nvim',
-  --   config = function()
-  --     local wilder = require('wilder')
-  --     wilder.setup({
-  --       modes = { ':', '/', '?' },
-  --       enable_cmd_enter = 1,
-  --       next_key = '<Tab>',
-  --       previous_key = '<S-Tab>',
-  --       accept_key = '<C-n>', -- hisotry
-  --       reject_key = '<C-p>', -- hisotry
-  --     })
-
-  --     wilder.set_option('renderer', wilder.popupmenu_renderer({
-  --       -- highlighter applies highlighting to the candidates
-  --       highlighter = wilder.basic_highlighter(),
-  --     }))
-  --   end
-  -- },
   {
     "jessarcher/onedark.nvim",
     lazy = false,
@@ -376,6 +362,7 @@ return {
   },
   {
     'simrat39/symbols-outline.nvim',
+    event = "LspAttach",
     config = function()
       require("symbols-outline").setup({
         -- auto_preview = false,
@@ -386,6 +373,7 @@ return {
   },
   {
     "folke/trouble.nvim",
+    event = "BufRead",
     -- dependencies = "kyazdani42/nvim-web-devicons",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
@@ -412,34 +400,6 @@ return {
     end,
   },
   -- CODE
-  -- {
-  --   "echasnovski/mini.map",
-  --   branch = "stable",
-  --   config = function()
-  --     require('mini.map').setup()
-  --     local map = require('mini.map')
-  --     map.setup({
-  --       integrations = {
-  --         map.gen_integration.builtin_search(),
-  --         map.gen_integration.diagnostic({
-  --           error = 'DiagnosticFloatingError',
-  --           warn  = 'DiagnosticFloatingWarn',
-  --           info  = 'DiagnosticFloatingInfo',
-  --           hint  = 'DiagnosticFloatingHint',
-  --         }),
-  --       },
-  --       symbols = {
-  --         encode = map.gen_encode_symbols.dot('4x2'),
-  --       },
-  --       window = {
-  --         side = 'right',
-  --         width = 20, -- set to 1 for a pure scrollbar :)
-  --         winblend = 15,
-  --         show_integration_count = false,
-  --       },
-  --     })
-  --   end
-  -- },
   -- TEXT
   {
     "windwp/nvim-spectre",
@@ -448,7 +408,7 @@ return {
       require("spectre").setup()
     end,
   },
-  { 'prettier/vim-prettier' },
+  { 'prettier/vim-prettier',      event = 'BufRead' },
   {
     'theHamsta/nvim-dap-virtual-text',
     config = function()
@@ -575,12 +535,13 @@ return {
   --   end
   -- },
   -- TEXT Align
-  { 'junegunn/vim-easy-align' },
+  { 'junegunn/vim-easy-align',    event = 'BufRead' },
   -- NPM
   { 'elianiva/telescope-npm.nvim' },
   -- 错误开关
   {
     'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim',
+    event = 'LspAttach',
     config = function()
       --       require('toggle-lsp-diagnostics').init()
       require('toggle_lsp_diagnostics').init { underline = false, virtual_text = { prefix = 'SMART', spacing = 5 } }
@@ -588,7 +549,7 @@ return {
   },
   -- Window Zoom
   --  use <C-w>m
-  { 'dhruvasagar/vim-zoom' },
+  { 'dhruvasagar/vim-zoom',          lazy = false },
   { 'christoomey/vim-tmux-navigator' },
   {
     "folke/zen-mode.nvim",
