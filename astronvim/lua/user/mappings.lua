@@ -21,20 +21,21 @@ return {
     ['<S-l>'] = { ":BufferLineCycleNext<CR>" },
     ['<S-h>'] = { ":BufferLineCyclePrev<CR>" },
     -- ['<F1>'] = { ":FloatermToggle<CR>" },
-    ['<F7>'] = { ':SymbolsOutline<cr>' },
     ['<F2>'] = {
       function()
         vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
       end
     },
-    ['F11'] = {
-      function()
-        vim.diagnostic.goto_prev()
-      end
-    },
     ['F3'] = {
       function()
         vim.lsp.buf.code_action()
+      end
+    },
+    ['<F7>'] = { ':SymbolsOutline<cr>' },
+    ['<F8>'] = { ':SymbolsOutline<cr>' },
+    ['F11'] = {
+      function()
+        vim.diagnostic.goto_prev()
       end
     },
     ['<leader>H'] = { ':nohlsearch<cr>' },
@@ -57,7 +58,8 @@ return {
     ['<C-i>'] = { '<cmd>Lspsaga hover_doc<cr>' },
     ['<leader>p'] = { '<cmd>Telescope<cr>' },
     ['<C-F>'] = {
-      '<cmd>lua require(\'telescope.builtin\').find_files({ no_ignore = true, prompt_title = \'All Files\' })<cr>' },
+      '<cmd>lua require(\'telescope.builtin\').find_files({ no_ignore = true, prompt_title = \'All Files\' })<cr>'
+    },
     ['<C-b>'] = { '<cmd>lua require(\'telescope.builtin\').buffers()<cr>' },
     ['<C-g>'] = { ':Telescope live_grep<cr>' },
     ['<C-s>'] = { '<cmd>lua require(\'telescope.builtin\').lsp_document_symbols()<cr>' },
@@ -67,6 +69,8 @@ return {
     ['<leader>rr'] = { "<cmd>lua require('spectre').open()<cr>", desc = "replace" },
     ['<leader>gj'] = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", desc = "next_hunk" },
     ['<leader>gk'] = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", desc = "prev_hunk" },
+    ['<leader>gr'] = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", desc = "Reset Hunk" },
+    ['<leader>gR'] = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer" },
   },
   v = {
     ['F3'] = {

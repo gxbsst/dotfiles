@@ -53,15 +53,15 @@ return {
     'rebelot/kanagawa.nvim',
     config = function()
       require('kanagawa').setup({
-        compile = false,  -- enable compiling the colorscheme
+        compile = false, -- enable compiling the colorscheme
         undercurl = true, -- enable undercurls
         commentStyle = { italic = true },
         functionStyle = {},
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
         typeStyle = {},
-        transparent = true,    -- do not set background color
-        dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
+        transparent = true, -- do not set background color
+        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
         colors = {
           -- add/modify theme and palette colors
@@ -193,7 +193,7 @@ return {
       { 'MunifTanjim/nui.nvim' }
     }
   },
-  { "heavenshell/vim-jsdoc",       build = "make install" },
+  { "heavenshell/vim-jsdoc", build = "make install" },
   {
     'rcarriga/nvim-notify',
     config = function()
@@ -219,7 +219,7 @@ return {
     config = function()
       require 'web-tools'.setup({
         keymaps = {
-          rename = nil,        -- by default use same setup of lspconfig
+          rename = nil, -- by default use same setup of lspconfig
           repeat_rename = '.', -- . to repeat
         },
       })
@@ -408,25 +408,25 @@ return {
       require("spectre").setup()
     end,
   },
-  { 'prettier/vim-prettier',      event = 'BufRead' },
+  { 'prettier/vim-prettier', event = 'BufRead' },
   {
     'theHamsta/nvim-dap-virtual-text',
     config = function()
       require("nvim-dap-virtual-text").setup {
-        enabled = true,                        -- enable this plugin (the default)
-        enabled_commands = true,               -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
-        highlight_changed_variables = true,    -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
-        highlight_new_as_changed = false,      -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
-        show_stop_reason = true,               -- show stop reason when stopped for exceptions
-        commented = false,                     -- prefix virtual text with comment string
-        only_first_definition = true,          -- only show virtual text at first definition (if there are multiple)
-        all_references = false,                -- show virtual text on all all references of the variable (not only definitions)
+        enabled = true, -- enable this plugin (the default)
+        enabled_commands = true, -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
+        highlight_changed_variables = true, -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
+        highlight_new_as_changed = false, -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
+        show_stop_reason = true, -- show stop reason when stopped for exceptions
+        commented = false, -- prefix virtual text with comment string
+        only_first_definition = true, -- only show virtual text at first definition (if there are multiple)
+        all_references = false, -- show virtual text on all all references of the variable (not only definitions)
         filter_references_pattern = '<module', -- filter references (not definitions) pattern when all_references is activated (Lua gmatch pattern, default filters out Python modules)
         -- experimental features:
-        virt_text_pos = 'eol',                 -- position of virtual text, see `:h nvim_buf_set_extmark()`
-        all_frames = false,                    -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
-        virt_lines = false,                    -- show virtual lines instead of virtual text (will flicker!)
-        virt_text_win_col = nil                -- position the virtual text at a fixed window column (starting from the first text column) ,
+        virt_text_pos = 'eol', -- position of virtual text, see `:h nvim_buf_set_extmark()`
+        all_frames = false, -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
+        virt_lines = false, -- show virtual lines instead of virtual text (will flicker!)
+        virt_text_win_col = nil -- position the virtual text at a fixed window column (starting from the first text column) ,
         -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
       }
     end
@@ -443,7 +443,7 @@ return {
 
   let g:test#custom_strategies = {'floaterm': function('FloatermStrategy')}
   let g:test#strategy = 'floaterm'
-]])
+]]     )
       -- vim.cmd([[
       --   let test#strategy = "neovim"
       --   let g:test#preserve_screen = 1
@@ -535,7 +535,7 @@ return {
   --   end
   -- },
   -- TEXT Align
-  { 'junegunn/vim-easy-align',    event = 'BufRead' },
+  { 'junegunn/vim-easy-align', event = 'BufRead' },
   -- NPM
   { 'elianiva/telescope-npm.nvim' },
   -- 错误开关
@@ -549,7 +549,7 @@ return {
   },
   -- Window Zoom
   --  use <C-w>m
-  { 'dhruvasagar/vim-zoom',          lazy = false },
+  { 'dhruvasagar/vim-zoom', lazy = false },
   { 'christoomey/vim-tmux-navigator' },
   {
     "folke/zen-mode.nvim",
@@ -631,8 +631,8 @@ return {
   --   "0x100101/lab.nvim",
   --   build = "cd js && npm ci",
   -- },
-  { "tzachar/cmp-tabnine",               build = "./install.sh" },
-  { "github/copilot.vim",                lazy = false },
+  { "tzachar/cmp-tabnine", build = "./install.sh" },
+  { "github/copilot.vim", lazy = true },
   {
     "zbirenbaum/copilot.lua",
     lazy = false,

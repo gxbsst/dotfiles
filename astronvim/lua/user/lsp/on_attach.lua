@@ -12,7 +12,7 @@ return function(client, bufnr)
   if client.name == "tsserver" or client.name == "jsonls" or client.name == "html" or client.name == "sumneko_lua" then
     client.resolved_capabilities.document_formatting = false
   end
-  if client.resolved_capabilities.document_formatting then
+  if client.resolved_capabilities and client.resolved_capabilities.document_formatting then
     vim.api.nvim_create_augroup("format_on_save", { clear = true })
     vim.api.nvim_create_autocmd("BufWritePre", {
       desc = "Auto format before save",
