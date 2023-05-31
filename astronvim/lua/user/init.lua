@@ -25,7 +25,7 @@ return {
         local path = vim.fs.find({ "app.json" }, { type = "file" })
         local cmd = { "wxml-langserver" };
         local filetypes = { "wxml" };
-        local root_dir = vim.fs.dirname(path[1]);
+        -- local root_dir = vim.fs.dirname(path[1]);
         opts.cmd = cmd;
         opts.filetypes = filetypes;
         opts.root_dir = require("lspconfig.util").root_pattern("app.json");
