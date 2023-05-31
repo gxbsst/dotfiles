@@ -193,13 +193,14 @@ return {
       { 'MunifTanjim/nui.nvim' }
     }
   },
+
   { "heavenshell/vim-jsdoc", build = "make install" },
-  {
-    'rcarriga/nvim-notify',
-    config = function()
-      vim.notify = require("notify")
-    end
-  },
+  -- {
+  --   'rcarriga/nvim-notify',
+  --   config = function()
+  --     vim.notify = require("notify")
+  --   end
+  -- },
   {
     "jessarcher/onedark.nvim",
     lazy = false,
@@ -632,15 +633,15 @@ return {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine", build = "./install.sh" },
-  { "github/copilot.vim", lazy = true },
+  { "github/copilot.vim", evnet = "InsertEnter", lazy = false },
   {
-    "zbirenbaum/copilot.lua",
-    lazy = false,
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end,
+    -- "zbirenbaum/copilot.lua",
+    -- lazy = true,
+    -- cmd = "Copilot",
+    -- event = "InsertEnter",
+    -- config = function()
+    --   require("copilot").setup({})
+    -- end,
     -- "zbirenbaum/copilot.lua",
     -- -- event = { "VimEnter" },
     -- config = function()
@@ -651,17 +652,17 @@ return {
     --   end, 100)
     -- end,
   },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup {
-  --       formatters = {
-  --         insert_text = require("copilot_cmp.format").remove_existing,
-  --       },
-  --     }
-  --   end,
-  -- },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup {
+        formatters = {
+          insert_text = require("copilot_cmp.format").remove_existing,
+        },
+      }
+    end,
+  },
   -- "MunifTanjim/nui.nvim",
   -- {
   --   "folke/noice.nvim",
