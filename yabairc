@@ -39,7 +39,7 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 
 # general space settings
-yabai -m config layout                       bsp # managed or float or bsp
+yabai -m config layout                       float # managed or float or bsp
 yabai -m config top_padding                  38
 yabai -m config bottom_padding               6
 yabai -m config left_padding                 6
