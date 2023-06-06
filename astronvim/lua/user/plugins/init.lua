@@ -521,7 +521,7 @@ return {
     end
   },
   -- WX
-  { 'chemzqm/wxapp.vim' },
+  { 'chemzqm/wxapp.vim', lazy = false },
   -- {
   --   'norcalli/nvim-colorizer.lua',
   --   config = function()

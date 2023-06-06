@@ -175,7 +175,7 @@ local font = wezterm.font_with_fallback {
     --     family = 'FiraCode Nerd Font Mono',
     -- family = 'Hack Nerd Font Mono',
     -- family = 'Fira Code',
-    family            = 'Monaco',
+    family            = 'Iosevka',
     -- weight            = 'Bold',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
     italic            = false
