@@ -14,6 +14,7 @@ return {
               cmd = { "wxml-langserver" },
               root_dir = vim.fs.dirname(path[1]),
               settings = {
+
               },
             })
           end
