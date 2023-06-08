@@ -62,6 +62,6 @@ yabai -m rule --add label="mpv" app="^mpv$" manage=off
 yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
 yabai -m rule --add label="Transmission" app="^Transmission$" manage=off
 yabai -m rule --add label="Colorpicker" app="^Colorpicker$" manage=off
-# yabai -m rule --add label="iTerm2" app="^iTerm2$" manage=off
+yabai -m rule --add label="iTerm2" app="^iTerm2$" manage=on
 
 echo "yabai configuration loaded.."
