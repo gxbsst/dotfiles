@@ -172,6 +172,7 @@ alias which='which -a'
 alias s='webstorm .'
 alias wxcli="/Applications/wechatwebdevtools.app/Contents/MacOS/cli"
 alias v="nvim"
+alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug
