@@ -47,3 +47,5 @@ windows:
   - git-core:
     - cd emenu-mini-core
     - lazygit
+  - TODO:
+    - dooit

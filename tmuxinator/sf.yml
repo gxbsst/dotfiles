@@ -13,3 +13,5 @@ windows:
   - git-sfh-mp:
     - cd sth-mp
     - lazygit
+  - TODO:
+    - dooit
