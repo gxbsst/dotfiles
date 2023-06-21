@@ -2,6 +2,7 @@ WOSAI:
   common: []
   CPC:
     common:
+    - - X (1) due:none OK
     - - "X (1) due:15-06-23 \u5B8C\u6210SUI"
   MINI:
     common: []
