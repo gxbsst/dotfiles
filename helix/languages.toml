@@ -3,6 +3,6 @@ name = "rust"
 auto-format = false
 [[language]]
 name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript", "--config", "/Users/weston/Projects/WOSAI/FRONTEND/emenu-mini-core"] }
 auto-format = true
-# pass format options according to https://github.com/typescript-language-server/typescript-language-server#workspacedidchangeconfiguration omitting the "[language].format." prefix.
 config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }

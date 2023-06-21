@@ -23,5 +23,5 @@ mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [editor.lsp]
-display-messages = true
-display-inlay-hints = true
+ display-messages = true
+ display-inlay-hints = true
