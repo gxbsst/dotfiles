@@ -312,5 +312,5 @@ map <C-A-M-p> :action TogglePowerSave<CR>
 map <leader>J <Plug>(easymotion-s)
 map <leader>j <Plug>(easymotion-f)
 
-inoremap ;; <Esc>A;<Esc>
-inoremap ,, <Esc>A,<Esc>
+" inoremap ;; <Esc>A;<Esc>
+" inoremap ,, <Esc>A,<Esc>
