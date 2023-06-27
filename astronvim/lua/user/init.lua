@@ -1,6 +1,7 @@
 vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		_G.THEME = require("user.util.theme").setup()
+		vim.cmd('highlight Folded guifg=none guibg=none ctermfg=none ctermbg=none')
 	end
 })
 

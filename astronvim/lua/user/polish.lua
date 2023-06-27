@@ -1,4 +1,15 @@
 return function()
+  -- 设置折叠代码背景颜色
+  vim.api.nvim_create_autocmd(
+    { "BufRead", "BufNewFile" },
+    { pattern = { "*.*" }, command = "highlight Folded guibg=none ctermfg=none" }
+  )
+
+  -- vim.api.nvim_create_autocmd(
+  --   { "BufRead", "BufNewFile" },
+  --   { pattern = { "*.*" }, command = "colorscheme onedark" }
+  -- )
+
   if vim.fn.exists "$TMUX" == 1 then
     local has_tmux, _ = pcall(require, "tmux")
     if has_tmux then

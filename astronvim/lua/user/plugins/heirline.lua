@@ -1,6 +1,8 @@
 return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
+    local directory = vim.fn.getcwd()
+
     local status = {
       user = require "user.util.statusline",
       astro = require "astronvim.utils.status",
@@ -102,48 +104,49 @@ return {
       -- add a component for the current diagnostics if it exists and use the right separator for the section
       status.astro.component.diagnostics { surround = { separator = "space_right" } },
       -- add a component to display LSP clients, disable showing LSP progress, and use the right separator
+      --
       status.astro.component.lsp { lsp_progress = false, surround = { separator = "space_right" } },
       {
         -- define a simple component where the provider is just a folder icon
-        status.astro.component.builder {
-          { provider = icons.FolderClosed },
-          padding = { right = 1 },
-          hl = { fg = "bg" },
-          surround = {
-            separator = "right",
-            color = function() return { main = THEME.folder_icon_bg } end,
-          },
-        },
-        status.astro.component.builder {
-          { provider = "" },
-          surround = {
-            separator = "right_accent",
-            color = function() return { main = THEME.folder_icon_bg, right = THEME.folder_bg } end,
-          },
-        },
+        -- status.astro.component.builder {
+        --   { provider = icons.FolderClosed },
+        --   padding = { right = 1 },
+        --   hl = { fg = "bg" },
+        --   surround = {
+        --     separator = "right",
+        --     color = function() return { main = THEME.folder_icon_bg } end,
+        --   },
+        -- },
+        -- status.astro.component.builder {
+        --   -- { provider = "" },
+        --   surround = {
+        --     separator = "right_accent",
+        --     -- color = function() return { main = THEME.folder_icon_bg, right = THEME.folder_bg } end,
+        --   },
+        -- },
         -- add a file information component and only show the current working directory name
         status.astro.component.file_info {
-          filename = { fname = function() return vim.fn.getcwd() end, padding = { left = 0 } },
+          filename = { fname = function() return vim.fn.getcwd() end, padding = { left = 1 } },
           hl = function() return { fg = THEME.folder_icon_bg } end,
           file_icon = false,
           file_modified = false,
           file_read_only = false,
           surround = {
-            separator = "none",
-            color = function() return THEME.folder_bg end,
+            separator = "left_accent",
+            -- color = function() return THEME.folder_bg end,
           },
         },
       },
       {
-        status.astro.component.builder {
-          { provider = icons.DefaultFile },
-          padding = { right = 1 },
-          hl = { fg = "bg" },
-          surround = {
-            separator = "right",
-            color = function() return { main = THEME.nav_icon_bg, left = THEME.folder_bg } end,
-          },
-        },
+        -- status.astro.component.builder {
+        --   -- { provider = icons.DefaultFile },
+        --   padding = { right = 1 },
+        --   hl = { fg = "bg" },
+        --   surround = {
+        --     separator = "right",
+        --     color = function() return { main = THEME.nav_icon_bg, left = THEME.folder_bg } end,
+        --   },
+        -- },
         status.astro.component.builder {
           { provider = "" },
           surround = {
