@@ -1,6 +1,8 @@
 return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
+    _G.THEME = require("user.util.theme").setup()
+
     local status = {
       user = require "user.util.statusline",
       astro = require "astronvim.utils.status",
