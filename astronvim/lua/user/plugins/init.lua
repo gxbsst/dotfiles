@@ -48,14 +48,6 @@ return {
       require('nvim-ts-autotag').setup()
     end
   },
-  {
-    'mvllow/modes.nvim',
-    event = 'BufRead',
-    tag = 'v0.2.0',
-    config = function()
-      require('modes').setup()
-    end
-  },
   { "shortcuts/no-neck-pain.nvim", version = "*" },
   {
     "dmmulroy/tsc.nvim",
@@ -229,6 +221,7 @@ return {
       { 'MunifTanjim/nui.nvim' }
     }
   },
+
   { "heavenshell/vim-jsdoc", build = "make install" },
   -- {
   --   'rcarriga/nvim-notify',
@@ -236,6 +229,20 @@ return {
   --     vim.notify = require("notify")
   --   end
   -- },
+  {
+    "jessarcher/onedark.nvim",
+    lazy = false,
+    config = function()
+      vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+
+      vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+        fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+        bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+      })
+
+      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
+    end
+  },
   {
     "ray-x/web-tools.nvim",
     config = function()
@@ -303,6 +310,31 @@ return {
     'michaelb/sniprun', build = 'bash ./install.sh',
   },
   -- themes
+  {
+    'rose-pine/neovim',
+    lazy = false,
+    name = 'rose-pine',
+    config = function()
+      -- vim.cmd('colorscheme rose-pine')
+      vim.api.nvim_set_hl(0, 'FloatBorder', {
+        fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+        bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
+      })
+
+      -- Make the cursor line background invisible
+      vim.api.nvim_set_hl(0, 'CursorLineBg', {
+        fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+        bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+      })
+
+      vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
+
+      vim.api.nvim_set_hl(0, 'StatusLineNonText', {
+        fg = vim.api.nvim_get_hl_by_name('NonText', true).foreground,
+        bg = vim.api.nvim_get_hl_by_name('StatusLine', true).background,
+      })
+    end
+  },
   -- Mark
   { 'kshenoy/vim-signature' },
   {
