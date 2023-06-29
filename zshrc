@@ -293,3 +293,10 @@ eval "$(zoxide init zsh)"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# start emenu workspace
+emenu()
+{
+ echo '🖖 Starting EMENU Workspace...'
+ tmuxinator start emenu
+}

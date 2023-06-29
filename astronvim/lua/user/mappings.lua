@@ -41,6 +41,13 @@ return {
     ['<leader>H'] = { ':nohlsearch<cr>' },
     ['q'] = { ':q<cr>', desc = "" },
     ['<C-o>'] = { "<cmd>Telescope git_files<cr>" },
+    -- ['<C-F>'] = {
+    --   '<cmd>lua require(\'telescope.builtin\').find_files({ no_ignore = true, prompt_title = \'All Files\' })<cr>'
+    -- },
+    ['<C-e>'] = { '<cmd>lua require(\'telescope.builtin\').buffers()<cr>' },
+    ['<C-g>'] = { ':Telescope live_grep<cr>' },
+    ['<C-s>'] = { '<cmd>lua require(\'telescope.builtin\').lsp_document_symbols()<cr>' },
+    ['<C-r>'] = { ':Telescope npm scripts<cr>' },
     [',,'] = { '<cmd>Lspsaga lsp_finder<cr>' },
     [',r'] = { '<cmd>Lspsaga rename<cr>' },
     [',p'] = { '<cmd>Lspsaga peek_definition<cr>' },
@@ -57,13 +64,6 @@ return {
     [',o'] = { '<cmd>Lspsaga outline<cr>' },
     ['<C-i>'] = { '<cmd>Lspsaga hover_doc<cr>' },
     ['<leader>p'] = { '<cmd>Telescope<cr>' },
-    ['<C-F>'] = {
-      '<cmd>lua require(\'telescope.builtin\').find_files({ no_ignore = true, prompt_title = \'All Files\' })<cr>'
-    },
-    ['<C-b>'] = { '<cmd>lua require(\'telescope.builtin\').buffers()<cr>' },
-    ['<C-g>'] = { ':Telescope live_grep<cr>' },
-    ['<C-s>'] = { '<cmd>lua require(\'telescope.builtin\').lsp_document_symbols()<cr>' },
-    ['<C-r>'] = { ':Telescope npm scripts<cr>' },
     ['zz'] = { ':ZenMode<cr>' },
     ['<leader>v'] = { "<cmd>vsplit<cr>", desc = "vsplit" },
     ['<leader>rr'] = { "<cmd>lua require('spectre').open()<cr>", desc = "replace" },
