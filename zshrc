@@ -300,6 +300,13 @@ emenu()
  echo '🖖 Starting EMENU Workspace...'
  tmuxinator start emenu
 }
+
+sf()
+{
+ echo '🖖 Starting SF Workspace...'
+ tmuxinator start sf
+}
+
 P()
 {
  echo "🖖 git push...$1"
