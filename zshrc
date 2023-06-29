@@ -300,3 +300,15 @@ emenu()
  echo '🖖 Starting EMENU Workspace...'
  tmuxinator start emenu
 }
+P()
+{
+ echo "🖖 git push...$1"
+ git add .
+ git commit -m "$1"
+ git push
+}
+L()
+{
+ echo '🖖 git pull...'
+ git pull
+}
