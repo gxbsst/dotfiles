@@ -18,6 +18,7 @@ return {
     [',,'] = { '<Esc>A,' }
   },
   n = {
+    ['<leader>r'] = { ':Telescope resume<cr>' },
     ['<S-l>'] = { ":BufferLineCycleNext<CR>" },
     ['<S-h>'] = { ":BufferLineCyclePrev<CR>" },
     -- ['<F1>'] = { ":FloatermToggle<CR>" },
