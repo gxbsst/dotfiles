@@ -1,0 +1,595 @@
+Running `brew update --auto-update`...
+==> Auto-updated Homebrew!
+Updated 5 taps (zurawiki/brews, homebrew/cask-fonts, homebrew/services, homebrew/core and homebrew/cask).
+==> New Formulae
+alass
+bbot
+cppinsights
+erlang@25
+gotestsum
+pypy3.10
+pypy3.9
+python-toml
+rio
+scrapy
+shub
+sickchill
+trzsz-ssh
+zchunk
+zrok
+==> New Casks
+audiocupcake
+drata-agent
+font-bacasime-antique
+font-belanosima
+font-chiron-hei-hk
+font-chiron-sung-hk
+font-iming
+font-lxgw-fasmart-gothic
+font-lxgw-neoxihei
+font-ysabeau-infant
+font-ysabeau-office
+font-ysabeau-sc
+picoscope
+rio
+score
+ths
+whisky
+
+You have 63 outdated formulae and 3 outdated casks installed.
+
+==> Fetching dependencies for neofetch: screenresolution
+==> Fetching screenresolution
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/screenresolution-1.6.arm64_monterey.bottle.tar.gz
+==> Fetching neofetch
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/neofetch-7.1.0.all.bottle.2.tar.gz
+==> Installing dependencies for neofetch: screenresolution
+==> Installing neofetch dependency: screenresolution
+==> Pouring screenresolution-1.6.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/screenresolution/1.6: 5 files, 57.6KB
+==> Installing neofetch
+==> Pouring neofetch-7.1.0.all.bottle.2.tar.gz
+🍺  /opt/homebrew/Cellar/neofetch/7.1.0: 6 files, 350.5KB
+==> Running `brew cleanup neofetch`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Warning: wget 1.21.4 is already installed and up-to-date.
+To reinstall 1.21.4, run:
+  brew reinstall wget
+Warning: bat 0.23.0 is already installed and up-to-date.
+To reinstall 0.23.0, run:
+  brew reinstall bat
+Warning: lsd 0.23.1 is already installed and up-to-date.
+To reinstall 0.23.1, run:
+  brew reinstall lsd
+Warning: exa 0.10.1_1 is already installed and up-to-date.
+To reinstall 0.10.1_1, run:
+  brew reinstall exa
+Warning: No available formula with the name "rip". Did you mean rzip, grip, rio, rig, sip, vip or zip?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chaiscript
+clojurescript
+coffeescript
+duckscript
+emscripten
+enscript
+ghostscript
+grip
+jerryscript
+mmsrip
+onscripter
+pipgrip
+prips
+purescript
+purescript-language-server
+rfcstrip
+ripgrep
+ripgrep-all
+ripmime
+ripsecrets
+scriptcs
+scriptisto
+streamripper
+trippy
+typescript
+typescript-language-server
+uriparser
+rzip
+rio
+rig
+sip
+vip
+zip
+
+To install chaiscript, run:
+  brew install chaiscript
+
+==> Casks
+criptext
+datagrip
+descript
+eclipse-javascript
+fastscripts
+fiscript
+font-aguafina-script
+font-alumni-sans-pinstripe
+font-andron-scriptor-web
+font-bad-script
+font-clicker-script
+font-dancing-script
+font-euphoria-script
+font-imperial-script
+font-kaushan-script
+font-league-script
+font-lily-script-one
+font-luxurious-script
+font-marck-script
+font-meie-script
+font-meow-script
+font-mervale-script
+font-nanum-brush-script
+font-nanum-pen-script
+font-noto-sans-inscriptional-pahlavi
+font-noto-sans-inscriptional-parthian
+font-nova-script
+font-oleo-script
+font-oleo-script-swash-caps
+font-petit-formal-script
+font-pinyon-script
+font-redacted-script
+font-rouge-script
+font-seaweed-script
+font-style-script
+font-vujahday-script
+font-xkcd-script
+macx-dvd-ripper-mac-free-edition
+macx-dvd-ripper-pro
+manuskript
+rio
+ripcord
+ripme
+script-debugger
+scriptql
+sip
+tip
+triplecheese
+tripmode
+
+To install criptext, run:
+  brew install --cask criptext
+Warning: No available formula with the name "xcp". Did you mean xcv, xmp, pcp, ocp, ncp or fcp?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+osx-cpu-temp
+xcproj
+xcprojectlint
+xcv
+xmp
+pcp
+ocp
+ncp
+fcp
+
+To install osx-cpu-temp, run:
+  brew install osx-cpu-temp
+
+==> Casks
+xca
+
+To install xca, run:
+  brew install --cask xca
+zoxide 0.9.0 is already installed but outdated (so it will be upgraded).
+==> Fetching zoxide
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/zoxide-0.9.1.arm64_monterey.bottle.tar.gz
+==> Upgrading zoxide
+  0.9.0 -> 0.9.1 
+==> Pouring zoxide-0.9.1.arm64_monterey.bottle.tar.gz
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> Summary
+🍺  /opt/homebrew/Cellar/zoxide/0.9.1: 17 files, 961.7KB
+==> Running `brew cleanup zoxide`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/zoxide/0.9.0... (17 files, 974.7KB)
+dust 0.8.5 is already installed but outdated (so it will be upgraded).
+==> Fetching dust
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dust-0.8.6.arm64_monterey.bottle.tar.gz
+==> Upgrading dust
+  0.8.5 -> 0.8.6 
+==> Pouring dust-0.8.6.arm64_monterey.bottle.tar.gz
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> Summary
+🍺  /opt/homebrew/Cellar/dust/0.8.6: 10 files, 1.8MB
+==> Running `brew cleanup dust`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/dust/0.8.5... (10 files, 1.7MB)
+Warning: ripgrep 13.0.0 is already installed and up-to-date.
+To reinstall 13.0.0, run:
+  brew reinstall ripgrep
+Warning: fd 8.7.0 is already installed and up-to-date.
+To reinstall 8.7.0, run:
+  brew reinstall fd
+Warning: sd 0.7.6_1 is already installed and up-to-date.
+To reinstall 0.7.6_1, run:
+  brew reinstall sd
+Warning: procs 0.14.0 is already installed and up-to-date.
+To reinstall 0.14.0, run:
+  brew reinstall procs
+bottom 0.8.0 is already installed but outdated (so it will be upgraded).
+==> Fetching bottom
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/bottom-0.9.3.arm64_monterey.bottle.tar.gz
+==> Upgrading bottom
+  0.8.0 -> 0.9.3 
+==> Pouring bottom-0.9.3.arm64_monterey.bottle.tar.gz
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> Summary
+🍺  /opt/homebrew/Cellar/bottom/0.9.3: 12 files, 3.3MB
+==> Running `brew cleanup bottom`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/bottom/0.8.0... (12 files, 3.1MB)
+topgrade 10.3.3 is already installed but outdated (so it will be upgraded).
+==> Fetching topgrade
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/topgrade-12.0.0.arm64_monterey.bottle.tar.gz
+==> Upgrading topgrade
+  10.3.3 -> 12.0.0 
+==> Pouring topgrade-12.0.0.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/topgrade/12.0.0: 7 files, 4.3MB
+==> Running `brew cleanup topgrade`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/topgrade/10.3.3... (7 files, 4MB)
+broot 1.21.0 is already installed but outdated (so it will be upgraded).
+==> Fetching dependencies for broot: xorgproto
+==> Fetching xorgproto
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/xorgproto-2023.2.arm64_monterey.bottle.tar.gz
+==> Fetching broot
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/broot-1.23.0.arm64_monterey.bottle.tar.gz
+==> Upgrading broot
+  1.21.0 -> 1.23.0 
+==> Installing dependencies for broot: xorgproto
+==> Installing broot dependency: xorgproto
+==> Pouring xorgproto-2023.2.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xorgproto/2023.2: 267 files, 3.9MB
+==> Installing broot
+==> Pouring broot-1.23.0.arm64_monterey.bottle.tar.gz
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> Summary
+🍺  /opt/homebrew/Cellar/broot/1.23.0: 15 files, 8MB
+==> Running `brew cleanup broot`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/broot/1.21.0... (15 files, 7.9MB)
+==> Upgrading 3 dependents of upgraded formulae:
+Disable this behaviour by setting HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+libx11 1.8.4 -> 1.8.6, harfbuzz 7.1.0 -> 7.3.0_1, openjdk 19 -> 20.0.1
+==> Fetching libx11
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libx11-1.8.6.arm64_monterey.bottle.tar.gz
+==> Fetching dependencies for harfbuzz: libpng, freetype and icu4c
+==> Fetching libpng
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libpng-1.6.40.arm64_monterey.bottle.tar.gz
+==> Fetching freetype
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/freetype-2.13.1.arm64_monterey.bottle.tar.gz
+==> Fetching icu4c
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/icu4c-73.2.arm64_monterey.bottle.tar.gz
+==> Fetching harfbuzz
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/harfbuzz-7.3.0_1.arm64_monterey.bottle.tar.gz
+==> Fetching dependencies for openjdk: libtiff
+==> Fetching libtiff
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libtiff-4.5.1.arm64_monterey.bottle.tar.gz
+==> Fetching openjdk
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/openjdk-20.0.1.arm64_monterey.bottle.tar.gz
+==> Upgrading libx11
+  1.8.4 -> 1.8.6 
+==> Pouring libx11-1.8.6.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libx11/1.8.6: 1,054 files, 7MB
+==> Running `brew cleanup libx11`...
+Removing: /opt/homebrew/Cellar/libx11/1.8.4... (1,054 files, 7MB)
+Removing: /Users/weston/Library/Caches/Homebrew/libx11--1.8.4.arm64_monterey.bottle.tar.gz... (2.1MB)
+==> Upgrading harfbuzz
+  7.1.0 -> 7.3.0_1 
+==> Installing dependencies for harfbuzz: libpng, freetype and icu4c
+==> Installing harfbuzz dependency: libpng
+==> Pouring libpng-1.6.40.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libpng/1.6.40: 27 files, 1.3MB
+==> Installing harfbuzz dependency: freetype
+==> Pouring freetype-2.13.1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/freetype/2.13.1: 67 files, 2.4MB
+==> Installing harfbuzz dependency: icu4c
+==> Pouring icu4c-73.2.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/icu4c/73.2: 268 files, 80.1MB
+==> Installing harfbuzz
+==> Pouring harfbuzz-7.3.0_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/harfbuzz/7.3.0_1: 76 files, 9.1MB
+==> Running `brew cleanup harfbuzz`...
+Removing: /opt/homebrew/Cellar/harfbuzz/7.1.0... (76 files, 8.8MB)
+==> Upgrading openjdk
+  19 -> 20.0.1 
+==> Installing dependencies for openjdk: libtiff
+==> Installing openjdk dependency: libtiff
+==> Pouring libtiff-4.5.1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libtiff/4.5.1: 473 files, 8MB
+==> Installing openjdk
+==> Pouring openjdk-20.0.1.arm64_monterey.bottle.tar.gz
+==> Caveats
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
+openjdk is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS provides similar software and installing this software in
+parallel can cause all kinds of trouble.
+
+If you need to have openjdk first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openjdk you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+==> Summary
+🍺  /opt/homebrew/Cellar/openjdk/20.0.1: 637 files, 322.2MB
+==> Running `brew cleanup openjdk`...
+Removing: /opt/homebrew/Cellar/openjdk/19... (637 files, 320.0MB)
+==> Checking for dependents of upgraded formulae...
+==> No broken dependents to reinstall!
+==> Caveats
+==> broot
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> openjdk
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
+openjdk is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS provides similar software and installing this software in
+parallel can cause all kinds of trouble.
+
+If you need to have openjdk first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openjdk you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+Warning: tokei 12.1.2 is already installed and up-to-date.
+To reinstall 12.1.2, run:
+  brew reinstall tokei
+Warning: tmuxinator 3.0.5 is already installed and up-to-date.
+To reinstall 3.0.5, run:
+  brew reinstall tmuxinator
+lazygit 0.37.0 is already installed but outdated (so it will be upgraded).
+==> Fetching lazygit
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/lazygit-0.38.2.arm64_monterey.bottle.tar.gz
+==> Upgrading lazygit
+  0.37.0 -> 0.38.2 
+==> Pouring lazygit-0.38.2.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/lazygit/0.38.2: 5 files, 20.2MB
+==> Running `brew cleanup lazygit`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/lazygit/0.37.0... (5 files, 19.8MB)
+gptcommit 0.4.0 is already installed but outdated (so it will be upgraded).
+==> Fetching dependencies for zurawiki/brews/gptcommit: openssl@3
+==> Fetching openssl@3
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/openssl%403-3.1.1_1.arm64_monterey.bottle.tar.gz
+==> Fetching zurawiki/brews/gptcommit
+==> Downloading https://github.com/zurawiki/gptcommit/archive/v0.5.9.tar.gz
+==> Downloading from https://codeload.github.com/zurawiki/gptcommit/tar.gz/refs/tags/v0.5.9
+==> Upgrading zurawiki/brews/gptcommit
+  0.4.0 -> 0.5.9 
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences.
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  https://developer.apple.com/download/all/.
+You should download the Command Line Tools for Xcode 14.2.
+
+==> Installing dependencies for zurawiki/brews/gptcommit: openssl@3
+==> Installing zurawiki/brews/gptcommit dependency: openssl@3
+==> Pouring openssl@3-3.1.1_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openssl@3/3.1.1_1: 6,495 files, 28.4MB
+==> Installing zurawiki/brews/gptcommit
+[34m==>[0m [1mcargo install[0m
+🍺  /opt/homebrew/Cellar/gptcommit/0.5.9: 7 files, 13.8MB, built in 1 minute 41 seconds
+==> Running `brew cleanup gptcommit`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/gptcommit/0.4.0... (7 files, 13.8MB)
+==> Fetching dependencies for btop: isl, mpfr, libmpc and gcc
+==> Fetching isl
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/isl-0.26.arm64_monterey.bottle.tar.gz
+==> Fetching mpfr
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mpfr-4.2.0-p9.arm64_monterey.bottle.tar.gz
+==> Fetching libmpc
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libmpc-1.3.1.arm64_monterey.bottle.tar.gz
+==> Fetching gcc
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/gcc-13.1.0.arm64_monterey.bottle.tar.gz
+==> Fetching btop
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/btop-1.2.13.arm64_monterey.bottle.tar.gz
+==> Installing dependencies for btop: isl, mpfr, libmpc and gcc
+==> Installing btop dependency: isl
+==> Pouring isl-0.26.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/isl/0.26: 73 files, 7.6MB
+==> Installing btop dependency: mpfr
+==> Pouring mpfr-4.2.0-p9.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/mpfr/4.2.0-p9: 30 files, 3MB
+==> Installing btop dependency: libmpc
+==> Pouring libmpc-1.3.1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libmpc/1.3.1: 12 files, 470.0KB
+==> Installing btop dependency: gcc
+==> Pouring gcc-13.1.0.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/gcc/13.1.0: 1,488 files, 388.9MB
+==> Installing btop
+==> Pouring btop-1.2.13.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/btop/1.2.13: 36 files, 1015.2KB
+==> Running `brew cleanup btop`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+fzf 0.39.0 is already installed but outdated (so it will be upgraded).
+==> Fetching fzf
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fzf-0.42.0.arm64_monterey.bottle.tar.gz
+==> Upgrading fzf
+  0.39.0 -> 0.42.0 
+==> Pouring fzf-0.42.0.arm64_monterey.bottle.tar.gz
+==> Caveats
+To install useful keybindings and fuzzy completion:
+  /opt/homebrew/opt/fzf/install
+
+To use fzf in Vim, add the following line to your .vimrc:
+  set rtp+=/opt/homebrew/opt/fzf
+==> Summary
+🍺  /opt/homebrew/Cellar/fzf/0.42.0: 17 files, 3.6MB
+==> Running `brew cleanup fzf`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Removing: /opt/homebrew/Cellar/fzf/0.39.0... (17 files, 3.5MB)
+==> Fetching dependencies for tldr: libzip
+==> Fetching libzip
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libzip-1.10.0_1.arm64_monterey.bottle.tar.gz
+==> Fetching tldr
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/tldr-1.6.0.arm64_monterey.bottle.tar.gz
+==> Installing dependencies for tldr: libzip
+==> Installing tldr dependency: libzip
+==> Pouring libzip-1.10.0_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libzip/1.10.0_1: 154 files, 903.7KB
+==> Installing tldr
+==> Pouring tldr-1.6.0.arm64_monterey.bottle.tar.gz
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> Summary
+🍺  /opt/homebrew/Cellar/tldr/1.6.0: 10 files, 103.6KB
+==> Running `brew cleanup tldr`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Upgrading 1 dependent of upgraded formulae:
+Disable this behaviour by setting HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+php 8.2.7 -> 8.2.7_2
+==> Fetching dependencies for php: apr-util, libssh2, openldap, rtmpdump, curl, freetds, openexr, webp, krb5 and libpq
+==> Fetching apr-util
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/apr-util-1.6.3_1.arm64_monterey.bottle.tar.gz
+==> Fetching libssh2
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libssh2-1.11.0_1.arm64_monterey.bottle.tar.gz
+==> Fetching openldap
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/openldap-2.6.4_1.arm64_monterey.bottle.tar.gz
+==> Fetching rtmpdump
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/rtmpdump-2.4%2B20151223_2.arm64_monterey.bottle.tar.gz
+==> Fetching curl
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/curl-8.1.2_1.arm64_monterey.bottle.tar.gz
+==> Fetching freetds
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/freetds-1.3.18_1.arm64_monterey.bottle.tar.gz
+==> Fetching openexr
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/openexr-3.1.9.arm64_monterey.bottle.tar.gz
+==> Fetching webp
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/webp-1.3.1.arm64_monterey.bottle.tar.gz
+==> Fetching krb5
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/krb5-1.21_1.arm64_monterey.bottle.tar.gz
+==> Fetching libpq
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/libpq-15.3_1.arm64_monterey.bottle.tar.gz
+==> Fetching php
+==> Downloading https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.2.7_2.arm64_monterey.bottle.tar.gz
+==> Upgrading php
+  8.2.7 -> 8.2.7_2 
+==> Installing dependencies for php: apr-util, libssh2, openldap, rtmpdump, curl, freetds, openexr, webp, krb5 and libpq
+==> Installing php dependency: apr-util
+==> Pouring apr-util-1.6.3_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/apr-util/1.6.3_1: 54 files, 908.4KB
+==> Installing php dependency: libssh2
+==> Pouring libssh2-1.11.0_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libssh2/1.11.0_1: 197 files, 1.2MB
+==> Installing php dependency: openldap
+==> Pouring openldap-2.6.4_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openldap/2.6.4_1: 340 files, 7.8MB
+==> Installing php dependency: rtmpdump
+==> Pouring rtmpdump-2.4+20151223_2.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/rtmpdump/2.4+20151223_2: 20 files, 645.4KB
+==> Installing php dependency: curl
+==> Pouring curl-8.1.2_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/curl/8.1.2_1: 510 files, 4.3MB
+==> Installing php dependency: freetds
+==> Pouring freetds-1.3.18_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/freetds/1.3.18_1: 1,262 files, 14MB
+==> Installing php dependency: openexr
+==> Pouring openexr-3.1.9.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openexr/3.1.9: 194 files, 7.7MB
+==> Installing php dependency: webp
+==> Pouring webp-1.3.1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/webp/1.3.1: 63 files, 2.3MB
+==> Installing php dependency: krb5
+==> Pouring krb5-1.21_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/krb5/1.21_1: 162 files, 5.6MB
+==> Installing php dependency: libpq
+==> Pouring libpq-15.3_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libpq/15.3_1: 2,369 files, 28.5MB
+==> Installing php
+==> Pouring php-8.2.7_2.arm64_monterey.bottle.tar.gz
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set php_ini /opt/homebrew/e[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set php_dir /opt/homebrew/s[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set doc_dir /opt/homebrew/s[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set ext_dir /opt/homebrew/l[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set bin_dir /opt/homebrew/o[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set data_dir /opt/homebrew/[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set cfg_dir /opt/homebrew/s[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set www_dir /opt/homebrew/s[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set man_dir /opt/homebrew/s[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set test_dir /opt/homebrew/[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear config-set php_bin /opt/homebrew/o[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/php/8.2.7_2/bin/pear update-channels[0m
+==> Caveats
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /opt/homebrew/etc/php/8.2/
+
+To start php now and restart at login:
+  brew services start php
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/php/sbin/php-fpm --nodaemonize
+==> Summary
+🍺  /opt/homebrew/Cellar/php/8.2.7_2: 520 files, 83.4MB
+==> Running `brew cleanup php`...
+Removing: /opt/homebrew/Cellar/php/8.2.7... (520 files, 83.4MB)
+==> Checking for dependents of upgraded formulae...
+==> No broken dependents found!
+==> Caveats
+==> tldr
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> php
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so
+
+    <FilesMatch \.php$>
+        SetHandler application/x-httpd-php
+    </FilesMatch>
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /opt/homebrew/etc/php/8.2/
+
+To start php now and restart at login:
+  brew services start php
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/php/sbin/php-fpm --nodaemonize
