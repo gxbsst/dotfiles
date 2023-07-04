@@ -78,7 +78,8 @@ return {
       function()
         vim.lsp.buf.code_action()
       end
-    }
+    },
+    ['<C-g>'] = 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>'
   }
 
   -- n = {

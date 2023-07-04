@@ -59,8 +59,8 @@ return function()
       vim.cmd('hi! VertSplit guifg=#333333 guibg=none ctermfg=none ctermbg=none')
 
       -- local color = vim.cmd('echo synIDattr(hlID("Normal"), "bg")')
-      vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = 'none' })
-      vim.cmd('hi! IndentBlanklineChar guifg=#000000 guibg=none ctermfg=none ctermbg=none')
+      -- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = 'none' })
+      vim.cmd('hi! IndentBlanklineChar guifg=#222222 guibg=none ctermfg=none ctermbg=none')
 
       -- 设置背景为无
       vim.cmd('hi Normal ctermbg=none guibg=none')
