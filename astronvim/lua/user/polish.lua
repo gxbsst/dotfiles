@@ -56,11 +56,11 @@ return function()
       vim.cmd('hi FoldColumn guibg=none')
       vim.cmd('hi SignColumn guibg=none')
       --vim.cmd('set fillchars+=vert:\\') -- 设置panel线条为无
-      vim.cmd('hi! VertSplit guifg=#333333 guibg=none ctermfg=none ctermbg=none')
+      vim.cmd('hi! VertSplit guifg=#222222 guibg=none ctermfg=none ctermbg=none')
 
       -- local color = vim.cmd('echo synIDattr(hlID("Normal"), "bg")')
       -- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = 'none' })
-      vim.cmd('hi! IndentBlanklineChar guifg=#222222 guibg=none ctermfg=none ctermbg=none')
+      vim.cmd('hi! IndentBlanklineChar guifg=#111111 guibg=none ctermfg=none ctermbg=none')
 
       -- 设置背景为无
       vim.cmd('hi Normal ctermbg=none guibg=none')

@@ -2,6 +2,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 	callback = function()
 		_G.THEME = require("user.util.theme").setup()
 		vim.cmd('highlight Folded guifg=none guibg=none ctermfg=none ctermbg=none')
+
+		vim.cmd [[highlight IndentBlanklineIndent1 guifg=#111111 gui=nocombine]]
+		vim.cmd [[highlight IndentBlanklineIndent2 guifg=#111111 gui=nocombine]]
+		vim.cmd [[highlight IndentBlanklineIndent3 guifg=#111111 gui=nocombine]]
+		vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
+		vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
+		vim.cmd [[highlight IndentBlanklineIndent6 guifg=#111111 gui=nocombine]]
 	end
 })
 
