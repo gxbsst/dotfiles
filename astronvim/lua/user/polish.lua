@@ -5,6 +5,12 @@ return function()
     { pattern = { "*.*" }, command = "highlight Folded guibg=none ctermfg=none" }
   )
 
+  -- 自动格式化wxml使用neoformat
+  vim.api.nvim_create_autocmd(
+    { "BufWritePre" },
+    { pattern = { "*.wxml" }, command = "Neoformat" }
+  )
+
   -- vim.api.nvim_create_autocmd(
   --   { "BufRead", "BufNewFile" },
   --   { pattern = { "*.*" }, command = "colorscheme onedark" }

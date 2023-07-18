@@ -32,6 +32,9 @@ return {
 	end,
 	-- LSP
 	lsp = {
+		formatting = {
+			disabled = { "html" },
+		},
 		servers = {
 			"wxml_lsp",
 		},
