@@ -107,9 +107,9 @@ noremap zz :action ToggleZenMode<CR>
 """ Split ----------------------------------
 "map <M-S-D> :action SplitHorizontally<CR>
 "map <M-D> :action  SplitVertically<CR>
-" noremap <S-l> :action NextSplitter<CR>
-" noremap <S-j> :action NextSplitter<CR>
-" noremap <S-h> :action PrevSplitter<CR>
+noremap <S-l> :action NextSplitter<CR>
+"noremap <S-j> :action NextSplitter<CR>
+ noremap <S-h> :action PrevSplitter<CR>
 noremap <Leader><Leader> :action QuickJavaDoc<CR>
 
  "sethandler <c-j> a:vim

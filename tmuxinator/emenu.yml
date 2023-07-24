@@ -37,15 +37,15 @@ windows:
         - other:
             - cd emenu-mini-core
   - emenu-mini-core:
-    - cd emenu-mini-core
-    - v
+      - cd emenu-mini-core
+      - v
   - forever-discount-mp:
-    - cd forever-discount-mp
-    - v
+      - cd forever-discount-mp
+      - v
   - sqb-qr-mini-app:
-    - echo "edit sqb mp app"
+      - echo "edit sqb mp app"
   - git-core:
-    - cd emenu-mini-core
-    - lazygit
-  - TODO:
-    - dooit
+      - cd emenu-mini-core
+      - lazygit
+  - btop:
+      - btop
