@@ -4,6 +4,11 @@ return function()
     { "BufRead", "BufNewFile" },
     { pattern = { "*.*" }, command = "highlight Folded guibg=none ctermfg=none" }
   )
+ -- 格式化HTML
+  vim.api.nvim_create_autocmd(
+    { "BufWritePre" },
+    { pattern = { "*.wxml" }, command = "Neoformat" }
+  )
 
   -- vim.api.nvim_create_autocmd(
   --   { "BufRead", "BufNewFile" },

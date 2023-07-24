@@ -47,5 +47,6 @@ return {
 	},
 	g = {
 		noautochdir = true,
+		neoformat_enabled_html = { "prettier" },
 	},
 }

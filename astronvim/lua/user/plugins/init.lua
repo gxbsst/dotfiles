@@ -1,4 +1,5 @@
 return {
+  {"sbdchd/neoformat", lazy =  false},
   { "HiPhish/nvim-ts-rainbow2" },
   { 'projekt0n/github-nvim-theme', lazy = false },
   -- {
