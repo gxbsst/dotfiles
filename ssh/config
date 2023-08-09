@@ -1,3 +1,9 @@
+# gitee
+Host gitee.com
+HostName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/sf-w
+
 Include ~/.orbstack/ssh/config
 
 Host route
