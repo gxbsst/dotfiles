@@ -1,0 +1,17 @@
+# /Users/weston/.config/tmuxinator/e2e.yml
+
+name: e2e
+root: ~/Projects/WOSAI/FRONTEND/
+
+windows:
+  - nicet:
+      - cd nicet
+      - v
+  - smart-spms-fe:
+      - cd smart-spms-fe
+      - v
+  - jjz-mp-e2e:
+      - cd jjz-mp-e2e
+      - v
+  - anything:
+      -  # anything

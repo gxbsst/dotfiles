@@ -301,6 +301,12 @@ emenu()
  tmuxinator start emenu
 }
 
+e2e()
+{
+ echo '🖖 Starting E2E Workspace...'
+ tmuxinator start e2e
+}
+
 sf()
 {
  echo '🖖 Starting SF Workspace...'
