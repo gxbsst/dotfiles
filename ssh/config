@@ -1,5 +1,12 @@
 Include ~/.orbstack/ssh/config
 
+#gitlab@ququ
+Host git.ququ
+  HostName gitee.com
+  Port 22
+  User git
+  IdentityFile ~/.ssh/sf
+
 Host route
 HostName 192.168.71.101
 User root
