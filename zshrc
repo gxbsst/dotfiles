@@ -174,6 +174,7 @@ alias wxcli="/Applications/wechatwebdevtools.app/Contents/MacOS/cli"
 alias v="nvim"
 alias h="hx"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
+alias gll='git log --color --pretty=format:"%Cred%h%Creset - %ad - %Cgreen%an%Creset : %s" --date=short'
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug
