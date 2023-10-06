@@ -175,6 +175,7 @@ alias v="nvim"
 alias h="hx"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
 alias yt="python3 $HOME/dotfiles/bin/download_yt.py"
+alias gll='git log --color --pretty=format:"%Cred%h%Creset - %ad - %Cgreen%an%Creset : %s" --date=short'
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug
