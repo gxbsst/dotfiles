@@ -174,6 +174,7 @@ alias wxcli="/Applications/wechatwebdevtools.app/Contents/MacOS/cli"
 alias v="nvim"
 alias h="hx"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
+alias yt="python3 $HOME/dotfiles/bin/download_yt.py"
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug
@@ -325,3 +326,6 @@ L()
  echo '🖖 git pull...'
  git pull
 }
+
+eval "$(starship init zsh)"
+

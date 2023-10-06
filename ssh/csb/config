@@ -1,0 +1,25 @@
+Host sandbox.zlc6xl.csb
+  HostName 207.244.234.46
+  User gxbsst
+  Port 20223
+  Compression yes
+  IdentitiesOnly true
+  IdentityFile /Users/weston/.ssh/csb/csb_id_rsa_zlc6xl
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  ServerAliveInterval 30
+  ServerAliveCountMax 120
+  ConnectionAttempts 30
+
+Host sandbox.zrr32l.csb
+  HostName 209.126.3.147
+  User gxbsst
+  Port 61820
+  Compression yes
+  IdentitiesOnly true
+  IdentityFile /Users/weston/.ssh/csb/csb_id_rsa_zrr32l
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  ServerAliveInterval 30
+  ServerAliveCountMax 120
+  ConnectionAttempts 30
