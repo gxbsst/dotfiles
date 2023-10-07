@@ -9,15 +9,15 @@ windows:
       panes:
         - auto:
             - cd forever-discount-mp
-            - dev auto
+            # - dev auto
         - core:
             - cd emenu-mini-core
             - if [ -d "packages/components/dist" ]; then rm -rvf packages/components/dist; fi
-            - yarn dev:components:wx:all
+            # - yarn dev:components:wx:all
         - jjz:
             - cd forever-discount-mp
-            - nvm use 14
-            - dev jjz
+            # - nvm use 14
+            # - dev jjz
   - buildSQB:
       layout: ba78,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
       panes:

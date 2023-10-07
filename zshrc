@@ -283,9 +283,6 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias ls='exa --git --icons --color=always --group-directories-first'
 export OPENAI_API_KEY="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"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # pnpm
 export PNPM_HOME="/Users/weston/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -326,3 +323,6 @@ L()
  echo '🖖 git pull...'
  git pull
 }
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

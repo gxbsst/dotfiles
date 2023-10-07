@@ -3,3 +3,13 @@
 2023/07/04 (08:08:43) | ERROR: Stall in Runner thread, restarting!
 2023/07/04 (08:08:51) | ERROR: Stall in Runner thread, restarting!
 2023/07/04 (17:19:55) | ERROR: Stall in Runner thread, restarting!
+
+2023/09/05 (04:39:45) | ===> btop++ v.1.2.13
+2023/09/05 (04:39:45) | ERROR: failed getting network interfaces
+
+2023/09/15 (11:00:39) | ===> btop++ v.1.2.13
+2023/09/15 (11:00:39) | ERROR: Stall in Runner thread, restarting!
+
+2023/09/28 (17:32:14) | ===> btop++ v.1.2.13
+2023/09/28 (17:32:14) | ERROR: Stall in Runner thread, restarting!
+2023/09/28 (17:32:20) | ERROR: Stall in Runner thread, restarting!

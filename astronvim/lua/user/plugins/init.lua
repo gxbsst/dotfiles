@@ -131,7 +131,7 @@ return {
   },
   -- {
   --   lazy = false,
-  --   event = "InsertEnter", 
+  --   event = "InsertEnter",
   --   'Exafunction/codeium.vim',
   --   config = function()
   --       -- Change '<C-g>' here to any keycode you like.
@@ -665,15 +665,15 @@ return {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine", build = "./install.sh" },
-  -- { "github/copilot.vim", evnet = "InsertEnter", lazy = false },
+  { "github/copilot.vim", evnet = "InsertEnter", lazy = false },
   {
-    -- "zbirenbaum/copilot.lua",
-    -- lazy = true,
-    -- cmd = "Copilot",
-    -- event = "InsertEnter",
-    -- config = function()
-    --   require("copilot").setup({})
-    -- end,
+    "zbirenbaum/copilot.lua",
+    lazy = true,
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
     -- "zbirenbaum/copilot.lua",
     -- -- event = { "VimEnter" },
     -- config = function()
