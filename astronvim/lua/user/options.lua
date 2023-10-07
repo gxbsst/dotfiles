@@ -48,6 +48,6 @@ return {
 	g = {
 		noautochdir = true,
 		neoformat_enabled_html = { "prettier" },
-		codeium_disable_bindings = 1
+-- 		codeium_disable_bindings = 1
 	},
 }
