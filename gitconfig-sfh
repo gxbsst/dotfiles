@@ -1,0 +1,14 @@
+[user]
+name = Weston Wei
+email = weixuhong@gmail.com
+
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+	sshCommand = ssh -i ~/.ssh/nashannaguo_key
+
+

@@ -329,3 +329,10 @@ L()
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 eval "$(starship init zsh)"
 
+
+# bun completions
+[ -s "/Users/weston/.bun/_bun" ] && source "/Users/weston/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

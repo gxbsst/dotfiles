@@ -6,6 +6,8 @@
 
 [includeIf "gitdir:~/Projects/Me/"]
   path = ~/dotfiles/gitconfig-personal
+[includeIf "gitdir:~/Projects/SFH/"]
+  path = ~/dotfiles/gitconfig-sfh
 
 [pull]
 	rebase = false
