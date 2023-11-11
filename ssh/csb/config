@@ -24,3 +24,17 @@ Host sandbox.dm5fyl.csb
   ServerAliveCountMax 120
   ConnectionAttempts 30
   SetEnv CSB_SSH_OUTSIDE_CONTAINER=true
+
+Host sandbox.5gg9ps.csb
+  HostName 167.235.8.202
+  User gxbsst
+  Port 11682
+  Compression yes
+  IdentitiesOnly true
+  IdentityFile /Users/weston/.ssh/csb/csb_id_rsa_5gg9ps
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  ServerAliveInterval 30
+  ServerAliveCountMax 120
+  ConnectionAttempts 30
+  SetEnv CSB_SSH_OUTSIDE_CONTAINER=true
