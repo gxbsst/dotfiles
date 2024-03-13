@@ -74,7 +74,8 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "User AstroFile",
+        version = "^3",
+
     opts = {
       buftype_exclude = {
         "nofile",

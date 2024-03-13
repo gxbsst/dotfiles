@@ -273,7 +273,7 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 # 显示项目link 的npm包
 alias llp="sh $DOTFILES/bin/list_yarn_links.sh"
 alias dev="sh $DOTFILES/bin/dev.sh"
-alias wx='cli --project "$(pwd)"'
+alias wx='wxcli --project "$(pwd)"'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 #source /Users/weston/.config/broot/launcher/bash/br
@@ -336,3 +336,5 @@ eval "$(starship init zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+PATH=~/.console-ninja/.bin:$PATH
