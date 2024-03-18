@@ -336,5 +336,6 @@ eval "$(starship init zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export HOMEBREW_BUNDLE_FILE="$HOME/dotfiles/Brewfile"
 
 PATH=~/.console-ninja/.bin:$PATH

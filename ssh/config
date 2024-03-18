@@ -1,3 +1,5 @@
+Include ~/.orbstack/ssh/config
+
 Host guodong
 HostName 101.34.172.68 
 User root
