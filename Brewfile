@@ -1,3 +1,7 @@
+brew "dnsmasq"
+brew "nginx"
+brew "mysql"
+brew "php"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"

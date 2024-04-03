@@ -281,7 +281,7 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #export http_proxy="socks5://127.0.0.1:1080"
 #export https_proxy="socks5://127.0.0.1:1080"
 
-alias ls='exa --git --icons --color=always --group-directories-first'
+#alias ls='exa --git --icons --color=always --group-directories-first'
 export OPENAI_API_KEY="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"
 
 # pnpm
@@ -339,3 +339,27 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export HOMEBREW_BUNDLE_FILE="$HOME/dotfiles/Brewfile"
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# Local 
+export DISABLE_AUTO_TITLE="true"
+echo -n -e "\033]0;sem Shell\007"
+
+#export MYSQL_HOME="/Users/weston/Library/Application Support/Local/run/HWsVujkKP/conf/mysql"
+#export PHPRC="/Users/weston/Library/Application Support/Local/run/HWsVujkKP/conf/php"
+#export WP_CLI_CONFIG_PATH="/Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/config.yaml"
+#export WP_CLI_DISABLE_AUTO_CHECK_UPDATE=1
+
+# Add PHP, MySQL, and WP-CLI to $PATH
+#echo "Setting Local environment variables..."
+
+#export PATH="/Users/weston/Library/Application Support/Local/lightning-services/mysql-8.0.16+6/bin/darwin/bin:$PATH"
+#export PATH="/Users/weston/Library/Application Support/Local/lightning-services/php-8.1.23+0/bin/darwin-arm64/bin:$PATH"
+#export PATH="/Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/posix:$PATH"
+#export PATH="/Applications/Local.app/Contents/Resources/extraResources/bin/composer/posix:$PATH"
+
+
+#export MAGICK_CODER_MODULE_PATH="/Users/weston/Library/Application Support/Local/lightning-services/php-8.1.23+0/bin/darwin-arm64/ImageMagick/modules-Q16/coders"
+#
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+

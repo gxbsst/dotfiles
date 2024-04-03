@@ -339,89 +339,89 @@
         }
       },
       "cmake": {
-        "version": "3.28.3",
+        "version": "3.28.4",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
           "files": {
             "arm64_sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.arm64_sonoma.bottle.tar.gz",
-              "sha256": "91fc13f7284a925a794549c0f708b612a4fa87b0fdfdf6d224fd14512aaa1397"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.arm64_sonoma.bottle.tar.gz",
+              "sha256": "402dbe8f6789acc8d87e42dfa136059810d8b151562efe21dc2dbc9ea88131e9"
             },
             "arm64_ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.arm64_ventura.bottle.tar.gz",
-              "sha256": "971a7a7ede64c866acd74211c51b14ccc9f15d5214538b7f2c386cfcc9d5df17"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.arm64_ventura.bottle.tar.gz",
+              "sha256": "2ec583d4c1280f86312a20cd2374d09f67fce3588d7a01ee48e99409577e9002"
             },
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.arm64_monterey.bottle.tar.gz",
-              "sha256": "53c78bcbe47be5bc2f2512f679a760e5b9d596724773ddb31f58e3abf8375f9c"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.arm64_monterey.bottle.tar.gz",
+              "sha256": "0a6eb72877e91e26617d7cbe1240f2213f1abbc1b48c3cbdb6875fbb5500eb11"
             },
             "sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.sonoma.bottle.tar.gz",
-              "sha256": "d1e4a8a2bcbb4dd3f447fa59761ccff46553d452100bbcc69aa730b74daa6481"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.sonoma.bottle.tar.gz",
+              "sha256": "0045b5fdbb139e1f91f5370a9bcf0a409434a088e4824cddb6539f03adcdf77b"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.ventura.bottle.tar.gz",
-              "sha256": "eb0c7a47da85e62faa20aa5f89da9180d026eb400266249f14219b972754e0fa"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.ventura.bottle.tar.gz",
+              "sha256": "82a0485ff08d62a32ac08f228c6aad3c816668ee2d61885d6edbe15c7f0bbc59"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.monterey.bottle.tar.gz",
-              "sha256": "d3219efe5909c5ee3cd3827b719bf7f1dbc22a5ca0ab4ed65d5f72b204a6e334"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.monterey.bottle.tar.gz",
+              "sha256": "36dfd9efbc80c7e97aa73bb2c89987cd5ee312d1ce1c019aa761969e16ed8614"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.3.x86_64_linux.bottle.tar.gz",
-              "sha256": "3004aab27511db3212d6fa3bc60958ca8e6c6d2d2739c538bba5f39f9f8aee7b"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/cmake-3.28.4.x86_64_linux.bottle.tar.gz",
+              "sha256": "f7b4fb1e54014a2b81f17518d2a467af5ffa117d094810ca139577c0231c0c12"
             }
           }
         }
       },
       "docker": {
-        "version": "25.0.4",
+        "version": "25.0.5",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
           "files": {
             "arm64_sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.arm64_sonoma.bottle.tar.gz",
-              "sha256": "3b95b1673b5ff63e01ee164c6fde1c022e80a4f01cc57f89360300e6f8dc47d7"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.arm64_sonoma.bottle.tar.gz",
+              "sha256": "d2868bfb2db0c75cc48b1cd2d52fe7fbf878a64086a03df98e1f59e0939fb372"
             },
             "arm64_ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.arm64_ventura.bottle.tar.gz",
-              "sha256": "b2f9c976ed1c83c4080ae998622cd5235d0a489d22fd6ce3300c6e49c58b55f9"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.arm64_ventura.bottle.tar.gz",
+              "sha256": "64d4c7533c543dd33637d7ac16294b59f2c8c50b766a7e8fa278f9597ff21bdb"
             },
             "arm64_monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.arm64_monterey.bottle.tar.gz",
-              "sha256": "fb7f898f1fbe21f157c0252457376050940bf9cfa9b391e3eed09916d3478a9a"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.arm64_monterey.bottle.tar.gz",
+              "sha256": "224635b9da0ef0c7a1ece289ac6c7d96f9f703c13902e87eb59e85232d556a81"
             },
             "sonoma": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.sonoma.bottle.tar.gz",
-              "sha256": "c49f3e68c9fe7e8e87295073215c9cfd9175d2fcc72ab4d93c00886807354837"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.sonoma.bottle.tar.gz",
+              "sha256": "f62dc6363ab11b6d2b3aa8a0c7ad9add94968164213cb0457e38a4be581e1b7f"
             },
             "ventura": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.ventura.bottle.tar.gz",
-              "sha256": "187dbe2248c6e140ac1bb27ca7ba7877ead154ad41757404c55584b74ebf2183"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.ventura.bottle.tar.gz",
+              "sha256": "3fd8e5a2af273f4bc9756a9cd5e7c66e16d26c5e34534d69f45419214a359784"
             },
             "monterey": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.monterey.bottle.tar.gz",
-              "sha256": "1d9bb7844614a21943c4f1aef4e42573ae3b4dd3beaf27de8a5d1a7c90f55c40"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.monterey.bottle.tar.gz",
+              "sha256": "cb5def81e5b7593feda37ac7b82f9b9d4948ec0bd9e99bd334e5015e72c62b36"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.4.x86_64_linux.bottle.tar.gz",
-              "sha256": "cd2ffbc42e1c1408af7d572282163dedc786755d229dac95be24d9d2fea42a47"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/docker-25.0.5.x86_64_linux.bottle.tar.gz",
+              "sha256": "e8f1657f238d9635ad184f854ae582e6eb25427940f147c4ecda16303ec30988"
             }
           }
         }
@@ -559,45 +559,45 @@
         }
       },
       "fish": {
-        "version": "3.7.0",
+        "version": "3.7.1",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
           "files": {
             "arm64_sonoma": {
               "cellar": ":any",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.arm64_sonoma.bottle.tar.gz",
-              "sha256": "df77766a3e20b75b220364befbb0a8abea19662e471fb9c42bc0d8746ae00570"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.arm64_sonoma.bottle.tar.gz",
+              "sha256": "479ae1960544dc4a84c961f125bb9cc42c194ec2a04f0ffb1591e0c3c1d7d577"
             },
             "arm64_ventura": {
               "cellar": ":any",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.arm64_ventura.bottle.tar.gz",
-              "sha256": "1968642c9fec6da5d16cb649d54c66bc9d500e5b91c43bd2c4b8098f71c0b983"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.arm64_ventura.bottle.tar.gz",
+              "sha256": "51719eb992cbea31b99828036479b510011c1b4eef131a7b684bf4835f01374e"
             },
             "arm64_monterey": {
               "cellar": ":any",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.arm64_monterey.bottle.tar.gz",
-              "sha256": "80e5c51fe504bef8785c472424ea8a176536b0d56f3b52eb79a1d1b6ac7739f3"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.arm64_monterey.bottle.tar.gz",
+              "sha256": "0261f26bf449353f84f83ebfe3922fb2d6a0f98e65c551f3d3b14d0e26e78723"
             },
             "sonoma": {
               "cellar": ":any",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.sonoma.bottle.tar.gz",
-              "sha256": "4a123e4be4fb992fe9d0e4473d7be2f8389616b12b0d081db82e5bae395e57cf"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.sonoma.bottle.tar.gz",
+              "sha256": "a5b25fde2926a00b08d77798c52030543252418733442fc25eb1e0ce99b95010"
             },
             "ventura": {
               "cellar": ":any",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.ventura.bottle.tar.gz",
-              "sha256": "00de65841e80b4acd781999a03f2fe38d32a1aa10d8b4432af832905ec26c2d8"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.ventura.bottle.tar.gz",
+              "sha256": "f2d8ddb5b5e4a29dc9e39230845b514c9fc169e5f2922a1369bd72decc141886"
             },
             "monterey": {
               "cellar": ":any",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.monterey.bottle.tar.gz",
-              "sha256": "0bea9245a7565601af76d43c3cb26b7ce500b68a9326df6cd4d0d6cd49d91e12"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.monterey.bottle.tar.gz",
+              "sha256": "8518a301b9136ecbd87373b39c6736fae1fc0569da2fa8be7d5f066f1b320fd0"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.0.x86_64_linux.bottle.tar.gz",
-              "sha256": "e8b18b643a3cf68af82ebeb260dde9be24bac67b5e48b44cce1799777eab4e96"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/fish-3.7.1.x86_64_linux.bottle.tar.gz",
+              "sha256": "c69075343a17848c5f56d4af091e84604f7447fd91d62ebd92ce20b9eb67f2b5"
             }
           }
         }
@@ -1308,45 +1308,45 @@
         }
       },
       "mercurial": {
-        "version": "6.7",
+        "version": "6.7.1",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
           "files": {
             "arm64_sonoma": {
               "cellar": "/opt/homebrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.arm64_sonoma.bottle.tar.gz",
-              "sha256": "4a8d8102d5d69314b65534b72fed00f3863ef3140e5bd641dc04a2c7845143ad"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.arm64_sonoma.bottle.tar.gz",
+              "sha256": "15d4961fb9c58069ecbe31b3bfc47f0f8c67eaddd51d69e892733f8dcc1e5fa2"
             },
             "arm64_ventura": {
               "cellar": "/opt/homebrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.arm64_ventura.bottle.tar.gz",
-              "sha256": "b991376fa57e2bb5538c6e3a60e5be735b52c7b1e3e27b21e727fce5cf0a33aa"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.arm64_ventura.bottle.tar.gz",
+              "sha256": "fd1f804ce76f01df5257475eb2379e7e23f594c69f975bc3622c37258d11b21d"
             },
             "arm64_monterey": {
               "cellar": "/opt/homebrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.arm64_monterey.bottle.tar.gz",
-              "sha256": "ea88427401e7bd437210ab59550ec03316d506dbe7601bbc6e0cf5665b341422"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.arm64_monterey.bottle.tar.gz",
+              "sha256": "8012cd1f205e9bdeb3f3a2ff0e157a4261786196a2a56a50550e4ff685b91726"
             },
             "sonoma": {
               "cellar": "/usr/local/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.sonoma.bottle.tar.gz",
-              "sha256": "215468cea73b95e751c059e952aa21f056da8f0c76879af4b77d9e7d7726dc6f"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.sonoma.bottle.tar.gz",
+              "sha256": "1d96eebbd407a413abf6bb285f038039064f60107f9b5a44a36ba4fc6358bd33"
             },
             "ventura": {
               "cellar": "/usr/local/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.ventura.bottle.tar.gz",
-              "sha256": "e9611d24c2f18542ecb8ffc4f0b267ab9394522b00f0284a8180297396cd42c4"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.ventura.bottle.tar.gz",
+              "sha256": "978045f0b709ddaf8872799524850ffe763b8d0682d552dffd59c891ee1b4046"
             },
             "monterey": {
               "cellar": "/usr/local/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.monterey.bottle.tar.gz",
-              "sha256": "e0a5b5d89ca02190eefcfdd13adeaae5e731a457b5d9e89c0e29f7ce04730e9b"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.monterey.bottle.tar.gz",
+              "sha256": "373bc54ad5ffbd33fa9ed19a4637cd6cecefbddc8e4a21e2f433c643f02e136e"
             },
             "x86_64_linux": {
               "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.x86_64_linux.bottle.tar.gz",
-              "sha256": "71784c11639fe5e7f75552719b1762809db2a2806a7b268ce0b76896ab8f962a"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mercurial-6.7.1.x86_64_linux.bottle.tar.gz",
+              "sha256": "411534f44366078ea82155cbf29ded4ee4b3e109ef1bb31c2c0daef142471661"
             }
           }
         }
@@ -1645,45 +1645,45 @@
         }
       },
       "python@3.10": {
-        "version": "3.10.13_2",
+        "version": "3.10.14",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
           "files": {
             "arm64_sonoma": {
               "cellar": "/opt/homebrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.arm64_sonoma.bottle.tar.gz",
-              "sha256": "cbf651a2c8f70a1492a57da1b9b95700a149e071b54c9b57d5136bdca6a5388a"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.arm64_sonoma.bottle.tar.gz",
+              "sha256": "4068f5e2e1370502de8fcf54e43f7aeaf825fea72d1d69e34c54ba4b7ac714a4"
             },
             "arm64_ventura": {
               "cellar": "/opt/homebrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.arm64_ventura.bottle.tar.gz",
-              "sha256": "e9c41dbb46d11339b5afd00009a9ab481c4351be0fd1e158a8d23a99027d158c"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.arm64_ventura.bottle.tar.gz",
+              "sha256": "8794c74617118d900893131cf49eb695d75063275890e03070252e4fce9c778e"
             },
             "arm64_monterey": {
               "cellar": "/opt/homebrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.arm64_monterey.bottle.tar.gz",
-              "sha256": "f6345d57d64be9c31877fdcf101db5ddb850df56c3bbe48e924cb59f65d802ec"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.arm64_monterey.bottle.tar.gz",
+              "sha256": "73fb11a2a2008bb85d82f005e0ee5417a5dff3d6c6b88a12a93ced81d960fc22"
             },
             "sonoma": {
               "cellar": "/usr/local/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.sonoma.bottle.tar.gz",
-              "sha256": "5889f7db9f4602668486ca7158482ca907db49eda132ae7d6bb82ad779c4ab59"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.sonoma.bottle.tar.gz",
+              "sha256": "59d79d661030f9523dfca8262e98a361d019174421ee34a7486734898d29692e"
             },
             "ventura": {
               "cellar": "/usr/local/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.ventura.bottle.tar.gz",
-              "sha256": "a8c341aa21127e787b080678b1f8eb72ebd10c4f29ebf10d5f37f3c3a8b69e8e"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.ventura.bottle.tar.gz",
+              "sha256": "5210a41b8515b802031c14792d1892a6a9a6c8ca3f35f3e840742a58410710b0"
             },
             "monterey": {
               "cellar": "/usr/local/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.monterey.bottle.tar.gz",
-              "sha256": "fd5481ce63fe45b1e2fd2810a6528e333ac524f5a7d73a399777f0625f1bfeea"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.monterey.bottle.tar.gz",
+              "sha256": "3c6fb32876dff5afb7deb024d84e0344d4b8d599bb310b470b9cf7d90fad7a1c"
             },
             "x86_64_linux": {
               "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.13_2.x86_64_linux.bottle.tar.gz",
-              "sha256": "2143a7999b0aaf03bbd34a5a66193463afd901be0618356322a04347663e35b7"
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/python%403.10-3.10.14.x86_64_linux.bottle.tar.gz",
+              "sha256": "080fe880a66b737f7131bac5ab4ccaf2e3498e87efefa9e4062424bc8aa5d969"
             }
           }
         }
@@ -2375,6 +2375,182 @@
       "koekeishiya/formulae/yabai": {
         "version": "7.0.2",
         "bottle": false
+      },
+      "php": {
+        "version": "8.3.4",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.arm64_sonoma.bottle.tar.gz",
+              "sha256": "525e92e0a47205a680e8cd44d670b49677d6ac3d62642cda1750fa7daf26e186"
+            },
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.arm64_ventura.bottle.tar.gz",
+              "sha256": "e8d3905de3b9438bc53c1c70dfa125eec7cd3ba1c6c5256c57baf77d439dc55c"
+            },
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.arm64_monterey.bottle.tar.gz",
+              "sha256": "a2c6738ceb3d61b99f9ecc60cf644f490acfbe6e2dc1a39d8511f14ba0539b3f"
+            },
+            "sonoma": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.sonoma.bottle.tar.gz",
+              "sha256": "cd1318f394e15d7703d14b31414aa806502447c6b80c28ae3d290105c6a93946"
+            },
+            "ventura": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.ventura.bottle.tar.gz",
+              "sha256": "9e0af62ad21ae113ba719db6893bd7e60c810897f8cabcdb7f178cd26d788396"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.monterey.bottle.tar.gz",
+              "sha256": "0c46e5cf032fe803088413c156739cecd9142ed076ecdc20c60faa3d41b6d16c"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/php-8.3.4.x86_64_linux.bottle.tar.gz",
+              "sha256": "e0eca91b03b45c7a1d8d7d41d0966e7d138ea564d58bba3e1910ce937349ae2a"
+            }
+          }
+        }
+      },
+      "mysql": {
+        "version": "8.3.0_1",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.arm64_sonoma.bottle.tar.gz",
+              "sha256": "33919f057802485d77e2eaa66618d837d73e54a7b1c1953a2709d4e08358c46a"
+            },
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.arm64_ventura.bottle.tar.gz",
+              "sha256": "325df850a10bcba335ad37ba964f037782cf6b502bb16693d3593b0b954f289f"
+            },
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.arm64_monterey.bottle.tar.gz",
+              "sha256": "2d1c67c9fd7819a680719017793dbc855b5594ce64341e4243e773a350f47e14"
+            },
+            "sonoma": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.sonoma.bottle.tar.gz",
+              "sha256": "1fdc5b8989a5f8e8a1543792c8bd5a20ca6bf477280b1d31774af033600d2e3b"
+            },
+            "ventura": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.ventura.bottle.tar.gz",
+              "sha256": "ca686ca38112b46a348d014397a8a279a9a8a4cc3812dc8096b1c6fb72997aa8"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.monterey.bottle.tar.gz",
+              "sha256": "b0f19a04b4a11e8c14e8d6ad387ffe63af7a2e291a739872b455c1604845582d"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/mysql-8.3.0_1.x86_64_linux.bottle.tar.gz",
+              "sha256": "66c4a58b3f7f376bdcdec40dd747ccb544cac7e167cd359392cb3877df36bafe"
+            }
+          }
+        }
+      },
+      "nginx": {
+        "version": "1.25.4",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.arm64_sonoma.bottle.tar.gz",
+              "sha256": "5e1209c9d6ec8000de03a13febce98faf478e6135cd4ed10c9acad0c99b08a6b"
+            },
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.arm64_ventura.bottle.tar.gz",
+              "sha256": "0843071b15940ca4b493a6f4d8949e37c59eed065432192a1984dfb37c207599"
+            },
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.arm64_monterey.bottle.tar.gz",
+              "sha256": "f155883f1af8b2c47e953b4b45f76f259044accc59bb77dd9cac98ab0344103a"
+            },
+            "sonoma": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.sonoma.bottle.tar.gz",
+              "sha256": "af4d7ce61f0480090abc69992c37473cc5a364a644cd09df6ab86b928991bf1e"
+            },
+            "ventura": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.ventura.bottle.tar.gz",
+              "sha256": "2bc4312caf668685912acbfb7203f39f34899a4abaed8f215e4d8d1b1aee8325"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.monterey.bottle.tar.gz",
+              "sha256": "52cfde3116f5922b3a6e71d8953915c8f9e6b01f6136bc5194753c5163e9f253"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/nginx-1.25.4.x86_64_linux.bottle.tar.gz",
+              "sha256": "393982d5773f283a46af6bb727e25f50856e8ed6da1b4132efd1c1e5cc04e9f1"
+            }
+          }
+        }
+      },
+      "dnsmasq": {
+        "version": "2.90",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.arm64_sonoma.bottle.tar.gz",
+              "sha256": "b6897c95d454b3d7a0d488b3cba0f525a90c951d8690929a80794aee05f48ae7"
+            },
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.arm64_ventura.bottle.tar.gz",
+              "sha256": "96d78b8341adb55a2f3260fa4813102e7c08bc0d61306401de5bf4f1e49843b2"
+            },
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.arm64_monterey.bottle.tar.gz",
+              "sha256": "740412d9203cd865d9cafb9c10a3bc69ef19e44291954d7c26e48b17fd378039"
+            },
+            "sonoma": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.sonoma.bottle.tar.gz",
+              "sha256": "0e20ef773a39be121ee8fddc46a6dca9f1d6b9c09cc069bfa75334bff479079b"
+            },
+            "ventura": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.ventura.bottle.tar.gz",
+              "sha256": "f0fda257b89641375e5711c1afdc66c35771234a7fc2a51c124cc856085dd005"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.monterey.bottle.tar.gz",
+              "sha256": "51b10e0af794890ffcf3220848032c3086af3d3f5d488b454003fcde72793225"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/dnsmasq-2.90.x86_64_linux.bottle.tar.gz",
+              "sha256": "ba407d18d57b06e39f5576cda5f97703b1def62c14960d62f16eecd236180fc4"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -2391,7 +2567,7 @@
         }
       },
       "firefox": {
-        "version": "123.0.1",
+        "version": "124.0",
         "options": {
           "args": {
             "appdir": "~/my-apps/Applications"
@@ -2454,7 +2630,7 @@
         }
       },
       "google-chrome": {
-        "version": "122.0.6261.129",
+        "version": "123.0.6312.59",
         "options": {
           "args": {
             "appdir": "~/Applications"
@@ -2512,7 +2688,7 @@
       },
       "VidHub": {
         "id": "1659622164",
-        "version": "1.3.4"
+        "version": "1.3.6"
       },
       "WPS Office": {
         "id": "1443749478",
@@ -2532,7 +2708,7 @@
       },
       "微信": {
         "id": "836500024",
-        "version": "3.8.6"
+        "version": "3.8.7"
       },
       "爱奇艺": {
         "id": "1012296988",
@@ -2655,7 +2831,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.2.12",
+        "HOMEBREW_VERSION": "4.2.14",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.3.0.0.1.1708646388",

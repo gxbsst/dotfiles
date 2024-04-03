@@ -1,0 +1,48 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+name: nginx
+root: /opt/homebrew/etc
+
+windows:
+  - configs:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - nginx:
+            - cd /opt/homebrew/etc/nginx/servers
+            - v sem.conf
+        - php:
+            - cd /opt/homebrew/etc/php/8.3
+            - v php-fpm.conf
+            # - yarn dev:components:wx:all
+        - mysql:
+            - cd /opt/homebrew/etc
+            - v my.cnf
+            # - nvm use 14
+            # - dev jjz
+  - nginx_php_logs:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - nginx:
+           - cd /opt/homebrew/var/log/nginx
+           - tail -f access.log
+        - nginxerror:
+           - cd /opt/homebrew/var/log/nginx
+           - tail -f error.log
+        - php:
+           - cd /opt/homebrew/var/log
+           - tail -f php-fpm.log
+  - mysql_logs:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - query:
+           - cd /opt/homebrew/var/log/mysql
+           - tail -f query.log
+        - error:
+           - cd /opt/homebrew/var/log/mysql
+           - tail -f error.log
+        - slow:
+           - cd /opt/homebrew/var/log/mysql
+           - tail -f slow.log
+  - mysql:
+      - mysql -uroot
+  - sites:
+      - cd ~/sites/
