@@ -312,6 +312,12 @@ sf()
  tmuxinator start sf
 }
 
+dev_php()
+{
+ echo '🖖 Starting SF Workspace...'
+ tmuxinator start nginx
+}
+
 P()
 {
  echo "🖖 git push...$1"

@@ -42,7 +42,18 @@ windows:
         - slow:
            - cd /opt/homebrew/var/log/mysql
            - tail -f slow.log
+  - wordpress_logs:
+      layout: main-vertical
+      panes:
+        - php:
+           - cd /opt/homebrew/var/log/wordpress
+           - tail -f php.log
+        - mysql:
+           - cd /opt/homebrew/var/log/mysql
+           - tail -f query.log
   - mysql:
       - mysql -uroot
+  - font:
+      - cd /Users/weston/Projects/Me/minify-font
   - sites:
       - cd ~/sites/
