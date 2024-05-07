@@ -1,0 +1,10 @@
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /Users/weston/dotfiles/bin/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/Users/weston/dotfiles/bin/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/weston/.npm/_logs/2024-04-18T01_50_47_657Z-debug-0.log

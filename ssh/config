@@ -1,5 +1,10 @@
 Include ~/.orbstack/ssh/config
 
+Host mee
+HostName 23.106.142.139
+User root
+Port 9117
+
 Host guodong
 HostName 101.34.172.68 
 User root

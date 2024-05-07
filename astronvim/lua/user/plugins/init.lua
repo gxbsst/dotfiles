@@ -1,4 +1,12 @@
 return {
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    },
+    lazy = false,
+  },
+  { "nvim-neotest/nvim-nio" },
   { 'sbdchd/neoformat', lazy = false },
   { "HiPhish/nvim-ts-rainbow2" },
   { 'projekt0n/github-nvim-theme', lazy = false },

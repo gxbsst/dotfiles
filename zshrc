@@ -368,4 +368,5 @@ echo -n -e "\033]0;sem Shell\007"
 #
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 
