@@ -1,0 +1,16 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: mp
+root: ~/Projects/WOSAI/FRONTEND/mp/
+
+windows:
+  - ui:
+      - cd smart-mp-ui
+  - biz:
+      - cd smart-mp-biz
+  - cli:
+      - cd smart-mp-cli
+  - concise:
+      - cd smart-mp-concise
+  - console:
+      - cd smart-mp-console

@@ -3,7 +3,22 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'michaeljsmith/vim-indent-object'
-"Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
+
+ set sneak
+" https://github.com/TheBlob42/idea-which-key?tab=readme-ov-file
+set which-key
+set nottimeout
+set timeoutlen=600000
+let g:WhichKeyDesc_windows        = "<Leader>w  Windows"
+let g:WhichKeyDesc_windows_delete = "<Leader>wd delete"
+let g:WhichKeyDesc_windows_split  = "<Leader>ws split below"
+let g:WhichKeyDesc_windows_maximize = "<leader>wm maximize"
+let g:WhichKeyDesc_commentray_prefix = "gc"
+let g:WhichKeyDesc_commentray_action = "gcc"
+let g:WhichKey_ShowTypedSequence = "false"
+let g:WhichKey_ShowVimActions = "true"
+
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
@@ -71,14 +86,14 @@ noremap <Right> <Nop>
 
 """ Idea Actions ---------------------------
 " Idea Ctrl-u
-noremap <Leader>u :action GotoSuperMethod<CR>
+noremap <Leader>lu :action GotoSuperMethod<CR>
 " Idea Ctrl-o
-noremap <Leader>o :action OverrideMethods<CR>
+noremap <Leader>lo :action OverrideMethods<CR>
 " live template
-noremap <Leader>j :action InsertLiveTemplate<CR>
+noremap <Leader>lj :action InsertLiveTemplate<CR>
 " implement method
-noremap <Leader>i :action ImplementMethods<CR>
-noremap <Leader>l :action EditorToggleShowLineNumbers<CR>
+noremap <Leader>li :action ImplementMethods<CR>
+noremap <Leader>ll :action EditorToggleShowLineNumbers<CR>
 " Type Hierarchy
 "noremap <Leader>h :action TypeHierarchy<CR>
 " Go to Declaration
@@ -91,7 +106,7 @@ noremap g, :action JumpToNextChange<CR>
 " forward and back(试了一下暂时没有发现有问题)
 map <C-o> :action Back<CR>
 map <c-i> :action Forward<CR>
-noremap <Leader>r :action RenameElement<CR>
+noremap ;r :action RenameElement<CR>
 "noremap <Leader>e :action RecentChangedFiles<CR>
 
 noremap za :action CollapseRegion<CR>
@@ -306,11 +321,32 @@ nnoremap <C-l> :action NextTab<CR>
 " nnoremap ,d :action ContextDebug<CR>
 " nnoremap ,n :action ActivateDebugToolWindow<CR>
 " 切换TogglePowerSave
-map <C-A-M-p> :action TogglePowerSave<CR>
+"map <M-A-C-9> :action TogglePowerSave<CR>
+map <D-M-C-0> :action TogglePowerSave<CR>
+"map <M-A-C-0> :action ViewStatusBar<CR>
 
 " easymotion
 map <leader>J <Plug>(easymotion-s)
 map <leader>j <Plug>(easymotion-f)
+" f - file
+map <leader>fp :action ManageRecentProjects<CR>
+map <leader>ff :action FileMenu<CR>
+map <leader>fg :action FileStructurePopup<CR>
+map <leader>fs :action FileStructurePopup<CR>
+
+" b - bookmarks
+map <leader>bb :action Bookmarks<CR>
+map <leader>bs :action ShowBookmarks<CR>
+map <leader>bB :action ToggleBookmarkWithMnemonic<CR>
 
 " inoremap ;; <Esc>A;<Esc>
 " inoremap ,, <Esc>A,<Esc>
+" 自定义命令 :NewFile 在当前目录创建文件
+map <C-n> :action NewFile<CR>
+map <C-M-n> :action NewDir<CR>
+command! -nargs=1 NewFile :action NewFile
+command! -nargs=1 NewDir :action NewDir
+
+
+
+

@@ -43,7 +43,7 @@ return {
 		sidescrolloff = 8,
 		guifont = "JetBrainsMono_Nerd_Font:h15", -- the font used in graphical neovim applications
 		title = true,
-
+		shell = "/bin/zsh -i",
 	},
 	g = {
 		noautochdir = true,

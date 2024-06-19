@@ -318,6 +318,12 @@ dev_php()
  tmuxinator start nginx
 }
 
+mp()
+{
+ echo '🖖 Starting MP Workspace...'
+ tmuxinator start mp
+}
+
 P()
 {
  echo "🖖 git push...$1"
@@ -370,3 +376,23 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/weston/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/weston/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/weston/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/weston/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
+
+bindkey "\e\eOD" backward-word
+bindkey "\e\eOC" forward-word

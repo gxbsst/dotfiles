@@ -113,7 +113,11 @@ return {
       },
     },
     filesystem = {
-      follow_current_file = true,
+      follow_current_file = {
+        enable = true,
+        pattern = ".*",
+        path = function() return vim.fn.expand "%:p" end,
+      },
       hijack_netrw_behavior = "open_current",
       use_libuv_file_watcher = true,
     },
