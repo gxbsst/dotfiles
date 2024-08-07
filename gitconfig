@@ -1,6 +1,3 @@
-[user]
-  name = Weston Wei
-  email = gxbsst@gmail.com
 [includeIf "gitdir:~/Projects/WOSAI/"]
   path = ~/dotfiles/gitconfig-work
 
@@ -41,3 +38,11 @@
 	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-services
 [init]
 	defaultBranch = master
+[user]
+	name = weston
+	email = weixuhong@gmail.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

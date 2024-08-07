@@ -8,14 +8,15 @@ Plug 'easymotion/vim-easymotion'
  set sneak
 " https://github.com/TheBlob42/idea-which-key?tab=readme-ov-file
 set which-key
-set nottimeout
-set timeoutlen=600000
-let g:WhichKeyDesc_windows        = "<Leader>w  Windows"
-let g:WhichKeyDesc_windows_delete = "<Leader>wd delete"
-let g:WhichKeyDesc_windows_split  = "<Leader>ws split below"
-let g:WhichKeyDesc_windows_maximize = "<leader>wm maximize"
-let g:WhichKeyDesc_commentray_prefix = "gc"
-let g:WhichKeyDesc_commentray_action = "gcc"
+"set nottimeout
+"set timeoutlen=600000
+set notimeout
+"let g:WhichKeyDesc_windows        = "<Leader>w  Windows"
+"let g:WhichKeyDesc_windows_delete = "<Leader>wd delete"
+"let g:WhichKeyDesc_windows_split  = "<Leader>ws split below"
+"let g:WhichKeyDesc_windows_maximize = "<leader>wm maximize"
+"let g:WhichKeyDesc_commentray_prefix = "gc"
+"let g:WhichKeyDesc_commentray_action = "gcc"
 let g:WhichKey_ShowTypedSequence = "false"
 let g:WhichKey_ShowVimActions = "true"
 
@@ -26,6 +27,10 @@ inoremap <S-Tab> <C-D
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 " set number relativenumber
+"
+" inoremap ;; <Esc>A;<Esc>
+" inoremap ,, <Esc>A,<Esc>
+" 自定义命令 :NewFile 在当前目录创建文件
 
 """ set leader -----------------------------
 let mapleader = " "
@@ -85,15 +90,6 @@ noremap <Right> <Nop>
 " noremap <Tap> <Nop>
 
 """ Idea Actions ---------------------------
-" Idea Ctrl-u
-noremap <Leader>lu :action GotoSuperMethod<CR>
-" Idea Ctrl-o
-noremap <Leader>lo :action OverrideMethods<CR>
-" live template
-noremap <Leader>lj :action InsertLiveTemplate<CR>
-" implement method
-noremap <Leader>li :action ImplementMethods<CR>
-noremap <Leader>ll :action EditorToggleShowLineNumbers<CR>
 " Type Hierarchy
 "noremap <Leader>h :action TypeHierarchy<CR>
 " Go to Declaration
@@ -119,13 +115,6 @@ noremap q :action UnsplitAll<CR>
 
 noremap zz :action ToggleZenMode<CR>
 
-""" Split ----------------------------------
-"map <M-S-D> :action SplitHorizontally<CR>
-"map <M-D> :action  SplitVertically<CR>
-noremap <S-l> :action NextSplitter<CR>
-"noremap <S-j> :action NextSplitter<CR>
- noremap <S-h> :action PrevSplitter<CR>
-noremap <Leader><Leader> :action QuickJavaDoc<CR>
 
  "sethandler <c-j> a:vim
  "sethandler <c-k> a:vim
@@ -138,7 +127,7 @@ noremap <Leader><Leader> :action QuickJavaDoc<CR>
 " GIT 
 noremap \h :action Vcs.ShowHistoryForBlock<CR>
 noremap \g :action Git.Menu<CR>
-noremap \r :action RefactoringMenu<CR>
+vmap \r :action RefactoringMenu<CR>
 noremap \n :action GoToMenu<CR>
 noremap \c :action CodeMenu<CR>
 noremap \e :action EditMenu<CR>
@@ -151,15 +140,6 @@ noremap <Leader>gg :action Vcs.QuickListPopupAction<CR>
 "noremap <Leader>b :action Git.Branches<CR>
 noremap <C-E> :action Git.Branches<CR>
 "noremap <C><Tab> :action Git.Branches<CR>
-" commit history
-noremap <Leader>gm :action Vcs.ShowTabbedFileHistory<CR>
-" commit history
-noremap <Leader>gm :action Vcs.ShowTabbedFileHistory<CR>
-" commit merge
-"noremap <Leader>gm :action Git.Merge<CR>
-noremap <Leader>gj :action VcsShowNextChangeMarker<CR>
-noremap <Leader>gk :action VcsShowPrevChangeMarker<CR>
-noremap <Leader>gh :action VcsShowCurrentChangeMarker<CR>
 " git commit
 noremap <Leader>k :action CheckinProject<CR>
 noremap <Leader>H :action VcsSelectionHistoryDialog.Popup<CR>
@@ -171,57 +151,42 @@ noremap <Leader><Tab> :action Switcher<CR>
 "Wallaby
 noremap \t :action com.wallaby.javascript.actions.StartExclusiveTestRunAction<CR>
 
-" File 
-map <M-n> :action NewFile<CR>
-map <C-M-n> :action NewDir<CR>
-
 
 " map <C-k> :action SmartTypeCompletion<CR>
 "inoremap <C-k> :action SmartTypeCompletion<CR>
 
 
-nnoremap <Leader>e :action EditSourceInNewWindow<CR>
-"nnoremap <Leader>n :action NextWindow<CR>
-"nnoremap <Leader>p :action PreviousWindow<CR>
-nnoremap <Leader>qa :action CloseAllEditors<CR>
-"nnoremap <Leader>s :action FileStructurePopup<CR>
-" 最大化编辑器
-nnoremap <Leader>w :action MaximizeEditorInSplit<CR>
-
 " nnoremap <Leader>t :action ActivateTerminalToolWindow<CR>
-nnoremap <C-1> :b1<CR>
-nnoremap <C-2>  :b2<CR>
-nnoremap <C-3>  :b3<CR>
-nnoremap <C-4>  :b4<CR>
-nnoremap <C-5> :b5<CR>
-nnoremap <C-6>  :b6<CR>
-nnoremap <C-7>  :b7<CR>
-nnoremap <C-8> :b8<CR>
-nnoremap <C-9>  :b9<CR>
-nnoremap <C-n>  :bn<CR>
-nnoremap <C-p>  :bp<CR>
+" nnoremap <C-1> :b1<CR>
+" nnoremap <C-2>  :b2<CR>
+" nnoremap <C-3>  :b3<CR>
+" nnoremap <C-4>  :b4<CR>
+" nnoremap <C-5> :b5<CR>
+" nnoremap <C-6>  :b6<CR>
+" nnoremap <C-7>  :b7<CR>
+" nnoremap <C-8> :b8<CR>
+" nnoremap <C-9>  :b9<CR>
+"nnoremap <C-n>  :bn<CR>
+"nnoremap <C-p>  :bp<CR>
 "nnoremap <C-s> :b#<CR>
-nnoremap <C-s> :action FileStructurePopup<CR>
+" nnoremap <C-s> :action FileStructurePopup<CR>
 
 " 显示执行命令
 nnoremap <C-R> :action ChooseRunConfiguration<CR>
 
 "Bookmark
-nnoremap <A-C-n> :action GotoNextBookmarkInEditor<CR>
+"nnoremap <A-C-n> :action GotoNextBookmarkInEditor<CR>
 
 " Running and Debugging
 "nnoremap ,r :action ContextRun<CR>
-nnoremap ,c :action RunClass<CR>
-nnoremap ,t :action ActivateRunToolWindow<CR>
-nnoremap ,u :action Rerun<CR>
-nnoremap ,b :action ToggleLineBreakpoint<CR>
-nnoremap ,d :action ContextDebug<CR>
+"nnoremap ,c :action RunClass<CR>
+"nnoremap ,t :action ActivateRunToolWindow<CR>
+"nnoremap ,u :action Rerun<CR>
+"nnoremap ,b :action ToggleLineBreakpoint<CR>
+"nnoremap ,d :action ContextDebug<CR>
 " 关闭通知
 "nnoremap ,n :action CloseAllNotifications<CR>
-nnoremap <Leader>mc :action CloseAllNotifications<CR>
-map ,m :action osmedile.intellij.stringmanip.SwitchCasePopup<CR>
-map ,s :action osmedile.intellij.stringmanip.RepeatAction<CR>
-map ,a :action StringManipulation.Group.Align<CR>
+"nnoremap <Leader>mc :action CloseAllNotifications<CR>
 
 " View
 map <M-A-C-0> :action ViewStatusBar<CR>
@@ -230,7 +195,7 @@ map <M-S-0> :action ViewToolButtons<CR>
 map <M-S-P> :action GotoAction<CR>
 "map <M-J> :action ShowNavBar<CR>
 " 选择
-map ,w :action EditorSelectWord<CR>
+"map ,w :action EditorSelectWord<CR>
 " 切换所有窗口
 map <A-M-0> :action HideAllWindows<CR>
 map <ESC><ESC> :action HideAllWindows<CR>
@@ -241,8 +206,8 @@ map ,, :action Rainbow.ScopeOutsideHighlightingRestrainAction<CR>
 "map <Leader>p :!pwd<CR> 
 
 " recent
-map <M-A-E> :action RecentChangedFiles<CR>
-map <M-S-E> :action RecentLocations<CR>
+"map <M-A-E> :action RecentChangedFiles<CR>
+"map <M-S-E> :action RecentLocations<CR>
 """ Editing and Reloading the Config
 " set clipboard+=unnamed
 " set clipboard+=ideaput
@@ -258,12 +223,6 @@ map <M-S-E> :action RecentLocations<CR>
 " nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 " nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 "" Navigation
-nnoremap <Leader>v :action SplitVertically<CR>
-nnoremap <Leader>h :action SplitHorizontally<CR>
-" nnoremap <c-=> :action Unsplit<CR>
-" nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
-nnoremap <C-h> :action PreviousTab<CR>
-nnoremap <C-l> :action NextTab<CR>
 " nnoremap <Leader>en :action EditSourceInNewWindow<CR>
 " nnoremap <Leader>n :action NextWindow<CR>
 " nnoremap <Leader>q :action CloseContent<CR>
@@ -291,7 +250,7 @@ nnoremap <C-l> :action NextTab<CR>
 " nnoremap <leader>s :write<CR>
 "" Searching and Source Code Navigation
 " set incsearch
- nnoremap <c-/> :action FindInPath<CR>
+ "nnoremap <c-/> :action FindInPath<CR>
 " nnoremap <c-a> :action GotoAction<CR>
 " nnoremap <c-f> :action GotoFile<CR>
 " nnoremap <leader>u :action FindUsages<CR>
@@ -322,7 +281,7 @@ nnoremap <C-l> :action NextTab<CR>
 " nnoremap ,n :action ActivateDebugToolWindow<CR>
 " 切换TogglePowerSave
 "map <M-A-C-9> :action TogglePowerSave<CR>
-map <D-M-C-0> :action TogglePowerSave<CR>
+"map <D-M-C-0> :action TogglePowerSave<CR>
 "map <M-A-C-0> :action ViewStatusBar<CR>
 
 " easymotion
@@ -333,20 +292,90 @@ map <leader>fp :action ManageRecentProjects<CR>
 map <leader>ff :action FileMenu<CR>
 map <leader>fg :action FileStructurePopup<CR>
 map <leader>fs :action FileStructurePopup<CR>
+map <leader>fn :action NewFile<CR>
 
-" b - bookmarks
+" b - bookmarks & buffer
 map <leader>bb :action Bookmarks<CR>
 map <leader>bs :action ShowBookmarks<CR>
 map <leader>bB :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bl :ls<CR>
+nnoremap <leader>bp :bp<CR>
 
-" inoremap ;; <Esc>A;<Esc>
-" inoremap ,, <Esc>A,<Esc>
-" 自定义命令 :NewFile 在当前目录创建文件
-map <C-n> :action NewFile<CR>
-map <C-M-n> :action NewDir<CR>
+" w - window
+nnoremap <Leader>wv :action SplitVertically<CR>
+nnoremap <Leader>wh :action SplitHorizontally<CR>
+nnoremap <Leader>ws :action osmedile.intellij.stringmanip.SwitchCasePopup<CR>
+nnoremap <Leader>wa :action StringManipulation.Group.Align<CR>
+" nnoremap  ,s :action osmedile.intellij.stringmanip.RepeatAction<CR>
+nnoremap <Leader>we :action EditSourceInNewWindow<CR>
+"nnoremap <Leader>n :action NextWindow<CR>
+"nnoremap <Leader>p :action PreviousWindow<CR>
+nnoremap <Leader>wc :action CloseAllEditors<CR>
+"nnoremap <Leader>s :action FileStructurePopup<CR>
+" 最大化编辑器
+nnoremap <Leader>wm :action MaximizeEditorInSplit<CR>
+nnoremap <Leader>ww   :action ToggleDistractionFreeMode<CR>
+noremap <Leader><Leader> :action ToggleDistractionFreeMode<CR>
+
+nnoremap <C-h> :action PreviousWindow<CR>
+nnoremap <C-l> :action NextWindow<CR>
+
+""" Split ----------------------------------
+"map <M-S-D> :action SplitHorizontally<CR>
+"map <M-D> :action  SplitVertically<CR>
+noremap <S-l> :action NextSplitter<CR>
+"noremap <S-j> :action NextSplitter<CR>
+noremap <S-h> :action PrevSplitter<CR>
+"noremap <Leader><Leader> :action QuickJavaDoc<CR>
+" nnoremap <c-=> :action Unsplit<CR>
+" nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+"nnoremap <C-h> :action PreviousTab<CR>
+"nnoremap <C-l> :action NextTab<CR>
+"
+" g - 
+" commit history
+noremap <Leader>gm :action Vcs.ShowTabbedFileHistory<CR>
+" commit history
+noremap <Leader>gm :action Vcs.ShowTabbedFileHistory<CR>
+" commit merge
+"noremap <Leader>gm :action Git.Merge<CR>
+noremap <Leader>gj :action VcsShowNextChangeMarker<CR>
+noremap <Leader>gk :action VcsShowPrevChangeMarker<CR>
+noremap <Leader>gh :action VcsShowCurrentChangeMarker<CR>
+
+" Idea Ctrl-u
+noremap <Leader>lu :action GotoSuperMethod<CR>
+" Idea Ctrl-o
+noremap <Leader>lo :action OverrideMethods<CR>
+" live template
+noremap <Leader>lj :action InsertLiveTemplate<CR>
+" implement method
+noremap <Leader>li :action ImplementMethods<CR>
+noremap <Leader>ll :action EditorToggleShowLineNumbers<CR>
+noremap <Leader>ld :action ShowHoverInfo<CR>
+noremap <Leader>lp :action TogglePopupHints<CR>
+noremap <Leader>lH :action QuickToggleEditorHighlight<CR>
+noremap <Leader>lP :action QuickPreview<CR>
+noremap <Leader>lf :action  ShowIntentionActions<CR>
+" a - action 
+noremap <Leader>ap :action EditorActions<CR>
+noremap <Leader>aR :action RunnerActions<CR>
+noremap <Leader>ar :action Refactorings.QuickListPopupAction<CR>
+
+" n - new xxx
+noremap <Leader>nf :action NewFile<CR>
+noremap <Leader>nd :action NewDir<CR>
+noremap <Leader>nc :action NewClass<CR>
+noremap <Leader>ni :action NewInterface<CR>
+
+" VISUAL
+vmap t :action Refactorings.QuickListPopupAction<CR>
+vmap ss :action SurroundWith<CR>
+vmap sS :action osmedile.intellij.stringmanip.PopupChoiceAction<CR>
+
+
 command! -nargs=1 NewFile :action NewFile
 command! -nargs=1 NewDir :action NewDir
-
-
-
-
+map <M-n> :action NewFile<CR>
+map <C-M-n> :action NewDir<CR>

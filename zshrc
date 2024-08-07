@@ -176,6 +176,7 @@ alias h="hx"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
 alias yt="python3 $HOME/dotfiles/bin/download_yt.py"
 alias gll='git log --color --pretty=format:"%Cred%h%Creset - %ad - %Cgreen%an%Creset : %s" --date=short'
+alias copy_my_components="sh $HOME/dotfiles/bin/copy_my_components_to_qr_mini_pay.sh"
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 #export ZPLUG_HOME=/usr/local/opt/zplug
@@ -394,5 +395,5 @@ unset __conda_setup
 
 ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
 
-bindkey "\e\eOD" backward-word
-bindkey "\e\eOC" forward-word
+#bindkey "\e\eOD" backward-word
+#bindkey "\e\eOC" forward-word
