@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -29,13 +29,13 @@ return {
         "██   ██      ██    ██    ██   ██ ██    ██",
         "██   ██ ███████    ██    ██   ██  ██████",
         " ",
+        "    ███    ██ ██    ██ ██ ███    ███",
+        "    ████   ██ ██    ██ ██ ████  ████",
+        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+        "    ██   ████   ████   ██ ██      ██",
       }
       return opts
-    end,
-    config = function()
-      -- local config = require("alpha.themes.startify").config
-      -- require 'alpha'.setup(config)
-      require'alpha'.setup(require'alpha.themes.startify'.config)
     end,
   },
 
@@ -80,36 +80,6 @@ return {
         -- disable for .vim files, but it work for another filetypes
         Rule("a", "a", "-vim")
       )
-    end,
-  },
-  { "github/copilot.vim", evnet = "InsertEnter", lazy = false },
-  {
-    "zbirenbaum/copilot.lua",
-    lazy = true,
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end,
-    -- "zbirenbaum/copilot.lua",
-    -- -- event = { "VimEnter" },
-    -- config = function()
-    --   vim.defer_fn(function()
-    --     require("copilot").setup {
-    --       plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-    --     }
-    --   end, 100)
-    -- end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup {
-        formatters = {
-          insert_text = require("copilot_cmp.format").remove_existing,
-        },
-      }
     end,
   },
 }
