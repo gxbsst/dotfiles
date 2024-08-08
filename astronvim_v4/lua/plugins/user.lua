@@ -18,26 +18,31 @@ return {
     -- == Examples of Overriding Plugins ==
 
     -- customize alpha options
-    {
-        "goolord/alpha-nvim",
-        opts = function(_, opts)
-            -- customize the dashboard header
-            opts.section.header.val = {
-                " █████  ███████ ████████ ██████   ██████",
-                "██   ██ ██         ██    ██   ██ ██    ██",
-                "███████ ███████    ██    ██████  ██    ██",
-                "██   ██      ██    ██    ██   ██ ██    ██",
-                "██   ██ ███████    ██    ██   ██  ██████",
-                " ",
-            }
-            return opts
-        end,
-        config = function()
-            -- local config = require("alpha.themes.startify").config
-            -- require 'alpha'.setup(config)
-            require 'alpha'.setup(require 'alpha.themes.startify'.config)
-        end,
-    },
+    -- {
+    --     "goolord/alpha-nvim",
+    --     opts = function(_, opts)
+    --         -- customize the dashboard header
+    --         opts.section.header.val = {
+    --             " █████  ███████ ████████ ██████   ██████",
+    --             "██   ██ ██         ██    ██   ██ ██    ██",
+    --             "███████ ███████    ██    ██████  ██    ██",
+    --             "██   ██      ██    ██    ██   ██ ██    ██",
+    --             "██   ██ ███████    ██    ██   ██  ██████",
+    --             " ",
+    --             "    ███    ██ ██    ██ ██ ███    ███",
+    --             "    ████   ██ ██    ██ ██ ████  ████",
+    --             "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+    --             "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+    --             "    ██   ████   ████   ██ ██      ██",
+    --         }
+    --         return opts
+    --     end,
+    --     config = function()
+    --         -- local config = require("alpha.themes.startify").config
+    --         -- require 'alpha'.setup(config)
+    --         require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    --     end,
+    -- },
 
     -- You can disable default plugins as follows:
     { "max397574/better-escape.nvim", enabled = false },
