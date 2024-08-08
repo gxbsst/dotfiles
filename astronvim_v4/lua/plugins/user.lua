@@ -146,4 +146,11 @@ return {
             }
         end,
     },
+    {
+        "akinsho/bufferline.nvim",
+        event = "UIEnter",
+        config = function()
+            require('bufferline').setup {}
+        end
+    },
 }
