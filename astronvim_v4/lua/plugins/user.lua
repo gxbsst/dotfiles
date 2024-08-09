@@ -3,44 +3,17 @@
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
----@type LazySpec
+-- -@type LazySpec
 return {
 
     -- == Examples of Adding Plugins ==
 
     "andweeb/presence.nvim",
-    {
-        "ray-x/lsp_signature.nvim",
-        event = "BufRead",
-        config = function() require("lsp_signature").setup() end,
-    },
-
-    -- == Examples of Overriding Plugins ==
-
-    -- customize alpha options
     -- {
-    --     "goolord/alpha-nvim",
-    --     opts = function(_, opts)
-    --         -- customize the dashboard header
-    --         opts.section.header.val = {
-    --             " █████  ███████ ████████ ██████   ██████",
-    --             "██   ██ ██         ██    ██   ██ ██    ██",
-    --             "███████ ███████    ██    ██████  ██    ██",
-    --             "██   ██      ██    ██    ██   ██ ██    ██",
-    --             "██   ██ ███████    ██    ██   ██  ██████",
-    --             " ",
-    --             "    ███    ██ ██    ██ ██ ███    ███",
-    --             "    ████   ██ ██    ██ ██ ████  ████",
-    --             "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-    --             "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-    --             "    ██   ████   ████   ██ ██      ██",
-    --         }
-    --         return opts
-    --     end,
+    --     "ray-x/lsp_signature.nvim",
+    --     event = "BufRead",
     --     config = function()
-    --         -- local config = require("alpha.themes.startify").config
-    --         -- require 'alpha'.setup(config)
-    --         require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    --         require("lsp_signature").setup()
     --     end,
     -- },
 
@@ -125,15 +98,6 @@ return {
         config = function()
             require("copilot").setup({})
         end,
-        -- "zbirenbaum/copilot.lua",
-        -- -- event = { "VimEnter" },
-        -- config = function()
-        --   vim.defer_fn(function()
-        --     require("copilot").setup {
-        --       plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-        --     }
-        --   end, 100)
-        -- end,
     },
     {
         "zbirenbaum/copilot-cmp",
@@ -152,5 +116,43 @@ return {
         config = function()
             require('bufferline').setup {}
         end
+    },
+    {
+        'simrat39/symbols-outline.nvim',
+        event = "LspAttach",
+        config = function()
+            require("symbols-outline").setup({
+                -- auto_preview = false,
+                autofold_depth = 1,
+                -- auto_close = true,
+            })
+        end
+    },
+    { 'chemzqm/wxapp.vim',       lazy = false },
+    -- TEXT Align
+
+    { 'junegunn/vim-easy-align', event = 'BufRead' },
+    -- 错误开关
+    {
+        'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim',
+        event = 'LspAttach',
+        config = function()
+            --       require('toggle-lsp-diagnostics').init()
+            require('toggle_lsp_diagnostics').init { underline = false, virtual_text = { prefix = 'SMART', spacing = 5 } }
+        end
+    },
+    -- KEYMAPS
+    -- LSP
+    {
+        "glepnir/lspsaga.nvim",
+        event = "LspAttach",
+        config = function()
+            require("lspsaga").setup({})
+        end,
+        dependencies = {
+            { "nvim-tree/nvim-web-devicons" },
+            --Please make sure you install markdown and markdown_inline parser
+            { "nvim-treesitter/nvim-treesitter" }
+        }
     },
 }
