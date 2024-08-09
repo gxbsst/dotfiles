@@ -11,9 +11,9 @@ return {
     ---@type AstroUIOpts
     opts = {
         -- change colorscheme
-        colorscheme = "astrodark",
+        -- colorscheme = "astrodark",
         -- colorscheme = "tokyonight",
-        -- colorscheme = "rose-pine",
+        colorscheme = "rose-pine",
         -- colorscheme = "kanagawa",
 
         -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes

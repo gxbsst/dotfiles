@@ -89,27 +89,27 @@ return {
             )
         end,
     },
-    { "github/copilot.vim",           evnet = "InsertEnter", lazy = false },
-    {
-        "zbirenbaum/copilot.lua",
-        lazy = true,
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({})
-        end,
-    },
-    {
-        "zbirenbaum/copilot-cmp",
-        after = { "copilot.lua" },
-        config = function()
-            require("copilot_cmp").setup {
-                formatters = {
-                    insert_text = require("copilot_cmp.format").remove_existing,
-                },
-            }
-        end,
-    },
+    -- { "github/copilot.vim",           evnet = "InsertEnter", lazy = false },
+    -- {
+    --     "zbirenbaum/copilot.lua",
+    --     lazy = true,
+    --     cmd = "Copilot",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require("copilot").setup({})
+    --     end,
+    -- },
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     after = { "copilot.lua" },
+    --     config = function()
+    --         require("copilot_cmp").setup {
+    --             formatters = {
+    --                 insert_text = require("copilot_cmp.format").remove_existing,
+    --             },
+    --         }
+    --     end,
+    -- },
     {
         "akinsho/bufferline.nvim",
         event = "UIEnter",
@@ -128,10 +128,10 @@ return {
             })
         end
     },
-    { 'chemzqm/wxapp.vim',       lazy = false },
+    { 'chemzqm/wxapp.vim',            lazy = false },
     -- TEXT Align
 
-    { 'junegunn/vim-easy-align', event = 'BufRead' },
+    { 'junegunn/vim-easy-align',      event = 'BufRead' },
     -- 错误开关
     {
         'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim',
@@ -154,5 +154,14 @@ return {
             --Please make sure you install markdown and markdown_inline parser
             { "nvim-treesitter/nvim-treesitter" }
         }
+    },
+    {
+        "folke/trouble.nvim",
+        event = "BufRead",
+        -- dependencies = "kyazdani42/nvim-web-devicons",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
+        end
     },
 }
