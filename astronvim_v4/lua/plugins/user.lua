@@ -164,4 +164,52 @@ return {
             require("trouble").setup {}
         end
     },
+    {
+        "folke/zen-mode.nvim",
+        lazy = false,
+        config = function()
+            require("zen-mode").setup {
+                window = {
+                    width = 120,
+                    options = {
+                        number = true,
+                        relativenumber = true,
+                    }
+                },
+            }
+        end
+    },
+    {
+        'windwp/nvim-ts-autotag',
+        lazy = false,
+        config = function()
+            require('nvim-ts-autotag').setup()
+        end
+    },
+    { "shortcuts/no-neck-pain.nvim", version = "*" },
+    {
+        "dmmulroy/tsc.nvim",
+        lazy = false,
+        config = function()
+            require('tsc').setup {
+                auto_open_qflist = true,
+                enable_progress_notifications = true,
+                flags = {
+                    build = true,
+                },
+                hide_progress_notifications_from_history = true,
+                spinner = { "⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷" },
+            }
+        end
+    },
+    {
+        "f-person/git-blame.nvim",
+        event = "BufRead",
+        config = function()
+            vim.cmd "highlight default link gitblame SpecialComment"
+            vim.g.gitblame_enabled = 0
+        end,
+    },
+    { 'prettier/vim-prettier',       event = 'BufRead' },
+
 }
