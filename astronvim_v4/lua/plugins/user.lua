@@ -211,5 +211,4 @@ return {
         end,
     },
     { 'prettier/vim-prettier',       event = 'BufRead' },
-
 }
