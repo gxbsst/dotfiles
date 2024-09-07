@@ -12,7 +12,9 @@ return {
     opts = {
         -- change colorscheme
         -- colorscheme = "astrodark",
-        colorscheme = "tokyonight",
+        -- colorscheme = "astrolight",
+
+        -- colorscheme = "tokyonight",
         -- colorscheme = "rose-pine",
         -- colorscheme = "kanagawa",
 

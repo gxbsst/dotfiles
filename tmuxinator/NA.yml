@@ -1,0 +1,19 @@
+# /Users/weston/.config/tmuxinator/emenu.yml
+
+name: NA
+root: ~/Projects/NA/
+
+windows:
+  - slideBuild:
+      layout: ba77,192x37,0,0{96x37,0,0,0,95x37,97,0[95x18,97,0,4,95x18,97,19,5]}
+      panes:
+        - slidev:
+            - cd mp_photo_assistant/mp/dist/wechat
+        - mp:
+            - cd mp_photo_assistant/mp
+            - bun run dev
+  - server:
+    - cd mp_photo_assistant/server
+    - echo "server"
+  - blog:
+    - echo "blog"

@@ -319,6 +319,12 @@ dev_php()
  tmuxinator start nginx
 }
 
+na()
+{
+ echo '🖖 Starting NA Workspace...'
+ tmuxinator start na
+}
+
 mp()
 {
  echo '🖖 Starting MP Workspace...'
@@ -397,3 +403,8 @@ ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
 
 #bindkey "\e\eOD" backward-word
 #bindkey "\e\eOC" forward-word
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+export JAVA_HOME=$(/usr/libexec/java_home)

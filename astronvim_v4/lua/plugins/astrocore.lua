@@ -33,7 +33,10 @@ return {
                 signcolumn = "yes",    -- sets vim.opt.signcolumn to yes
                 wrap = false,          -- sets vim.opt.wrap
             },
-            g = {                      -- vim.g.<key>
+            g = {
+                noautochdir = true,
+                neoformat_enabled_html = { "prettier" },
+                -- vim.g.<key>
                 -- configure global vim variables (vim.g)
                 -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
                 -- This can be found in the `lua/lazy_setup.lua` file
@@ -72,7 +75,8 @@ return {
                 -- ['<F1>'] = { ":FloatermToggle<CR>" },
                 ['<F2>'] = {
                     function()
-                        vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+                        -- vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+                        vim.diagnostic.goto_next()
                     end
                 },
                 ['F3'] = {
@@ -82,7 +86,7 @@ return {
                 },
                 ['<F7>'] = { ':SymbolsOutline<cr>' },
                 ['<F8>'] = { ':SymbolsOutline<cr>' },
-                ['F11'] = {
+                ['F12'] = {
                     function()
                         vim.diagnostic.goto_prev()
                     end

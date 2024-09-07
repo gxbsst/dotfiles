@@ -1,6 +1,6 @@
 return {
     "jessarcher/onedark.nvim",
-    lazy = true,
+    lazy = false,
     -- priority = 800,
     config = function()
         -- vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = '#30323E' })
